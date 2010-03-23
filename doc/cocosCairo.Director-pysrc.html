@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.Director</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;Director
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.Director-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cocosCairo.Director-module.html">Module cocosCairo.Director</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module cocosCairo.Geometry=cocosCairo.Geometry-module.html"><a title="cocosCairo.Geometry" class="py-name" href="#" onclick="return doclink('link-0', 'Geometry', 'link-0');">Geometry</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module cocosCairo.GTKInterface=cocosCairo.GTKInterface-module.html,Class cocosCairo.GTKInterface.GTKInterface=cocosCairo.GTKInterface.GTKInterface-class.html"><a title="cocosCairo.GTKInterface
+cocosCairo.GTKInterface.GTKInterface" class="py-name" href="#" onclick="return doclink('link-1', 'GTKInterface', 'link-1');">GTKInterface</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module cocosCairo.GTKWindow=cocosCairo.GTKWindow-module.html,Class cocosCairo.GTKWindow.GTKWindow=cocosCairo.GTKWindow.GTKWindow-class.html"><a title="cocosCairo.GTKWindow
+cocosCairo.GTKWindow.GTKWindow" class="py-name" href="#" onclick="return doclink('link-2', 'GTKWindow', 'link-2');">GTKWindow</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Module cocosCairo.GestureDispatch=cocosCairo.GestureDispatch-module.html,Class cocosCairo.GestureDispatch.GestureDispatch=cocosCairo.GestureDispatch.GestureDispatch-class.html"><a title="cocosCairo.GestureDispatch
+cocosCairo.GestureDispatch.GestureDispatch" class="py-name" href="#" onclick="return doclink('link-3', 'GestureDispatch', 'link-3');">GestureDispatch</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name" targets="Module cocosCairo.ActionManager=cocosCairo.ActionManager-module.html,Class cocosCairo.ActionManager.ActionManager=cocosCairo.ActionManager.ActionManager-class.html"><a title="cocosCairo.ActionManager
+cocosCairo.ActionManager.ActionManager" class="py-name" href="#" onclick="return doclink('link-4', 'ActionManager', 'link-4');">ActionManager</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name" targets="Module cocosCairo.Scheduler=cocosCairo.Scheduler-module.html,Class cocosCairo.Scheduler.Scheduler=cocosCairo.Scheduler.Scheduler-class.html"><a title="cocosCairo.Scheduler
+cocosCairo.Scheduler.Scheduler" class="py-name" href="#" onclick="return doclink('link-5', 'Scheduler', 'link-5');">Scheduler</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name" targets="Module cocosCairo.Transition=cocosCairo.Transition-module.html"><a title="cocosCairo.Transition" class="py-name" href="#" onclick="return doclink('link-6', 'Transition', 'link-6');">Transition</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-7" class="py-name" targets="Module cocosCairo.Color=cocosCairo.Color-module.html,Class cocosCairo.Color.Color=cocosCairo.Color.Color-class.html"><a title="cocosCairo.Color
+cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-7', 'Color', 'link-7');">Color</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gobject</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">time</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">warnings</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-name">gobject</tt><tt class="py-op">.</tt><tt class="py-name">threads_init</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="Director"></a><div id="Director-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="Director-toggle" onclick="return toggle('Director');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html">Director</a><tt class="py-op">:</tt> </tt>
+</div><div id="Director-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Director-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">        The central point of the application. It handles the main run loop, L{Scene} transitions, and propagating redraw events to the Scene's children. It is also the owner of the L{GestureDispatch}, L{ActionManager}, L{Scheduler}, and the L{GTKInterface}.</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">        Normally only one Director should exist per application.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="Director.__init__"></a><div id="Director.__init__-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="Director.__init__-toggle" onclick="return toggle('Director.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.__init__-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">                Initialization method.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt>       <tt class="py-comment"># set this up in setWindow()</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gestureDispatch</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="cocosCairo.GestureDispatch
+cocosCairo.GestureDispatch.GestureDispatch" class="py-name" href="#" onclick="return doclink('link-8', 'GestureDispatch', 'link-3');">GestureDispatch</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scheduler</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="cocosCairo.Scheduler
+cocosCairo.Scheduler.Scheduler" class="py-name" href="#" onclick="return doclink('link-9', 'Scheduler', 'link-5');">Scheduler</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_actionManager</tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="cocosCairo.ActionManager
+cocosCairo.ActionManager.ActionManager" class="py-name" href="#" onclick="return doclink('link-10', 'ActionManager', 'link-4');">ActionManager</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scheduler</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isShowingFPS</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_oldAnimationInterval</tt> <tt class="py-op">=</tt> <tt class="py-number">1.0</tt><tt class="py-op">/</tt><tt class="py-number">30.0</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_animationInterval</tt> <tt class="py-op">=</tt> <tt class="py-number">1.0</tt><tt class="py-op">/</tt><tt class="py-number">30.0</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_frames</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isPaused</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_dt</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isNextDeltaTimeZero</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_lastTimeStamp</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-comment">#self._accumDt = 0              # TODO: finish implementing these</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-comment">#self._frameRate = 0</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_backgroundColor</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name" targets="Function cocosCairo.Color.BlackColor()=cocosCairo.Color-module.html#BlackColor"><a title="cocosCairo.Color.BlackColor" class="py-name" href="#" onclick="return doclink('link-11', 'BlackColor', 'link-11');">BlackColor</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-comment">#{ Accessor methods.</tt> </tt>
+<a name="Director.isShowingFPS"></a><div id="Director.isShowingFPS-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="Director.isShowingFPS-toggle" onclick="return toggle('Director.isShowingFPS');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#isShowingFPS">isShowingFPS</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.isShowingFPS-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.isShowingFPS-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">                Whether or not the Director is displaying frames per second. Default is C{False}.</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">                @return: Whether or not the Director is displaying frames per second (FPS).</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{bool}</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isShowingFPS</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="Director.setShowingFPS"></a><div id="Director.setShowingFPS-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="Director.setShowingFPS-toggle" onclick="return toggle('Director.setShowingFPS');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#setShowingFPS">setShowingFPS</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">isShowingFPS</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.setShowingFPS-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.setShowingFPS-expanded"><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">                Sets whether or not the Director displays frames per second.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">                @param isShowingFPS: Whether or not the Director displays frames per second.</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">                @type isShowingFPS: C{bool}</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isShowingFPS</tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name" targets="Method cocosCairo.Director.Director.isShowingFPS()=cocosCairo.Director.Director-class.html#isShowingFPS"><a title="cocosCairo.Director.Director.isShowingFPS" class="py-name" href="#" onclick="return doclink('link-12', 'isShowingFPS', 'link-12');">isShowingFPS</a></tt> </tt>
+</div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="Director.getSize"></a><div id="Director.getSize-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="Director.getSize-toggle" onclick="return toggle('Director.getSize');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getSize">getSize</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getSize-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getSize-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the size of the main application window.</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">                @return: Size of the main application window.</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{Size}</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method cocosCairo.Director.Director.getSize()=cocosCairo.Director.Director-class.html#getSize,Method cocosCairo.GTKInterface.GTKInterface.getSize()=cocosCairo.GTKInterface.GTKInterface-class.html#getSize,Method cocosCairo.Node.Node.getSize()=cocosCairo.Node.Node-class.html#getSize,Method cocosCairo.SVGSprite.SVGSprite.getSize()=cocosCairo.SVGSprite.SVGSprite-class.html#getSize"><a title="cocosCairo.Director.Director.getSize
+cocosCairo.GTKInterface.GTKInterface.getSize
+cocosCairo.Node.Node.getSize
+cocosCairo.SVGSprite.SVGSprite.getSize" class="py-name" href="#" onclick="return doclink('link-13', 'getSize', 'link-13');">getSize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="Director.getGestureDispatch"></a><div id="Director.getGestureDispatch-def"><a name="L83"></a><tt class="py-lineno"> 83</tt> <a class="py-toggle" href="#" id="Director.getGestureDispatch-toggle" onclick="return toggle('Director.getGestureDispatch');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getGestureDispatch">getGestureDispatch</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getGestureDispatch-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getGestureDispatch-expanded"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the L{GestureDispatch} for the application, which sends out notifications of L{GestureEvent}s to L{GestureListener}s.</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The dispatch.</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{GestureDispatch}</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gestureDispatch</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="Director.getActionManager"></a><div id="Director.getActionManager-def"><a name="L92"></a><tt class="py-lineno"> 92</tt> <a class="py-toggle" href="#" id="Director.getActionManager-toggle" onclick="return toggle('Director.getActionManager');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getActionManager">getActionManager</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getActionManager-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getActionManager-expanded"><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">                Reutrns the L{ActionManager} for the application, which manages the L{Action}s.</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The manager.</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{ActionManager}</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_actionManager</tt> </tt>
+</div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="Director.getScheduler"></a><div id="Director.getScheduler-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="Director.getScheduler-toggle" onclick="return toggle('Director.getScheduler');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getScheduler">getScheduler</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getScheduler-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getScheduler-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the L{Scheduler} for the application, which manages the L{Timer}s.</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The scheduler.</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{Scheduler}</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scheduler</tt> </tt>
+</div><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt>
+<a name="Director.setBackgroundColor"></a><div id="Director.setBackgroundColor-def"><a name="L110"></a><tt class="py-lineno">110</tt> <a class="py-toggle" href="#" id="Director.setBackgroundColor-toggle" onclick="return toggle('Director.setBackgroundColor');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#setBackgroundColor">setBackgroundColor</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.setBackgroundColor-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.setBackgroundColor-expanded"><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-docstring">                Sets the color for the background of the application.</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">                @param color: The color of the background.</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">                @type color: L{Color}</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method cocosCairo.Director.Director.setBackgroundColor()=cocosCairo.Director.Director-class.html#setBackgroundColor,Method cocosCairo.GTKInterface.GTKInterface.setBackgroundColor()=cocosCairo.GTKInterface.GTKInterface-class.html#setBackgroundColor,Method cocosCairo.Node.Node.setBackgroundColor()=cocosCairo.Node.Node-class.html#setBackgroundColor"><a title="cocosCairo.Director.Director.setBackgroundColor
+cocosCairo.GTKInterface.GTKInterface.setBackgroundColor
+cocosCairo.Node.Node.setBackgroundColor" class="py-name" href="#" onclick="return doclink('link-14', 'setBackgroundColor', 'link-14');">setBackgroundColor</a></tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_backgroundColor</tt> <tt class="py-op">=</tt> <tt class="py-name">color</tt> </tt>
+</div><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="Director.setWindow"></a><div id="Director.setWindow-def"><a name="L121"></a><tt class="py-lineno">121</tt> <a class="py-toggle" href="#" id="Director.setWindow-toggle" onclick="return toggle('Director.setWindow');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#setWindow">setWindow</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">window</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.setWindow-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.setWindow-expanded"><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">                Sets the main window for the application. If window is C{None}, a L{GTKWindow} is generated automatically.</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">                @param window: The main application window.</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">                @type window: L{AbstractWindow} (or C{None})</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="cocosCairo.GTKInterface
+cocosCairo.GTKInterface.GTKInterface" class="py-name" href="#" onclick="return doclink('link-15', 'GTKInterface', 'link-1');">GTKInterface</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">window</tt><tt class="py-op">)</tt> <tt class="py-comment"># if window is None, defaults to GTKWindow()</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="cocosCairo.Director.Director.setBackgroundColor
+cocosCairo.GTKInterface.GTKInterface.setBackgroundColor
+cocosCairo.Node.Node.setBackgroundColor" class="py-name" href="#" onclick="return doclink('link-16', 'setBackgroundColor', 'link-14');">setBackgroundColor</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_backgroundColor</tt><tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">                        <tt class="py-name">warnings</tt><tt class="py-op">.</tt><tt class="py-name">warn</tt><tt class="py-op">(</tt><tt class="py-string">"Window is already set."</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="Director.getGTKLayout"></a><div id="Director.getGTKLayout-def"><a name="L134"></a><tt class="py-lineno">134</tt> <a class="py-toggle" href="#" id="Director.getGTKLayout-toggle" onclick="return toggle('Director.getGTKLayout');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getGTKLayout">getGTKLayout</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getGTKLayout-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getGTKLayout-expanded"><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method cocosCairo.Director.Director.getGTKLayout()=cocosCairo.Director.Director-class.html#getGTKLayout,Method cocosCairo.GTKInterface.GTKInterface.getGTKLayout()=cocosCairo.GTKInterface.GTKInterface-class.html#getGTKLayout"><a title="cocosCairo.Director.Director.getGTKLayout
+cocosCairo.GTKInterface.GTKInterface.getGTKLayout" class="py-name" href="#" onclick="return doclink('link-17', 'getGTKLayout', 'link-17');">getGTKLayout</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-comment">#}</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-comment">#{ Scene methods.</tt> </tt>
+<a name="Director.getRunningScene"></a><div id="Director.getRunningScene-def"><a name="L143"></a><tt class="py-lineno">143</tt> <a class="py-toggle" href="#" id="Director.getRunningScene-toggle" onclick="return toggle('Director.getRunningScene');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getRunningScene">getRunningScene</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getRunningScene-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getRunningScene-expanded"><a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the L{Scene} which is currently running or C{None} if there is not a scene currently running.</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The running Scene.</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{Scene} (or C{None})</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt> </tt>
+</div><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="Director.runWithScene"></a><div id="Director.runWithScene-def"><a name="L152"></a><tt class="py-lineno">152</tt> <a class="py-toggle" href="#" id="Director.runWithScene-toggle" onclick="return toggle('Director.runWithScene');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#runWithScene">runWithScene</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">scene</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.runWithScene-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.runWithScene-expanded"><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-docstring">                Starts the application with a L{Scene}. This starts the main run loop.</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-docstring">                @param scene: The opening scene.</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-docstring">                @type scene: L{Scene}</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">:</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">                        <tt class="py-name">warnings</tt><tt class="py-op">.</tt><tt class="py-name">warn</tt><tt class="py-op">(</tt><tt class="py-string">"Scene is already running. Use replaceScene or pushScene instead."</tt><tt class="py-op">)</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method cocosCairo.Director.Director.pushScene()=cocosCairo.Director.Director-class.html#pushScene"><a title="cocosCairo.Director.Director.pushScene" class="py-name" href="#" onclick="return doclink('link-18', 'pushScene', 'link-18');">pushScene</a></tt><tt class="py-op">(</tt><tt class="py-name">scene</tt><tt class="py-op">)</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method cocosCairo.Director.Director._startAnimation()=cocosCairo.Director.Director-class.html#_startAnimation"><a title="cocosCairo.Director.Director._startAnimation" class="py-name" href="#" onclick="return doclink('link-19', '_startAnimation', 'link-19');">_startAnimation</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"> </tt>
+<a name="Director.replaceScene"></a><div id="Director.replaceScene-def"><a name="L167"></a><tt class="py-lineno">167</tt> <a class="py-toggle" href="#" id="Director.replaceScene-toggle" onclick="return toggle('Director.replaceScene');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#replaceScene">replaceScene</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">scene</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.replaceScene-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.replaceScene-expanded"><a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-docstring">                Replaces the currently running L{Scene} with a new Scene.</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-docstring">                @param scene: The new Scene.</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-docstring">                @type scene: L{Scene}</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">                <tt class="py-name">scene</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method cocosCairo.Node.Node.setRect()=cocosCairo.Node.Node-class.html#setRect"><a title="cocosCairo.Node.Node.setRect" class="py-name" href="#" onclick="return doclink('link-20', 'setRect', 'link-20');">setRect</a></tt><tt class="py-op">(</tt><tt id="link-21" class="py-name" targets="Class cocosCairo.Geometry.Rect=cocosCairo.Geometry.Rect-class.html"><a title="cocosCairo.Geometry.Rect" class="py-name" href="#" onclick="return doclink('link-21', 'Rect', 'link-21');">Rect</a></tt><tt class="py-op">(</tt><tt id="link-22" class="py-name" targets="Class cocosCairo.Geometry.Point=cocosCairo.Geometry.Point-class.html"><a title="cocosCairo.Geometry.Point" class="py-name" href="#" onclick="return doclink('link-22', 'Point', 'link-22');">Point</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="cocosCairo.Director.Director.getSize
+cocosCairo.GTKInterface.GTKInterface.getSize
+cocosCairo.Node.Node.getSize
+cocosCairo.SVGSprite.SVGSprite.getSize" class="py-name" href="#" onclick="return doclink('link-23', 'getSize', 'link-13');">getSize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">                <tt class="py-name">scene</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method cocosCairo.Node.Node.setDirector()=cocosCairo.Node.Node-class.html#setDirector,Method cocosCairo.Scene.Scene.setDirector()=cocosCairo.Scene.Scene-class.html#setDirector,Method cocosCairo.Transition.AbstractTransition.setDirector()=cocosCairo.Transition.AbstractTransition-class.html#setDirector"><a title="cocosCairo.Node.Node.setDirector
+cocosCairo.Scene.Scene.setDirector
+cocosCairo.Transition.AbstractTransition.setDirector" class="py-name" href="#" onclick="return doclink('link-24', 'setDirector', 'link-24');">setDirector</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">                <tt class="py-name">index</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-number">1</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt><tt class="py-op">[</tt><tt class="py-name">index</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">scene</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> <tt class="py-op">=</tt> <tt class="py-name">scene</tt> </tt>
+</div><a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"> </tt>
+<a name="Director.pushScene"></a><div id="Director.pushScene-def"><a name="L180"></a><tt class="py-lineno">180</tt> <a class="py-toggle" href="#" id="Director.pushScene-toggle" onclick="return toggle('Director.pushScene');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#pushScene">pushScene</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">scene</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.pushScene-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.pushScene-expanded"><a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-docstring">                Pushes a new L{Scene} onto the stack of Scenes.</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-docstring">                @param scene: The new Scene.</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-docstring">                @type scene: L{Scene}</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">                <tt class="py-name">scene</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="cocosCairo.Node.Node.setRect" class="py-name" href="#" onclick="return doclink('link-25', 'setRect', 'link-20');">setRect</a></tt><tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="cocosCairo.Geometry.Rect" class="py-name" href="#" onclick="return doclink('link-26', 'Rect', 'link-21');">Rect</a></tt><tt class="py-op">(</tt><tt id="link-27" class="py-name"><a title="cocosCairo.Geometry.Point" class="py-name" href="#" onclick="return doclink('link-27', 'Point', 'link-22');">Point</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="cocosCairo.Director.Director.getSize
+cocosCairo.GTKInterface.GTKInterface.getSize
+cocosCairo.Node.Node.getSize
+cocosCairo.SVGSprite.SVGSprite.getSize" class="py-name" href="#" onclick="return doclink('link-28', 'getSize', 'link-13');">getSize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">                <tt class="py-name">scene</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="cocosCairo.Node.Node.setDirector
+cocosCairo.Scene.Scene.setDirector
+cocosCairo.Transition.AbstractTransition.setDirector" class="py-name" href="#" onclick="return doclink('link-29', 'setDirector', 'link-24');">setDirector</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">scene</tt><tt class="py-op">)</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> <tt class="py-op">=</tt> <tt class="py-name">scene</tt> </tt>
+</div><a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"> </tt>
+<a name="Director.popScene"></a><div id="Director.popScene-def"><a name="L192"></a><tt class="py-lineno">192</tt> <a class="py-toggle" href="#" id="Director.popScene-toggle" onclick="return toggle('Director.popScene');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#popScene">popScene</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.popScene-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.popScene-expanded"><a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"><tt class="py-docstring">                Pops the most recently-pushed L{Scene} off the stack of Scenes.</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">                <tt class="py-name">scene</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt><tt class="py-op">.</tt><tt class="py-name">pop</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">                <tt class="py-name">count</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt><tt class="py-op">)</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">count</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method cocosCairo.Director.Director.end()=cocosCairo.Director.Director-class.html#end"><a title="cocosCairo.Director.Director.end" class="py-name" href="#" onclick="return doclink('link-30', 'end', 'link-30');">end</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt><tt class="py-op">[</tt><tt class="py-name">count</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line"><tt class="py-comment">#}</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line"> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"><tt class="py-comment">#{ Run methods.</tt> </tt>
+<a name="Director.end"></a><div id="Director.end-def"><a name="L206"></a><tt class="py-lineno">206</tt> <a class="py-toggle" href="#" id="Director.end-toggle" onclick="return toggle('Director.end');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#end">end</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.end-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.end-expanded"><a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line"><tt class="py-docstring">                Ends all animations, unregisters all L{GestureDispatch} listeners, and clears out the stack of L{Scene}s. This does not end the program by itself, however.</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method cocosCairo.Node.Node.onExit()=cocosCairo.Node.Node-class.html#onExit,Method cocosCairo.Scene.Scene.onExit()=cocosCairo.Scene.Scene-class.html#onExit,Method cocosCairo.Transition.AbstractTransition.onExit()=cocosCairo.Transition.AbstractTransition-class.html#onExit,Method cocosCairo.Transition.FadeTransition.onExit()=cocosCairo.Transition.FadeTransition-class.html#onExit"><a title="cocosCairo.Node.Node.onExit
+cocosCairo.Scene.Scene.onExit
+cocosCairo.Transition.AbstractTransition.onExit
+cocosCairo.Transition.FadeTransition.onExit" class="py-name" href="#" onclick="return doclink('link-31', 'onExit', 'link-31');">onExit</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">.</tt><tt class="py-name">cleanup</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scenesStack</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gestureDispatch</tt><tt class="py-op">.</tt><tt class="py-name">removeAllListeners</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method cocosCairo.Director.Director._stopAnimation()=cocosCairo.Director.Director-class.html#_stopAnimation"><a title="cocosCairo.Director.Director._stopAnimation" class="py-name" href="#" onclick="return doclink('link-32', '_stopAnimation', 'link-32');">_stopAnimation</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line"> </tt>
+<a name="Director._setNextScene"></a><div id="Director._setNextScene-def"><a name="L216"></a><tt class="py-lineno">216</tt> <a class="py-toggle" href="#" id="Director._setNextScene-toggle" onclick="return toggle('Director._setNextScene');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#_setNextScene">_setNextScene</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director._setNextScene-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director._setNextScene-expanded"><a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line"><tt class="py-docstring">                Private method which handles setting the next L{Scene}. This should not normally be called manually.</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">                <tt class="py-name">isTransitionRunning</tt> <tt class="py-op">=</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">,</tt> <tt id="link-33" class="py-name" targets="Class cocosCairo.Transition.AbstractTransition=cocosCairo.Transition.AbstractTransition-class.html"><a title="cocosCairo.Transition.AbstractTransition" class="py-name" href="#" onclick="return doclink('link-33', 'AbstractTransition', 'link-33');">AbstractTransition</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">                <tt class="py-name">isTransitionNext</tt> <tt class="py-op">=</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt><tt class="py-op">,</tt> <tt id="link-34" class="py-name"><a title="cocosCairo.Transition.AbstractTransition" class="py-name" href="#" onclick="return doclink('link-34', 'AbstractTransition', 'link-33');">AbstractTransition</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">isTransitionNext</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">True</tt> <tt class="py-keyword">and</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="cocosCairo.Node.Node.onExit
+cocosCairo.Scene.Scene.onExit
+cocosCairo.Transition.AbstractTransition.onExit
+cocosCairo.Transition.FadeTransition.onExit" class="py-name" href="#" onclick="return doclink('link-35', 'onExit', 'link-31');">onExit</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">isTransitionRunning</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">True</tt><tt class="py-op">:</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Method cocosCairo.Node.Node.onEnter()=cocosCairo.Node.Node-class.html#onEnter,Method cocosCairo.Scene.Scene.onEnter()=cocosCairo.Scene.Scene-class.html#onEnter,Method cocosCairo.Transition.AbstractTransition.onEnter()=cocosCairo.Transition.AbstractTransition-class.html#onEnter,Method cocosCairo.Transition.FadeTransition.onEnter()=cocosCairo.Transition.FadeTransition-class.html#onEnter,Method cocosCairo.Transition.JumpZoomTransition.onEnter()=cocosCairo.Transition.JumpZoomTransition-class.html#onEnter,Method cocosCairo.Transition.MoveInLeftTransition.onEnter()=cocosCairo.Transition.MoveInLeftTransition-class.html#onEnter,Method cocosCairo.Transition.RotoZoomTransition.onEnter()=cocosCairo.Transition.RotoZoomTransition-class.html#onEnter,Method cocosCairo.Transition.ShrinkGrowTransition.onEnter()=cocosCairo.Transition.ShrinkGrowTransition-class.html#onEnter,Method cocosCairo.Transition.SlideInLeftTransition.onEnter()=cocosCairo.Transition.SlideInLeftTransition-class.html#onEnter"><a title="cocosCairo.Node.Node.onEnter
+cocosCairo.Scene.Scene.onEnter
+cocosCairo.Transition.AbstractTransition.onEnter
+cocosCairo.Transition.FadeTransition.onEnter
+cocosCairo.Transition.JumpZoomTransition.onEnter
+cocosCairo.Transition.MoveInLeftTransition.onEnter
+cocosCairo.Transition.RotoZoomTransition.onEnter
+cocosCairo.Transition.ShrinkGrowTransition.onEnter
+cocosCairo.Transition.SlideInLeftTransition.onEnter" class="py-name" href="#" onclick="return doclink('link-36', 'onEnter', 'link-36');">onEnter</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_runningScene</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method cocosCairo.Node.Node.onEnterFromFinishedTransition()=cocosCairo.Node.Node-class.html#onEnterFromFinishedTransition,Method cocosCairo.Transition.AbstractTransition.onEnterFromFinishedTransition()=cocosCairo.Transition.AbstractTransition-class.html#onEnterFromFinishedTransition"><a title="cocosCairo.Node.Node.onEnterFromFinishedTransition
+cocosCairo.Transition.AbstractTransition.onEnterFromFinishedTransition" class="py-name" href="#" onclick="return doclink('link-37', 'onEnterFromFinishedTransition', 'link-37');">onEnterFromFinishedTransition</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"> </tt>
+<a name="Director.getAnimationInterval"></a><div id="Director.getAnimationInterval-def"><a name="L230"></a><tt class="py-lineno">230</tt> <a class="py-toggle" href="#" id="Director.getAnimationInterval-toggle" onclick="return toggle('Director.getAnimationInterval');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#getAnimationInterval">getAnimationInterval</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.getAnimationInterval-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.getAnimationInterval-expanded"><a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the animation interval. Default is C{30.0} FPS.</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"><tt class="py-docstring">                @return: Animation interval.</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: C{float}</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_animationInterval</tt> </tt>
+</div><a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"> </tt>
+<a name="Director.setAnimationInterval"></a><div id="Director.setAnimationInterval-def"><a name="L239"></a><tt class="py-lineno">239</tt> <a class="py-toggle" href="#" id="Director.setAnimationInterval-toggle" onclick="return toggle('Director.setAnimationInterval');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#setAnimationInterval">setAnimationInterval</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">animationInterval</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.setAnimationInterval-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.setAnimationInterval-expanded"><a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line"><tt class="py-docstring">                Sets the animation interval, that is, the frames per second for the application. Note that this must be set before L{runWithScene} is called, otherwise this method will have no effect.</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"><tt class="py-docstring">                @param animationInterval: The animation interval (FPS).</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line"><tt class="py-docstring">                @type animationInterval: C{float}</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_animationInterval</tt> <tt class="py-op">=</tt> <tt class="py-name">animationInterval</tt> </tt>
+</div><a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"> </tt>
+<a name="Director.pause"></a><div id="Director.pause-def"><a name="L248"></a><tt class="py-lineno">248</tt> <a class="py-toggle" href="#" id="Director.pause-toggle" onclick="return toggle('Director.pause');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#pause">pause</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.pause-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.pause-expanded"><a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"><tt class="py-docstring">                Pauses the application.</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isPaused</tt><tt class="py-op">:</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_oldAnimationInterval</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_animationInterval</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method cocosCairo.Director.Director.setAnimationInterval()=cocosCairo.Director.Director-class.html#setAnimationInterval"><a title="cocosCairo.Director.Director.setAnimationInterval" class="py-name" href="#" onclick="return doclink('link-38', 'setAnimationInterval', 'link-38');">setAnimationInterval</a></tt><tt class="py-op">(</tt><tt class="py-number">1.0</tt><tt class="py-op">/</tt><tt class="py-number">4.0</tt><tt class="py-op">)</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isPaused</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"> </tt>
+<a name="Director.resume"></a><div id="Director.resume-def"><a name="L258"></a><tt class="py-lineno">258</tt> <a class="py-toggle" href="#" id="Director.resume-toggle" onclick="return toggle('Director.resume');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#resume">resume</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.resume-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.resume-expanded"><a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line"><tt class="py-docstring">                Resumes the application.</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isPaused</tt><tt class="py-op">:</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="cocosCairo.Director.Director.setAnimationInterval" class="py-name" href="#" onclick="return doclink('link-39', 'setAnimationInterval', 'link-38');">setAnimationInterval</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_oldAnimationInterval</tt><tt class="py-op">)</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isPaused</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_dt</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line"><tt class="py-comment">#}</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line"> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line"> </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line"><tt class="py-comment">#{ Private methods.</tt> </tt>
+<a name="Director._startAnimation"></a><div id="Director._startAnimation-def"><a name="L271"></a><tt class="py-lineno">271</tt> <a class="py-toggle" href="#" id="Director._startAnimation-toggle" onclick="return toggle('Director._startAnimation');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#_startAnimation">_startAnimation</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director._startAnimation-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director._startAnimation-expanded"><a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line"><tt class="py-docstring">                Private method that calls L{_preMainLoop} to begin the main loop.</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRunning</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line"> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name" targets="Method cocosCairo.Director.Director._preMainLoop()=cocosCairo.Director.Director-class.html#_preMainLoop"><a title="cocosCairo.Director.Director._preMainLoop" class="py-name" href="#" onclick="return doclink('link-40', '_preMainLoop', 'link-40');">_preMainLoop</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name" targets="Method cocosCairo.Action.AbstractAction.start()=cocosCairo.Action.AbstractAction-class.html#start,Method cocosCairo.Action.RepeatForever.start()=cocosCairo.Action.RepeatForever-class.html#start,Method cocosCairo.Action.Speed.start()=cocosCairo.Action.Speed-class.html#start,Method cocosCairo.EaseAction.AbstractEaseAction.start()=cocosCairo.EaseAction.AbstractEaseAction-class.html#start,Method cocosCairo.GTKInterface.GTKInterface.start()=cocosCairo.GTKInterface.GTKInterface-class.html#start,Method cocosCairo.InstantAction.CallbackInstantAction.start()=cocosCairo.InstantAction.CallbackInstantAction-class.html#start,Method cocosCairo.InstantAction.Hide.start()=cocosCairo.InstantAction.Hide-class.html#start,Method cocosCairo.InstantAction.Place.start()=cocosCairo.InstantAction.Place-class.html#start,Method cocosCairo.InstantAction.Show.start()=cocosCairo.InstantAction.Show-class.html#start,Method cocosCairo.InstantAction.ToggleVisibility.start()=cocosCairo.InstantAction.ToggleVisibility-class.html#start,Method cocosCairo.IntervalAction.AbstractIntervalAction.start()=cocosCairo.IntervalAction.AbstractIntervalAction-class.html#start,Method cocosCairo.IntervalAction.BezierBy.start()=cocosCairo.IntervalAction.BezierBy-class.html#start,Method cocosCairo.IntervalAction.BezierTo.start()=cocosCairo.IntervalAction.BezierTo-class.html#start,Method cocosCairo.IntervalAction.FadeTo.start()=cocosCairo.IntervalAction.FadeTo-class.html#start,Method cocosCairo.IntervalAction.JumpBy.start()=cocosCairo.IntervalAction.JumpBy-class.html#start,Method cocosCairo.IntervalAction.JumpTo.start()=cocosCairo.IntervalAction.JumpTo-class.html#start,Method cocosCairo.IntervalAction.MoveBy.start()=cocosCairo.IntervalAction.MoveBy-class.html#start,Method cocosCairo.IntervalAction.MoveTo.start()=cocosCairo.IntervalAction.MoveTo-class.html#start,Method cocosCairo.IntervalAction.Repeat.start()=cocosCairo.IntervalAction.Repeat-class.html#start,Method cocosCairo.IntervalAction.ReverseTime.start()=cocosCairo.IntervalAction.ReverseTime-class.html#start,Method cocosCairo.IntervalAction.RotateBy.start()=cocosCairo.IntervalAction.RotateBy-class.html#start,Method cocosCairo.IntervalAction.RotateTo.start()=cocosCairo.IntervalAction.RotateTo-class.html#start,Method cocosCairo.IntervalAction.ScaleBy.start()=cocosCairo.IntervalAction.ScaleBy-class.html#start,Method cocosCairo.IntervalAction.ScaleTo.start()=cocosCairo.IntervalAction.ScaleTo-class.html#start,Method cocosCairo.IntervalAction.Sequence.start()=cocosCairo.IntervalAction.Sequence-class.html#start,Method cocosCairo.IntervalAction.Spawn.start()=cocosCairo.IntervalAction.Spawn-class.html#start,Method cocosCairo.IntervalAction.TintBy.start()=cocosCairo.IntervalAction.TintBy-class.html#start,Method cocosCairo.IntervalAction.TintTo.start()=cocosCairo.IntervalAction.TintTo-class.html#start"><a title="cocosCairo.Action.AbstractAction.start
+cocosCairo.Action.RepeatForever.start
+cocosCairo.Action.Speed.start
+cocosCairo.EaseAction.AbstractEaseAction.start
+cocosCairo.GTKInterface.GTKInterface.start
+cocosCairo.InstantAction.CallbackInstantAction.start
+cocosCairo.InstantAction.Hide.start
+cocosCairo.InstantAction.Place.start
+cocosCairo.InstantAction.Show.start
+cocosCairo.InstantAction.ToggleVisibility.start
+cocosCairo.IntervalAction.AbstractIntervalAction.start
+cocosCairo.IntervalAction.BezierBy.start
+cocosCairo.IntervalAction.BezierTo.start
+cocosCairo.IntervalAction.FadeTo.start
+cocosCairo.IntervalAction.JumpBy.start
+cocosCairo.IntervalAction.JumpTo.start
+cocosCairo.IntervalAction.MoveBy.start
+cocosCairo.IntervalAction.MoveTo.start
+cocosCairo.IntervalAction.Repeat.start
+cocosCairo.IntervalAction.ReverseTime.start
+cocosCairo.IntervalAction.RotateBy.start
+cocosCairo.IntervalAction.RotateTo.start
+cocosCairo.IntervalAction.ScaleBy.start
+cocosCairo.IntervalAction.ScaleTo.start
+cocosCairo.IntervalAction.Sequence.start
+cocosCairo.IntervalAction.Spawn.start
+cocosCairo.IntervalAction.TintBy.start
+cocosCairo.IntervalAction.TintTo.start" class="py-name" href="#" onclick="return doclink('link-41', 'start', 'link-41');">start</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line"> </tt>
+<a name="Director._preMainLoop"></a><div id="Director._preMainLoop-def"><a name="L280"></a><tt class="py-lineno">280</tt> <a class="py-toggle" href="#" id="Director._preMainLoop-toggle" onclick="return toggle('Director._preMainLoop');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#_preMainLoop">_preMainLoop</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director._preMainLoop-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director._preMainLoop-expanded"><a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line"><tt class="py-docstring">                Private method that sets up the L{_mainLoop} method to be called repeatedly.</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">                <tt class="py-name">interval</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_animationInterval</tt><tt class="py-op">*</tt><tt class="py-number">1000</tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">                <tt class="py-name">interval</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">interval</tt><tt class="py-op">)</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line">                <tt class="py-name">gobject</tt><tt class="py-op">.</tt><tt class="py-name">timeout_add</tt><tt class="py-op">(</tt><tt class="py-name">interval</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name" targets="Method cocosCairo.Director.Director._mainLoop()=cocosCairo.Director.Director-class.html#_mainLoop"><a title="cocosCairo.Director.Director._mainLoop" class="py-name" href="#" onclick="return doclink('link-42', '_mainLoop', 'link-42');">_mainLoop</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line"> </tt>
+<a name="Director._mainLoop"></a><div id="Director._mainLoop-def"><a name="L288"></a><tt class="py-lineno">288</tt> <a class="py-toggle" href="#" id="Director._mainLoop-toggle" onclick="return toggle('Director._mainLoop');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#_mainLoop">_mainLoop</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director._mainLoop-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director._mainLoop-expanded"><a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line"><tt class="py-docstring">                Private method which is called repeatedly to redraw the L{Node}s and to update the L{Scheduler} with the time that has passed since the last loop.</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name" targets="Method cocosCairo.Director.Director._calculateDeltaTime()=cocosCairo.Director.Director-class.html#_calculateDeltaTime"><a title="cocosCairo.Director.Director._calculateDeltaTime" class="py-name" href="#" onclick="return doclink('link-43', '_calculateDeltaTime', 'link-43');">_calculateDeltaTime</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isPaused</tt><tt class="py-op">:</tt> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt><tt class="py-op">:</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line">                                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scheduler</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Method cocosCairo.ActionManager.ActionManager.tick()=cocosCairo.ActionManager.ActionManager-class.html#tick,Method cocosCairo.Scheduler.Scheduler.tick()=cocosCairo.Scheduler.Scheduler-class.html#tick"><a title="cocosCairo.ActionManager.ActionManager.tick
+cocosCairo.Scheduler.Scheduler.tick" class="py-name" href="#" onclick="return doclink('link-44', 'tick', 'link-44');">tick</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_dt</tt><tt class="py-op">)</tt> </tt>
+<a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line">                        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line">                                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_scheduler</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="cocosCairo.ActionManager.ActionManager.tick
+cocosCairo.Scheduler.Scheduler.tick" class="py-name" href="#" onclick="return doclink('link-45', 'tick', 'link-44');">tick</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_animationInterval</tt><tt class="py-op">)</tt> </tt>
+<a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_nextScene</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name" targets="Method cocosCairo.Director.Director._setNextScene()=cocosCairo.Director.Director-class.html#_setNextScene"><a title="cocosCairo.Director.Director._setNextScene" class="py-name" href="#" onclick="return doclink('link-46', '_setNextScene', 'link-46');">_setNextScene</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L300"></a><tt class="py-lineno">300</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name" targets="Method cocosCairo.GTKInterface.GTKInterface.redraw()=cocosCairo.GTKInterface.GTKInterface-class.html#redraw"><a title="cocosCairo.GTKInterface.GTKInterface.redraw" class="py-name" href="#" onclick="return doclink('link-47', 'redraw', 'link-47');">redraw</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line"> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRunning</tt><tt class="py-op">:</tt> </tt>
+<a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L304"></a><tt class="py-lineno">304</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line"> </tt>
+<a name="Director._calculateDeltaTime"></a><div id="Director._calculateDeltaTime-def"><a name="L307"></a><tt class="py-lineno">307</tt> <a class="py-toggle" href="#" id="Director._calculateDeltaTime-toggle" onclick="return toggle('Director._calculateDeltaTime');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#_calculateDeltaTime">_calculateDeltaTime</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director._calculateDeltaTime-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director._calculateDeltaTime-expanded"><a name="L308"></a><tt class="py-lineno">308</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L309"></a><tt class="py-lineno">309</tt>  <tt class="py-line"><tt class="py-docstring">                Private method which calculates how much time has elapsed since the last loop iteration. This method should generally not be called manually.</tt> </tt>
+<a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line">                <tt class="py-name">timestamp</tt> <tt class="py-op">=</tt> <tt class="py-name">time</tt><tt class="py-op">.</tt><tt class="py-name">time</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-comment"># now</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isNextDeltaTimeZero</tt><tt class="py-op">:</tt> </tt>
+<a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_dt</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L314"></a><tt class="py-lineno">314</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isNextDeltaTimeZero</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L315"></a><tt class="py-lineno">315</tt>  <tt class="py-line">                <tt class="py-comment">#elif self._lastTimeStamp == 0.0:</tt> </tt>
+<a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line">                <tt class="py-comment">#       self._dt = 0</tt> </tt>
+<a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L318"></a><tt class="py-lineno">318</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_dt</tt> <tt class="py-op">=</tt> <tt class="py-name">timestamp</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_lastTimeStamp</tt> </tt>
+<a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_lastTimeStamp</tt> <tt class="py-op">=</tt> <tt class="py-name">timestamp</tt> </tt>
+</div><a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line"> </tt>
+<a name="Director._stopAnimation"></a><div id="Director._stopAnimation-def"><a name="L321"></a><tt class="py-lineno">321</tt> <a class="py-toggle" href="#" id="Director._stopAnimation-toggle" onclick="return toggle('Director._stopAnimation');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#_stopAnimation">_stopAnimation</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director._stopAnimation-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director._stopAnimation-expanded"><a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line"><tt class="py-docstring">                Private method which stops the main loop.</tt> </tt>
+<a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L325"></a><tt class="py-lineno">325</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRunning</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name" targets="Method cocosCairo.Director.Director.stopRecording()=cocosCairo.Director.Director-class.html#stopRecording,Method cocosCairo.GTKInterface.GTKLayout.stopRecording()=cocosCairo.GTKInterface.GTKLayout-class.html#stopRecording"><a title="cocosCairo.Director.Director.stopRecording
+cocosCairo.GTKInterface.GTKLayout.stopRecording" class="py-name" href="#" onclick="return doclink('link-48', 'stopRecording', 'link-48');">stopRecording</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line"><tt class="py-comment">#}</tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line"> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line"><tt class="py-comment">#{ Recording methods.</tt> </tt>
+<a name="Director.takeScreenshot"></a><div id="Director.takeScreenshot-def"><a name="L330"></a><tt class="py-lineno">330</tt> <a class="py-toggle" href="#" id="Director.takeScreenshot-toggle" onclick="return toggle('Director.takeScreenshot');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#takeScreenshot">takeScreenshot</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">imagePath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.takeScreenshot-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.takeScreenshot-expanded"><a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L332"></a><tt class="py-lineno">332</tt>  <tt class="py-line"><tt class="py-docstring">                Takes a screenshot of the application. Note that PyGTK widgets will not be rendered to the image.</tt> </tt>
+<a name="L333"></a><tt class="py-lineno">333</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line"><tt class="py-docstring">                @param imagePath: The name of the file to be saved.</tt> </tt>
+<a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line"><tt class="py-docstring">                @type imagePath: C{string}</tt> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L337"></a><tt class="py-lineno">337</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Method cocosCairo.Director.Director.takeScreenshot()=cocosCairo.Director.Director-class.html#takeScreenshot,Method cocosCairo.GTKInterface.GTKLayout.takeScreenshot()=cocosCairo.GTKInterface.GTKLayout-class.html#takeScreenshot"><a title="cocosCairo.Director.Director.takeScreenshot
+cocosCairo.GTKInterface.GTKLayout.takeScreenshot" class="py-name" href="#" onclick="return doclink('link-49', 'takeScreenshot', 'link-49');">takeScreenshot</a></tt><tt class="py-op">(</tt><tt class="py-name">imagePath</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line"> </tt>
+<a name="Director.startRecording"></a><div id="Director.startRecording-def"><a name="L339"></a><tt class="py-lineno">339</tt> <a class="py-toggle" href="#" id="Director.startRecording-toggle" onclick="return toggle('Director.startRecording');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#startRecording">startRecording</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">directoryPath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.startRecording-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.startRecording-expanded"><a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name" targets="Method cocosCairo.Director.Director.startRecording()=cocosCairo.Director.Director-class.html#startRecording,Method cocosCairo.GTKInterface.GTKLayout.startRecording()=cocosCairo.GTKInterface.GTKLayout-class.html#startRecording"><a title="cocosCairo.Director.Director.startRecording
+cocosCairo.GTKInterface.GTKLayout.startRecording" class="py-name" href="#" onclick="return doclink('link-50', 'startRecording', 'link-50');">startRecording</a></tt><tt class="py-op">(</tt><tt class="py-name">directoryPath</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line"> </tt>
+<a name="Director.stopRecording"></a><div id="Director.stopRecording-def"><a name="L343"></a><tt class="py-lineno">343</tt> <a class="py-toggle" href="#" id="Director.stopRecording-toggle" onclick="return toggle('Director.stopRecording');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Director.Director-class.html#stopRecording">stopRecording</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Director.stopRecording-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Director.stopRecording-expanded"><a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L345"></a><tt class="py-lineno">345</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gtkInterface</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="cocosCairo.Director.Director.stopRecording
+cocosCairo.GTKInterface.GTKLayout.stopRecording" class="py-name" href="#" onclick="return doclink('link-51', 'stopRecording', 'link-48');">stopRecording</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line"><tt class="py-comment">#}</tt> </tt>
+<a name="L347"></a><tt class="py-lineno">347</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:35 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

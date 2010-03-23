@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>CocosCairo.cocosCairo.InstantAction</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="CocosCairo.cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;CocosCairo ::
+        <a href="CocosCairo.cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;InstantAction
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="CocosCairo.cocosCairo.InstantAction-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="CocosCairo.cocosCairo.InstantAction-module.html">Module CocosCairo.cocosCairo.InstantAction</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module CocosCairo.cocosCairo.Action=CocosCairo.cocosCairo.Action-module.html"><a title="CocosCairo.cocosCairo.Action" class="py-name" href="#" onclick="return doclink('link-0', 'Action', 'link-0');">Action</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Method CocosCairo.cocosCairo.Color.Color.copy()=CocosCairo.cocosCairo.Color.Color-class.html#copy,Method CocosCairo.cocosCairo.Geometry.Point.copy()=CocosCairo.cocosCairo.Geometry.Point-class.html#copy,Method CocosCairo.cocosCairo.Geometry.Rect.copy()=CocosCairo.cocosCairo.Geometry.Rect-class.html#copy,Method CocosCairo.cocosCairo.Geometry.Size.copy()=CocosCairo.cocosCairo.Geometry.Size-class.html#copy,Method CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.copy()=CocosCairo.cocosCairo.IntervalAction.BezierConfiguration-class.html#copy"><a title="CocosCairo.cocosCairo.Color.Color.copy
+CocosCairo.cocosCairo.Geometry.Point.copy
+CocosCairo.cocosCairo.Geometry.Rect.copy
+CocosCairo.cocosCairo.Geometry.Size.copy
+CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.copy" class="py-name" href="#" onclick="return doclink('link-1', 'copy', 'link-1');">copy</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name"><a title="CocosCairo.cocosCairo.Color.Color.copy
+CocosCairo.cocosCairo.Geometry.Point.copy
+CocosCairo.cocosCairo.Geometry.Rect.copy
+CocosCairo.cocosCairo.Geometry.Size.copy
+CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.copy" class="py-name" href="#" onclick="return doclink('link-2', 'copy', 'link-1');">copy</a></tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"> </tt>
+<a name="InstantAction"></a><div id="InstantAction-def"><a name="L4"></a><tt class="py-lineno"> 4</tt> <a class="py-toggle" href="#" id="InstantAction-toggle" onclick="return toggle('InstantAction');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.InstantAction-class.html">InstantAction</a><tt class="py-op">(</tt><tt class="py-base-class">FiniteTimeAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstantAction-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="InstantAction-expanded"><a name="InstantAction.__init__"></a><div id="InstantAction.__init__-def"><a name="L5"></a><tt class="py-lineno"> 5</tt> <a class="py-toggle" href="#" id="InstantAction.__init__-toggle" onclick="return toggle('InstantAction.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstantAction.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="InstantAction.__init__-expanded"><a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">                <tt id="link-3" class="py-name" targets="Class CocosCairo.cocosCairo.Action.FiniteTimeAction=CocosCairo.cocosCairo.Action.FiniteTimeAction-class.html"><a title="CocosCairo.cocosCairo.Action.FiniteTimeAction" class="py-name" href="#" onclick="return doclink('link-3', 'FiniteTimeAction', 'link-3');">FiniteTimeAction</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method CocosCairo.cocosCairo.AbstractController.AbstractController.__init__()=CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#__init__,Method CocosCairo.cocosCairo.AbstractWindow.AbstractWindow.__init__()=CocosCairo.cocosCairo.AbstractWindow.AbstractWindow-class.html#__init__,Method CocosCairo.cocosCairo.Action.AbstractAction.__init__()=CocosCairo.cocosCairo.Action.AbstractAction-class.html#__init__,Method CocosCairo.cocosCairo.Action.FiniteTimeAction.__init__()=CocosCairo.cocosCairo.Action.FiniteTimeAction-class.html#__init__,Method CocosCairo.cocosCairo.Action.RepeatForever.__init__()=CocosCairo.cocosCairo.Action.RepeatForever-class.html#__init__,Method CocosCairo.cocosCairo.Action.Speed.__init__()=CocosCairo.cocosCairo.Action.Speed-class.html#__init__,Method CocosCairo.cocosCairo.ActionManager.ActionManager.__init__()=CocosCairo.cocosCairo.ActionManager.ActionManager-class.html#__init__,Method CocosCairo.cocosCairo.Color.Color.__init__()=CocosCairo.cocosCairo.Color.Color-class.html#__init__,Method CocosCairo.cocosCairo.ColorNode.ColorNode.__init__()=CocosCairo.cocosCairo.ColorNode.ColorNode-class.html#__init__,Method CocosCairo.cocosCairo.Director.Director.__init__()=CocosCairo.cocosCairo.Director.Director-class.html#__init__,Method CocosCairo.cocosCairo.EaseAction.EaseAction.__init__()=CocosCairo.cocosCairo.EaseAction.EaseAction-class.html#__init__,Method CocosCairo.cocosCairo.EaseAction.EaseElastic.__init__()=CocosCairo.cocosCairo.EaseAction.EaseElastic-class.html#__init__,Method CocosCairo.cocosCairo.EaseAction.EaseRateAction.__init__()=CocosCairo.cocosCairo.EaseAction.EaseRateAction-class.html#__init__,Method CocosCairo.cocosCairo.GTKInterface.GTKInterface.__init__()=CocosCairo.cocosCairo.GTKInterface.GTKInterface-class.html#__init__,Method CocosCairo.cocosCairo.GTKInterface.GTKLayout.__init__()=CocosCairo.cocosCairo.GTKInterface.GTKLayout-class.html#__init__,Method CocosCairo.cocosCairo.Geometry.Point.__init__()=CocosCairo.cocosCairo.Geometry.Point-class.html#__init__,Method CocosCairo.cocosCairo.Geometry.Rect.__init__()=CocosCairo.cocosCairo.Geometry.Rect-class.html#__init__,Method CocosCairo.cocosCairo.Geometry.Size.__init__()=CocosCairo.cocosCairo.Geometry.Size-class.html#__init__,Method CocosCairo.cocosCairo.GestureDispatch.GestureDispatch.__init__()=CocosCairo.cocosCairo.GestureDispatch.GestureDispatch-class.html#__init__,Method CocosCairo.cocosCairo.GestureEvent.GestureEvent.__init__()=CocosCairo.cocosCairo.GestureEvent.GestureEvent-class.html#__init__,Method CocosCairo.cocosCairo.GestureEvent.KeyboardGestureEvent.__init__()=CocosCairo.cocosCairo.GestureEvent.KeyboardGestureEvent-class.html#__init__,Method CocosCairo.cocosCairo.GestureEvent.MouseGestureEvent.__init__()=CocosCairo.cocosCairo.GestureEvent.MouseGestureEvent-class.html#__init__,Method CocosCairo.cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__()=CocosCairo.cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html#__init__,Method CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.__init__()=CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html#__init__,Method CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData.__init__()=CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData-class.html#__init__,Method CocosCairo.cocosCairo.InstantAction.InstantAction.__init__()=CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#__init__,Method CocosCairo.cocosCairo.InstantAction.Place.__init__()=CocosCairo.cocosCairo.InstantAction.Place-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.Animate.__init__()=CocosCairo.cocosCairo.IntervalAction.Animate-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.BezierBy.__init__()=CocosCairo.cocosCairo.IntervalAction.BezierBy-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.__init__()=CocosCairo.cocosCairo.IntervalAction.BezierConfiguration-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.Blink.__init__()=CocosCairo.cocosCairo.IntervalAction.Blink-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.FadeTo.__init__()=CocosCairo.cocosCairo.IntervalAction.FadeTo-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.IntervalAction.__init__()=CocosCairo.cocosCairo.IntervalAction.IntervalAction-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.JumpBy.__init__()=CocosCairo.cocosCairo.IntervalAction.JumpBy-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.MoveBy.__init__()=CocosCairo.cocosCairo.IntervalAction.MoveBy-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.MoveTo.__init__()=CocosCairo.cocosCairo.IntervalAction.MoveTo-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.Repeat.__init__()=CocosCairo.cocosCairo.IntervalAction.Repeat-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.ReverseTime.__init__()=CocosCairo.cocosCairo.IntervalAction.ReverseTime-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.RotateBy.__init__()=CocosCairo.cocosCairo.IntervalAction.RotateBy-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.RotateTo.__init__()=CocosCairo.cocosCairo.IntervalAction.RotateTo-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.ScaleTo.__init__()=CocosCairo.cocosCairo.IntervalAction.ScaleTo-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.Sequence.__init__()=CocosCairo.cocosCairo.IntervalAction.Sequence-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.Spawn.__init__()=CocosCairo.cocosCairo.IntervalAction.Spawn-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.TintBy.__init__()=CocosCairo.cocosCairo.IntervalAction.TintBy-class.html#__init__,Method CocosCairo.cocosCairo.IntervalAction.TintTo.__init__()=CocosCairo.cocosCairo.IntervalAction.TintTo-class.html#__init__,Method CocosCairo.cocosCairo.ListenedObject.ListenedObject.__init__()=CocosCairo.cocosCairo.ListenedObject.ListenedObject-class.html#__init__,Method CocosCairo.cocosCairo.Node.Node.__init__()=CocosCairo.cocosCairo.Node.Node-class.html#__init__,Method CocosCairo.cocosCairo.PangoLabel.PangoLabel.__init__()=CocosCairo.cocosCairo.PangoLabel.PangoLabel-class.html#__init__,Method CocosCairo.cocosCairo.Primitive.LineNode.__init__()=CocosCairo.cocosCairo.Primitive.LineNode-class.html#__init__,Method CocosCairo.cocosCairo.Primitive.RectangleNode.__init__()=CocosCairo.cocosCairo.Primitive.RectangleNode-class.html#__init__,Method CocosCairo.cocosCairo.Scene.Scene.__init__()=CocosCairo.cocosCairo.Scene.Scene-class.html#__init__,Method CocosCairo.cocosCairo.Scheduler.Scheduler.__init__()=CocosCairo.cocosCairo.Scheduler.Scheduler-class.html#__init__,Method CocosCairo.cocosCairo.Sprite.Sprite.__init__()=CocosCairo.cocosCairo.Sprite.Sprite-class.html#__init__,Method CocosCairo.cocosCairo.Timer.Timer.__init__()=CocosCairo.cocosCairo.Timer.Timer-class.html#__init__,Method CocosCairo.cocosCairo.Transition.AbstractTransition.__init__()=CocosCairo.cocosCairo.Transition.AbstractTransition-class.html#__init__,Method CocosCairo.cocosCairo.Transition.FadeTransition.__init__()=CocosCairo.cocosCairo.Transition.FadeTransition-class.html#__init__"><a title="CocosCairo.cocosCairo.AbstractController.AbstractController.__init__
+CocosCairo.cocosCairo.AbstractWindow.AbstractWindow.__init__
+CocosCairo.cocosCairo.Action.AbstractAction.__init__
+CocosCairo.cocosCairo.Action.FiniteTimeAction.__init__
+CocosCairo.cocosCairo.Action.RepeatForever.__init__
+CocosCairo.cocosCairo.Action.Speed.__init__
+CocosCairo.cocosCairo.ActionManager.ActionManager.__init__
+CocosCairo.cocosCairo.Color.Color.__init__
+CocosCairo.cocosCairo.ColorNode.ColorNode.__init__
+CocosCairo.cocosCairo.Director.Director.__init__
+CocosCairo.cocosCairo.EaseAction.EaseAction.__init__
+CocosCairo.cocosCairo.EaseAction.EaseElastic.__init__
+CocosCairo.cocosCairo.EaseAction.EaseRateAction.__init__
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.__init__
+CocosCairo.cocosCairo.GTKInterface.GTKLayout.__init__
+CocosCairo.cocosCairo.Geometry.Point.__init__
+CocosCairo.cocosCairo.Geometry.Rect.__init__
+CocosCairo.cocosCairo.Geometry.Size.__init__
+CocosCairo.cocosCairo.GestureDispatch.GestureDispatch.__init__
+CocosCairo.cocosCairo.GestureEvent.GestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.KeyboardGestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.MouseGestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.__init__
+CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData.__init__
+CocosCairo.cocosCairo.InstantAction.InstantAction.__init__
+CocosCairo.cocosCairo.InstantAction.Place.__init__
+CocosCairo.cocosCairo.IntervalAction.Animate.__init__
+CocosCairo.cocosCairo.IntervalAction.BezierBy.__init__
+CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.__init__
+CocosCairo.cocosCairo.IntervalAction.Blink.__init__
+CocosCairo.cocosCairo.IntervalAction.FadeTo.__init__
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.__init__
+CocosCairo.cocosCairo.IntervalAction.JumpBy.__init__
+CocosCairo.cocosCairo.IntervalAction.MoveBy.__init__
+CocosCairo.cocosCairo.IntervalAction.MoveTo.__init__
+CocosCairo.cocosCairo.IntervalAction.Repeat.__init__
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.__init__
+CocosCairo.cocosCairo.IntervalAction.RotateBy.__init__
+CocosCairo.cocosCairo.IntervalAction.RotateTo.__init__
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.__init__
+CocosCairo.cocosCairo.IntervalAction.Sequence.__init__
+CocosCairo.cocosCairo.IntervalAction.Spawn.__init__
+CocosCairo.cocosCairo.IntervalAction.TintBy.__init__
+CocosCairo.cocosCairo.IntervalAction.TintTo.__init__
+CocosCairo.cocosCairo.ListenedObject.ListenedObject.__init__
+CocosCairo.cocosCairo.Node.Node.__init__
+CocosCairo.cocosCairo.PangoLabel.PangoLabel.__init__
+CocosCairo.cocosCairo.Primitive.LineNode.__init__
+CocosCairo.cocosCairo.Primitive.RectangleNode.__init__
+CocosCairo.cocosCairo.Scene.Scene.__init__
+CocosCairo.cocosCairo.Scheduler.Scheduler.__init__
+CocosCairo.cocosCairo.Sprite.Sprite.__init__
+CocosCairo.cocosCairo.Timer.Timer.__init__
+CocosCairo.cocosCairo.Transition.AbstractTransition.__init__
+CocosCairo.cocosCairo.Transition.FadeTransition.__init__" class="py-name" href="#" onclick="return doclink('link-4', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="InstantAction.isDone"></a><div id="InstantAction.isDone-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="InstantAction.isDone-toggle" onclick="return toggle('InstantAction.isDone');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#isDone">isDone</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstantAction.isDone-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="InstantAction.isDone-expanded"><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="InstantAction.step"></a><div id="InstantAction.step-def"><a name="L11"></a><tt class="py-lineno">11</tt> <a class="py-toggle" href="#" id="InstantAction.step-toggle" onclick="return toggle('InstantAction.step');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#step">step</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">dt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstantAction.step-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="InstantAction.step-expanded"><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method CocosCairo.cocosCairo.Action.AbstractAction.update()=CocosCairo.cocosCairo.Action.AbstractAction-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseAction.update()=CocosCairo.cocosCairo.EaseAction.EaseAction-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseBackIn.update()=CocosCairo.cocosCairo.EaseAction.EaseBackIn-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseBackInOut.update()=CocosCairo.cocosCairo.EaseAction.EaseBackInOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseBackOut.update()=CocosCairo.cocosCairo.EaseAction.EaseBackOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseBounceIn.update()=CocosCairo.cocosCairo.EaseAction.EaseBounceIn-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseBounceInOut.update()=CocosCairo.cocosCairo.EaseAction.EaseBounceInOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseBounceOut.update()=CocosCairo.cocosCairo.EaseAction.EaseBounceOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseElasticIn.update()=CocosCairo.cocosCairo.EaseAction.EaseElasticIn-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseElasticInOut.update()=CocosCairo.cocosCairo.EaseAction.EaseElasticInOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseElasticOut.update()=CocosCairo.cocosCairo.EaseAction.EaseElasticOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseExponentialIn.update()=CocosCairo.cocosCairo.EaseAction.EaseExponentialIn-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseExponentialInOut.update()=CocosCairo.cocosCairo.EaseAction.EaseExponentialInOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseExponentialOut.update()=CocosCairo.cocosCairo.EaseAction.EaseExponentialOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseIn.update()=CocosCairo.cocosCairo.EaseAction.EaseIn-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseInOut.update()=CocosCairo.cocosCairo.EaseAction.EaseInOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseOut.update()=CocosCairo.cocosCairo.EaseAction.EaseOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseSineIn.update()=CocosCairo.cocosCairo.EaseAction.EaseSineIn-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseSineInOut.update()=CocosCairo.cocosCairo.EaseAction.EaseSineInOut-class.html#update,Method CocosCairo.cocosCairo.EaseAction.EaseSineOut.update()=CocosCairo.cocosCairo.EaseAction.EaseSineOut-class.html#update,Method CocosCairo.cocosCairo.InstantAction.InstantAction.update()=CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.Animate.update()=CocosCairo.cocosCairo.IntervalAction.Animate-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.BezierBy.update()=CocosCairo.cocosCairo.IntervalAction.BezierBy-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.Blink.update()=CocosCairo.cocosCairo.IntervalAction.Blink-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.DelayTime.update()=CocosCairo.cocosCairo.IntervalAction.DelayTime-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.FadeIn.update()=CocosCairo.cocosCairo.IntervalAction.FadeIn-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.FadeOut.update()=CocosCairo.cocosCairo.IntervalAction.FadeOut-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.FadeTo.update()=CocosCairo.cocosCairo.IntervalAction.FadeTo-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.JumpBy.update()=CocosCairo.cocosCairo.IntervalAction.JumpBy-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.MoveTo.update()=CocosCairo.cocosCairo.IntervalAction.MoveTo-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.Repeat.update()=CocosCairo.cocosCairo.IntervalAction.Repeat-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.ReverseTime.update()=CocosCairo.cocosCairo.IntervalAction.ReverseTime-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.RotateBy.update()=CocosCairo.cocosCairo.IntervalAction.RotateBy-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.RotateTo.update()=CocosCairo.cocosCairo.IntervalAction.RotateTo-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.ScaleTo.update()=CocosCairo.cocosCairo.IntervalAction.ScaleTo-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.Sequence.update()=CocosCairo.cocosCairo.IntervalAction.Sequence-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.Spawn.update()=CocosCairo.cocosCairo.IntervalAction.Spawn-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.TintBy.update()=CocosCairo.cocosCairo.IntervalAction.TintBy-class.html#update,Method CocosCairo.cocosCairo.IntervalAction.TintTo.update()=CocosCairo.cocosCairo.IntervalAction.TintTo-class.html#update"><a title="CocosCairo.cocosCairo.Action.AbstractAction.update
+CocosCairo.cocosCairo.EaseAction.EaseAction.update
+CocosCairo.cocosCairo.EaseAction.EaseBackIn.update
+CocosCairo.cocosCairo.EaseAction.EaseBackInOut.update
+CocosCairo.cocosCairo.EaseAction.EaseBackOut.update
+CocosCairo.cocosCairo.EaseAction.EaseBounceIn.update
+CocosCairo.cocosCairo.EaseAction.EaseBounceInOut.update
+CocosCairo.cocosCairo.EaseAction.EaseBounceOut.update
+CocosCairo.cocosCairo.EaseAction.EaseElasticIn.update
+CocosCairo.cocosCairo.EaseAction.EaseElasticInOut.update
+CocosCairo.cocosCairo.EaseAction.EaseElasticOut.update
+CocosCairo.cocosCairo.EaseAction.EaseExponentialIn.update
+CocosCairo.cocosCairo.EaseAction.EaseExponentialInOut.update
+CocosCairo.cocosCairo.EaseAction.EaseExponentialOut.update
+CocosCairo.cocosCairo.EaseAction.EaseIn.update
+CocosCairo.cocosCairo.EaseAction.EaseInOut.update
+CocosCairo.cocosCairo.EaseAction.EaseOut.update
+CocosCairo.cocosCairo.EaseAction.EaseSineIn.update
+CocosCairo.cocosCairo.EaseAction.EaseSineInOut.update
+CocosCairo.cocosCairo.EaseAction.EaseSineOut.update
+CocosCairo.cocosCairo.InstantAction.InstantAction.update
+CocosCairo.cocosCairo.IntervalAction.Animate.update
+CocosCairo.cocosCairo.IntervalAction.BezierBy.update
+CocosCairo.cocosCairo.IntervalAction.Blink.update
+CocosCairo.cocosCairo.IntervalAction.DelayTime.update
+CocosCairo.cocosCairo.IntervalAction.FadeIn.update
+CocosCairo.cocosCairo.IntervalAction.FadeOut.update
+CocosCairo.cocosCairo.IntervalAction.FadeTo.update
+CocosCairo.cocosCairo.IntervalAction.JumpBy.update
+CocosCairo.cocosCairo.IntervalAction.MoveTo.update
+CocosCairo.cocosCairo.IntervalAction.Repeat.update
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.update
+CocosCairo.cocosCairo.IntervalAction.RotateBy.update
+CocosCairo.cocosCairo.IntervalAction.RotateTo.update
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.update
+CocosCairo.cocosCairo.IntervalAction.Sequence.update
+CocosCairo.cocosCairo.IntervalAction.Spawn.update
+CocosCairo.cocosCairo.IntervalAction.TintBy.update
+CocosCairo.cocosCairo.IntervalAction.TintTo.update" class="py-name" href="#" onclick="return doclink('link-5', 'update', 'link-5');">update</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="InstantAction.update"></a><div id="InstantAction.update-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="InstantAction.update-toggle" onclick="return toggle('InstantAction.update');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#update">update</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">dt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstantAction.update-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="InstantAction.update-expanded"><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">                <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="InstantAction.reverse"></a><div id="InstantAction.reverse-def"><a name="L17"></a><tt class="py-lineno">17</tt> <a class="py-toggle" href="#" id="InstantAction.reverse-toggle" onclick="return toggle('InstantAction.reverse');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.InstantAction-class.html#reverse">reverse</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstantAction.reverse-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="InstantAction.reverse-expanded"><a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt id="link-6" class="py-name"><a title="CocosCairo.cocosCairo.Color.Color.copy
+CocosCairo.cocosCairo.Geometry.Point.copy
+CocosCairo.cocosCairo.Geometry.Rect.copy
+CocosCairo.cocosCairo.Geometry.Size.copy
+CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.copy" class="py-name" href="#" onclick="return doclink('link-6', 'copy', 'link-1');">copy</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="Show"></a><div id="Show-def"><a name="L21"></a><tt class="py-lineno">21</tt> <a class="py-toggle" href="#" id="Show-toggle" onclick="return toggle('Show');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Show-class.html">Show</a><tt class="py-op">(</tt><tt class="py-base-class">InstantAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Show-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Show-expanded"><a name="Show.start"></a><div id="Show.start-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="Show.start-toggle" onclick="return toggle('Show.start');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Show-class.html#start">start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Show.start-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Show.start-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">                <tt id="link-7" class="py-name" targets="Module CocosCairo.cocosCairo.InstantAction=CocosCairo.cocosCairo.InstantAction-module.html,Class CocosCairo.cocosCairo.InstantAction.InstantAction=CocosCairo.cocosCairo.InstantAction.InstantAction-class.html"><a title="CocosCairo.cocosCairo.InstantAction
+CocosCairo.cocosCairo.InstantAction.InstantAction" class="py-name" href="#" onclick="return doclink('link-7', 'InstantAction', 'link-7');">InstantAction</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method CocosCairo.cocosCairo.Action.AbstractAction.start()=CocosCairo.cocosCairo.Action.AbstractAction-class.html#start,Method CocosCairo.cocosCairo.Action.RepeatForever.start()=CocosCairo.cocosCairo.Action.RepeatForever-class.html#start,Method CocosCairo.cocosCairo.Action.Speed.start()=CocosCairo.cocosCairo.Action.Speed-class.html#start,Method CocosCairo.cocosCairo.EaseAction.EaseAction.start()=CocosCairo.cocosCairo.EaseAction.EaseAction-class.html#start,Method CocosCairo.cocosCairo.GTKInterface.GTKInterface.start()=CocosCairo.cocosCairo.GTKInterface.GTKInterface-class.html#start,Method CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.start()=CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html#start,Method CocosCairo.cocosCairo.InstantAction.Hide.start()=CocosCairo.cocosCairo.InstantAction.Hide-class.html#start,Method CocosCairo.cocosCairo.InstantAction.Place.start()=CocosCairo.cocosCairo.InstantAction.Place-class.html#start,Method CocosCairo.cocosCairo.InstantAction.Show.start()=CocosCairo.cocosCairo.InstantAction.Show-class.html#start,Method CocosCairo.cocosCairo.InstantAction.ToggleVisibility.start()=CocosCairo.cocosCairo.InstantAction.ToggleVisibility-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.Animate.start()=CocosCairo.cocosCairo.IntervalAction.Animate-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.BezierBy.start()=CocosCairo.cocosCairo.IntervalAction.BezierBy-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.BezierTo.start()=CocosCairo.cocosCairo.IntervalAction.BezierTo-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.FadeTo.start()=CocosCairo.cocosCairo.IntervalAction.FadeTo-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.IntervalAction.start()=CocosCairo.cocosCairo.IntervalAction.IntervalAction-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.JumpBy.start()=CocosCairo.cocosCairo.IntervalAction.JumpBy-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.JumpTo.start()=CocosCairo.cocosCairo.IntervalAction.JumpTo-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.MoveBy.start()=CocosCairo.cocosCairo.IntervalAction.MoveBy-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.MoveTo.start()=CocosCairo.cocosCairo.IntervalAction.MoveTo-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.Repeat.start()=CocosCairo.cocosCairo.IntervalAction.Repeat-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.ReverseTime.start()=CocosCairo.cocosCairo.IntervalAction.ReverseTime-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.RotateBy.start()=CocosCairo.cocosCairo.IntervalAction.RotateBy-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.RotateTo.start()=CocosCairo.cocosCairo.IntervalAction.RotateTo-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.ScaleBy.start()=CocosCairo.cocosCairo.IntervalAction.ScaleBy-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.ScaleTo.start()=CocosCairo.cocosCairo.IntervalAction.ScaleTo-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.Sequence.start()=CocosCairo.cocosCairo.IntervalAction.Sequence-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.Spawn.start()=CocosCairo.cocosCairo.IntervalAction.Spawn-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.TintBy.start()=CocosCairo.cocosCairo.IntervalAction.TintBy-class.html#start,Method CocosCairo.cocosCairo.IntervalAction.TintTo.start()=CocosCairo.cocosCairo.IntervalAction.TintTo-class.html#start"><a title="CocosCairo.cocosCairo.Action.AbstractAction.start
+CocosCairo.cocosCairo.Action.RepeatForever.start
+CocosCairo.cocosCairo.Action.Speed.start
+CocosCairo.cocosCairo.EaseAction.EaseAction.start
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.start
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.start
+CocosCairo.cocosCairo.InstantAction.Hide.start
+CocosCairo.cocosCairo.InstantAction.Place.start
+CocosCairo.cocosCairo.InstantAction.Show.start
+CocosCairo.cocosCairo.InstantAction.ToggleVisibility.start
+CocosCairo.cocosCairo.IntervalAction.Animate.start
+CocosCairo.cocosCairo.IntervalAction.BezierBy.start
+CocosCairo.cocosCairo.IntervalAction.BezierTo.start
+CocosCairo.cocosCairo.IntervalAction.FadeTo.start
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.start
+CocosCairo.cocosCairo.IntervalAction.JumpBy.start
+CocosCairo.cocosCairo.IntervalAction.JumpTo.start
+CocosCairo.cocosCairo.IntervalAction.MoveBy.start
+CocosCairo.cocosCairo.IntervalAction.MoveTo.start
+CocosCairo.cocosCairo.IntervalAction.Repeat.start
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.start
+CocosCairo.cocosCairo.IntervalAction.RotateBy.start
+CocosCairo.cocosCairo.IntervalAction.RotateTo.start
+CocosCairo.cocosCairo.IntervalAction.ScaleBy.start
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.start
+CocosCairo.cocosCairo.IntervalAction.Sequence.start
+CocosCairo.cocosCairo.IntervalAction.Spawn.start
+CocosCairo.cocosCairo.IntervalAction.TintBy.start
+CocosCairo.cocosCairo.IntervalAction.TintTo.start" class="py-name" href="#" onclick="return doclink('link-8', 'start', 'link-8');">start</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">                <tt class="py-name">owner</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method CocosCairo.cocosCairo.Node.Node.setVisible()=CocosCairo.cocosCairo.Node.Node-class.html#setVisible"><a title="CocosCairo.cocosCairo.Node.Node.setVisible" class="py-name" href="#" onclick="return doclink('link-9', 'setVisible', 'link-9');">setVisible</a></tt><tt class="py-op">(</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="Show.reverse"></a><div id="Show.reverse-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="Show.reverse-toggle" onclick="return toggle('Show.reverse');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Show-class.html#reverse">reverse</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Show.reverse-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Show.reverse-expanded"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt id="link-10" class="py-name" targets="Class CocosCairo.cocosCairo.InstantAction.Hide=CocosCairo.cocosCairo.InstantAction.Hide-class.html"><a title="CocosCairo.cocosCairo.InstantAction.Hide" class="py-name" href="#" onclick="return doclink('link-10', 'Hide', 'link-10');">Hide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="Hide"></a><div id="Hide-def"><a name="L29"></a><tt class="py-lineno">29</tt> <a class="py-toggle" href="#" id="Hide-toggle" onclick="return toggle('Hide');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Hide-class.html">Hide</a><tt class="py-op">(</tt><tt class="py-base-class">InstantAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Hide-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Hide-expanded"><a name="Hide.start"></a><div id="Hide.start-def"><a name="L30"></a><tt class="py-lineno">30</tt> <a class="py-toggle" href="#" id="Hide.start-toggle" onclick="return toggle('Hide.start');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Hide-class.html#start">start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Hide.start-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Hide.start-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">                <tt id="link-11" class="py-name"><a title="CocosCairo.cocosCairo.InstantAction
+CocosCairo.cocosCairo.InstantAction.InstantAction" class="py-name" href="#" onclick="return doclink('link-11', 'InstantAction', 'link-7');">InstantAction</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="CocosCairo.cocosCairo.Action.AbstractAction.start
+CocosCairo.cocosCairo.Action.RepeatForever.start
+CocosCairo.cocosCairo.Action.Speed.start
+CocosCairo.cocosCairo.EaseAction.EaseAction.start
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.start
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.start
+CocosCairo.cocosCairo.InstantAction.Hide.start
+CocosCairo.cocosCairo.InstantAction.Place.start
+CocosCairo.cocosCairo.InstantAction.Show.start
+CocosCairo.cocosCairo.InstantAction.ToggleVisibility.start
+CocosCairo.cocosCairo.IntervalAction.Animate.start
+CocosCairo.cocosCairo.IntervalAction.BezierBy.start
+CocosCairo.cocosCairo.IntervalAction.BezierTo.start
+CocosCairo.cocosCairo.IntervalAction.FadeTo.start
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.start
+CocosCairo.cocosCairo.IntervalAction.JumpBy.start
+CocosCairo.cocosCairo.IntervalAction.JumpTo.start
+CocosCairo.cocosCairo.IntervalAction.MoveBy.start
+CocosCairo.cocosCairo.IntervalAction.MoveTo.start
+CocosCairo.cocosCairo.IntervalAction.Repeat.start
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.start
+CocosCairo.cocosCairo.IntervalAction.RotateBy.start
+CocosCairo.cocosCairo.IntervalAction.RotateTo.start
+CocosCairo.cocosCairo.IntervalAction.ScaleBy.start
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.start
+CocosCairo.cocosCairo.IntervalAction.Sequence.start
+CocosCairo.cocosCairo.IntervalAction.Spawn.start
+CocosCairo.cocosCairo.IntervalAction.TintBy.start
+CocosCairo.cocosCairo.IntervalAction.TintTo.start" class="py-name" href="#" onclick="return doclink('link-12', 'start', 'link-8');">start</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">                <tt class="py-name">owner</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="CocosCairo.cocosCairo.Node.Node.setVisible" class="py-name" href="#" onclick="return doclink('link-13', 'setVisible', 'link-9');">setVisible</a></tt><tt class="py-op">(</tt><tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="Hide.reverse"></a><div id="Hide.reverse-def"><a name="L34"></a><tt class="py-lineno">34</tt> <a class="py-toggle" href="#" id="Hide.reverse-toggle" onclick="return toggle('Hide.reverse');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Hide-class.html#reverse">reverse</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Hide.reverse-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Hide.reverse-expanded"><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt id="link-14" class="py-name" targets="Class CocosCairo.cocosCairo.InstantAction.Show=CocosCairo.cocosCairo.InstantAction.Show-class.html"><a title="CocosCairo.cocosCairo.InstantAction.Show" class="py-name" href="#" onclick="return doclink('link-14', 'Show', 'link-14');">Show</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"> </tt>
+<a name="ToggleVisibility"></a><div id="ToggleVisibility-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="ToggleVisibility-toggle" onclick="return toggle('ToggleVisibility');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.ToggleVisibility-class.html">ToggleVisibility</a><tt class="py-op">(</tt><tt class="py-base-class">InstantAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToggleVisibility-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ToggleVisibility-expanded"><a name="ToggleVisibility.start"></a><div id="ToggleVisibility.start-def"><a name="L38"></a><tt class="py-lineno">38</tt> <a class="py-toggle" href="#" id="ToggleVisibility.start-toggle" onclick="return toggle('ToggleVisibility.start');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.ToggleVisibility-class.html#start">start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ToggleVisibility.start-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="ToggleVisibility.start-expanded"><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                <tt id="link-15" class="py-name"><a title="CocosCairo.cocosCairo.InstantAction
+CocosCairo.cocosCairo.InstantAction.InstantAction" class="py-name" href="#" onclick="return doclink('link-15', 'InstantAction', 'link-7');">InstantAction</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="CocosCairo.cocosCairo.Action.AbstractAction.start
+CocosCairo.cocosCairo.Action.RepeatForever.start
+CocosCairo.cocosCairo.Action.Speed.start
+CocosCairo.cocosCairo.EaseAction.EaseAction.start
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.start
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.start
+CocosCairo.cocosCairo.InstantAction.Hide.start
+CocosCairo.cocosCairo.InstantAction.Place.start
+CocosCairo.cocosCairo.InstantAction.Show.start
+CocosCairo.cocosCairo.InstantAction.ToggleVisibility.start
+CocosCairo.cocosCairo.IntervalAction.Animate.start
+CocosCairo.cocosCairo.IntervalAction.BezierBy.start
+CocosCairo.cocosCairo.IntervalAction.BezierTo.start
+CocosCairo.cocosCairo.IntervalAction.FadeTo.start
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.start
+CocosCairo.cocosCairo.IntervalAction.JumpBy.start
+CocosCairo.cocosCairo.IntervalAction.JumpTo.start
+CocosCairo.cocosCairo.IntervalAction.MoveBy.start
+CocosCairo.cocosCairo.IntervalAction.MoveTo.start
+CocosCairo.cocosCairo.IntervalAction.Repeat.start
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.start
+CocosCairo.cocosCairo.IntervalAction.RotateBy.start
+CocosCairo.cocosCairo.IntervalAction.RotateTo.start
+CocosCairo.cocosCairo.IntervalAction.ScaleBy.start
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.start
+CocosCairo.cocosCairo.IntervalAction.Sequence.start
+CocosCairo.cocosCairo.IntervalAction.Spawn.start
+CocosCairo.cocosCairo.IntervalAction.TintBy.start
+CocosCairo.cocosCairo.IntervalAction.TintTo.start" class="py-name" href="#" onclick="return doclink('link-16', 'start', 'link-8');">start</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                <tt class="py-name">owner</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="CocosCairo.cocosCairo.Node.Node.setVisible" class="py-name" href="#" onclick="return doclink('link-17', 'setVisible', 'link-9');">setVisible</a></tt><tt class="py-op">(</tt><tt class="py-keyword">not</tt> <tt class="py-name">owner</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method CocosCairo.cocosCairo.Node.Node.isVisible()=CocosCairo.cocosCairo.Node.Node-class.html#isVisible"><a title="CocosCairo.cocosCairo.Node.Node.isVisible" class="py-name" href="#" onclick="return doclink('link-18', 'isVisible', 'link-18');">isVisible</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"> </tt>
+<a name="Place"></a><div id="Place-def"><a name="L42"></a><tt class="py-lineno">42</tt> <a class="py-toggle" href="#" id="Place-toggle" onclick="return toggle('Place');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Place-class.html">Place</a><tt class="py-op">(</tt><tt class="py-base-class">InstantAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Place-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Place-expanded"><a name="Place.__init__"></a><div id="Place.__init__-def"><a name="L43"></a><tt class="py-lineno">43</tt> <a class="py-toggle" href="#" id="Place.__init__-toggle" onclick="return toggle('Place.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Place-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">position</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Place.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Place.__init__-expanded"><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_position</tt> <tt class="py-op">=</tt> <tt class="py-name">position</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt>
+<a name="Place.start"></a><div id="Place.start-def"><a name="L46"></a><tt class="py-lineno">46</tt> <a class="py-toggle" href="#" id="Place.start-toggle" onclick="return toggle('Place.start');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.Place-class.html#start">start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Place.start-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Place.start-expanded"><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                <tt id="link-19" class="py-name"><a title="CocosCairo.cocosCairo.InstantAction
+CocosCairo.cocosCairo.InstantAction.InstantAction" class="py-name" href="#" onclick="return doclink('link-19', 'InstantAction', 'link-7');">InstantAction</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="CocosCairo.cocosCairo.Action.AbstractAction.start
+CocosCairo.cocosCairo.Action.RepeatForever.start
+CocosCairo.cocosCairo.Action.Speed.start
+CocosCairo.cocosCairo.EaseAction.EaseAction.start
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.start
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.start
+CocosCairo.cocosCairo.InstantAction.Hide.start
+CocosCairo.cocosCairo.InstantAction.Place.start
+CocosCairo.cocosCairo.InstantAction.Show.start
+CocosCairo.cocosCairo.InstantAction.ToggleVisibility.start
+CocosCairo.cocosCairo.IntervalAction.Animate.start
+CocosCairo.cocosCairo.IntervalAction.BezierBy.start
+CocosCairo.cocosCairo.IntervalAction.BezierTo.start
+CocosCairo.cocosCairo.IntervalAction.FadeTo.start
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.start
+CocosCairo.cocosCairo.IntervalAction.JumpBy.start
+CocosCairo.cocosCairo.IntervalAction.JumpTo.start
+CocosCairo.cocosCairo.IntervalAction.MoveBy.start
+CocosCairo.cocosCairo.IntervalAction.MoveTo.start
+CocosCairo.cocosCairo.IntervalAction.Repeat.start
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.start
+CocosCairo.cocosCairo.IntervalAction.RotateBy.start
+CocosCairo.cocosCairo.IntervalAction.RotateTo.start
+CocosCairo.cocosCairo.IntervalAction.ScaleBy.start
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.start
+CocosCairo.cocosCairo.IntervalAction.Sequence.start
+CocosCairo.cocosCairo.IntervalAction.Spawn.start
+CocosCairo.cocosCairo.IntervalAction.TintBy.start
+CocosCairo.cocosCairo.IntervalAction.TintTo.start" class="py-name" href="#" onclick="return doclink('link-20', 'start', 'link-8');">start</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">                <tt class="py-name">owner</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method CocosCairo.cocosCairo.Node.Node.setPosition()=CocosCairo.cocosCairo.Node.Node-class.html#setPosition"><a title="CocosCairo.cocosCairo.Node.Node.setPosition" class="py-name" href="#" onclick="return doclink('link-21', 'setPosition', 'link-21');">setPosition</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_position</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="CallbackInstantAction"></a><div id="CallbackInstantAction-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="CallbackInstantAction-toggle" onclick="return toggle('CallbackInstantAction');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html">CallbackInstantAction</a><tt class="py-op">(</tt><tt class="py-base-class">InstantAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackInstantAction-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="CallbackInstantAction-expanded"><a name="CallbackInstantAction.__init__"></a><div id="CallbackInstantAction.__init__-def"><a name="L51"></a><tt class="py-lineno">51</tt> <a class="py-toggle" href="#" id="CallbackInstantAction.__init__-toggle" onclick="return toggle('CallbackInstantAction.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">callback</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackInstantAction.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="CallbackInstantAction.__init__-expanded"><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">                <tt id="link-22" class="py-name"><a title="CocosCairo.cocosCairo.InstantAction
+CocosCairo.cocosCairo.InstantAction.InstantAction" class="py-name" href="#" onclick="return doclink('link-22', 'InstantAction', 'link-7');">InstantAction</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="CocosCairo.cocosCairo.AbstractController.AbstractController.__init__
+CocosCairo.cocosCairo.AbstractWindow.AbstractWindow.__init__
+CocosCairo.cocosCairo.Action.AbstractAction.__init__
+CocosCairo.cocosCairo.Action.FiniteTimeAction.__init__
+CocosCairo.cocosCairo.Action.RepeatForever.__init__
+CocosCairo.cocosCairo.Action.Speed.__init__
+CocosCairo.cocosCairo.ActionManager.ActionManager.__init__
+CocosCairo.cocosCairo.Color.Color.__init__
+CocosCairo.cocosCairo.ColorNode.ColorNode.__init__
+CocosCairo.cocosCairo.Director.Director.__init__
+CocosCairo.cocosCairo.EaseAction.EaseAction.__init__
+CocosCairo.cocosCairo.EaseAction.EaseElastic.__init__
+CocosCairo.cocosCairo.EaseAction.EaseRateAction.__init__
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.__init__
+CocosCairo.cocosCairo.GTKInterface.GTKLayout.__init__
+CocosCairo.cocosCairo.Geometry.Point.__init__
+CocosCairo.cocosCairo.Geometry.Rect.__init__
+CocosCairo.cocosCairo.Geometry.Size.__init__
+CocosCairo.cocosCairo.GestureDispatch.GestureDispatch.__init__
+CocosCairo.cocosCairo.GestureEvent.GestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.KeyboardGestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.MouseGestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.__init__
+CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData.__init__
+CocosCairo.cocosCairo.InstantAction.InstantAction.__init__
+CocosCairo.cocosCairo.InstantAction.Place.__init__
+CocosCairo.cocosCairo.IntervalAction.Animate.__init__
+CocosCairo.cocosCairo.IntervalAction.BezierBy.__init__
+CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.__init__
+CocosCairo.cocosCairo.IntervalAction.Blink.__init__
+CocosCairo.cocosCairo.IntervalAction.FadeTo.__init__
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.__init__
+CocosCairo.cocosCairo.IntervalAction.JumpBy.__init__
+CocosCairo.cocosCairo.IntervalAction.MoveBy.__init__
+CocosCairo.cocosCairo.IntervalAction.MoveTo.__init__
+CocosCairo.cocosCairo.IntervalAction.Repeat.__init__
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.__init__
+CocosCairo.cocosCairo.IntervalAction.RotateBy.__init__
+CocosCairo.cocosCairo.IntervalAction.RotateTo.__init__
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.__init__
+CocosCairo.cocosCairo.IntervalAction.Sequence.__init__
+CocosCairo.cocosCairo.IntervalAction.Spawn.__init__
+CocosCairo.cocosCairo.IntervalAction.TintBy.__init__
+CocosCairo.cocosCairo.IntervalAction.TintTo.__init__
+CocosCairo.cocosCairo.ListenedObject.ListenedObject.__init__
+CocosCairo.cocosCairo.Node.Node.__init__
+CocosCairo.cocosCairo.PangoLabel.PangoLabel.__init__
+CocosCairo.cocosCairo.Primitive.LineNode.__init__
+CocosCairo.cocosCairo.Primitive.RectangleNode.__init__
+CocosCairo.cocosCairo.Scene.Scene.__init__
+CocosCairo.cocosCairo.Scheduler.Scheduler.__init__
+CocosCairo.cocosCairo.Sprite.Sprite.__init__
+CocosCairo.cocosCairo.Timer.Timer.__init__
+CocosCairo.cocosCairo.Transition.AbstractTransition.__init__
+CocosCairo.cocosCairo.Transition.FadeTransition.__init__" class="py-name" href="#" onclick="return doclink('link-23', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt> <tt class="py-op">=</tt> <tt class="py-name">callback</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt>
+<a name="CallbackInstantAction.start"></a><div id="CallbackInstantAction.start-def"><a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="CallbackInstantAction.start-toggle" onclick="return toggle('CallbackInstantAction.start');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html#start">start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackInstantAction.start-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="CallbackInstantAction.start-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">                <tt id="link-24" class="py-name"><a title="CocosCairo.cocosCairo.InstantAction
+CocosCairo.cocosCairo.InstantAction.InstantAction" class="py-name" href="#" onclick="return doclink('link-24', 'InstantAction', 'link-7');">InstantAction</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="CocosCairo.cocosCairo.Action.AbstractAction.start
+CocosCairo.cocosCairo.Action.RepeatForever.start
+CocosCairo.cocosCairo.Action.Speed.start
+CocosCairo.cocosCairo.EaseAction.EaseAction.start
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.start
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.start
+CocosCairo.cocosCairo.InstantAction.Hide.start
+CocosCairo.cocosCairo.InstantAction.Place.start
+CocosCairo.cocosCairo.InstantAction.Show.start
+CocosCairo.cocosCairo.InstantAction.ToggleVisibility.start
+CocosCairo.cocosCairo.IntervalAction.Animate.start
+CocosCairo.cocosCairo.IntervalAction.BezierBy.start
+CocosCairo.cocosCairo.IntervalAction.BezierTo.start
+CocosCairo.cocosCairo.IntervalAction.FadeTo.start
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.start
+CocosCairo.cocosCairo.IntervalAction.JumpBy.start
+CocosCairo.cocosCairo.IntervalAction.JumpTo.start
+CocosCairo.cocosCairo.IntervalAction.MoveBy.start
+CocosCairo.cocosCairo.IntervalAction.MoveTo.start
+CocosCairo.cocosCairo.IntervalAction.Repeat.start
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.start
+CocosCairo.cocosCairo.IntervalAction.RotateBy.start
+CocosCairo.cocosCairo.IntervalAction.RotateTo.start
+CocosCairo.cocosCairo.IntervalAction.ScaleBy.start
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.start
+CocosCairo.cocosCairo.IntervalAction.Sequence.start
+CocosCairo.cocosCairo.IntervalAction.Spawn.start
+CocosCairo.cocosCairo.IntervalAction.TintBy.start
+CocosCairo.cocosCairo.IntervalAction.TintTo.start" class="py-name" href="#" onclick="return doclink('link-25', 'start', 'link-8');">start</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.execute()=CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html#execute,Method CocosCairo.cocosCairo.InstantAction.CallbackWithNode.execute()=CocosCairo.cocosCairo.InstantAction.CallbackWithNode-class.html#execute,Method CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData.execute()=CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData-class.html#execute"><a title="CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.execute
+CocosCairo.cocosCairo.InstantAction.CallbackWithNode.execute
+CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData.execute" class="py-name" href="#" onclick="return doclink('link-26', 'execute', 'link-26');">execute</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="CallbackInstantAction.execute"></a><div id="CallbackInstantAction.execute-def"><a name="L59"></a><tt class="py-lineno">59</tt> <a class="py-toggle" href="#" id="CallbackInstantAction.execute-toggle" onclick="return toggle('CallbackInstantAction.execute');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackInstantAction-class.html#execute">execute</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackInstantAction.execute-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="CallbackInstantAction.execute-expanded"><a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"> </tt>
+<a name="CallbackWithNode"></a><div id="CallbackWithNode-def"><a name="L62"></a><tt class="py-lineno">62</tt> <a class="py-toggle" href="#" id="CallbackWithNode-toggle" onclick="return toggle('CallbackWithNode');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackWithNode-class.html">CallbackWithNode</a><tt class="py-op">(</tt><tt class="py-base-class">CallbackInstantAction</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackWithNode-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="CallbackWithNode-expanded"><a name="CallbackWithNode.execute"></a><div id="CallbackWithNode.execute-def"><a name="L63"></a><tt class="py-lineno">63</tt> <a class="py-toggle" href="#" id="CallbackWithNode.execute-toggle" onclick="return toggle('CallbackWithNode.execute');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackWithNode-class.html#execute">execute</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackWithNode.execute-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="CallbackWithNode.execute-expanded"><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_owner</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"> </tt>
+<a name="CallbackWithNodeAndData"></a><div id="CallbackWithNodeAndData-def"><a name="L66"></a><tt class="py-lineno">66</tt> <a class="py-toggle" href="#" id="CallbackWithNodeAndData-toggle" onclick="return toggle('CallbackWithNodeAndData');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData-class.html">CallbackWithNodeAndData</a><tt class="py-op">(</tt><tt class="py-base-class">CallbackWithNode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackWithNodeAndData-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="CallbackWithNodeAndData-expanded"><a name="CallbackWithNodeAndData.__init__"></a><div id="CallbackWithNodeAndData.__init__-def"><a name="L67"></a><tt class="py-lineno">67</tt> <a class="py-toggle" href="#" id="CallbackWithNodeAndData.__init__-toggle" onclick="return toggle('CallbackWithNodeAndData.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">callback</tt><tt class="py-op">,</tt> <tt class="py-param">data</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackWithNodeAndData.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="CallbackWithNodeAndData.__init__-expanded"><a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">                <tt id="link-27" class="py-name" targets="Class CocosCairo.cocosCairo.InstantAction.CallbackWithNode=CocosCairo.cocosCairo.InstantAction.CallbackWithNode-class.html"><a title="CocosCairo.cocosCairo.InstantAction.CallbackWithNode" class="py-name" href="#" onclick="return doclink('link-27', 'CallbackWithNode', 'link-27');">CallbackWithNode</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="CocosCairo.cocosCairo.AbstractController.AbstractController.__init__
+CocosCairo.cocosCairo.AbstractWindow.AbstractWindow.__init__
+CocosCairo.cocosCairo.Action.AbstractAction.__init__
+CocosCairo.cocosCairo.Action.FiniteTimeAction.__init__
+CocosCairo.cocosCairo.Action.RepeatForever.__init__
+CocosCairo.cocosCairo.Action.Speed.__init__
+CocosCairo.cocosCairo.ActionManager.ActionManager.__init__
+CocosCairo.cocosCairo.Color.Color.__init__
+CocosCairo.cocosCairo.ColorNode.ColorNode.__init__
+CocosCairo.cocosCairo.Director.Director.__init__
+CocosCairo.cocosCairo.EaseAction.EaseAction.__init__
+CocosCairo.cocosCairo.EaseAction.EaseElastic.__init__
+CocosCairo.cocosCairo.EaseAction.EaseRateAction.__init__
+CocosCairo.cocosCairo.GTKInterface.GTKInterface.__init__
+CocosCairo.cocosCairo.GTKInterface.GTKLayout.__init__
+CocosCairo.cocosCairo.Geometry.Point.__init__
+CocosCairo.cocosCairo.Geometry.Rect.__init__
+CocosCairo.cocosCairo.Geometry.Size.__init__
+CocosCairo.cocosCairo.GestureDispatch.GestureDispatch.__init__
+CocosCairo.cocosCairo.GestureEvent.GestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.KeyboardGestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.MouseGestureEvent.__init__
+CocosCairo.cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__
+CocosCairo.cocosCairo.InstantAction.CallbackInstantAction.__init__
+CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData.__init__
+CocosCairo.cocosCairo.InstantAction.InstantAction.__init__
+CocosCairo.cocosCairo.InstantAction.Place.__init__
+CocosCairo.cocosCairo.IntervalAction.Animate.__init__
+CocosCairo.cocosCairo.IntervalAction.BezierBy.__init__
+CocosCairo.cocosCairo.IntervalAction.BezierConfiguration.__init__
+CocosCairo.cocosCairo.IntervalAction.Blink.__init__
+CocosCairo.cocosCairo.IntervalAction.FadeTo.__init__
+CocosCairo.cocosCairo.IntervalAction.IntervalAction.__init__
+CocosCairo.cocosCairo.IntervalAction.JumpBy.__init__
+CocosCairo.cocosCairo.IntervalAction.MoveBy.__init__
+CocosCairo.cocosCairo.IntervalAction.MoveTo.__init__
+CocosCairo.cocosCairo.IntervalAction.Repeat.__init__
+CocosCairo.cocosCairo.IntervalAction.ReverseTime.__init__
+CocosCairo.cocosCairo.IntervalAction.RotateBy.__init__
+CocosCairo.cocosCairo.IntervalAction.RotateTo.__init__
+CocosCairo.cocosCairo.IntervalAction.ScaleTo.__init__
+CocosCairo.cocosCairo.IntervalAction.Sequence.__init__
+CocosCairo.cocosCairo.IntervalAction.Spawn.__init__
+CocosCairo.cocosCairo.IntervalAction.TintBy.__init__
+CocosCairo.cocosCairo.IntervalAction.TintTo.__init__
+CocosCairo.cocosCairo.ListenedObject.ListenedObject.__init__
+CocosCairo.cocosCairo.Node.Node.__init__
+CocosCairo.cocosCairo.PangoLabel.PangoLabel.__init__
+CocosCairo.cocosCairo.Primitive.LineNode.__init__
+CocosCairo.cocosCairo.Primitive.RectangleNode.__init__
+CocosCairo.cocosCairo.Scene.Scene.__init__
+CocosCairo.cocosCairo.Scheduler.Scheduler.__init__
+CocosCairo.cocosCairo.Sprite.Sprite.__init__
+CocosCairo.cocosCairo.Timer.Timer.__init__
+CocosCairo.cocosCairo.Transition.AbstractTransition.__init__
+CocosCairo.cocosCairo.Transition.FadeTransition.__init__" class="py-name" href="#" onclick="return doclink('link-28', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">callback</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_data</tt> <tt class="py-op">=</tt> <tt class="py-name">data</tt> </tt>
+</div><a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"> </tt>
+<a name="CallbackWithNodeAndData.execute"></a><div id="CallbackWithNodeAndData.execute-def"><a name="L71"></a><tt class="py-lineno">71</tt> <a class="py-toggle" href="#" id="CallbackWithNodeAndData.execute-toggle" onclick="return toggle('CallbackWithNodeAndData.execute');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.InstantAction.CallbackWithNodeAndData-class.html#execute">execute</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CallbackWithNodeAndData.execute-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="CallbackWithNodeAndData.execute-expanded"><a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_owner</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_data</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="CocosCairo.cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar  3 23:56:49 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

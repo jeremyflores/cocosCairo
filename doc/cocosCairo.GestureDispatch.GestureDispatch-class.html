@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.GestureDispatch.GestureDispatch</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        <a href="cocosCairo.GestureDispatch-module.html">Module&nbsp;GestureDispatch</a> ::
+        Class&nbsp;GestureDispatch
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.GestureDispatch.GestureDispatch-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class GestureDispatch</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="cocosCairo.ListenedObject.ListenedObject-class.html">ListenedObject.ListenedObject</a> --+
+                                |
+                               <strong class="uidshort">GestureDispatch</strong>
+</pre>
+
+<hr />
+<p>A <a href="cocosCairo.ListenedObject.ListenedObject-class.html" 
+  class="link">ListenedObject</a> that is responsible for sending user 
+  gestures to handlers (which could, but not necessarily, be an <a 
+  href="cocosCairo.AbstractController-module.html" 
+  class="link">AbstractController</a>).</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.ListenedObject.ListenedObject-class.html">ListenedObject.ListenedObject</a></code></b>:
+      <code><a href="cocosCairo.ListenedObject.ListenedObject-class.html#addListener">addListener</a></code>,
+      <code><a href="cocosCairo.ListenedObject.ListenedObject-class.html#getListeners">getListeners</a></code>,
+      <code><a href="cocosCairo.ListenedObject.ListenedObject-class.html#removeListener">removeListener</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Allow / disallow dispatching.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#isDispatching" class="summary-sig-name">isDispatching</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns whether or not the GestureDispatch will send out events.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.isDispatching">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#setDispatching" class="summary-sig-name">setDispatching</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isDispatching</span>)</span><br />
+      Sets whether or not the GestureDispatch will send out events.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.setDispatching">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8"  class="private">
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Private GTK event handlers.</th></tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMouseMotion" class="summary-sig-name" onclick="show_private();">_onMouseMotion</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widget</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMouseMotion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMousePress" class="summary-sig-name" onclick="show_private();">_onMousePress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widget</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMousePress">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMouseRelease" class="summary-sig-name" onclick="show_private();">_onMouseRelease</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widget</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMouseRelease">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMouseScroll" class="summary-sig-name" onclick="show_private();">_onMouseScroll</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widget</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMouseScroll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#_onKeyPress" class="summary-sig-name" onclick="show_private();">_onKeyPress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widget</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onKeyPress">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#_onKeyRelease" class="summary-sig-name" onclick="show_private();">_onKeyRelease</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widget</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onKeyRelease">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Public dispatch methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseMotionGesture" class="summary-sig-name">dispatchMouseMotionGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a mouse 
+      motion.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseMotionGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMousePressGesture" class="summary-sig-name">dispatchMousePressGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a mouse press.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMousePressGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseDoublePressGesture" class="summary-sig-name">dispatchMouseDoublePressGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a mouse double
+      press (that is, a double click).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseDoublePressGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseReleaseGesture" class="summary-sig-name">dispatchMouseReleaseGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a mouse 
+      release.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseReleaseGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseScrollGesture" class="summary-sig-name">dispatchMouseScrollGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a mouse 
+      scroll.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseScrollGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchKeyPressGesture" class="summary-sig-name">dispatchKeyPressGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a key press.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchKeyPressGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchKeyReleaseGesture" class="summary-sig-name">dispatchKeyReleaseGesture</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gestureEvent</span>)</span><br />
+      If currently sending out events, notifies listeners of a key release.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchKeyReleaseGesture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="cocosCairo.ListenedObject.ListenedObject-class.html#__init__">ListenedObject.ListenedObject.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isDispatching"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isDispatching</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.isDispatching">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not the GestureDispatch will send out events. By 
+  default, this is <code>True</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not the GestureDispatch will send out events.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setDispatching"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setDispatching</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isDispatching</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.setDispatching">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets whether or not the GestureDispatch will send out events.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isDispatching</code></strong> (<code>bool</code>) - Whether or not to send out events.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_onMouseMotion"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_onMouseMotion</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">widget</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMouseMotion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Receives mouse motion events from GTK. It constructs a
+  <a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+  class="link">MouseGestureEvent</a>, then dispatches it via <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseMotionGesture"
+  class="link">dispatchMouseMotionGesture</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>widget</code></strong> (<code>gtk.Widget</code>) - The GTK widget in which the event occurred. This should normally 
+          be the <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+          class="link">GTKLayout</a>.</li>
+        <li><strong class="pname"><code>event</code></strong> (<code>gtk.gdk.MOTION_NOTIFY</code>) - The GTK event with the event information.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_onMousePress"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_onMousePress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">widget</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMousePress">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Receives mouse press events from GTK. It constructs a 
+  <a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+  class="link">MouseGestureEvent</a>, then dispatches it via <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMousePressGesture"
+  class="link">dispatchMousePressGesture</a> (or <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseDoublePressGesture"
+  class="link">dispatchMouseDoublePressGesture</a> if it was a double 
+  press). Note that, when a user double presses, two single-press events 
+  will be dispatched before the double-press event is dispatched.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>widget</code></strong> (<code>gtk.Widget</code>) - The GTK widget in which the event occurred. This should normally 
+          be the <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+          class="link">GTKLayout</a>.</li>
+        <li><strong class="pname"><code>event</code></strong> (<code>gtk.gdk.BUTTON_PRESS</code>) - The GTK event with the event information.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_onMouseRelease"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_onMouseRelease</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">widget</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMouseRelease">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Receives mouse release events from GTK. It constructs 
+  a <a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+  class="link">MouseGestureEvent</a>, then dispatches it via <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseReleaseGesture"
+  class="link">dispatchMouseReleaseGesture</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>widget</code></strong> (<code>gtk.Widget</code>) - The GTK widget in which the event occurred. This should normally 
+          be the <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+          class="link">GTKLayout</a>.</li>
+        <li><strong class="pname"><code>event</code></strong> (<code>gtk.gdk.BUTTON_RELEASE</code>) - The GTK event with the event information.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_onMouseScroll"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_onMouseScroll</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">widget</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onMouseScroll">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Receives mouse scroll events from GTK. It constructs a
+  <a href="cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html" 
+  class="link">MouseScrollGestureEvent</a>, then dispatches it via <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchMouseScrollGesture"
+  class="link">dispatchMouseScrollGesture</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>widget</code></strong> (<code>gtk.Widget</code>) - The GTK widget in which the event occurred. This should normally 
+          be the <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+          class="link">GTKLayout</a>.</li>
+        <li><strong class="pname"><code>event</code></strong> (<code>gtk.gdk.SCROLL</code>) - The GTK event with the event information.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_onKeyPress"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_onKeyPress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">widget</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onKeyPress">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Receives key press events from GTK. It constructs a <a
+  href="cocosCairo.GestureEvent.KeyboardGestureEvent-class.html" 
+  class="link">KeyboardGestureEvent</a>, then dispatches it via <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchKeyPressGesture"
+  class="link">dispatchKeyPressGesture</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>widget</code></strong> (<code>gtk.Widget</code>) - The GTK widget in which the event occurred. This should normally 
+          be the <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+          class="link">GTKLayout</a>.</li>
+        <li><strong class="pname"><code>event</code></strong> (<code>gtk.gdk.KEY_PRESS</code>) - The GTK event with the event information.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_onKeyRelease"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_onKeyRelease</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">widget</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch._onKeyRelease">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Receives key release events from GTK. It constructs a 
+  <a href="cocosCairo.GestureEvent.KeyboardGestureEvent-class.html" 
+  class="link">KeyboardGestureEvent</a>, then dispatches it via <a 
+  href="cocosCairo.GestureDispatch.GestureDispatch-class.html#dispatchKeyReleaseGesture"
+  class="link">dispatchKeyReleaseGesture</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>widget</code></strong> (<code>gtk.Widget</code>) - The GTK widget in which the event occurred. This should normally 
+          be the <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+          class="link">GTKLayout</a>.</li>
+        <li><strong class="pname"><code>event</code></strong> (<code>gtk.gdk.KEY_RELEASE</code>) - The GTK event with the event information.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchMouseMotionGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchMouseMotionGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseMotionGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a mouse motion.
+  This may be used to manually fire an event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+          class="link">MouseGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchMousePressGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchMousePressGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMousePressGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a mouse press. 
+  This may be used to manually fire an event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+          class="link">MouseGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchMouseDoublePressGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchMouseDoublePressGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseDoublePressGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a mouse double 
+  press (that is, a double click). This may be used to manually fire an 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+          class="link">MouseGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchMouseReleaseGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchMouseReleaseGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseReleaseGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a mouse 
+  release. This may be used to manually fire an event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html" 
+          class="link">MouseGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchMouseScrollGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchMouseScrollGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchMouseScrollGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a mouse scroll.
+  This may be used to manually fire an event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a 
+          href="cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html"
+          class="link">MouseScrollGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchKeyPressGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchKeyPressGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchKeyPressGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a key press. 
+  This may be used to manually fire an event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a href="cocosCairo.GestureEvent.KeyboardGestureEvent-class.html"
+          class="link">KeyboardGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dispatchKeyReleaseGesture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dispatchKeyReleaseGesture</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gestureEvent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GestureDispatch-pysrc.html#GestureDispatch.dispatchKeyReleaseGesture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If currently sending out events, notifies listeners of a key release. 
+  This may be used to manually fire an event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gestureEvent</code></strong> (<a href="cocosCairo.GestureEvent.KeyboardGestureEvent-class.html"
+          class="link">KeyboardGestureEvent</a>) - The event.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:31 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

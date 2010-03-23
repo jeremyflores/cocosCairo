@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.Geometry</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;Geometry
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.Geometry-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module Geometry</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html">source&nbsp;code</a></span></p>
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Geometry.Size-class.html" class="summary-name">Size</a><br />
+      The size of some object (usually a <a 
+        href="cocosCairo.Node-module.html" class="link">Node</a>), given as
+        its width and height (usually in pixels).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Geometry.Point-class.html" class="summary-name">Point</a><br />
+      A two-dimensional coordinate (usually for a <a 
+        href="cocosCairo.Node-module.html" class="link">Node</a>), given as
+        its x-coordinate and its y-coordinate (usually in pixels).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Geometry.Rect-class.html" class="summary-name">Rect</a><br />
+      A <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a> and a <a 
+        href="cocosCairo.Geometry.Size-class.html" class="link">Size</a> 
+        which are used to define a rectangle.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Geometry.Polygon-class.html" class="summary-name">Polygon</a><br />
+      A sequence of <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a><code>s</code> which defines a polygon.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Polygon-class.html" 
+      class="link">Polygon</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#addPolygons" class="summary-sig-name">addPolygons</a>(<span class="summary-sig-arg">*polygons</span>)</span><br />
+      Returns the smallest possible convex polygon which encompasses all 
+      points generated from pointwise addition of the polygons.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#addPolygons">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Polygon-class.html" 
+      class="link">Polygon</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#multiplyPolygons" class="summary-sig-name">multiplyPolygons</a>(<span class="summary-sig-arg">*polygons</span>)</span><br />
+      Returns the smallest possible convex polygon which encompasses all 
+      points generated from pointwise multiplication of the polygons.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#multiplyPolygons">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Polygon-class.html" 
+      class="link">Polygon</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#MakePolygon" class="summary-sig-name">MakePolygon</a>(<span class="summary-sig-arg">*points</span>)</span><br />
+      Creates the smallest possible convex polygon which encompasses the 
+      given points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#MakePolygon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#MakeRect" class="summary-sig-name">MakeRect</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">w</span>,
+        <span class="summary-sig-arg">h</span>)</span><br />
+      Convenience method to construct a <a 
+      href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#MakeRect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#PointZero" class="summary-sig-name">PointZero</a>()</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> with values <code>(0, 0)</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#PointZero">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Size-class.html" class="link">Size</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#SizeZero" class="summary-sig-name">SizeZero</a>()</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Size-class.html" 
+      class="link">Size</a> with values <code>(0, 0)</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#SizeZero">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#RectZero" class="summary-sig-name">RectZero</a>()</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Rect-class.html" 
+      class="link">Rect</a> with values <code>(0, 0, 0, 0)</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#RectZero">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointAdd" class="summary-sig-name">pointAdd</a>(<span class="summary-sig-arg">*points</span>)</span><br />
+      Adds up a series of <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a><code>s</code> and returns a new Point that is 
+      the result.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointAdd">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointSub" class="summary-sig-name">pointSub</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">*points</span>)</span><br />
+      Subtracts a series of <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a><code>s</code> and returns a new Point that is 
+      the result.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointSub">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointMult" class="summary-sig-name">pointMult</a>(<span class="summary-sig-arg">*points</span>)</span><br />
+      Multiplies a series of <a href="cocosCairo.Geometry.Point-class.html"
+      class="link">Point</a><code>s</code> by each other and returns a new 
+      Point that is the result.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointMult">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointConstMult" class="summary-sig-name">pointConstMult</a>(<span class="summary-sig-arg">point</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> whose value is the given Point multiplied by 
+      the given value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointConstMult">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointNeg" class="summary-sig-name">pointNeg</a>(<span class="summary-sig-arg">point</span>)</span><br />
+      Returns the a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> whose values are the negative of the given 
+      Point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointNeg">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointMid" class="summary-sig-name">pointMid</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> whose values are the midpoint of the given 
+      Points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointMid">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointDot" class="summary-sig-name">pointDot</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns the dot product of the given Points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointDot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointCross" class="summary-sig-name">pointCross</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns the cross product of the given Points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointCross">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointPerp" class="summary-sig-name">pointPerp</a>(<span class="summary-sig-arg">point</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> which is perpendicular to the given point, 
+      rotated pi/2 radians counter-clockwise (that is, the new Point has 
+      the value <code>(-y, x)</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointPerp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointRPerp" class="summary-sig-name">pointRPerp</a>(<span class="summary-sig-arg">point</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> which is perpendicular to the given point, 
+      rotated pi/2 radians clockwise (that is, the new Point has the value 
+      <code>(y, -x)</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointRPerp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointProject" class="summary-sig-name">pointProject</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns the projection of p1 over p2.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointProject">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointProjectToLine" class="summary-sig-name">pointProjectToLine</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">b</span>)</span><br />
+      Projects a point onto a line (that is, it constructs a line 
+      perpendicular to the given line that intersects the given point, then
+      returns where the given line and perpendicular line intersect).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointProjectToLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointProjectToLineWithPoints" class="summary-sig-name">pointProjectToLineWithPoints</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>,
+        <span class="summary-sig-arg">p3</span>)</span><br />
+      Projects a point onto a line (that is, it constructs a line 
+      perpendicular to the given line that intersects the given point, then
+      returns where the given line and perpendicular line intersect).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointProjectToLineWithPoints">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#arePointsCollinear" class="summary-sig-name">arePointsCollinear</a>(<span class="summary-sig-arg">*points</span>)</span><br />
+      Returns whether or not the given <a 
+      href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a><code>s</code> lie on the same line.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#arePointsCollinear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#areThreePointsCollinear" class="summary-sig-name">areThreePointsCollinear</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>,
+        <span class="summary-sig-arg">p3</span>)</span><br />
+      Returns whether or not three points lie on the same line.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#areThreePointsCollinear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>list</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#getSlopeAndIntercept" class="summary-sig-name">getSlopeAndIntercept</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns the slope and intercept of the line which passes between two 
+      given points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#getSlopeAndIntercept">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointRotate" class="summary-sig-name">pointRotate</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> which is the rotation of the two given points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointRotate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointUnrotate" class="summary-sig-name">pointUnrotate</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> which is the reversed rotation of the two 
+      given points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointUnrotate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointLength" class="summary-sig-name">pointLength</a>(<span class="summary-sig-arg">point</span>)</span><br />
+      Returns the distance of the given <a 
+      href="cocosCairo.Geometry.Point-class.html" class="link">Point</a> 
+      from the origin (<a href="cocosCairo.Geometry-module.html#PointZero" 
+      class="link">PointZero</a>).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointLength">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointDistance" class="summary-sig-name">pointDistance</a>(<span class="summary-sig-arg">p1</span>,
+        <span class="summary-sig-arg">p2</span>)</span><br />
+      Returns the distance between two Points.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointDistance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointNormalize" class="summary-sig-name">pointNormalize</a>(<span class="summary-sig-arg">point</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> whose length is 1 (that is, the Point's unit 
+      vector).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointNormalize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointForAngle" class="summary-sig-name">pointForAngle</a>(<span class="summary-sig-arg">angle</span>)</span><br />
+      Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a> whose length is 1 and has an angle as provided
+      in radians (that is, a unit vector).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointForAngle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Geometry-module.html#pointToAngle" class="summary-sig-name">pointToAngle</a>(<span class="summary-sig-arg">point</span>)</span><br />
+      Returns the angle (in radians) of the vector from <code>Point(0, 
+      0)</code> to the given <a href="cocosCairo.Geometry.Point-class.html"
+      class="link">Point</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointToAngle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'cocosCairo'"><code class="variable-quote">'</code><code class="variable-string">cocosCairo</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="addPolygons"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addPolygons</span>(<span class="sig-arg">*polygons</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#addPolygons">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the smallest possible convex polygon which encompasses all 
+  points generated from pointwise addition of the polygons. (That is, it 
+  returns the convex hull of the Minkowski summation of the polygons.)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>polygons</code></strong> (<code>comma-separated Polygons</code>) - The <a href="cocosCairo.Geometry.Polygon-class.html" 
+          class="link">Polygon</a><code>s</code> to add up.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Polygon-class.html" 
+      class="link">Polygon</a></dt>
+        <dd>The smallest possible convex polygon which encompasses all the 
+          points.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="multiplyPolygons"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">multiplyPolygons</span>(<span class="sig-arg">*polygons</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#multiplyPolygons">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the smallest possible convex polygon which encompasses all 
+  points generated from pointwise multiplication of the polygons. (That is,
+  it returns the convex hull of the multiplication of the polygons.)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>polygons</code></strong> (<code>comma-separated Polygons</code>) - The <a href="cocosCairo.Geometry.Polygon-class.html" 
+          class="link">Polygon</a><code>s</code> to multiply.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Polygon-class.html" 
+      class="link">Polygon</a></dt>
+        <dd>The smallest possible convex polygon which encompasses all the 
+          points.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MakePolygon"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MakePolygon</span>(<span class="sig-arg">*points</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#MakePolygon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Creates the smallest possible convex polygon which encompasses the 
+  given points. (That is, it returns the convex hull of the points.)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>points</code></strong> (<code>comma-separated Points</code>) - The <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a><code>s</code> to be bounded by a Polygon.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Polygon-class.html" 
+      class="link">Polygon</a></dt>
+        <dd>The convex polygon bounding the points.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MakeRect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MakeRect</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>,
+        <span class="sig-arg">w</span>,
+        <span class="sig-arg">h</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#MakeRect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convenience method to construct a <a 
+  href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (<code>float</code>) - The x-coordinate.</li>
+        <li><strong class="pname"><code>y</code></strong> (<code>float</code>) - The y-coordinate.</li>
+        <li><strong class="pname"><code>w</code></strong> (Non-negative <code>float</code>) - The width.</li>
+        <li><strong class="pname"><code>h</code></strong> (Non-negative <code>float</code>) - The height.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a></dt>
+        <dd>A new Rect.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="PointZero"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">PointZero</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#PointZero">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> with values <code>(0, 0)</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A new Point with values <code>(0, 0)</code>.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="SizeZero"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SizeZero</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#SizeZero">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Size-class.html" 
+  class="link">Size</a> with values <code>(0, 0)</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Size-class.html" class="link">Size</a></dt>
+        <dd>A new Size with values <code>(0, 0)</code>.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="RectZero"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RectZero</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#RectZero">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Rect-class.html" 
+  class="link">Rect</a> with values <code>(0, 0, 0, 0)</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a></dt>
+        <dd>A new Rect with values <code>(0, 0, 0, 0)</code>.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointAdd"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointAdd</span>(<span class="sig-arg">*points</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointAdd">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Adds up a series of <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a><code>s</code> and returns a new Point that is the 
+  result.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>points</code></strong> (Comma-separated <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a><code>s</code>) - A series of Points.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointSub"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointSub</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">*points</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointSub">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subtracts a series of <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a><code>s</code> and returns a new Point that is the 
+  result.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - The original point from which all other values will be 
+          subtracted.</li>
+        <li><strong class="pname"><code>points</code></strong> (Comma-separated <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a><code>s</code>) - A series of Points.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointMult"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointMult</span>(<span class="sig-arg">*points</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointMult">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Multiplies a series of <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a><code>s</code> by each other and returns a new 
+  Point that is the result.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>points</code></strong> (Comma-separated <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a><code>s</code>) - A series of Points.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointConstMult"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointConstMult</span>(<span class="sig-arg">point</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointConstMult">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> whose value is the given Point multiplied by the 
+  given value.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>value</code></strong> (<code>float</code>) - The value by which the Point is multiplied.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointNeg"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointNeg</span>(<span class="sig-arg">point</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointNeg">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> whose values are the negative of the given 
+  Point.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - The Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointMid"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointMid</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointMid">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> whose values are the midpoint of the given 
+  Points.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - Another Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointDot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointDot</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointDot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the dot product of the given Points.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - Another Point.</li>
+    </ul></dd>
+    <dt>Returns: <code>float</code></dt>
+        <dd>The dot product.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointCross"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointCross</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointCross">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the cross product of the given Points.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - Another Point.</li>
+    </ul></dd>
+    <dt>Returns: <code>float</code></dt>
+        <dd>The cross product.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointPerp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointPerp</span>(<span class="sig-arg">point</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointPerp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> which is perpendicular to the given point, rotated
+  pi/2 radians counter-clockwise (that is, the new Point has the value 
+  <code>(-y, x)</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointRPerp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointRPerp</span>(<span class="sig-arg">point</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointRPerp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> which is perpendicular to the given point, rotated
+  pi/2 radians clockwise (that is, the new Point has the value <code>(y, 
+  -x)</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointProject"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointProject</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointProject">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the projection of p1 over p2.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointProjectToLine"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointProjectToLine</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">b</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointProjectToLine">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Projects a point onto a line (that is, it constructs a line 
+  perpendicular to the given line that intersects the given point, then 
+  returns where the given line and perpendicular line intersect).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - The Point to project.</li>
+        <li><strong class="pname"><code>m</code></strong> (<code>float</code>) - The slope of the line.</li>
+        <li><strong class="pname"><code>b</code></strong> (<code>float</code>) - The y-intercept of the line.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point on the given line.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointProjectToLineWithPoints"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointProjectToLineWithPoints</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>,
+        <span class="sig-arg">p3</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointProjectToLineWithPoints">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Projects a point onto a line (that is, it constructs a line 
+  perpendicular to the given line that intersects the given point, then 
+  returns where the given line and perpendicular line intersect).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - The Point to project.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point on the line.</li>
+        <li><strong class="pname"><code>p3</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - Another Point on the line.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>The projected Point on the given line.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arePointsCollinear"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">arePointsCollinear</span>(<span class="sig-arg">*points</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#arePointsCollinear">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not the given <a 
+  href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a><code>s</code> lie on the same line.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>points</code></strong> (Comma-separated <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a><code>s</code>) - A series of Points.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not the given Points lie on the same line.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="areThreePointsCollinear"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">areThreePointsCollinear</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>,
+        <span class="sig-arg">p3</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#areThreePointsCollinear">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not three points lie on the same line.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - Another Point.</li>
+        <li><strong class="pname"><code>p3</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A third Point.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not three points lie on the same line.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSlopeAndIntercept"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSlopeAndIntercept</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#getSlopeAndIntercept">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the slope and intercept of the line which passes between two 
+  given points. It will return a list in the form [m, b] where m is the 
+  slope and b is the intercept. If it is a vertical line, it will return 
+  [None, None].</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - Another Point.</li>
+    </ul></dd>
+    <dt>Returns: <code>list</code></dt>
+        <dd>The slope and intercept of the line in the form [m, b].</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointRotate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointRotate</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointRotate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> which is the rotation of the two given points.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a> return: A Point with the result.) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointUnrotate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointUnrotate</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointUnrotate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> which is the reversed rotation of the two given 
+  points.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a> return: A Point with the result.) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointLength"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointLength</span>(<span class="sig-arg">point</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointLength">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the distance of the given <a 
+  href="cocosCairo.Geometry.Point-class.html" class="link">Point</a> from 
+  the origin (<a href="cocosCairo.Geometry-module.html#PointZero" 
+  class="link">PointZero</a>).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A point.</li>
+    </ul></dd>
+    <dt>Returns: <code>float</code></dt>
+        <dd>The distance.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointDistance"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointDistance</span>(<span class="sig-arg">p1</span>,
+        <span class="sig-arg">p2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointDistance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the distance between two Points.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p1</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+        <li><strong class="pname"><code>p2</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a> return: The distance between the two 
+          Points.) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <code>float</code></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointNormalize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointNormalize</span>(<span class="sig-arg">point</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointNormalize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> whose length is 1 (that is, the Point's unit 
+  vector).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointForAngle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointForAngle</span>(<span class="sig-arg">angle</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointForAngle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a> whose length is 1 and has an angle as provided in 
+  radians (that is, a unit vector).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>angle</code></strong> (<code>float</code>) - The angle (in radians) away from the x-axis.</li>
+    </ul></dd>
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" class="link">Point</a></dt>
+        <dd>A Point with the result.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pointToAngle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pointToAngle</span>(<span class="sig-arg">point</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Geometry-pysrc.html#pointToAngle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the angle (in radians) of the vector from <code>Point(0, 
+  0)</code> to the given <a href="cocosCairo.Geometry.Point-class.html" 
+  class="link">Point</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - A Point.</li>
+    </ul></dd>
+    <dt>Returns: <code>float</code></dt>
+        <dd>The angle in radians.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:29 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

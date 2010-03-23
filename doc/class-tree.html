@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class Hierarchy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="class-tree.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<center><b>
+ [ <a href="module-tree.html">Module Hierarchy</a>
+ | <a href="class-tree.html">Class Hierarchy</a> ]
+</b></center><br />
+<h1 class="epydoc">Class Hierarchy</h1>
+<ul class="nomargin-top">
+    <li> <strong class="uidlink"><a href="cocosCairo.Action.AbstractAction-class.html">cocosCairo.Action.AbstractAction</a></strong>:
+      <em class="summary">The base class for all Actions.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Action.FiniteTimeAction-class.html">cocosCairo.Action.FiniteTimeAction</a></strong>:
+      <em class="summary">An <a href="cocosCairo.Action.AbstractAction-class.html" 
+        class="link">AbstractAction</a> that will take place over a 
+        (finite) period of time.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.AbstractInstantAction-class.html">cocosCairo.InstantAction.AbstractInstantAction</a></strong>:
+      <em class="summary">An Action that executes once instantaneously.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.CallbackInstantAction-class.html">cocosCairo.InstantAction.CallbackInstantAction</a></strong>:
+      <em class="summary">When executed, calls a callback.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.CallbackWithOwner-class.html">cocosCairo.InstantAction.CallbackWithOwner</a></strong>:
+      <em class="summary">When executed, calls a callback and passes the method the Action's 
+        owner.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.CallbackWithOwnerAndData-class.html">cocosCairo.InstantAction.CallbackWithOwnerAndData</a></strong>:
+      <em class="summary">When executed, calls a callback and passes the method the Action's 
+        owner as well as some given data.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.Hide-class.html">cocosCairo.InstantAction.Hide</a></strong>:
+      <em class="summary">When executed, hides an object.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.Place-class.html">cocosCairo.InstantAction.Place</a></strong>:
+      <em class="summary">When executed, sets a new position for an object.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.Show-class.html">cocosCairo.InstantAction.Show</a></strong>:
+      <em class="summary">When executed, shows an object.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.InstantAction.ToggleVisibility-class.html">cocosCairo.InstantAction.ToggleVisibility</a></strong>:
+      <em class="summary">When executed, toggles an object's visibility.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.AbstractIntervalAction-class.html">cocosCairo.IntervalAction.AbstractIntervalAction</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Action.FiniteTimeAction-class.html" 
+        class="link">FiniteTimeAction</a> that incrementally performs small
+        changes in intervals over a period of time.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.AbstractEaseAction-class.html">cocosCairo.EaseAction.AbstractEaseAction</a></strong>:
+      <em class="summary">An abstract <a href="cocosCairo.Action.AbstractAction-class.html" 
+        class="link">AbstractAction</a> wrapper that modifies the rate at 
+        which the wrapped Action executes, usually by some geometric curve.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.AbstractEaseBounce-class.html">cocosCairo.EaseAction.AbstractEaseBounce</a></strong>:
+      <em class="summary">An abstract <a 
+        href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve oscillates so as to
+        produce a bouncing effect.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseBounceIn-class.html">cocosCairo.EaseAction.EaseBounceIn</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first bounces 
+        before reaching completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseBounceInOut-class.html">cocosCairo.EaseAction.EaseBounceInOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first bounces 
+        before reaching completion, then again bounces as it reaches 
+        completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseBounceOut-class.html">cocosCairo.EaseAction.EaseBounceOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve bounces as it 
+        reaches completion.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.AbstractEaseElastic-class.html">cocosCairo.EaseAction.AbstractEaseElastic</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve oscillates so as to
+        produce an elastic effect.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseElasticIn-class.html">cocosCairo.EaseAction.EaseElasticIn</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> which oscillates at the 
+        beginning before reaching completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseElasticInOut-class.html">cocosCairo.EaseAction.EaseElasticInOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> which oscillates both at the 
+        beginning and as it reaches completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseElasticOut-class.html">cocosCairo.EaseAction.EaseElasticOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> which oscillates at the end as 
+        it reaches completion.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html">cocosCairo.EaseAction.AbstractEaseRateAction</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve is determined by a 
+        given rate.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseIn-class.html">cocosCairo.EaseAction.EaseIn</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" 
+        class="link">AbstractEaseRateAction</a> that starts slowly then 
+        increases speed as it nears completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseInOut-class.html">cocosCairo.EaseAction.EaseInOut</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" 
+        class="link">AbstractEaseRateAction</a> that starts slowly, speeds 
+        up to being 50% complete, then slows back down as it nears 
+        completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseOut-class.html">cocosCairo.EaseAction.EaseOut</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" 
+        class="link">AbstractEaseRateAction</a> that starts quickly then 
+        decreases speed as it nears completion.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseBackIn-class.html">cocosCairo.EaseAction.EaseBackIn</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first reverses 
+        before reaching completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseBackInOut-class.html">cocosCairo.EaseAction.EaseBackInOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first reverses then
+        overshoots and corrects as it reaches completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseBackOut-class.html">cocosCairo.EaseAction.EaseBackOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve overshoots and then
+        corrects as it reaches completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseExponentialIn-class.html">cocosCairo.EaseAction.EaseExponentialIn</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly then 
+        increases speed as it nears completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseExponentialInOut-class.html">cocosCairo.EaseAction.EaseExponentialInOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly, speeds up 
+        to being 50% complete, then slows back down as it nears completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseExponentialOut-class.html">cocosCairo.EaseAction.EaseExponentialOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts quickly then 
+        decreases speed as it nears completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseSineIn-class.html">cocosCairo.EaseAction.EaseSineIn</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly then 
+        increases speed as it nears completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseSineInOut-class.html">cocosCairo.EaseAction.EaseSineInOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly, speeds up 
+        to being 50% complete, then slows back down as it nears completion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.EaseAction.EaseSineOut-class.html">cocosCairo.EaseAction.EaseSineOut</a></strong>:
+      <em class="summary">An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts quickly then 
+        decreases speed as it nears completion.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.BezierBy-class.html">cocosCairo.IntervalAction.BezierBy</a></strong>:
+      <em class="summary">Moves a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        along a curved path as defined by a <a 
+        href="cocosCairo.IntervalAction.BezierConfiguration-class.html" 
+        class="link">BezierConfiguration</a>.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.BezierTo-class.html">cocosCairo.IntervalAction.BezierTo</a></strong>:
+      <em class="summary">Moves a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        to a specified <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a> by following a Bezier curve.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.Blink-class.html">cocosCairo.IntervalAction.Blink</a></strong>:
+      <em class="summary">Makes a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        alternately visible and invisible.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.DelayTime-class.html">cocosCairo.IntervalAction.DelayTime</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.IntervalAction.AbstractIntervalAction-class.html" 
+        class="link">AbstractIntervalAction</a> that performs no operations
+        over a period of time.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.FadeIn-class.html">cocosCairo.IntervalAction.FadeIn</a></strong>:
+      <em class="summary">Fades in a Node (makes it visible).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.FadeOut-class.html">cocosCairo.IntervalAction.FadeOut</a></strong>:
+      <em class="summary">Fades out a Node (makes it invisible).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.FadeTo-class.html">cocosCairo.IntervalAction.FadeTo</a></strong>:
+      <em class="summary">Fades a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        to a specified opacity.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.JumpBy-class.html">cocosCairo.IntervalAction.JumpBy</a></strong>:
+      <em class="summary">Moves a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        by a certain distance by having it &quot;jump&quot; to its final 
+        destination.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.JumpTo-class.html">cocosCairo.IntervalAction.JumpTo</a></strong>:
+      <em class="summary">Moves a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        to a certain <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a> by having it &quot;jump&quot; there.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.MoveTo-class.html">cocosCairo.IntervalAction.MoveTo</a></strong>:
+      <em class="summary">Moves a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        to a certain <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a> over a period of time.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.MoveBy-class.html">cocosCairo.IntervalAction.MoveBy</a></strong>:
+      <em class="summary">Moves a <a href="cocosCairo.Node-module.html" class="link">Node</a>
+        by a certain distance (given by a <a 
+        href="cocosCairo.Geometry.Point-class.html" class="link">Point</a>)
+        over a period of time.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.Repeat-class.html">cocosCairo.IntervalAction.Repeat</a></strong>:
+      <em class="summary">Repeats a given Action a given number of times.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.ReverseTime-class.html">cocosCairo.IntervalAction.ReverseTime</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.IntervalAction.AbstractIntervalAction-class.html" 
+        class="link">AbstractIntervalAction</a> whose wrapped Action is run
+        in reverse.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.RotateBy-class.html">cocosCairo.IntervalAction.RotateBy</a></strong>:
+      <em class="summary">Rotates a <a href="cocosCairo.Node-module.html" 
+        class="link">Node</a> by a certain angle over a period of time.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.RotateTo-class.html">cocosCairo.IntervalAction.RotateTo</a></strong>:
+      <em class="summary">Rotates a <a href="cocosCairo.Node-module.html" 
+        class="link">Node</a> to a certain angle in radians over a period 
+        of time.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.ScaleTo-class.html">cocosCairo.IntervalAction.ScaleTo</a></strong>:
+      <em class="summary">Scales a <a href="cocosCairo.Node-module.html" 
+        class="link">Node</a> to a specified percentage in both the x- and 
+        y-axes.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.ScaleBy-class.html">cocosCairo.IntervalAction.ScaleBy</a></strong>:
+      <em class="summary">Scales a <a href="cocosCairo.Node-module.html" 
+        class="link">Node</a> by a specified percentage in both the x- and 
+        y-axes.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.Sequence-class.html">cocosCairo.IntervalAction.Sequence</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.IntervalAction.AbstractIntervalAction-class.html" 
+        class="link">AbstractIntervalAction</a> that executes a series of 
+        Actions according to the order in which they are given.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.Spawn-class.html">cocosCairo.IntervalAction.Spawn</a></strong>:
+      <em class="summary">Starts multiple Actions simultaneously.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.TintBy-class.html">cocosCairo.IntervalAction.TintBy</a></strong>:
+      <em class="summary">Changes the color value of a <a href="cocosCairo.Node-module.html" 
+        class="link">Node</a> by a certain amount given for each color 
+        channel.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.TintTo-class.html">cocosCairo.IntervalAction.TintTo</a></strong>:
+      <em class="summary">Changes the color value of a <a href="cocosCairo.Node-module.html" 
+        class="link">Node</a> which uses <code>Node.getColor</code> and 
+        <code>Node.setColor</code> (e.g.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Action.RepeatForever-class.html">cocosCairo.Action.RepeatForever</a></strong>:
+      <em class="summary">An Action wrapper that modifies another <a 
+        href="cocosCairo.Action.AbstractAction-class.html" 
+        class="link">AbstractAction</a> by making it repeat forever.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Action.Speed-class.html">cocosCairo.Action.Speed</a></strong>:
+      <em class="summary">An Action wrapper that modifies another <a 
+        href="cocosCairo.Action.AbstractAction-class.html" 
+        class="link">AbstractAction</a> by changing the speed at which it 
+        is run.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.GestureEvent.AbstractGestureEvent-class.html">cocosCairo.GestureEvent.AbstractGestureEvent</a></strong>:
+      <em class="summary">A package that contains information about a detected gesture (e.g.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GestureEvent.KeyboardGestureEvent-class.html">cocosCairo.GestureEvent.KeyboardGestureEvent</a></strong>:
+      <em class="summary">An event for when a key is pressed or released.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.GestureEvent.MouseGestureEvent-class.html">cocosCairo.GestureEvent.MouseGestureEvent</a></strong>:
+      <em class="summary">An event for mouse press, mouse double press, mouse release, and 
+        mouse motion.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html">cocosCairo.GestureEvent.MouseScrollGestureEvent</a></strong>:
+      <em class="summary">An event for when the mouse scrolls.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.AbstractListener.AbstractListener-class.html">cocosCairo.AbstractListener.AbstractListener</a></strong>:
+      <em class="summary">Base class for Listeners to be used in conjunction with <a 
+        href="cocosCairo.ListenedObject-module.html" 
+        class="link">ListenedObject</a>s.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.AbstractModel.ModelListener-class.html">cocosCairo.AbstractModel.ModelListener</a></strong>:
+      <em class="summary">An <a 
+        href="cocosCairo.AbstractListener.AbstractListener-class.html" 
+        class="link">AbstractListener</a> that receives notifications from 
+        an <a href="cocosCairo.AbstractModel.AbstractModel-class.html" 
+        class="link">AbstractModel</a> that it has changed.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Node.Node-class.html">cocosCairo.Node.Node</a></strong>:
+      <em class="summary">The base class for rendering objects to the screen.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html">cocosCairo.Primitive.AbstractFillableNode</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Node.Node-class.html" class="link">Node</a> 
+        which can be filled with a color and have a colored outline.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Primitive.EllipseNode-class.html">cocosCairo.Primitive.EllipseNode</a></strong>:
+      <em class="summary">Displays an ellipse in the given <a 
+        href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a>.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Primitive.PointNode-class.html">cocosCairo.Primitive.PointNode</a></strong>:
+      <em class="summary">Draws a circle with a given radius at a <a 
+        href="cocosCairo.Geometry.Point-class.html" class="link">Point</a>.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Primitive.PolygonNode-class.html">cocosCairo.Primitive.PolygonNode</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Primitive.RectangleNode-class.html">cocosCairo.Primitive.RectangleNode</a></strong>:
+      <em class="summary">Displays a rectangle.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.ColorNode.ColorNode-class.html">cocosCairo.ColorNode.ColorNode</a></strong>:
+      <em class="summary">A Node which fills its bounding box with a certain <a 
+        href="cocosCairo.Color.Color-class.html" class="link">Color</a>.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Label.Label-class.html">cocosCairo.Label.Label</a></strong>:
+      <em class="summary">Renders text to the screen.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Primitive.LineNode-class.html">cocosCairo.Primitive.LineNode</a></strong>:
+      <em class="summary">Displays a line.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.PangoLabel.PangoLabel-class.html">cocosCairo.PangoLabel.PangoLabel</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Node.Node-class.html" class="link">Node</a> 
+        used to render text to the screen.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.SVGSprite.SVGSprite-class.html">cocosCairo.SVGSprite.SVGSprite</a></strong>:
+      <em class="summary">Renders SVG files to the screen.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Scene.Scene-class.html">cocosCairo.Scene.Scene</a></strong>:
+      <em class="summary">The main type of <a href="cocosCairo.Node.Node-class.html" 
+        class="link">Node</a> to which other Nodes are added.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.AbstractTransition-class.html">cocosCairo.Transition.AbstractTransition</a></strong>:
+      <em class="summary">A type of <a href="cocosCairo.Scene.Scene-class.html" 
+        class="link">Scene</a> that provides a transition animation from 
+        the currently-running Scene to a new Scene.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.FadeTransition-class.html">cocosCairo.Transition.FadeTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that fades from the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> to 
+        a <a href="cocosCairo.Color.Color-class.html" 
+        class="link">Color</a> (default is <a 
+        href="cocosCairo.Color-module.html#BlackColor" 
+        class="link">BlackColor()</a>) then fades to the next Scene.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.JumpZoomTransition-class.html">cocosCairo.Transition.JumpZoomTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that shrinks the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> and
+        has it jump off-screen, then has the next Scene jump on-screen and 
+        grow.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.MoveInLeftTransition-class.html">cocosCairo.Transition.MoveInLeftTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that leaves the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> in 
+        place and has the next Scene slide over it coming from left to 
+        right.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.MoveInBottomTransition-class.html">cocosCairo.Transition.MoveInBottomTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that leaves the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> in 
+        place and has the next Scene slide over it coming from bottom to 
+        top.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.MoveInRightTransition-class.html">cocosCairo.Transition.MoveInRightTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that leaves the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> in 
+        place and has the next Scene slide over it coming from right to 
+        left.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.MoveInTopTransition-class.html">cocosCairo.Transition.MoveInTopTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that leaves the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> in 
+        place and has the next Scene slide over it coming from top to 
+        bottom.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.RotoZoomTransition-class.html">cocosCairo.Transition.RotoZoomTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that spins and zooms out the previous 
+        <a href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> 
+        then spins and zooms in on the next Scene.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.ShrinkGrowTransition-class.html">cocosCairo.Transition.ShrinkGrowTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that shrinks the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> 
+        then grows the next Scene.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.SlideInLeftTransition-class.html">cocosCairo.Transition.SlideInLeftTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that pushes out the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> and
+        moves in the next Scene from left to right.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.SlideInBottomTransition-class.html">cocosCairo.Transition.SlideInBottomTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that pushes out the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> and
+        moves in the next Scene from bottom to top.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.SlideInRightTransition-class.html">cocosCairo.Transition.SlideInRightTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that pushes out the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> and
+        moves in the next Scene from right to left.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Transition.SlideInTopTransition-class.html">cocosCairo.Transition.SlideInTopTransition</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Transition-module.html" 
+        class="link">Transition</a> that pushes out the previous <a 
+        href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> and
+        moves in the next Scene from top to bottom.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Sprite.Sprite-class.html">cocosCairo.Sprite.Sprite</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Node.Node-class.html" class="link">Node</a> 
+        that renders an image (such as a JPEG or PNG) to the screen.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.AbstractWindow.AbstractWindow-class.html">cocosCairo.AbstractWindow.AbstractWindow</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKWindow.GTKWindow-class.html">cocosCairo.GTKWindow.GTKWindow</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.ActionManager.ActionManager-class.html">cocosCairo.ActionManager.ActionManager</a></strong>:
+      <em class="summary">Manages all <a href="cocosCairo.Action.AbstractAction-class.html" 
+        class="link">AbstractAction</a><code>s</code> for the application.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.IntervalAction.BezierConfiguration-class.html">cocosCairo.IntervalAction.BezierConfiguration</a></strong>:
+      <em class="summary">An object which holds parameter values for a Bezier curve.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Color.Color-class.html">cocosCairo.Color.Color</a></strong>:
+      <em class="summary">Defines an <code>RGBA</code> (Red, Green, Blue, Alpha) color.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Director.Director-class.html">cocosCairo.Director.Director</a></strong>:
+      <em class="summary">The central point of the application.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKInterface.GTKInterface-class.html">cocosCairo.GTKInterface.GTKInterface</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.GestureListener.GestureListener-class.html">cocosCairo.GestureListener.GestureListener</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.AbstractController.AbstractController-class.html">cocosCairo.AbstractController.AbstractController</a></strong>:
+      <em class="summary">The controller in the model-view-controller design pattern.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.ListenedObject.ListenedObject-class.html">cocosCairo.ListenedObject.ListenedObject</a></strong>:
+      <em class="summary">A mixin which provides convenience methods for storing, adding, and
+        removing <a href="cocosCairo.AbstractListener-module.html" 
+        class="link">AbstractListener</a><code>s</code> to an object.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.AbstractModel.AbstractModel-class.html">cocosCairo.AbstractModel.AbstractModel</a></strong>:
+      <em class="summary">The model in the model-view-controller design pattern.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.GestureDispatch.GestureDispatch-class.html">cocosCairo.GestureDispatch.GestureDispatch</a></strong>:
+      <em class="summary">A <a href="cocosCairo.ListenedObject.ListenedObject-class.html" 
+        class="link">ListenedObject</a> that is responsible for sending 
+        user gestures to handlers (which could, but not necessarily, be an 
+        <a href="cocosCairo.AbstractController-module.html" 
+        class="link">AbstractController</a>).</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Geometry.Point-class.html">cocosCairo.Geometry.Point</a></strong>:
+      <em class="summary">A two-dimensional coordinate (usually for a <a 
+        href="cocosCairo.Node-module.html" class="link">Node</a>), given as
+        its x-coordinate and its y-coordinate (usually in pixels).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Geometry.Polygon-class.html">cocosCairo.Geometry.Polygon</a></strong>:
+      <em class="summary">A sequence of <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a><code>s</code> which defines a polygon.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Geometry.Rect-class.html">cocosCairo.Geometry.Rect</a></strong>:
+      <em class="summary">A <a href="cocosCairo.Geometry.Point-class.html" 
+        class="link">Point</a> and a <a 
+        href="cocosCairo.Geometry.Size-class.html" class="link">Size</a> 
+        which are used to define a rectangle.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Scheduler.Scheduler-class.html">cocosCairo.Scheduler.Scheduler</a></strong>:
+      <em class="summary">Manages all <a href="cocosCairo.Timer-module.html" 
+        class="link">Timer</a><code>s</code> for the application.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Geometry.Size-class.html">cocosCairo.Geometry.Size</a></strong>:
+      <em class="summary">The size of some object (usually a <a 
+        href="cocosCairo.Node-module.html" class="link">Node</a>), given as
+        its width and height (usually in pixels).</em>
+    </li>
+    <li> <strong class="uidlink"><a href="cocosCairo.Timer.Timer-class.html">cocosCairo.Timer.Timer</a></strong>:
+      <em class="summary">An object calls a callback every given milliseconds.</em>
+    </li>
+    <li> <strong class="uidlink">object</strong>:
+      <em class="summary">The most base type</em>
+    <ul>
+    <li> <strong class="uidlink">gobject.GInterface</strong>:
+      <em class="summary">Interface GInterface</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Buildable</strong>
+    <ul>
+    <li> <strong class="uidlink">gtk.Widget</strong>:
+      <em class="summary">Object GtkWidget</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Container</strong>:
+      <em class="summary">Object GtkContainer</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Bin</strong>:
+      <em class="summary">Object GtkBin</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Window</strong>:
+      <em class="summary">Object GtkWindow</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKWindow.GTKWindow-class.html">cocosCairo.GTKWindow.GTKWindow</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">gtk.Layout</strong>:
+      <em class="summary">Object GtkLayout</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKInterface.GTKLayout-class.html">cocosCairo.GTKInterface.GTKLayout</a></strong>:
+      <em class="summary">A GTK widget to which any <a href="cocosCairo.Scene-module.html" 
+        class="link">Scene</a> is &quot;attached&quot; for rendering.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">atk.ImplementorIface</strong>
+    <ul>
+    <li> <strong class="uidlink">gtk.Widget</strong>:
+      <em class="summary">Object GtkWidget</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Container</strong>:
+      <em class="summary">Object GtkContainer</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Bin</strong>:
+      <em class="summary">Object GtkBin</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Window</strong>:
+      <em class="summary">Object GtkWindow</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKWindow.GTKWindow-class.html">cocosCairo.GTKWindow.GTKWindow</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">gtk.Layout</strong>:
+      <em class="summary">Object GtkLayout</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKInterface.GTKLayout-class.html">cocosCairo.GTKInterface.GTKLayout</a></strong>:
+      <em class="summary">A GTK widget to which any <a href="cocosCairo.Scene-module.html" 
+        class="link">Scene</a> is &quot;attached&quot; for rendering.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><i>unreachable</i>.GObject</strong>:
+      <em class="summary">Object GObject</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Object</strong>:
+      <em class="summary">Object GtkObject</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Widget</strong>:
+      <em class="summary">Object GtkWidget</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Container</strong>:
+      <em class="summary">Object GtkContainer</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Bin</strong>:
+      <em class="summary">Object GtkBin</em>
+    <ul>
+    <li> <strong class="uidlink">gtk.Window</strong>:
+      <em class="summary">Object GtkWindow</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKWindow.GTKWindow-class.html">cocosCairo.GTKWindow.GTKWindow</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">gtk.Layout</strong>:
+      <em class="summary">Object GtkLayout</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="cocosCairo.GTKInterface.GTKLayout-class.html">cocosCairo.GTKInterface.GTKLayout</a></strong>:
+      <em class="summary">A GTK widget to which any <a href="cocosCairo.Scene-module.html" 
+        class="link">Scene</a> is &quot;attached&quot; for rendering.</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+</ul>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:27 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.GTKInterface</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;GTKInterface
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.GTKInterface-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cocosCairo.GTKInterface-module.html">Module cocosCairo.GTKInterface</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pygtk</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-name">pygtk</tt><tt class="py-op">.</tt><tt class="py-name">require</tt><tt class="py-op">(</tt><tt class="py-string">'2.0'</tt><tt class="py-op">)</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gtk</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module cocosCairo.GTKWindow=cocosCairo.GTKWindow-module.html,Class cocosCairo.GTKWindow.GTKWindow=cocosCairo.GTKWindow.GTKWindow-class.html"><a title="cocosCairo.GTKWindow
+cocosCairo.GTKWindow.GTKWindow" class="py-name" href="#" onclick="return doclink('link-0', 'GTKWindow', 'link-0');">GTKWindow</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module cocosCairo.Geometry=cocosCairo.Geometry-module.html"><a title="cocosCairo.Geometry" class="py-name" href="#" onclick="return doclink('link-1', 'Geometry', 'link-1');">Geometry</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module cocosCairo.AbstractWindow=cocosCairo.AbstractWindow-module.html,Class cocosCairo.AbstractWindow.AbstractWindow=cocosCairo.AbstractWindow.AbstractWindow-class.html"><a title="cocosCairo.AbstractWindow
+cocosCairo.AbstractWindow.AbstractWindow" class="py-name" href="#" onclick="return doclink('link-2', 'AbstractWindow', 'link-2');">AbstractWindow</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Module cocosCairo.Color=cocosCairo.Color-module.html,Class cocosCairo.Color.Color=cocosCairo.Color.Color-class.html"><a title="cocosCairo.Color
+cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-3', 'Color', 'link-3');">Color</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable cocosCairo.Director.GTK_EVENT_MASKS=cocosCairo.Director-module.html#GTK_EVENT_MASKS,Variable cocosCairo.GTKInterface.GTK_EVENT_MASKS=cocosCairo.GTKInterface-module.html#GTK_EVENT_MASKS,Variable cocosCairo.Transition.GTK_EVENT_MASKS=cocosCairo.Transition-module.html#GTK_EVENT_MASKS,Variable cocosCairo.cocosCairo.GTK_EVENT_MASKS=cocosCairo.cocosCairo-module.html#GTK_EVENT_MASKS"><a title="cocosCairo.Director.GTK_EVENT_MASKS
+cocosCairo.GTKInterface.GTK_EVENT_MASKS
+cocosCairo.Transition.GTK_EVENT_MASKS
+cocosCairo.cocosCairo.GTK_EVENT_MASKS" class="py-name" href="#" onclick="return doclink('link-4', 'GTK_EVENT_MASKS', 'link-4');">GTK_EVENT_MASKS</a></tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">BUTTON_RELEASE_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">BUTTON_PRESS_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">ENTER_NOTIFY_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">LEAVE_NOTIFY_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">POINTER_MOTION_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">POINTER_MOTION_HINT_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">KEY_PRESS_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">KEY_RELEASE_MASK</tt> <tt class="py-op">|</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">SCROLL_MASK</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"># TODO: implement double buffering</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="GTKLayout"></a><div id="GTKLayout-def"><a name="L18"></a><tt class="py-lineno"> 18</tt> <a class="py-toggle" href="#" id="GTKLayout-toggle" onclick="return toggle('GTKLayout');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKLayout-class.html">GTKLayout</a><tt class="py-op">(</tt><tt class="py-base-class">gtk</tt><tt class="py-op">.</tt><tt class="py-base-class">Layout</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKLayout-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GTKLayout-expanded"><a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">        A GTK widget to which any L{Scene} is "attached" for rendering. Any L{Node}, therefore, is drawn onto this (which writes to the video hardware). Most applications should never have to directly talk to the GTKLayout as the L{Director} will handle this by childing / de-childing Scenes automatically.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="GTKLayout.__init__"></a><div id="GTKLayout.__init__-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="GTKLayout.__init__-toggle" onclick="return toggle('GTKLayout.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKLayout-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">director</tt><tt class="py-op">,</tt> <tt class="py-param">size</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKLayout.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKLayout.__init__-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">                <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">Layout</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method cocosCairo.AbstractController.AbstractController.__init__()=cocosCairo.AbstractController.AbstractController-class.html#__init__,Method cocosCairo.AbstractWindow.AbstractWindow.__init__()=cocosCairo.AbstractWindow.AbstractWindow-class.html#__init__,Method cocosCairo.Action.AbstractAction.__init__()=cocosCairo.Action.AbstractAction-class.html#__init__,Method cocosCairo.Action.FiniteTimeAction.__init__()=cocosCairo.Action.FiniteTimeAction-class.html#__init__,Method cocosCairo.Action.RepeatForever.__init__()=cocosCairo.Action.RepeatForever-class.html#__init__,Method cocosCairo.Action.Speed.__init__()=cocosCairo.Action.Speed-class.html#__init__,Method cocosCairo.ActionManager.ActionManager.__init__()=cocosCairo.ActionManager.ActionManager-class.html#__init__,Method cocosCairo.Color.Color.__init__()=cocosCairo.Color.Color-class.html#__init__,Method cocosCairo.ColorNode.ColorNode.__init__()=cocosCairo.ColorNode.ColorNode-class.html#__init__,Method cocosCairo.Director.Director.__init__()=cocosCairo.Director.Director-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseAction.__init__()=cocosCairo.EaseAction.AbstractEaseAction-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseElastic.__init__()=cocosCairo.EaseAction.AbstractEaseElastic-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseRateAction.__init__()=cocosCairo.EaseAction.AbstractEaseRateAction-class.html#__init__,Method cocosCairo.GTKInterface.GTKInterface.__init__()=cocosCairo.GTKInterface.GTKInterface-class.html#__init__,Method cocosCairo.GTKInterface.GTKLayout.__init__()=cocosCairo.GTKInterface.GTKLayout-class.html#__init__,Method cocosCairo.Geometry.Point.__init__()=cocosCairo.Geometry.Point-class.html#__init__,Method cocosCairo.Geometry.Polygon.__init__()=cocosCairo.Geometry.Polygon-class.html#__init__,Method cocosCairo.Geometry.Rect.__init__()=cocosCairo.Geometry.Rect-class.html#__init__,Method cocosCairo.Geometry.Size.__init__()=cocosCairo.Geometry.Size-class.html#__init__,Method cocosCairo.GestureDispatch.GestureDispatch.__init__()=cocosCairo.GestureDispatch.GestureDispatch-class.html#__init__,Method cocosCairo.GestureEvent.KeyboardGestureEvent.__init__()=cocosCairo.GestureEvent.KeyboardGestureEvent-class.html#__init__,Method cocosCairo.GestureEvent.MouseGestureEvent.__init__()=cocosCairo.GestureEvent.MouseGestureEvent-class.html#__init__,Method cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__()=cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html#__init__,Method cocosCairo.InstantAction.AbstractInstantAction.__init__()=cocosCairo.InstantAction.AbstractInstantAction-class.html#__init__,Method cocosCairo.InstantAction.CallbackInstantAction.__init__()=cocosCairo.InstantAction.CallbackInstantAction-class.html#__init__,Method cocosCairo.InstantAction.CallbackWithOwnerAndData.__init__()=cocosCairo.InstantAction.CallbackWithOwnerAndData-class.html#__init__,Method cocosCairo.InstantAction.Place.__init__()=cocosCairo.InstantAction.Place-class.html#__init__,Method cocosCairo.IntervalAction.AbstractIntervalAction.__init__()=cocosCairo.IntervalAction.AbstractIntervalAction-class.html#__init__,Method cocosCairo.IntervalAction.BezierBy.__init__()=cocosCairo.IntervalAction.BezierBy-class.html#__init__,Method cocosCairo.IntervalAction.BezierConfiguration.__init__()=cocosCairo.IntervalAction.BezierConfiguration-class.html#__init__,Method cocosCairo.IntervalAction.Blink.__init__()=cocosCairo.IntervalAction.Blink-class.html#__init__,Method cocosCairo.IntervalAction.FadeTo.__init__()=cocosCairo.IntervalAction.FadeTo-class.html#__init__,Method cocosCairo.IntervalAction.JumpBy.__init__()=cocosCairo.IntervalAction.JumpBy-class.html#__init__,Method cocosCairo.IntervalAction.MoveBy.__init__()=cocosCairo.IntervalAction.MoveBy-class.html#__init__,Method cocosCairo.IntervalAction.MoveTo.__init__()=cocosCairo.IntervalAction.MoveTo-class.html#__init__,Method cocosCairo.IntervalAction.Repeat.__init__()=cocosCairo.IntervalAction.Repeat-class.html#__init__,Method cocosCairo.IntervalAction.ReverseTime.__init__()=cocosCairo.IntervalAction.ReverseTime-class.html#__init__,Method cocosCairo.IntervalAction.RotateBy.__init__()=cocosCairo.IntervalAction.RotateBy-class.html#__init__,Method cocosCairo.IntervalAction.RotateTo.__init__()=cocosCairo.IntervalAction.RotateTo-class.html#__init__,Method cocosCairo.IntervalAction.ScaleTo.__init__()=cocosCairo.IntervalAction.ScaleTo-class.html#__init__,Method cocosCairo.IntervalAction.Sequence.__init__()=cocosCairo.IntervalAction.Sequence-class.html#__init__,Method cocosCairo.IntervalAction.Spawn.__init__()=cocosCairo.IntervalAction.Spawn-class.html#__init__,Method cocosCairo.IntervalAction.TintBy.__init__()=cocosCairo.IntervalAction.TintBy-class.html#__init__,Method cocosCairo.IntervalAction.TintTo.__init__()=cocosCairo.IntervalAction.TintTo-class.html#__init__,Method cocosCairo.Label.Label.__init__()=cocosCairo.Label.Label-class.html#__init__,Method cocosCairo.ListenedObject.ListenedObject.__init__()=cocosCairo.ListenedObject.ListenedObject-class.html#__init__,Method cocosCairo.Node.Node.__init__()=cocosCairo.Node.Node-class.html#__init__,Method cocosCairo.PangoLabel.PangoLabel.__init__()=cocosCairo.PangoLabel.PangoLabel-class.html#__init__,Method cocosCairo.Primitive.AbstractFillableNode.__init__()=cocosCairo.Primitive.AbstractFillableNode-class.html#__init__,Method cocosCairo.Primitive.EllipseNode.__init__()=cocosCairo.Primitive.EllipseNode-class.html#__init__,Method cocosCairo.Primitive.LineNode.__init__()=cocosCairo.Primitive.LineNode-class.html#__init__,Method cocosCairo.Primitive.PointNode.__init__()=cocosCairo.Primitive.PointNode-class.html#__init__,Method cocosCairo.Primitive.PolygonNode.__init__()=cocosCairo.Primitive.PolygonNode-class.html#__init__,Method cocosCairo.Primitive.RectangleNode.__init__()=cocosCairo.Primitive.RectangleNode-class.html#__init__,Method cocosCairo.SVGSprite.SVGSprite.__init__()=cocosCairo.SVGSprite.SVGSprite-class.html#__init__,Method cocosCairo.Scene.Scene.__init__()=cocosCairo.Scene.Scene-class.html#__init__,Method cocosCairo.Scheduler.Scheduler.__init__()=cocosCairo.Scheduler.Scheduler-class.html#__init__,Method cocosCairo.Sprite.Sprite.__init__()=cocosCairo.Sprite.Sprite-class.html#__init__,Method cocosCairo.Timer.Timer.__init__()=cocosCairo.Timer.Timer-class.html#__init__,Method cocosCairo.Transition.AbstractTransition.__init__()=cocosCairo.Transition.AbstractTransition-class.html#__init__,Method cocosCairo.Transition.FadeTransition.__init__()=cocosCairo.Transition.FadeTransition-class.html#__init__"><a title="cocosCairo.AbstractController.AbstractController.__init__
+cocosCairo.AbstractWindow.AbstractWindow.__init__
+cocosCairo.Action.AbstractAction.__init__
+cocosCairo.Action.FiniteTimeAction.__init__
+cocosCairo.Action.RepeatForever.__init__
+cocosCairo.Action.Speed.__init__
+cocosCairo.ActionManager.ActionManager.__init__
+cocosCairo.Color.Color.__init__
+cocosCairo.ColorNode.ColorNode.__init__
+cocosCairo.Director.Director.__init__
+cocosCairo.EaseAction.AbstractEaseAction.__init__
+cocosCairo.EaseAction.AbstractEaseElastic.__init__
+cocosCairo.EaseAction.AbstractEaseRateAction.__init__
+cocosCairo.GTKInterface.GTKInterface.__init__
+cocosCairo.GTKInterface.GTKLayout.__init__
+cocosCairo.Geometry.Point.__init__
+cocosCairo.Geometry.Polygon.__init__
+cocosCairo.Geometry.Rect.__init__
+cocosCairo.Geometry.Size.__init__
+cocosCairo.GestureDispatch.GestureDispatch.__init__
+cocosCairo.GestureEvent.KeyboardGestureEvent.__init__
+cocosCairo.GestureEvent.MouseGestureEvent.__init__
+cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__
+cocosCairo.InstantAction.AbstractInstantAction.__init__
+cocosCairo.InstantAction.CallbackInstantAction.__init__
+cocosCairo.InstantAction.CallbackWithOwnerAndData.__init__
+cocosCairo.InstantAction.Place.__init__
+cocosCairo.IntervalAction.AbstractIntervalAction.__init__
+cocosCairo.IntervalAction.BezierBy.__init__
+cocosCairo.IntervalAction.BezierConfiguration.__init__
+cocosCairo.IntervalAction.Blink.__init__
+cocosCairo.IntervalAction.FadeTo.__init__
+cocosCairo.IntervalAction.JumpBy.__init__
+cocosCairo.IntervalAction.MoveBy.__init__
+cocosCairo.IntervalAction.MoveTo.__init__
+cocosCairo.IntervalAction.Repeat.__init__
+cocosCairo.IntervalAction.ReverseTime.__init__
+cocosCairo.IntervalAction.RotateBy.__init__
+cocosCairo.IntervalAction.RotateTo.__init__
+cocosCairo.IntervalAction.ScaleTo.__init__
+cocosCairo.IntervalAction.Sequence.__init__
+cocosCairo.IntervalAction.Spawn.__init__
+cocosCairo.IntervalAction.TintBy.__init__
+cocosCairo.IntervalAction.TintTo.__init__
+cocosCairo.Label.Label.__init__
+cocosCairo.ListenedObject.ListenedObject.__init__
+cocosCairo.Node.Node.__init__
+cocosCairo.PangoLabel.PangoLabel.__init__
+cocosCairo.Primitive.AbstractFillableNode.__init__
+cocosCairo.Primitive.EllipseNode.__init__
+cocosCairo.Primitive.LineNode.__init__
+cocosCairo.Primitive.PointNode.__init__
+cocosCairo.Primitive.PolygonNode.__init__
+cocosCairo.Primitive.RectangleNode.__init__
+cocosCairo.SVGSprite.SVGSprite.__init__
+cocosCairo.Scene.Scene.__init__
+cocosCairo.Scheduler.Scheduler.__init__
+cocosCairo.Sprite.Sprite.__init__
+cocosCairo.Timer.Timer.__init__
+cocosCairo.Transition.AbstractTransition.__init__
+cocosCairo.Transition.FadeTransition.__init__" class="py-name" href="#" onclick="return doclink('link-5', '__init__', 'link-5');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_director</tt> <tt class="py-op">=</tt> <tt class="py-name">director</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt> <tt class="py-op">=</tt> <tt class="py-name">color</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_size</tt> <tt class="py-op">=</tt> <tt class="py-name">size</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">                <tt class="py-comment">#self.set_double_buffered(True) # this is possibly set by default. need to come up with another double buffering solution</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotName</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_exposeCounter</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">set_flags</tt><tt class="py-op">(</tt><tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">CAN_FOCUS</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">grab_focus</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">set_events</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name"><a title="cocosCairo.Director.GTK_EVENT_MASKS
+cocosCairo.GTKInterface.GTK_EVENT_MASKS
+cocosCairo.Transition.GTK_EVENT_MASKS
+cocosCairo.cocosCairo.GTK_EVENT_MASKS" class="py-name" href="#" onclick="return doclink('link-6', 'GTK_EVENT_MASKS', 'link-4');">GTK_EVENT_MASKS</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">set_size_request</tt><tt class="py-op">(</tt><tt class="py-name">size</tt><tt class="py-op">.</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">size</tt><tt class="py-op">.</tt><tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"expose-event"</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method cocosCairo.GTKInterface.GTKLayout._onExpose()=cocosCairo.GTKInterface.GTKLayout-class.html#_onExpose"><a title="cocosCairo.GTKInterface.GTKLayout._onExpose" class="py-name" href="#" onclick="return doclink('link-7', '_onExpose', 'link-7');">_onExpose</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">                <tt class="py-name">gestureDispatch</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_director</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method cocosCairo.Director.Director.getGestureDispatch()=cocosCairo.Director.Director-class.html#getGestureDispatch"><a title="cocosCairo.Director.Director.getGestureDispatch" class="py-name" href="#" onclick="return doclink('link-8', 'getGestureDispatch', 'link-8');">getGestureDispatch</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"motion-notify-event"</tt><tt class="py-op">,</tt> <tt class="py-name">gestureDispatch</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method cocosCairo.GestureDispatch.GestureDispatch._onMouseMotion()=cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMouseMotion"><a title="cocosCairo.GestureDispatch.GestureDispatch._onMouseMotion" class="py-name" href="#" onclick="return doclink('link-9', '_onMouseMotion', 'link-9');">_onMouseMotion</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"button-press-event"</tt><tt class="py-op">,</tt> <tt class="py-name">gestureDispatch</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method cocosCairo.GestureDispatch.GestureDispatch._onMousePress()=cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMousePress"><a title="cocosCairo.GestureDispatch.GestureDispatch._onMousePress" class="py-name" href="#" onclick="return doclink('link-10', '_onMousePress', 'link-10');">_onMousePress</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"button-release-event"</tt><tt class="py-op">,</tt> <tt class="py-name">gestureDispatch</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method cocosCairo.GestureDispatch.GestureDispatch._onMouseRelease()=cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMouseRelease"><a title="cocosCairo.GestureDispatch.GestureDispatch._onMouseRelease" class="py-name" href="#" onclick="return doclink('link-11', '_onMouseRelease', 'link-11');">_onMouseRelease</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"scroll-event"</tt><tt class="py-op">,</tt> <tt class="py-name">gestureDispatch</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method cocosCairo.GestureDispatch.GestureDispatch._onMouseScroll()=cocosCairo.GestureDispatch.GestureDispatch-class.html#_onMouseScroll"><a title="cocosCairo.GestureDispatch.GestureDispatch._onMouseScroll" class="py-name" href="#" onclick="return doclink('link-12', '_onMouseScroll', 'link-12');">_onMouseScroll</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"key-press-event"</tt><tt class="py-op">,</tt> <tt class="py-name">gestureDispatch</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method cocosCairo.GestureDispatch.GestureDispatch._onKeyPress()=cocosCairo.GestureDispatch.GestureDispatch-class.html#_onKeyPress"><a title="cocosCairo.GestureDispatch.GestureDispatch._onKeyPress" class="py-name" href="#" onclick="return doclink('link-13', '_onKeyPress', 'link-13');">_onKeyPress</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"key-release-event"</tt><tt class="py-op">,</tt> <tt class="py-name">gestureDispatch</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method cocosCairo.GestureDispatch.GestureDispatch._onKeyRelease()=cocosCairo.GestureDispatch.GestureDispatch-class.html#_onKeyRelease"><a title="cocosCairo.GestureDispatch.GestureDispatch._onKeyRelease" class="py-name" href="#" onclick="return doclink('link-14', '_onKeyRelease', 'link-14');">_onKeyRelease</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="GTKLayout.startRecording"></a><div id="GTKLayout.startRecording-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="GTKLayout.startRecording-toggle" onclick="return toggle('GTKLayout.startRecording');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKLayout-class.html#startRecording">startRecording</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">directoryPath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKLayout.startRecording-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKLayout.startRecording-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-keyword">is</tt> <tt class="py-name">True</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                        <tt class="py-keyword">return</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                <tt class="py-name">directoryPath</tt> <tt class="py-op">=</tt> <tt class="py-name">directoryPath</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-name">separator</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">sep</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">directoryPath</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">separator</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                        <tt class="py-name">directoryPath</tt> <tt class="py-op">+=</tt> <tt class="py-name">separator</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-op">=</tt> <tt class="py-name">directoryPath</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotName</tt> <tt class="py-op">=</tt> <tt class="py-string">"record.png"</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                        <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">makedirs</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
+<a name="GTKLayout.stopRecording"></a><div id="GTKLayout.stopRecording-def"><a name="L58"></a><tt class="py-lineno"> 58</tt> <a class="py-toggle" href="#" id="GTKLayout.stopRecording-toggle" onclick="return toggle('GTKLayout.stopRecording');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKLayout-class.html#stopRecording">stopRecording</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKLayout.stopRecording-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKLayout.stopRecording-expanded"><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="GTKLayout.takeScreenshot"></a><div id="GTKLayout.takeScreenshot-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="GTKLayout.takeScreenshot-toggle" onclick="return toggle('GTKLayout.takeScreenshot');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKLayout-class.html#takeScreenshot">takeScreenshot</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">screenshotPath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKLayout.takeScreenshot-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKLayout.takeScreenshot-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">                Takes a screenshot of the next expose event and saves it to the specified file. Note that PyGTK widgets will not appear in the screenshot as it will only render the gtk.Layout.</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring">                @param screenshotPath: The path for the file to be saved.</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">                @type screenshotPath: C{string}</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-name">screenshotPath</tt> <tt class="py-op">=</tt> <tt class="py-name">screenshotPath</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">screenshotPath</tt><tt class="py-op">.</tt><tt class="py-name">endswith</tt><tt class="py-op">(</tt><tt class="py-string">".png"</tt><tt class="py-op">)</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">True</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                        <tt class="py-name">screenshotPath</tt> <tt class="py-op">+=</tt> <tt class="py-string">".png"</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                <tt class="py-name">separator</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">sep</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-name">screenshotPath</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">+</tt> <tt class="py-name">separator</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotName</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-name">screenshotPath</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                        <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">makedirs</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="GTKLayout._onExpose"></a><div id="GTKLayout._onExpose-def"><a name="L77"></a><tt class="py-lineno"> 77</tt> <a class="py-toggle" href="#" id="GTKLayout._onExpose-toggle" onclick="return toggle('GTKLayout._onExpose');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKLayout-class.html#_onExpose">_onExpose</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widget</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKLayout._onExpose-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKLayout._onExpose-expanded"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                <tt class="py-name">context</tt> <tt class="py-op">=</tt> <tt class="py-name">widget</tt><tt class="py-op">.</tt><tt class="py-name">bin_window</tt><tt class="py-op">.</tt><tt class="py-name">cairo_create</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                <tt class="py-comment"># Push a new context state onto the stack</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-comment"># Clip the context</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">rectangle</tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">clip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                <tt class="py-comment"># Draw the background color</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">set_source_rgba</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">g</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">b</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">a</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">rectangle</tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">area</tt><tt class="py-op">.</tt><tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">fill</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                <tt class="py-comment"># Traverse the node tree.</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                <tt class="py-name">scene</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_director</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method cocosCairo.Director.Director.getRunningScene()=cocosCairo.Director.Director-class.html#getRunningScene"><a title="cocosCairo.Director.Director.getRunningScene" class="py-name" href="#" onclick="return doclink('link-15', 'getRunningScene', 'link-15');">getRunningScene</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">scene</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                        <tt class="py-name">scene</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method cocosCairo.Node.Node._visit()=cocosCairo.Node.Node-class.html#_visit"><a title="cocosCairo.Node.Node._visit" class="py-name" href="#" onclick="return doclink('link-16', '_visit', 'link-16');">_visit</a></tt><tt class="py-op">(</tt><tt class="py-name">context</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-comment"># Done with the new context state, so pop it.</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">restore</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-keyword">is</tt> <tt class="py-name">True</tt><tt class="py-op">:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                                <tt class="py-name">path</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_exposeCounter</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">"_"</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotName</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                                <tt class="py-name">path</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotName</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                        <tt class="py-name">surface</tt> <tt class="py-op">=</tt> <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">get_group_target</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                        <tt class="py-name">surface</tt><tt class="py-op">.</tt><tt class="py-name">write_to_png</tt><tt class="py-op">(</tt><tt class="py-name">path</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isRecording</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">True</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_screenshotPath</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_exposeCounter</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+</div></div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-comment"># TODO: this class will likely have to change to appropriately accommodate both Sugar activities and normal windowed applications.</tt> </tt>
+<a name="GTKInterface"></a><div id="GTKInterface-def"><a name="L114"></a><tt class="py-lineno">114</tt> <a class="py-toggle" href="#" id="GTKInterface-toggle" onclick="return toggle('GTKInterface');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html">GTKInterface</a><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GTKInterface-expanded"><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="GTKInterface._destroy"></a><div id="GTKInterface._destroy-def"><a name="L117"></a><tt class="py-lineno">117</tt> <a class="py-toggle" href="#" id="GTKInterface._destroy-toggle" onclick="return toggle('GTKInterface._destroy');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#_destroy">_destroy</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widget</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface._destroy-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface._destroy-expanded"><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_director</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method cocosCairo.Director.Director._stopAnimation()=cocosCairo.Director.Director-class.html#_stopAnimation"><a title="cocosCairo.Director.Director._stopAnimation" class="py-name" href="#" onclick="return doclink('link-17', '_stopAnimation', 'link-17');">_stopAnimation</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">main_quit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="GTKInterface.__init__"></a><div id="GTKInterface.__init__-def"><a name="L121"></a><tt class="py-lineno">121</tt> <a class="py-toggle" href="#" id="GTKInterface.__init__-toggle" onclick="return toggle('GTKInterface.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">director</tt><tt class="py-op">,</tt> <tt class="py-param">window</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">size</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface.__init__-expanded"><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">                Initialization method.</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">                </tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">                @param window: The main application window.</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">                @type window: L{AbstractWindow}.</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">                @param size: The size of the window.</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-docstring">                @type size: </tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">window</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                        <tt class="py-name">window</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="cocosCairo.GTKWindow
+cocosCairo.GTKWindow.GTKWindow" class="py-name" href="#" onclick="return doclink('link-18', 'GTKWindow', 'link-0');">GTKWindow</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">size</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                        <tt class="py-name">size</tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name" targets="Class cocosCairo.Geometry.Size=cocosCairo.Geometry.Size-class.html"><a title="cocosCairo.Geometry.Size" class="py-name" href="#" onclick="return doclink('link-19', 'Size', 'link-19');">Size</a></tt><tt class="py-op">(</tt><tt class="py-number">800</tt><tt class="py-op">,</tt><tt class="py-number">600</tt><tt class="py-op">)</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">color</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">                        <tt class="py-name">color</tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name" targets="Function cocosCairo.Color.BlackColor()=cocosCairo.Color-module.html#BlackColor"><a title="cocosCairo.Color.BlackColor" class="py-name" href="#" onclick="return doclink('link-20', 'BlackColor', 'link-20');">BlackColor</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_director</tt> <tt class="py-op">=</tt> <tt class="py-name">director</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_window</tt> <tt class="py-op">=</tt> <tt class="py-name">window</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_window</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt><tt class="py-string">"destroy"</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method cocosCairo.GTKInterface.GTKInterface._destroy()=cocosCairo.GTKInterface.GTKInterface-class.html#_destroy"><a title="cocosCairo.GTKInterface.GTKInterface._destroy" class="py-name" href="#" onclick="return doclink('link-21', '_destroy', 'link-21');">_destroy</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_window</tt><tt class="py-op">.</tt><tt class="py-name">set_size_request</tt><tt class="py-op">(</tt><tt class="py-name">size</tt><tt class="py-op">.</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">size</tt><tt class="py-op">.</tt><tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name" targets="Class cocosCairo.GTKInterface.GTKLayout=cocosCairo.GTKInterface.GTKLayout-class.html"><a title="cocosCairo.GTKInterface.GTKLayout" class="py-name" href="#" onclick="return doclink('link-22', 'GTKLayout', 'link-22');">GTKLayout</a></tt><tt class="py-op">(</tt><tt class="py-name">director</tt><tt class="py-op">,</tt> <tt class="py-name">size</tt><tt class="py-op">,</tt> <tt class="py-name">color</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_window</tt><tt class="py-op">.</tt><tt class="py-name">add</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt><tt class="py-op">)</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_size</tt> <tt class="py-op">=</tt> <tt class="py-name">size</tt> </tt>
+</div><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"> </tt>
+<a name="GTKInterface.getGTKLayout"></a><div id="GTKInterface.getGTKLayout-def"><a name="L144"></a><tt class="py-lineno">144</tt> <a class="py-toggle" href="#" id="GTKInterface.getGTKLayout-toggle" onclick="return toggle('GTKInterface.getGTKLayout');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#getGTKLayout">getGTKLayout</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface.getGTKLayout-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface.getGTKLayout-expanded"><a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt> </tt>
+</div><a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="GTKInterface.getSize"></a><div id="GTKInterface.getSize-def"><a name="L147"></a><tt class="py-lineno">147</tt> <a class="py-toggle" href="#" id="GTKInterface.getSize-toggle" onclick="return toggle('GTKInterface.getSize');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#getSize">getSize</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface.getSize-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface.getSize-expanded"><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_size</tt> </tt>
+</div><a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="GTKInterface.redraw"></a><div id="GTKInterface.redraw-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="GTKInterface.redraw-toggle" onclick="return toggle('GTKInterface.redraw');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#redraw">redraw</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface.redraw-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface.redraw-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt><tt class="py-op">.</tt><tt class="py-name">queue_draw</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"> </tt>
+<a name="GTKInterface.setBackgroundColor"></a><div id="GTKInterface.setBackgroundColor-def"><a name="L153"></a><tt class="py-lineno">153</tt> <a class="py-toggle" href="#" id="GTKInterface.setBackgroundColor-toggle" onclick="return toggle('GTKInterface.setBackgroundColor');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#setBackgroundColor">setBackgroundColor</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface.setBackgroundColor-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface.setBackgroundColor-expanded"><a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_layout</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt> <tt class="py-op">=</tt> <tt class="py-name">color</tt> </tt>
+</div><a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt>
+<a name="GTKInterface.start"></a><div id="GTKInterface.start-def"><a name="L156"></a><tt class="py-lineno">156</tt> <a class="py-toggle" href="#" id="GTKInterface.start-toggle" onclick="return toggle('GTKInterface.start');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.GTKInterface.GTKInterface-class.html#start">start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GTKInterface.start-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="GTKInterface.start-expanded"><a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_window</tt><tt class="py-op">.</tt><tt class="py-name">show_all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">main</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:35 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

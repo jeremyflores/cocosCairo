@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>CocosCairo.cocosCairo.AbstractController.AbstractController</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="CocosCairo.cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;CocosCairo ::
+        <a href="CocosCairo.cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        <a href="CocosCairo.cocosCairo.AbstractController-module.html">Module&nbsp;AbstractController</a> ::
+        Class&nbsp;AbstractController
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class AbstractController</h1><p class="nomargin-top"><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html">GestureListener.GestureListener</a> --+
+                                  |
+                                 <strong class="uidshort">AbstractController</strong>
+</pre>
+
+<hr />
+<p>The controller in the model-view-controller design pattern. Subclass 
+  this and override methods as needed to handle <a 
+  href="CocosCairo.cocosCairo.GestureEvent-module.html" 
+  class="link">GestureEvent</a>s and to facilitate model-view 
+  communications.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">node</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">model</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialization method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Accessor methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="CocosCairo.cocosCairo.Node.Node-class.html" 
+      class="link">Node</a> (or <code>None</code>).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#getNode" class="summary-sig-name">getNode</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the Node for this controller.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.getNode">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#setNode" class="summary-sig-name">setNode</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">node</span>)</span><br />
+      Sets the controller's <a 
+      href="CocosCairo.cocosCairo.Node.Node-class.html" 
+      class="link">Node</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.setNode">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a 
+      href="CocosCairo.cocosCairo.AbstractModel.AbstractModel-class.html" 
+      class="link">AbstractModel</a> (or <code>None</code>).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#getModel" class="summary-sig-name">getModel</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the model for this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.getModel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#setModel" class="summary-sig-name">setModel</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">model</span>)</span><br />
+      Sets the model for this controller.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.setModel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="CocosCairo.cocosCairo.Director-module.html" 
+      class="link">Director</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#getDirector" class="summary-sig-name">getDirector</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the <a href="CocosCairo.cocosCairo.Director-module.html" 
+      class="link">Director</a> of the controller's <a 
+      href="CocosCairo.cocosCairo.Node.Node-class.html" 
+      class="link">Node</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.getDirector">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Gesture control methods inherited from L{GestureListener} (repeated here for emphasis). Override as desired.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onMousePress" class="summary-sig-name">onMousePress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Subclass this class and override this method to handle a button press
+      event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMousePress">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onMouseMotion" class="summary-sig-name">onMouseMotion</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Subclass this class and override this method to handle a mouse motion
+      event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseMotion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onMouseRelease" class="summary-sig-name">onMouseRelease</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Subclass this class and override this method to handle a button 
+      release event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseRelease">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onMouseDoublePress" class="summary-sig-name">onMouseDoublePress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      If two mouse press gesture were detected within 0.25 seconds of each 
+      other.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseDoublePress">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onMouseScroll" class="summary-sig-name">onMouseScroll</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Subclass this class and override this method to handle a mouse scroll
+      event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseScroll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onKeyPress" class="summary-sig-name">onKeyPress</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Subclass this class and override this method to handle a key press 
+      event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onKeyPress">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="CocosCairo.cocosCairo.AbstractController.AbstractController-class.html#onKeyRelease" class="summary-sig-name">onKeyRelease</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Subclass this class and override this method to handle a key release 
+      event.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onKeyRelease">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">node</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">model</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialization method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>node</code></strong> (<a href="CocosCairo.cocosCairo.Node.Node-class.html" 
+          class="link">Node</a>. Default is <code>None</code>.) - The Node which this controls.</li>
+        <li><strong class="pname"><code>model</code></strong> - The model for the Node.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNode"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNode</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.getNode">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the Node for this controller. If a Node has not yet been 
+  assigned, it will return <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="CocosCairo.cocosCairo.Node.Node-class.html" 
+      class="link">Node</a> (or <code>None</code>).</dt>
+        <dd>The Node.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setNode"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setNode</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">node</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.setNode">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the controller's <a 
+  href="CocosCairo.cocosCairo.Node.Node-class.html" class="link">Node</a>. 
+  It will automatically register the view with the <a 
+  href="CocosCairo.cocosCairo.AbstractModel.AbstractModel-class.html" 
+  class="link">AbstractModel</a>, if one has been set for this controller. 
+  Also, if there was previously a parented Node, the new Node will become a
+  child of that parent and will inherit the same zOrder as its predecessor.
+  By default, the parent is the <a 
+  href="CocosCairo.cocosCairo.Scene-module.html" class="link">Scene</a> to 
+  which this <code>Controller</code> has been added.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>node</code></strong> (<a href="CocosCairo.cocosCairo.Node.Node-class.html" 
+          class="link">Node</a>.) - The node.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getModel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getModel</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.getModel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the model for this Node. If a Model has not yet been assigned,
+  it will return <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a 
+      href="CocosCairo.cocosCairo.AbstractModel.AbstractModel-class.html" 
+      class="link">AbstractModel</a> (or <code>None</code>).</dt>
+        <dd>The model.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setModel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setModel</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">model</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.setModel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the model for this controller. If the <a 
+  href="CocosCairo.cocosCairo.Node.Node-class.html" class="link">Node</a> 
+  has been defined, it will unregister the Node from listening to the 
+  previous model (if it exists), then it will register the Node to listen 
+  to the new model. When the model changes, it will call <a 
+  href="CocosCairo.cocosCairo.AbstractModel.ModelListener-class.html#onModelChange"
+  class="link">Node.onModelChange</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>model</code></strong> (<a 
+          href="CocosCairo.cocosCairo.AbstractModel.AbstractModel-class.html"
+          class="link">AbstractModel</a>.) - The new model.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getDirector"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getDirector</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.getDirector">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the <a href="CocosCairo.cocosCairo.Director-module.html" 
+  class="link">Director</a> of the controller's <a 
+  href="CocosCairo.cocosCairo.Node.Node-class.html" class="link">Node</a>. 
+  This will return <code>None</code> if there is currently no Node or if 
+  the Node has not yet been attached to the Director.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="CocosCairo.cocosCairo.Director-module.html" 
+      class="link">Director</a>.</dt>
+        <dd>The director.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onMousePress"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onMousePress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMousePress">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass this class and override this method to handle a button press 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onMousePress">GestureListener.GestureListener.onMousePress</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onMouseMotion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onMouseMotion</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseMotion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass this class and override this method to handle a mouse motion 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onMouseMotion">GestureListener.GestureListener.onMouseMotion</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onMouseRelease"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onMouseRelease</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseRelease">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass this class and override this method to handle a button 
+  release event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onMouseRelease">GestureListener.GestureListener.onMouseRelease</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onMouseDoublePress"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onMouseDoublePress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseDoublePress">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If two mouse press gesture were detected within 0.25 seconds of each 
+  other. If a double press gesture is detected, the GestureDispatch will 
+  first send the two individual mouse press gesture events, then send the 
+  double press gesture event.</p>
+  <p>Subclass this class and override this method to handle a double press 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onMouseDoublePress">GestureListener.GestureListener.onMouseDoublePress</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onMouseScroll"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onMouseScroll</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onMouseScroll">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass this class and override this method to handle a mouse scroll 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onMouseScroll">GestureListener.GestureListener.onMouseScroll</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onKeyPress"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onKeyPress</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onKeyPress">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass this class and override this method to handle a key press 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onKeyPress">GestureListener.GestureListener.onKeyPress</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onKeyRelease"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onKeyRelease</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="CocosCairo.cocosCairo.AbstractController-pysrc.html#AbstractController.onKeyRelease">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass this class and override this method to handle a key release 
+  event.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>event</code></strong> - Event details.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this listener will handle the event.</dd>
+    <dt>Overrides:
+        <a href="CocosCairo.cocosCairo.GestureListener.GestureListener-class.html#onKeyRelease">GestureListener.GestureListener.onKeyRelease</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="CocosCairo.cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar  3 23:56:46 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

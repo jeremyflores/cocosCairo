@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.PangoLabel.PangoLabel</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        <a href="cocosCairo.PangoLabel-module.html">Module&nbsp;PangoLabel</a> ::
+        Class&nbsp;PangoLabel
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.PangoLabel.PangoLabel-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class PangoLabel</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+        
+                                    |        
+          <a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a> --+    
+                                        |    
+                                <a href="cocosCairo.Node.Node-class.html">Node.Node</a> --+
+                                            |
+                                           <strong class="uidshort">PangoLabel</strong>
+</pre>
+
+<hr />
+<p>A <a href="cocosCairo.Node.Node-class.html" class="link">Node</a> used
+  to render text to the screen.</p>
+  <p>PangoLabel uses the Pango text-rendering library and provides an 
+  HTML-like markup language for in-line decoration (such as italics and 
+  underlining). See http://pygtk.org/docs/pygtk/pango-markup-language.html 
+  for the markup specification.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">markupText</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">point</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialization method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#isAlwaysRedrawing" class="summary-sig-name">isAlwaysRedrawing</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Whether or not this Node will be redrawn every loop.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isAlwaysRedrawing">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setAlwaysRedrawing" class="summary-sig-name">setAlwaysRedrawing</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isAlwaysRedrawing</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setAlwaysRedrawing">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setWidth"></a><span class="summary-sig-name">setWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">width</span>)</span><br />
+      This value is ignored if <code>wrappingType</code> is set to 
+      &quot;none&quot;.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getMarkupText" class="summary-sig-name">getMarkupText</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the marked-up text to be rendered.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getMarkupText">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setMarkupText" class="summary-sig-name">setMarkupText</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">markupText</span>)</span><br />
+      Sets the marked-up text to be rendered.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setMarkupText">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getAccelMarker" class="summary-sig-name">getAccelMarker</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the accel marker.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getAccelMarker">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setAccelMarker" class="summary-sig-name">setAccelMarker</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">accelMarker</span>)</span><br />
+      Sets the accel marker for the marked=up text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setAccelMarker">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getFontFamily" class="summary-sig-name">getFontFamily</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the font family to be used in rendering the text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontFamily">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setFontFamily" class="summary-sig-name">setFontFamily</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fontFamily</span>)</span><br />
+      Common (and possibly the only) values are &quot;serif&quot;, 
+      &quot;monospace&quot;, &quot;sans&quot;, or &quot;normal&quot;.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontFamily">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getFontSize" class="summary-sig-name">getFontSize</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the font size for the text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setFontSize" class="summary-sig-name">setFontSize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fontSize</span>)</span><br />
+      Sets the font size for the text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#isItalic" class="summary-sig-name">isItalic</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns whether or not the text is rendered in italics.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isItalic">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setItalic" class="summary-sig-name">setItalic</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isItalic</span>)</span><br />
+      Sets whether or not the text is rendered in italics.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setItalic">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#isSmallCaps" class="summary-sig-name">isSmallCaps</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns whether or not the text is rendered in small caps.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isSmallCaps">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setSmallCaps" class="summary-sig-name">setSmallCaps</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isSmallCaps</span>)</span><br />
+      Sets whether or not the text is rendered in small caps.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setSmallCaps">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getFontWeight" class="summary-sig-name">getFontWeight</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the font weight.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontWeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setFontWeight" class="summary-sig-name">setFontWeight</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fontWeight</span>)</span><br />
+      Sets the font weight.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontWeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>int</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getFontStretch" class="summary-sig-name">getFontStretch</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the amount by which the text will be stretched.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontStretch">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setFontStretch" class="summary-sig-name">setFontStretch</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fontStretch</span>)</span><br />
+      Sets the amount by which the text will be stretched.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontStretch">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getWrappingType" class="summary-sig-name">getWrappingType</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns how the text is wrapped.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getWrappingType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setWrappingType" class="summary-sig-name">setWrappingType</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrappingType</span>)</span><br />
+      This value is ignored if <code>width</code> is negative.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setWrappingType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getIndentation" class="summary-sig-name">getIndentation</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the amount by which the text is indented.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getIndentation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setIndentation" class="summary-sig-name">setIndentation</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">indentation</span>)</span><br />
+      Sets the amount by which the text is indented.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setIndentation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getSpacing" class="summary-sig-name">getSpacing</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the spacing between lines of text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getSpacing">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setSpacing" class="summary-sig-name">setSpacing</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">spacing</span>)</span><br />
+      Sets the spacing between lines of text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setSpacing">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#isJustified" class="summary-sig-name">isJustified</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns whether or not the text is justified.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isJustified">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setJustified" class="summary-sig-name">setJustified</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isJustified</span>)</span><br />
+      Sets whether or not the text is justified.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setJustified">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#getAlignment" class="summary-sig-name">getAlignment</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the alignment for the text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getAlignment">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setAlignment" class="summary-sig-name">setAlignment</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">alignment</span>)</span><br />
+      Sets the alignment for the text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setAlignment">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#isSingleParagraph" class="summary-sig-name">isSingleParagraph</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns whether or not the text is rendered as a single paragraph.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isSingleParagraph">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#setSingleParagraph" class="summary-sig-name">setSingleParagraph</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isSingleParagraph</span>)</span><br />
+      Sets whether or not the text should be treated as a single paragraph,
+      that is, whether or not the renderer should ignores newline 
+      characters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setSingleParagraph">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#dirty" class="summary-sig-name">dirty</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Notifies the drawing method that the layout has changed and needs to 
+      be redrawn.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.dirty">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a></code></b>:
+      <code><a href="cocosCairo.AbstractModel.ModelListener-class.html#onModelChange">onModelChange</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Accessor methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#getAnchorPoint">getAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getBackgroundColor">getBackgroundColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getColor">getColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getController">getController</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getDirector">getDirector</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getOpacity">getOpacity</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getParent">getParent</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getPosition">getPosition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getRect">getRect</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getRotation">getRotation</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getScaleX">getScaleX</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getScaleY">getScaleY</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getSize">getSize</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getTag">getTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getTransformAnchorPoint">getTransformAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getUserData">getUserData</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getZOrder">getZOrder</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#isVisible">isVisible</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setAnchorPoint">setAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setBackgroundColor">setBackgroundColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setColor">setColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setColors">setColors</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setController">setController</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setDirector">setDirector</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setOpacity">setOpacity</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setPosition">setPosition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setRect">setRect</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setRotation">setRotation</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setScaleX">setScaleX</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setScaleY">setScaleY</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setSize">setSize</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setTag">setTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setTransformAnchorPoint">setTransformAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setUserData">setUserData</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setVisible">setVisible</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setZOrder">setZOrder</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Children methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#addChild">addChild</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getChildByTag">getChildByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getChildren">getChildren</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#removeAllChildren">removeAllChildren</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#removeChild">removeChild</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#removeChildByTag">removeChildByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#reorderChild">reorderChild</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b> (private):
+      <code><a href="cocosCairo.Node.Node-class.html#_detachChild" onclick="show_private();">_detachChild</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#_insertChild" onclick="show_private();">_insertChild</a></code>
+      </p></div>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Scale convenience methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#getScale">getScale</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setScale">setScale</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Drawing methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.PangoLabel.PangoLabel-class.html#draw" class="summary-sig-name">draw</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span><br />
+      Subclass and do your drawing in here.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.draw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b> (private):
+      <code><a href="cocosCairo.Node.Node-class.html#_getTransformOffset" onclick="show_private();">_getTransformOffset</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#_transform" onclick="show_private();">_transform</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#_visit" onclick="show_private();">_visit</a></code>
+      </p></div>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Scene management.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#onEnter">onEnter</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#onEnterFromFinishedTransition">onEnterFromFinishedTransition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#onExit">onExit</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Timer methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#activateTimers">activateTimers</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#deactivateTimers">deactivateTimers</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getIntervalForScheduledCallback">getIntervalForScheduledCallback</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#scheduleCallback">scheduleCallback</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setIntervalForScheduledCallback">setIntervalForScheduledCallback</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#unscheduleCallback">unscheduleCallback</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Action methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#getActionByTag">getActionByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#numberOfRunningActions">numberOfRunningActions</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#runAction">runAction</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#stopAction">stopAction</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#stopActionByTag">stopActionByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#stopAllActions">stopAllActions</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8"  class="private">
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Cleanup</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b> (private):
+      <code><a href="cocosCairo.Node.Node-class.html#_cleanup" onclick="show_private();">_cleanup</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.PangoLabel.PangoLabel-class.html#_isDirty" class="summary-name" onclick="show_private();">_isDirty</a><br />
+      def getRectOfCharacterFromIndex(self, index):
+        if self._layout is not None:
+                rectTuple = self._layout.index_to_pos(index)
+                offset = self.getTransformOffset()
+                x = rectTuple[0] / pango.SCALE + offset.x
+                y = rectTuple[1] / pango.SCALE + offset.y
+                w = rectTuple[2] / pango.SCALE
+                h = rectTuple[3] / pango.SCALE
+                return MakeRect(x, y, w, h)
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">markupText</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">point</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialization method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>markupText</code></strong> (<code>string</code>) - The text to be displayed. Default is <code>&quot;&quot;</code>.</li>
+        <li><strong class="pname"><code>point</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>) - The position for the Node.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#__init__">Node.Node.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isAlwaysRedrawing"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isAlwaysRedrawing</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isAlwaysRedrawing">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Whether or not this Node will be redrawn every loop. By default, this 
+  is <code>False</code>. This should only be used to fix a Pango rendering 
+  bug when the Node is originally rendered at a small scale and then is 
+  scaled up.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this Node will be redrawn every loop.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setAlwaysRedrawing"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAlwaysRedrawing</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isAlwaysRedrawing</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setAlwaysRedrawing">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isAlwaysRedrawing</code></strong> (<code>bool</code>.) - Whether or not this Node should redraw every loop.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getMarkupText"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getMarkupText</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getMarkupText">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the marked-up text to be rendered.</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code></dt>
+        <dd>The marked-up text.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setMarkupText"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setMarkupText</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">markupText</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setMarkupText">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the marked-up text to be rendered.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>markupText</code></strong> (<code>string</code>) - The marked-up text.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAccelMarker"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAccelMarker</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getAccelMarker">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the accel marker.</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code></dt>
+        <dd>The accel marker.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setAccelMarker"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAccelMarker</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">accelMarker</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setAccelMarker">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the accel marker for the marked=up text. Set it to 
+  <code>None</code> if an accelMarker should not be used. Default is 
+  <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>accelMarker</code></strong> (<code>string</code>) - The accel marker.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getFontFamily"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getFontFamily</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontFamily">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the font family to be used in rendering the text.</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code></dt>
+        <dd>The font family (either &quot;serif&quot;, &quot;monospace&quot;,
+          &quot;sans&quot;, or &quot;normal&quot;).</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setFontFamily"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setFontFamily</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fontFamily</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontFamily">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Common (and possibly the only) values are &quot;serif&quot;, 
+  &quot;monospace&quot;, &quot;sans&quot;, or &quot;normal&quot;.</p>
+  <p>Default is <code>&quot;serif&quot;</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fontFamily</code></strong> (<code>string</code>) - The font family.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getFontSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getFontSize</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the font size for the text. Default is <code>12</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code></dt>
+        <dd>The font size.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setFontSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setFontSize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fontSize</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the font size for the text. Default is <code>12</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fontSize</code></strong> (Non-negative <code>float</code>) - The font size.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isItalic"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isItalic</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isItalic">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not the text is rendered in italics. This is 
+  <code>False</code> by default.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not the text is rendered in italics.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setItalic"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setItalic</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isItalic</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setItalic">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets whether or not the text is rendered in italics. Default is 
+  <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isItalic</code></strong> (<code>bool</code>) - Whether or not the text is rendered in italics.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isSmallCaps"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isSmallCaps</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isSmallCaps">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not the text is rendered in small caps. Default is 
+  <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not hte text is rendered in small caps.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSmallCaps"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSmallCaps</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isSmallCaps</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setSmallCaps">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets whether or not the text is rendered in small caps. Doesn't 
+  currently work. Default is <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isSmallCaps</code></strong> (<code>bool</code>) - Whether or not the text is rendered in small caps.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getFontWeight"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getFontWeight</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontWeight">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the font weight. Default is <code>0.375</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code></dt>
+        <dd>The font weight between <code>0.0</code> and <code>1.0</code>.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setFontWeight"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setFontWeight</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fontWeight</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontWeight">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the font weight. Only works for bolding the text, e.g. for 
+  fontWeight &gt;= 0.5. Default is <code>0.375</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fontWeight</code></strong> (<code>float</code>) - The font weight between <code>0.0</code> and <code>1.0</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getFontStretch"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getFontStretch</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getFontStretch">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets the amount by which the text will be stretched.</p>
+  <dl class="fields">
+    <dt>Returns: <code>int</code></dt>
+        <dd>The stretch amount (between <code>-4</code> and <code>4</code> 
+          inclusively).</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setFontStretch"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setFontStretch</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fontStretch</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setFontStretch">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the amount by which the text will be stretched. Doesn't currently
+  work. Might work for a newer version of Pango? Default is 
+  <code>0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fontStretch</code></strong> (<code>int</code>) - The amount to stretch (between <code>-4</code> and <code>4</code>
+          inclusively).</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getWrappingType"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getWrappingType</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getWrappingType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns how the text is wrapped. See <a 
+  href="cocosCairo.PangoLabel.PangoLabel-class.html#setWrappingType" 
+  class="link">setWrappingType</a> for more details.</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code></dt>
+        <dd>The wrapping type.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setWrappingType"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setWrappingType</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">wrappingType</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setWrappingType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This value is ignored if <code>width</code> is negative.</p>
+  <p>Set it to <code>&quot;none&quot;</code> if there should not be any 
+  wrapping, <code>&quot;word&quot;</code> if it should break only between 
+  words, <code>&quot;word-char&quot;</code> if it should try to break at 
+  words first before falling back to breaking between individual 
+  characters, or <code>&quot;char&quot;</code> if it should break between 
+  individual characters.</p>
+  <p>By default, <code>wrappingType</code> is 
+  <code>&quot;none&quot;</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>wrappingType</code></strong> (<code>string</code>) - The wrapping type.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getIndentation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIndentation</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getIndentation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the amount by which the text is indented. Default is 
+  <code>0.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code></dt>
+        <dd>Indentation amount.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setIndentation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setIndentation</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">indentation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setIndentation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the amount by which the text is indented. Default is 
+  <code>0.0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>indentation</code></strong> (<code>float</code>) - Indentation amount.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSpacing"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSpacing</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getSpacing">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the spacing between lines of text. Default is 
+  <code>0.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code></dt>
+        <dd>Spacing amount.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSpacing"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSpacing</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">spacing</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setSpacing">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the spacing between lines of text. Default is 
+  <code>0.0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>spacing</code></strong> (<code>float</code>) - Spacing amount.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isJustified"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isJustified</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isJustified">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not the text is justified. Default is 
+  <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not the text is justified.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setJustified"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setJustified</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isJustified</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setJustified">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets whether or not the text is justified. Default is 
+  <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isJustified</code></strong> (<code>bool</code>) - Whether or not the text is justified.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAlignment"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAlignment</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.getAlignment">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the alignment for the text. Default is 
+  <code>&quot;left&quot;</code>. See <a 
+  href="cocosCairo.PangoLabel.PangoLabel-class.html#setAlignment" 
+  class="link">setAlignment</a> for more details.</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code></dt>
+        <dd>The alignment for the text.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setAlignment"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAlignment</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">alignment</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setAlignment">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the alignment for the text. Set it to 
+  <code>&quot;left&quot;</code> for left-justified, 
+  <code>&quot;center&quot;</code> for center-justified, or 
+  <code>&quot;right&quot;</code> for right-justified. Default value is 
+  <code>&quot;left&quot;</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>alignment</code></strong> (<code>string</code>) - The alignment for the text.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isSingleParagraph"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isSingleParagraph</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.isSingleParagraph">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns whether or not the text is rendered as a single paragraph. 
+  Default is <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not the text is rendered as a single paragraph.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSingleParagraph"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSingleParagraph</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isSingleParagraph</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.setSingleParagraph">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets whether or not the text should be treated as a single paragraph, 
+  that is, whether or not the renderer should ignores newline characters. 
+  Default is <code>False</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isSingleParagraph</code></strong> (<code>bool</code>) - Whether or not the text is rendered as a single paragraph.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="draw"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">draw</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.draw">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass and do your drawing in here. The context will already be 
+  translated to the node's current position, so drawing to 
+  <code>Point(0,0)</code> will actually render to <a 
+  href="cocosCairo.Node.Node-class.html#getPosition" 
+  class="link">getPosition</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>context</code></strong> - A Cairo context clipped to the dirtied rectangle.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#draw">Node.Node.draw</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dirty"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dirty</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.PangoLabel-pysrc.html#PangoLabel.dirty">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Notifies the drawing method that the layout has changed and needs to 
+  be redrawn. This method is automatically called whenever any parameters 
+  for <code>PangoLabel</code> are changed, so it should not typically need 
+  to be called manually.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="_isDirty"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_isDirty</h3>
+  <pre class="literalblock">
+
+def getRectOfCharacterFromIndex(self, index):
+        if self._layout is not None:
+                rectTuple = self._layout.index_to_pos(index)
+                offset = self.getTransformOffset()
+                x = rectTuple[0] / pango.SCALE + offset.x
+                y = rectTuple[1] / pango.SCALE + offset.y
+                w = rectTuple[2] / pango.SCALE
+                h = rectTuple[3] / pango.SCALE
+                return MakeRect(x, y, w, h)
+
+# Currently doesn't work, and there are other things that still need to be implemented.
+def getIndexOfCharacterFromPoint(self, point):
+        if self._layout is not None:
+                offset = self._getTransformOffset()
+                return self._layout.xy_to_index(point.x - offset.x*pango.SCALE, point.y - offset.y*pango.SCALE)
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:33 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

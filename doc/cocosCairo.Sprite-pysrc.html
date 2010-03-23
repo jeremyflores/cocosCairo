@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.Sprite</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;Sprite
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.Sprite-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cocosCairo.Sprite-module.html">Module cocosCairo.Sprite</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module cocosCairo.Node=cocosCairo.Node-module.html,Class cocosCairo.Node.Node=cocosCairo.Node.Node-class.html"><a title="cocosCairo.Node
+cocosCairo.Node.Node" class="py-name" href="#" onclick="return doclink('link-0', 'Node', 'link-0');">Node</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module cocosCairo.Geometry=cocosCairo.Geometry-module.html"><a title="cocosCairo.Geometry" class="py-name" href="#" onclick="return doclink('link-1', 'Geometry', 'link-1');">Geometry</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gtk</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="Sprite"></a><div id="Sprite-def"><a name="L5"></a><tt class="py-lineno"> 5</tt> <a class="py-toggle" href="#" id="Sprite-toggle" onclick="return toggle('Sprite');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cocosCairo.Sprite.Sprite-class.html">Sprite</a><tt class="py-op">(</tt><tt class="py-base-class">Node</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Sprite-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Sprite-expanded"><a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">        A L{Node} that renders an image (such as a JPEG or PNG) to the screen.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="Sprite.__init__"></a><div id="Sprite.__init__-def"><a name="L9"></a><tt class="py-lineno"> 9</tt> <a class="py-toggle" href="#" id="Sprite.__init__-toggle" onclick="return toggle('Sprite.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Sprite.Sprite-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">imageName</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">position</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Sprite.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Sprite.__init__-expanded"><a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">                Initialization method.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">                @param imageName: The filepath to the image.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">                @type imageName: C{string}</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">                @param position: The position of the Node. Default is L{PointZero}.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">                @type position: L{Point}</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">                <tt id="link-2" class="py-name"><a title="cocosCairo.Node
+cocosCairo.Node.Node" class="py-name" href="#" onclick="return doclink('link-2', 'Node', 'link-0');">Node</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method cocosCairo.AbstractController.AbstractController.__init__()=cocosCairo.AbstractController.AbstractController-class.html#__init__,Method cocosCairo.AbstractWindow.AbstractWindow.__init__()=cocosCairo.AbstractWindow.AbstractWindow-class.html#__init__,Method cocosCairo.Action.AbstractAction.__init__()=cocosCairo.Action.AbstractAction-class.html#__init__,Method cocosCairo.Action.FiniteTimeAction.__init__()=cocosCairo.Action.FiniteTimeAction-class.html#__init__,Method cocosCairo.Action.RepeatForever.__init__()=cocosCairo.Action.RepeatForever-class.html#__init__,Method cocosCairo.Action.Speed.__init__()=cocosCairo.Action.Speed-class.html#__init__,Method cocosCairo.ActionManager.ActionManager.__init__()=cocosCairo.ActionManager.ActionManager-class.html#__init__,Method cocosCairo.Color.Color.__init__()=cocosCairo.Color.Color-class.html#__init__,Method cocosCairo.ColorNode.ColorNode.__init__()=cocosCairo.ColorNode.ColorNode-class.html#__init__,Method cocosCairo.Director.Director.__init__()=cocosCairo.Director.Director-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseAction.__init__()=cocosCairo.EaseAction.AbstractEaseAction-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseElastic.__init__()=cocosCairo.EaseAction.AbstractEaseElastic-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseRateAction.__init__()=cocosCairo.EaseAction.AbstractEaseRateAction-class.html#__init__,Method cocosCairo.GTKInterface.GTKInterface.__init__()=cocosCairo.GTKInterface.GTKInterface-class.html#__init__,Method cocosCairo.GTKInterface.GTKLayout.__init__()=cocosCairo.GTKInterface.GTKLayout-class.html#__init__,Method cocosCairo.Geometry.Point.__init__()=cocosCairo.Geometry.Point-class.html#__init__,Method cocosCairo.Geometry.Polygon.__init__()=cocosCairo.Geometry.Polygon-class.html#__init__,Method cocosCairo.Geometry.Rect.__init__()=cocosCairo.Geometry.Rect-class.html#__init__,Method cocosCairo.Geometry.Size.__init__()=cocosCairo.Geometry.Size-class.html#__init__,Method cocosCairo.GestureDispatch.GestureDispatch.__init__()=cocosCairo.GestureDispatch.GestureDispatch-class.html#__init__,Method cocosCairo.GestureEvent.KeyboardGestureEvent.__init__()=cocosCairo.GestureEvent.KeyboardGestureEvent-class.html#__init__,Method cocosCairo.GestureEvent.MouseGestureEvent.__init__()=cocosCairo.GestureEvent.MouseGestureEvent-class.html#__init__,Method cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__()=cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html#__init__,Method cocosCairo.InstantAction.AbstractInstantAction.__init__()=cocosCairo.InstantAction.AbstractInstantAction-class.html#__init__,Method cocosCairo.InstantAction.CallbackInstantAction.__init__()=cocosCairo.InstantAction.CallbackInstantAction-class.html#__init__,Method cocosCairo.InstantAction.CallbackWithOwnerAndData.__init__()=cocosCairo.InstantAction.CallbackWithOwnerAndData-class.html#__init__,Method cocosCairo.InstantAction.Place.__init__()=cocosCairo.InstantAction.Place-class.html#__init__,Method cocosCairo.IntervalAction.AbstractIntervalAction.__init__()=cocosCairo.IntervalAction.AbstractIntervalAction-class.html#__init__,Method cocosCairo.IntervalAction.BezierBy.__init__()=cocosCairo.IntervalAction.BezierBy-class.html#__init__,Method cocosCairo.IntervalAction.BezierConfiguration.__init__()=cocosCairo.IntervalAction.BezierConfiguration-class.html#__init__,Method cocosCairo.IntervalAction.Blink.__init__()=cocosCairo.IntervalAction.Blink-class.html#__init__,Method cocosCairo.IntervalAction.FadeTo.__init__()=cocosCairo.IntervalAction.FadeTo-class.html#__init__,Method cocosCairo.IntervalAction.JumpBy.__init__()=cocosCairo.IntervalAction.JumpBy-class.html#__init__,Method cocosCairo.IntervalAction.MoveBy.__init__()=cocosCairo.IntervalAction.MoveBy-class.html#__init__,Method cocosCairo.IntervalAction.MoveTo.__init__()=cocosCairo.IntervalAction.MoveTo-class.html#__init__,Method cocosCairo.IntervalAction.Repeat.__init__()=cocosCairo.IntervalAction.Repeat-class.html#__init__,Method cocosCairo.IntervalAction.ReverseTime.__init__()=cocosCairo.IntervalAction.ReverseTime-class.html#__init__,Method cocosCairo.IntervalAction.RotateBy.__init__()=cocosCairo.IntervalAction.RotateBy-class.html#__init__,Method cocosCairo.IntervalAction.RotateTo.__init__()=cocosCairo.IntervalAction.RotateTo-class.html#__init__,Method cocosCairo.IntervalAction.ScaleTo.__init__()=cocosCairo.IntervalAction.ScaleTo-class.html#__init__,Method cocosCairo.IntervalAction.Sequence.__init__()=cocosCairo.IntervalAction.Sequence-class.html#__init__,Method cocosCairo.IntervalAction.Spawn.__init__()=cocosCairo.IntervalAction.Spawn-class.html#__init__,Method cocosCairo.IntervalAction.TintBy.__init__()=cocosCairo.IntervalAction.TintBy-class.html#__init__,Method cocosCairo.IntervalAction.TintTo.__init__()=cocosCairo.IntervalAction.TintTo-class.html#__init__,Method cocosCairo.Label.Label.__init__()=cocosCairo.Label.Label-class.html#__init__,Method cocosCairo.ListenedObject.ListenedObject.__init__()=cocosCairo.ListenedObject.ListenedObject-class.html#__init__,Method cocosCairo.Node.Node.__init__()=cocosCairo.Node.Node-class.html#__init__,Method cocosCairo.PangoLabel.PangoLabel.__init__()=cocosCairo.PangoLabel.PangoLabel-class.html#__init__,Method cocosCairo.Primitive.AbstractFillableNode.__init__()=cocosCairo.Primitive.AbstractFillableNode-class.html#__init__,Method cocosCairo.Primitive.EllipseNode.__init__()=cocosCairo.Primitive.EllipseNode-class.html#__init__,Method cocosCairo.Primitive.LineNode.__init__()=cocosCairo.Primitive.LineNode-class.html#__init__,Method cocosCairo.Primitive.PointNode.__init__()=cocosCairo.Primitive.PointNode-class.html#__init__,Method cocosCairo.Primitive.PolygonNode.__init__()=cocosCairo.Primitive.PolygonNode-class.html#__init__,Method cocosCairo.Primitive.RectangleNode.__init__()=cocosCairo.Primitive.RectangleNode-class.html#__init__,Method cocosCairo.SVGSprite.SVGSprite.__init__()=cocosCairo.SVGSprite.SVGSprite-class.html#__init__,Method cocosCairo.Scene.Scene.__init__()=cocosCairo.Scene.Scene-class.html#__init__,Method cocosCairo.Scheduler.Scheduler.__init__()=cocosCairo.Scheduler.Scheduler-class.html#__init__,Method cocosCairo.Sprite.Sprite.__init__()=cocosCairo.Sprite.Sprite-class.html#__init__,Method cocosCairo.Timer.Timer.__init__()=cocosCairo.Timer.Timer-class.html#__init__,Method cocosCairo.Transition.AbstractTransition.__init__()=cocosCairo.Transition.AbstractTransition-class.html#__init__,Method cocosCairo.Transition.FadeTransition.__init__()=cocosCairo.Transition.FadeTransition-class.html#__init__"><a title="cocosCairo.AbstractController.AbstractController.__init__
+cocosCairo.AbstractWindow.AbstractWindow.__init__
+cocosCairo.Action.AbstractAction.__init__
+cocosCairo.Action.FiniteTimeAction.__init__
+cocosCairo.Action.RepeatForever.__init__
+cocosCairo.Action.Speed.__init__
+cocosCairo.ActionManager.ActionManager.__init__
+cocosCairo.Color.Color.__init__
+cocosCairo.ColorNode.ColorNode.__init__
+cocosCairo.Director.Director.__init__
+cocosCairo.EaseAction.AbstractEaseAction.__init__
+cocosCairo.EaseAction.AbstractEaseElastic.__init__
+cocosCairo.EaseAction.AbstractEaseRateAction.__init__
+cocosCairo.GTKInterface.GTKInterface.__init__
+cocosCairo.GTKInterface.GTKLayout.__init__
+cocosCairo.Geometry.Point.__init__
+cocosCairo.Geometry.Polygon.__init__
+cocosCairo.Geometry.Rect.__init__
+cocosCairo.Geometry.Size.__init__
+cocosCairo.GestureDispatch.GestureDispatch.__init__
+cocosCairo.GestureEvent.KeyboardGestureEvent.__init__
+cocosCairo.GestureEvent.MouseGestureEvent.__init__
+cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__
+cocosCairo.InstantAction.AbstractInstantAction.__init__
+cocosCairo.InstantAction.CallbackInstantAction.__init__
+cocosCairo.InstantAction.CallbackWithOwnerAndData.__init__
+cocosCairo.InstantAction.Place.__init__
+cocosCairo.IntervalAction.AbstractIntervalAction.__init__
+cocosCairo.IntervalAction.BezierBy.__init__
+cocosCairo.IntervalAction.BezierConfiguration.__init__
+cocosCairo.IntervalAction.Blink.__init__
+cocosCairo.IntervalAction.FadeTo.__init__
+cocosCairo.IntervalAction.JumpBy.__init__
+cocosCairo.IntervalAction.MoveBy.__init__
+cocosCairo.IntervalAction.MoveTo.__init__
+cocosCairo.IntervalAction.Repeat.__init__
+cocosCairo.IntervalAction.ReverseTime.__init__
+cocosCairo.IntervalAction.RotateBy.__init__
+cocosCairo.IntervalAction.RotateTo.__init__
+cocosCairo.IntervalAction.ScaleTo.__init__
+cocosCairo.IntervalAction.Sequence.__init__
+cocosCairo.IntervalAction.Spawn.__init__
+cocosCairo.IntervalAction.TintBy.__init__
+cocosCairo.IntervalAction.TintTo.__init__
+cocosCairo.Label.Label.__init__
+cocosCairo.ListenedObject.ListenedObject.__init__
+cocosCairo.Node.Node.__init__
+cocosCairo.PangoLabel.PangoLabel.__init__
+cocosCairo.Primitive.AbstractFillableNode.__init__
+cocosCairo.Primitive.EllipseNode.__init__
+cocosCairo.Primitive.LineNode.__init__
+cocosCairo.Primitive.PointNode.__init__
+cocosCairo.Primitive.PolygonNode.__init__
+cocosCairo.Primitive.RectangleNode.__init__
+cocosCairo.SVGSprite.SVGSprite.__init__
+cocosCairo.Scene.Scene.__init__
+cocosCairo.Scheduler.Scheduler.__init__
+cocosCairo.Sprite.Sprite.__init__
+cocosCairo.Timer.Timer.__init__
+cocosCairo.Transition.AbstractTransition.__init__
+cocosCairo.Transition.FadeTransition.__init__" class="py-name" href="#" onclick="return doclink('link-3', '__init__', 'link-3');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">position</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method cocosCairo.Node.Node.setPosition()=cocosCairo.Node.Node-class.html#setPosition"><a title="cocosCairo.Node.Node.setPosition" class="py-name" href="#" onclick="return doclink('link-4', 'setPosition', 'link-4');">setPosition</a></tt><tt class="py-op">(</tt><tt class="py-name">position</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pixbuf</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_sourcePattern</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method cocosCairo.Sprite.Sprite.setImageName()=cocosCairo.Sprite.Sprite-class.html#setImageName"><a title="cocosCairo.Sprite.Sprite.setImageName" class="py-name" href="#" onclick="return doclink('link-5', 'setImageName', 'link-5');">setImageName</a></tt><tt class="py-op">(</tt><tt class="py-name">imageName</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="Sprite.setImageName"></a><div id="Sprite.setImageName-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="Sprite.setImageName-toggle" onclick="return toggle('Sprite.setImageName');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Sprite.Sprite-class.html#setImageName">setImageName</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">imageName</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Sprite.setImageName-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Sprite.setImageName-expanded"><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-docstring">                Sets a new image by its filepath.</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-docstring">                @param imageName: The new filepath.</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">                @type imageName: C{string}</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">imageName</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_sourcePattern</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pixbuf</tt> <tt class="py-op">=</tt> <tt class="py-name">gtk</tt><tt class="py-op">.</tt><tt class="py-name">gdk</tt><tt class="py-op">.</tt><tt class="py-name">pixbuf_new_from_file</tt><tt class="py-op">(</tt><tt class="py-name">imageName</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method cocosCairo.Node.Node.setSize()=cocosCairo.Node.Node-class.html#setSize,Method cocosCairo.SVGSprite.SVGSprite.setSize()=cocosCairo.SVGSprite.SVGSprite-class.html#setSize"><a title="cocosCairo.Node.Node.setSize
+cocosCairo.SVGSprite.SVGSprite.setSize" class="py-name" href="#" onclick="return doclink('link-6', 'setSize', 'link-6');">setSize</a></tt><tt class="py-op">(</tt><tt id="link-7" class="py-name" targets="Class cocosCairo.Geometry.Size=cocosCairo.Geometry.Size-class.html"><a title="cocosCairo.Geometry.Size" class="py-name" href="#" onclick="return doclink('link-7', 'Size', 'link-7');">Size</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pixbuf</tt><tt class="py-op">.</tt><tt class="py-name">get_width</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pixbuf</tt><tt class="py-op">.</tt><tt class="py-name">get_height</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"> </tt>
+<a name="Sprite.draw"></a><div id="Sprite.draw-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="Sprite.draw-toggle" onclick="return toggle('Sprite.draw');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Sprite.Sprite-class.html#draw">draw</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">context</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Sprite.draw-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Sprite.draw-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_sourcePattern</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                        <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">set_source_pixbuf</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pixbuf</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_sourcePattern</tt> <tt class="py-op">=</tt> <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">get_source</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">                        <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">set_source</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_sourcePattern</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">paint_with_alpha</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method cocosCairo.ColorNode.ColorNode.getOpacity()=cocosCairo.ColorNode.ColorNode-class.html#getOpacity,Method cocosCairo.Label.Label.getOpacity()=cocosCairo.Label.Label-class.html#getOpacity,Method cocosCairo.Node.Node.getOpacity()=cocosCairo.Node.Node-class.html#getOpacity,Method cocosCairo.Primitive.AbstractFillableNode.getOpacity()=cocosCairo.Primitive.AbstractFillableNode-class.html#getOpacity,Method cocosCairo.Primitive.LineNode.getOpacity()=cocosCairo.Primitive.LineNode-class.html#getOpacity,Method cocosCairo.SVGSprite.SVGSprite.getOpacity()=cocosCairo.SVGSprite.SVGSprite-class.html#getOpacity"><a title="cocosCairo.ColorNode.ColorNode.getOpacity
+cocosCairo.Label.Label.getOpacity
+cocosCairo.Node.Node.getOpacity
+cocosCairo.Primitive.AbstractFillableNode.getOpacity
+cocosCairo.Primitive.LineNode.getOpacity
+cocosCairo.SVGSprite.SVGSprite.getOpacity" class="py-name" href="#" onclick="return doclink('link-8', 'getOpacity', 'link-8');">getOpacity</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">a</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0.0</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                        <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">set_source_rgba</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">g</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">b</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">a</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">                        <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">mask</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_sourcePattern</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:35 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

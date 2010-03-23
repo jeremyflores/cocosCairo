@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.EaseAction</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;EaseAction
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.EaseAction-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module EaseAction</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.EaseAction-pysrc.html">source&nbsp;code</a></span></p>
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" class="summary-name">AbstractEaseAction</a><br />
+      An abstract <a href="cocosCairo.Action.AbstractAction-class.html" 
+        class="link">AbstractAction</a> wrapper that modifies the rate at 
+        which the wrapped Action executes, usually by some geometric curve.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" class="summary-name">AbstractEaseRateAction</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve is determined by a 
+        given rate.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseIn-class.html" class="summary-name">EaseIn</a><br />
+      An <a 
+        href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" 
+        class="link">AbstractEaseRateAction</a> that starts slowly then 
+        increases speed as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseOut-class.html" class="summary-name">EaseOut</a><br />
+      An <a 
+        href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" 
+        class="link">AbstractEaseRateAction</a> that starts quickly then 
+        decreases speed as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseInOut-class.html" class="summary-name">EaseInOut</a><br />
+      An <a 
+        href="cocosCairo.EaseAction.AbstractEaseRateAction-class.html" 
+        class="link">AbstractEaseRateAction</a> that starts slowly, speeds 
+        up to being 50% complete, then slows back down as it nears 
+        completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseExponentialIn-class.html" class="summary-name">EaseExponentialIn</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly then 
+        increases speed as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseExponentialOut-class.html" class="summary-name">EaseExponentialOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts quickly then 
+        decreases speed as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseExponentialInOut-class.html" class="summary-name">EaseExponentialInOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly, speeds up 
+        to being 50% complete, then slows back down as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseSineIn-class.html" class="summary-name">EaseSineIn</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly then 
+        increases speed as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseSineOut-class.html" class="summary-name">EaseSineOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts quickly then 
+        decreases speed as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseSineInOut-class.html" class="summary-name">EaseSineInOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> that starts slowly, speeds up 
+        to being 50% complete, then slows back down as it nears completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.AbstractEaseElastic-class.html" class="summary-name">AbstractEaseElastic</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve oscillates so as to
+        produce an elastic effect.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseElasticIn-class.html" class="summary-name">EaseElasticIn</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> which oscillates at the 
+        beginning before reaching completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseElasticOut-class.html" class="summary-name">EaseElasticOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> which oscillates at the end as 
+        it reaches completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseElasticInOut-class.html" class="summary-name">EaseElasticInOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> which oscillates both at the 
+        beginning and as it reaches completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.AbstractEaseBounce-class.html" class="summary-name">AbstractEaseBounce</a><br />
+      An abstract <a 
+        href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve oscillates so as to
+        produce a bouncing effect.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseBounceIn-class.html" class="summary-name">EaseBounceIn</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first bounces 
+        before reaching completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseBounceOut-class.html" class="summary-name">EaseBounceOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve bounces as it 
+        reaches completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseBounceInOut-class.html" class="summary-name">EaseBounceInOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first bounces 
+        before reaching completion, then again bounces as it reaches 
+        completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseBackIn-class.html" class="summary-name">EaseBackIn</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first reverses 
+        before reaching completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseBackOut-class.html" class="summary-name">EaseBackOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve overshoots and then
+        corrects as it reaches completion.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.EaseAction.EaseBackInOut-class.html" class="summary-name">EaseBackInOut</a><br />
+      An <a href="cocosCairo.EaseAction.AbstractEaseAction-class.html" 
+        class="link">AbstractEaseAction</a> whose curve first reverses then
+        overshoots and corrects as it reaches completion.
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'cocosCairo'"><code class="variable-quote">'</code><code class="variable-string">cocosCairo</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:28 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

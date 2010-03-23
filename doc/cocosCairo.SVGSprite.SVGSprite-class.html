@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.SVGSprite.SVGSprite</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        <a href="cocosCairo.SVGSprite-module.html">Module&nbsp;SVGSprite</a> ::
+        Class&nbsp;SVGSprite
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.SVGSprite.SVGSprite-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SVGSprite</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+        
+                                    |        
+          <a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a> --+    
+                                        |    
+                                <a href="cocosCairo.Node.Node-class.html">Node.Node</a> --+
+                                            |
+                                           <strong class="uidshort">SVGSprite</strong>
+</pre>
+
+<hr />
+<p>Renders SVG files to the screen. While <a 
+  href="cocosCairo.Sprite-module.html" class="link">Sprite</a> can render 
+  SVG files, it first renders the SVG file to a pixel buffer, which forces 
+  it to be scaled by interpolating the pixels. SVGSprite, on the other 
+  hand, does allow scaling without pixel interpolation.</p>
+  <p>Note that if the SVG file is large, it is recommended to use <a 
+  href="cocosCairo.Sprite-module.html" class="link">Sprite</a> as SVGSprite
+  might slow down the application.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">svgName</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">position</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialization method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a></code></b>:
+      <code><a href="cocosCairo.AbstractModel.ModelListener-class.html#onModelChange">onModelChange</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;SVG methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code> (or <code>None</code>)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getSVGName" class="summary-sig-name">getSVGName</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the file path of the SVG file (or <code>None</code> if it is 
+      not defined).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getSVGName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setSVGName" class="summary-sig-name">setSVGName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">svgName</span>)</span><br />
+      Sets the file path of the SVG file to be rendered.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setSVGName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_setupSVGParsingWithTree"></a><span class="summary-sig-name">_setupSVGParsingWithTree</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tree</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite._setupSVGParsingWithTree">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getSVGAttribute" class="summary-sig-name">getSVGAttribute</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">attribute</span>)</span><br />
+      Returns the value of an attribute of the SVG (that is, the 
+      <code>&lt;svg&gt;</code> tag).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getSVGAttribute">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setSVGAttribute" class="summary-sig-name">setSVGAttribute</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">attribute</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Sets the value of an attribute of the SVG.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setSVGAttribute">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>xml.etree.ElementTree._ElementInterface</code> (or 
+      <code>None</code>)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getChildElementById" class="summary-sig-name">getChildElementById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>)</span><br />
+      Returns an <code>xml.etree.ElementTree._ElementInterface</code> for a
+      child of the <code>&lt;svg&gt;</code> tag (or <code>None</code> if 
+      the child does not exist or if the SVG file has not yet been 
+      defined).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getChildElementById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code> (or <code>None</code>)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getAttributeById" class="summary-sig-name">getAttributeById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>,
+        <span class="summary-sig-arg">attribute</span>)</span><br />
+      Returns the attribute's value for a child (or <code>None</code> if it
+      does not exist or if the SVG file has not yet been defined).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getAttributeById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setAttributeById" class="summary-sig-name">setAttributeById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>,
+        <span class="summary-sig-arg">attribute</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Sets the attribute's value for a child.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setAttributeById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>dict</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getStyleDictionaryById" class="summary-sig-name">getStyleDictionaryById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>)</span><br />
+      Returns a Python dictionary of all style properties (the keys of the 
+      dictionary) and their corresponding values (the values of the 
+      dictionary) for a particular child.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getStyleDictionaryById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setStyleDictionaryById" class="summary-sig-name">setStyleDictionaryById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>,
+        <span class="summary-sig-arg">styleDictionary</span>)</span><br />
+      Sets the style for a child from a dictionary whose keys are the 
+      attributes and the corresponding values are the attribute values.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setStyleDictionaryById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code> (or <code>None</code>)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getStylePropertyValueById" class="summary-sig-name">getStylePropertyValueById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>,
+        <span class="summary-sig-arg">styleProperty</span>)</span><br />
+      Returns the value of a particular style property for a child.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getStylePropertyValueById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setStylePropertyValueById" class="summary-sig-name">setStylePropertyValueById</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">elementId</span>,
+        <span class="summary-sig-arg">styleProperty</span>,
+        <span class="summary-sig-arg">styleValue</span>)</span><br />
+      Sets the value of a particular style property for a child.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setStylePropertyValueById">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#_setSVGFromData" class="summary-sig-name" onclick="show_private();">_setSVGFromData</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Private method called whenever the SVG's XML is altered to update the
+      display.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite._setSVGFromData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Accessor methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Size-class.html" class="link">Size</a></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getSize" class="summary-sig-name">getSize</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the size of the SVG image as specified in the 
+      <code>&lt;svg&gt;</code> attributes <code>&quot;width&quot;</code> 
+      and <code>&quot;height&quot;</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setSize" class="summary-sig-name">setSize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>)</span><br />
+      Sets the size of the Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#getOpacity" class="summary-sig-name">getOpacity</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the opacity of the SVG.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getOpacity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#setOpacity" class="summary-sig-name">setOpacity</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">opacity</span>)</span><br />
+      Sets the opacity of the SVG.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setOpacity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#getAnchorPoint">getAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getBackgroundColor">getBackgroundColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getColor">getColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getController">getController</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getDirector">getDirector</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getParent">getParent</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getPosition">getPosition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getRect">getRect</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getRotation">getRotation</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getScaleX">getScaleX</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getScaleY">getScaleY</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getTag">getTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getTransformAnchorPoint">getTransformAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getUserData">getUserData</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getZOrder">getZOrder</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#isVisible">isVisible</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setAnchorPoint">setAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setBackgroundColor">setBackgroundColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setColor">setColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setColors">setColors</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setController">setController</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setDirector">setDirector</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setPosition">setPosition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setRect">setRect</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setRotation">setRotation</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setScaleX">setScaleX</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setScaleY">setScaleY</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setTag">setTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setTransformAnchorPoint">setTransformAnchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setUserData">setUserData</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setVisible">setVisible</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setZOrder">setZOrder</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Children methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#addChild">addChild</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getChildByTag">getChildByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getChildren">getChildren</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#removeAllChildren">removeAllChildren</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#removeChild">removeChild</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#removeChildByTag">removeChildByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#reorderChild">reorderChild</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b> (private):
+      <code><a href="cocosCairo.Node.Node-class.html#_detachChild" onclick="show_private();">_detachChild</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#_insertChild" onclick="show_private();">_insertChild</a></code>
+      </p></div>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Scale convenience methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#getScale">getScale</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setScale">setScale</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Drawing methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.SVGSprite.SVGSprite-class.html#draw" class="summary-sig-name">draw</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span><br />
+      Subclass and do your drawing in here.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.draw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b> (private):
+      <code><a href="cocosCairo.Node.Node-class.html#_getTransformOffset" onclick="show_private();">_getTransformOffset</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#_transform" onclick="show_private();">_transform</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#_visit" onclick="show_private();">_visit</a></code>
+      </p></div>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Scene management.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#onEnter">onEnter</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#onEnterFromFinishedTransition">onEnterFromFinishedTransition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#onExit">onExit</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Timer methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#activateTimers">activateTimers</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#deactivateTimers">deactivateTimers</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#getIntervalForScheduledCallback">getIntervalForScheduledCallback</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#scheduleCallback">scheduleCallback</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#setIntervalForScheduledCallback">setIntervalForScheduledCallback</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#unscheduleCallback">unscheduleCallback</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Action methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#getActionByTag">getActionByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#numberOfRunningActions">numberOfRunningActions</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#runAction">runAction</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#stopAction">stopAction</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#stopActionByTag">stopActionByTag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#stopAllActions">stopAllActions</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8"  class="private">
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Cleanup</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b> (private):
+      <code><a href="cocosCairo.Node.Node-class.html#_cleanup" onclick="show_private();">_cleanup</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">svgName</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">position</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialization method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>svgName</code></strong> (<code>string</code>) - The path of the SVG file.</li>
+        <li><strong class="pname"><code>position</code></strong> (<a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a> (or <code>None</code>)) - The position of the Node. Default is <a 
+          href="cocosCairo.Geometry-module.html#PointZero" 
+          class="link">PointZero()</a>.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#__init__">Node.Node.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSize</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the size of the SVG image as specified in the 
+  <code>&lt;svg&gt;</code> attributes <code>&quot;width&quot;</code> and 
+  <code>&quot;height&quot;</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Size-class.html" class="link">Size</a></dt>
+        <dd>The size of the SVG image.</dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#getSize">Node.Node.getSize</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">size</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the size of the Node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>size</code></strong> - <a href="cocosCairo.Geometry.Size-class.html" 
+          class="link">Size</a>.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#setSize">Node.Node.setSize</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getOpacity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getOpacity</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getOpacity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the opacity of the SVG. If the SVG tag does not have an 
+  opacity attribute (or if the SVG file has not yet been set), then it will
+  return <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code></dt>
+        <dd>The opacity.</dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#getOpacity">Node.Node.getOpacity</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setOpacity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setOpacity</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">opacity</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setOpacity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the opacity of the SVG. The value should be between 
+  <code>0.0</code> and <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>opacity</code></strong> (<code>float</code>) - The SVG's new opacity.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#setOpacity">Node.Node.setOpacity</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSVGName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSVGName</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getSVGName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the file path of the SVG file (or <code>None</code> if it is 
+  not defined).</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code> (or <code>None</code>)</dt>
+        <dd>The file path.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSVGName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSVGName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">svgName</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setSVGName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the file path of the SVG file to be rendered.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>svgName</code></strong> (<code>string</code>) - The path of the SVG file.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSVGAttribute"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSVGAttribute</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">attribute</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getSVGAttribute">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the value of an attribute of the SVG (that is, the 
+  <code>&lt;svg&gt;</code> tag). If the SVG file has not yet been defined 
+  or if the SVG does not have the attribute, it will return 
+  <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>attribute</code></strong> (<code>string</code> (or <code>None</code>)) - The name of the attribute whose value will be returned.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSVGAttribute"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSVGAttribute</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">attribute</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setSVGAttribute">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the value of an attribute of the SVG.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>attribute</code></strong> (<code>string</code>) - The name of the attribute.</li>
+        <li><strong class="pname"><code>value</code></strong> (<code>string</code>) - The value for the attribute.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not the attribute's value was successfully set.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getChildElementById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getChildElementById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getChildElementById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns an <code>xml.etree.ElementTree._ElementInterface</code> for a 
+  child of the <code>&lt;svg&gt;</code> tag (or <code>None</code> if the 
+  child does not exist or if the SVG file has not yet been defined).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+    </ul></dd>
+    <dt>Returns: <code>xml.etree.ElementTree._ElementInterface</code> (or 
+      <code>None</code>)</dt>
+        <dd>The child.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAttributeById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAttributeById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>,
+        <span class="sig-arg">attribute</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getAttributeById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the attribute's value for a child (or <code>None</code> if it 
+  does not exist or if the SVG file has not yet been defined).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+    </ul></dd>
+    <dt>Returns: <code>string</code> (or <code>None</code>)</dt>
+        <dd>The value of the attribute.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setAttributeById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAttributeById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>,
+        <span class="sig-arg">attribute</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setAttributeById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the attribute's value for a child.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+        <li><strong class="pname"><code>attribute</code></strong> (<code>string</code>) - The attribute's name.</li>
+        <li><strong class="pname"><code>value</code></strong> (<code>string</code>) - The new value for the attribute.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not setting the new value succeeded.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getStyleDictionaryById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getStyleDictionaryById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getStyleDictionaryById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a Python dictionary of all style properties (the keys of the 
+  dictionary) and their corresponding values (the values of the dictionary)
+  for a particular child. If the child does not exist or if the child does 
+  not have the &quot;style&quot; attribute, then this will return an empty 
+  dictionary.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+    </ul></dd>
+    <dt>Returns: <code>dict</code></dt>
+        <dd>The dictionary.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setStyleDictionaryById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setStyleDictionaryById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>,
+        <span class="sig-arg">styleDictionary</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setStyleDictionaryById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the style for a child from a dictionary whose keys are the 
+  attributes and the corresponding values are the attribute values.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+        <li><strong class="pname"><code>styleDictionary</code></strong> (<code>dict</code>) - The dictionary.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not setting the new style succeeded.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getStylePropertyValueById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getStylePropertyValueById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>,
+        <span class="sig-arg">styleProperty</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.getStylePropertyValueById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the value of a particular style property for a child. If the 
+  property is not found, it will return <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+        <li><strong class="pname"><code>styleProperty</code></strong> (<code>string</code>) - The property's name.</li>
+    </ul></dd>
+    <dt>Returns: <code>string</code> (or <code>None</code>)</dt>
+        <dd>The value for the property.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setStylePropertyValueById"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setStylePropertyValueById</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">elementId</span>,
+        <span class="sig-arg">styleProperty</span>,
+        <span class="sig-arg">styleValue</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.setStylePropertyValueById">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the value of a particular style property for a child.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>elementId</code></strong> (<code>string</code>) - The id of the child.</li>
+        <li><strong class="pname"><code>styleProperty</code></strong> (<code>string</code>) - The property's name.</li>
+        <li><strong class="pname"><code>styleValue</code></strong> (<code>string</code> (or <code>None</code>)) - The value for the property.</li>
+    </ul></dd>
+    <dt>Returns: <code>bool</code></dt>
+        <dd>Whether or not setting the value succeeded.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_setSVGFromData"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_setSVGFromData</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite._setSVGFromData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method called whenever the SVG's XML is altered to update the 
+  display. This method should not usually need to be called manually.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="draw"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">draw</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.SVGSprite-pysrc.html#SVGSprite.draw">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass and do your drawing in here. The context will already be 
+  translated to the node's current position, so drawing to 
+  <code>Point(0,0)</code> will actually render to <a 
+  href="cocosCairo.Node.Node-class.html#getPosition" 
+  class="link">getPosition</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>context</code></strong> - A Cairo context clipped to the dirtied rectangle.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="cocosCairo.Node.Node-class.html#draw">Node.Node.draw</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:33 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

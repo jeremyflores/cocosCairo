@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>CocosCairo.cocosCairo.Color</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="CocosCairo.cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;CocosCairo ::
+        <a href="CocosCairo.cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;Color
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="CocosCairo.cocosCairo.Color-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="CocosCairo.cocosCairo.Color-module.html">Module CocosCairo.cocosCairo.Color</a></h1>
+<pre class="py-src">
+<a name="Color"></a><div id="Color-def"><a name="L1"></a><tt class="py-lineno"> 1</tt> <a class="py-toggle" href="#" id="Color-toggle" onclick="return toggle('Color');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color.Color-class.html">Color</a><tt class="py-op">:</tt> </tt>
+</div><div id="Color-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Color-expanded"><a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">        Defines an C{RGBA} (Red, Green, Blue, Alpha) color. A Color is considered a primitive, so its values may be accessed directly.</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="Color.__init__"></a><div id="Color.__init__-def"><a name="L5"></a><tt class="py-lineno"> 5</tt> <a class="py-toggle" href="#" id="Color.__init__-toggle" onclick="return toggle('Color.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color.Color-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">r</tt><tt class="py-op">,</tt> <tt class="py-param">g</tt><tt class="py-op">,</tt> <tt class="py-param">b</tt><tt class="py-op">,</tt> <tt class="py-param">a</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Color.__init__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Color.__init__-expanded"><a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">                Initialization method.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring">                @param r: The red value.</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">                @type r: C{float} between C{0.0} (no red) and C{1.0} (full red).</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">                @param r: The green value.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">                @type r: C{float} between C{0.0} (no green) and C{1.0} (full green).</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">                @param r: The blue value.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">                @type r: C{float} between C{0.0} (no blue) and C{1.0} (full blue).</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">                @param r: The alpha (opacity) value.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">                @type r: C{float} between C{0.0} (fully transparent) and C{1.0} (fully opaque).</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">r</tt> <tt class="py-op">=</tt> <tt class="py-name">r</tt>      <tt class="py-comment">#: The red value.</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">g</tt> <tt class="py-op">=</tt> <tt class="py-name">g</tt>      <tt class="py-comment">#: The green value.</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">b</tt> <tt class="py-op">=</tt> <tt class="py-name">b</tt>      <tt class="py-comment">#: The blue value.</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">a</tt> <tt class="py-op">=</tt> <tt class="py-name">a</tt>      <tt class="py-comment">#: The alpha value.</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="Color.__str__"></a><div id="Color.__str__-def"><a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="Color.__str__-toggle" onclick="return toggle('Color.__str__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color.Color-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Color.__str__-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Color.__str__-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-string">"r:\t"</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">"\ng:\t"</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">g</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">"\nb:\t"</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">b</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">"\na:\t"</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">a</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="Color.copy"></a><div id="Color.copy-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="Color.copy-toggle" onclick="return toggle('Color.copy');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color.Color-class.html#copy">copy</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Color.copy-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Color.copy-expanded"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring">                Returns a copy of the Color.</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">                @return: A copy of the Color.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: L{Color}.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt id="link-0" class="py-name" targets="Module CocosCairo.cocosCairo.Color=CocosCairo.cocosCairo.Color-module.html,Class CocosCairo.cocosCairo.Color.Color=CocosCairo.cocosCairo.Color.Color-class.html"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-0', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">g</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">b</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">a</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="BlackColor"></a><div id="BlackColor-def"><a name="L35"></a><tt class="py-lineno">35</tt> <a class="py-toggle" href="#" id="BlackColor-toggle" onclick="return toggle('BlackColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color-module.html#BlackColor">BlackColor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BlackColor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="BlackColor-expanded"><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-docstring">        Returns a new L{Color} with C{RGBA} values C{(0, 0, 0, 1)}.</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-1" class="py-name"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-1', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"> </tt>
+<a name="ClearColor"></a><div id="ClearColor-def"><a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="ClearColor-toggle" onclick="return toggle('ClearColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color-module.html#ClearColor">ClearColor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ClearColor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ClearColor-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring">        Returns a new L{Color} with C{RGBA} values C{(0, 0, 0, 0)}.</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-2" class="py-name"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-2', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="WhiteColor"></a><div id="WhiteColor-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="WhiteColor-toggle" onclick="return toggle('WhiteColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color-module.html#WhiteColor">WhiteColor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WhiteColor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="WhiteColor-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-docstring">        Returns a new L{Color} with C{RGBA} values C{(1, 1, 1, 1)}.</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-3" class="py-name"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-3', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"> </tt>
+<a name="RedColor"></a><div id="RedColor-def"><a name="L53"></a><tt class="py-lineno">53</tt> <a class="py-toggle" href="#" id="RedColor-toggle" onclick="return toggle('RedColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color-module.html#RedColor">RedColor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RedColor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="RedColor-expanded"><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-docstring">        Returns a new L{Color} with C{RGBA} values C{(1, 0, 0, 1)}.</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-4" class="py-name"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-4', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="GreenColor"></a><div id="GreenColor-def"><a name="L59"></a><tt class="py-lineno">59</tt> <a class="py-toggle" href="#" id="GreenColor-toggle" onclick="return toggle('GreenColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color-module.html#GreenColor">GreenColor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GreenColor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="GreenColor-expanded"><a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-docstring">        Returns a new L{Color} with C{RGBA} values C{(0, 1, 0, 1)}.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-5" class="py-name"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-5', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"> </tt>
+<a name="BlueColor"></a><div id="BlueColor-def"><a name="L65"></a><tt class="py-lineno">65</tt> <a class="py-toggle" href="#" id="BlueColor-toggle" onclick="return toggle('BlueColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="CocosCairo.cocosCairo.Color-module.html#BlueColor">BlueColor</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BlueColor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="BlueColor-expanded"><a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"><tt class="py-docstring">        Returns a new L{Color} with C{RGBA} values C{(0, 0, 1, 1)}.</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-6" class="py-name"><a title="CocosCairo.cocosCairo.Color
+CocosCairo.cocosCairo.Color.Color" class="py-name" href="#" onclick="return doclink('link-6', 'Color', 'link-0');">Color</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="CocosCairo.cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Mar  3 23:56:49 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

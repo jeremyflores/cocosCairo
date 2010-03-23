@@ -1,0 +1,2934 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.Node.Node</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        <a href="cocosCairo.Node-module.html">Module&nbsp;Node</a> ::
+        Class&nbsp;Node
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.Node.Node-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Node</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+    
+                                    |    
+          <a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a> --+
+                                        |
+                                       <strong class="uidshort">Node</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="cocosCairo.Label.Label-class.html">Label.Label</a></li><li>, <a href="cocosCairo.PangoLabel.PangoLabel-class.html">PangoLabel.PangoLabel</a></li><li>, <a href="cocosCairo.Scene.Scene-class.html">Scene.Scene</a></li><li>, <a href="cocosCairo.ColorNode.ColorNode-class.html">ColorNode.ColorNode</a></li><li>, <a href="cocosCairo.SVGSprite.SVGSprite-class.html">SVGSprite.SVGSprite</a></li><li>, <a href="cocosCairo.Sprite.Sprite-class.html">Sprite.Sprite</a></li><li>, <a href="cocosCairo.Primitive.AbstractFillableNode-class.html">Primitive.AbstractFillableNode</a></li><li>, <a href="cocosCairo.Primitive.LineNode-class.html">Primitive.LineNode</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>The base class for rendering objects to the screen.</p>
+  <p>Note that the position is set relative to the Node's parent. If the 
+  Node's parent is the <a href="cocosCairo.Director-module.html" 
+  class="link">Director</a>, the position is relative to the top-left 
+  corner of the screen (in general, this should only apply to <a 
+  href="cocosCairo.Scene-module.html" 
+  class="link">Scene</a><code>s</code>).</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rect</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialization method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a></code></b>:
+      <code><a href="cocosCairo.AbstractModel.ModelListener-class.html#onModelChange">onModelChange</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Accessor methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getAnchorPoint" class="summary-sig-name">getAnchorPoint</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      How the Node is displayed relative to its position.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getAnchorPoint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Color.Color-class.html" class="link">Color</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getBackgroundColor" class="summary-sig-name">getBackgroundColor</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The background color of this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Color.Color-class.html" class="link">Color</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getColor" class="summary-sig-name">getColor</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the foreground color for Node subclasses that use it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.AbstractController-module.html" 
+      class="link">AbstractController</a> (or <code>None</code> if not 
+      defined).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getController" class="summary-sig-name">getController</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the controller of this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getController">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Director-module.html" class="link">Director</a> 
+      (or <code>None</code> if not yet defined).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getDirector" class="summary-sig-name">getDirector</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      A convenience method to get the <a 
+      href="cocosCairo.Director-module.html" class="link">Director</a> of 
+      the application.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getDirector">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getOpacity" class="summary-sig-name">getOpacity</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the opacity for Node subclasses that use it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getOpacity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>Node</code> or <code>None</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getParent" class="summary-sig-name">getParent</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the parent of this node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getParent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getPosition" class="summary-sig-name">getPosition</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the current position of the Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getPosition">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getRect" class="summary-sig-name">getRect</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the bounding box for the Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getRect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getRotation" class="summary-sig-name">getRotation</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The current angle at which this Node is rotated.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getRotation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScaleX" class="summary-sig-name">getScaleX</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The scale factor for the X dimension.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScaleX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScaleY" class="summary-sig-name">getScaleY</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The scale factor for the Y dimension.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScaleY">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Size-class.html" class="link">Size</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getSize" class="summary-sig-name">getSize</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the size of this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code> (or <code>None</code> if not defined).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getTag" class="summary-sig-name">getTag</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      A convenience string with which to identify this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getTag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getTransformAnchorPoint" class="summary-sig-name">getTransformAnchorPoint</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns how the Node is transformed relative to its position.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getTransformAnchorPoint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>User defined</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getUserData" class="summary-sig-name">getUserData</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Any peripheral data the user wishes to attach.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getUserData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>int</code> (or possibly <code>float</code>).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getZOrder" class="summary-sig-name">getZOrder</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The Z-order of this current Node in relation to other Nodes.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getZOrder">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>bool</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#isVisible" class="summary-sig-name">isVisible</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Whether or not this Node and its children are visible.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.isVisible">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setAnchorPoint" class="summary-sig-name">setAnchorPoint</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">anchorPoint</span>)</span><br />
+      Sets how the Node is displayed on the screen relative to its 
+      position.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setAnchorPoint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setBackgroundColor" class="summary-sig-name">setBackgroundColor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">backgroundColor</span>)</span><br />
+      Background color for the node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setColor" class="summary-sig-name">setColor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">color</span>)</span><br />
+      Method for children who have color foregrounds for, e.g.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setColors" class="summary-sig-name">setColors</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">g</span>,
+        <span class="summary-sig-arg">b</span>,
+        <span class="summary-sig-arg">a</span>=<span class="summary-sig-default">1.0</span>)</span><br />
+      Method for children who have color foregrounds for, e.g.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setColors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setController" class="summary-sig-name">setController</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">controller</span>)</span><br />
+      Sets the controller of this Node for the MVC design pattern.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setController">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setDirector" class="summary-sig-name">setDirector</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">director</span>)</span><br />
+      Sets the <a href="cocosCairo.Director-module.html" 
+      class="link">Director</a> of the application.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setDirector">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setOpacity" class="summary-sig-name">setOpacity</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">opacity</span>)</span><br />
+      Sets the opacity for Node subclasses that use it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setOpacity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setPosition" class="summary-sig-name">setPosition</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">position</span>)</span><br />
+      Sets the current position of the Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setPosition">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setRect" class="summary-sig-name">setRect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rect</span>)</span><br />
+      Sets the rectangle for the Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setRect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setRotation" class="summary-sig-name">setRotation</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>)</span><br />
+      The rotation angle in radians.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setRotation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScaleX" class="summary-sig-name">setScaleX</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scaleX</span>)</span><br />
+      Scale factor for the X dimension.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScaleX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScaleY" class="summary-sig-name">setScaleY</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scaleY</span>)</span><br />
+      Scale factor for the Y dimension.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScaleY">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setSize" class="summary-sig-name">setSize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>)</span><br />
+      Sets the size of the Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setTag" class="summary-sig-name">setTag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span><br />
+      A convenience string with which to identify this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setTag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setTransformAnchorPoint" class="summary-sig-name">setTransformAnchorPoint</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">anchorPoint</span>)</span><br />
+      Sets how the Node is transformed relative to its position.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setTransformAnchorPoint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setUserData" class="summary-sig-name">setUserData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">userData</span>)</span><br />
+      Any peripheral data the user wishes to attach.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setUserData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setVisible" class="summary-sig-name">setVisible</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isVisible</span>)</span><br />
+      Whether or not this node &amp; children are visible.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setVisible">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setZOrder" class="summary-sig-name">setZOrder</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">zOrder</span>)</span><br />
+      The Z-Order.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setZOrder">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Children methods.</th></tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_detachChild"></a><span class="summary-sig-name">_detachChild</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">child</span>,
+        <span class="summary-sig-arg">shouldCleanup</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._detachChild">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#_insertChild" class="summary-sig-name" onclick="show_private();">_insertChild</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">child</span>,
+        <span class="summary-sig-arg">zOrder</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._insertChild">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#addChild" class="summary-sig-name">addChild</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">child</span>,
+        <span class="summary-sig-arg">zOrder</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">tag</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Adds a child <code>Node</code> to this node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.addChild">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>Node</code> (or <code>None</code> if the child is not found).</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getChildByTag" class="summary-sig-name">getChildByTag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span><br />
+      Returns a child <code>Node</code> whose tag matches the given 
+      <code>string</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getChildByTag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getChildren" class="summary-sig-name">getChildren</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns a list of children.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getChildren">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#removeAllChildren" class="summary-sig-name">removeAllChildren</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">shouldCleanup</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Removes all children from this node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeAllChildren">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#removeChild" class="summary-sig-name">removeChild</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">child</span>,
+        <span class="summary-sig-arg">shouldCleanup</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Removes a child <code>Node</code> from this node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeChild">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#removeChildByTag" class="summary-sig-name">removeChildByTag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>,
+        <span class="summary-sig-arg">shouldCleanup</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Removes a child <code>Node</code> from this node as identified by its
+      tag.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeChildByTag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#reorderChild" class="summary-sig-name">reorderChild</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">child</span>,
+        <span class="summary-sig-arg">zOrder</span>)</span><br />
+      Changes the zOrder of a child of this node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.reorderChild">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Scale convenience methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScale" class="summary-sig-name">getScale</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the scale amount if both scaleX and scaleY are equal.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScale">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScale" class="summary-sig-name">setScale</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scale</span>)</span><br />
+      Set the scale amount for both the x-axis and y-axis.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScale">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Drawing methods.</th></tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_getTransformOffset"></a><span class="summary-sig-name">_getTransformOffset</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Private method for performing a translation on the current context.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._getTransformOffset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#_transform" class="summary-sig-name" onclick="show_private();">_transform</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span><br />
+      Private method that is called by <code>_visit</code>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._transform">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#_visit" class="summary-sig-name" onclick="show_private();">_visit</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span><br />
+      Private method that is called by its parent whenever the node (and 
+      its children) need to be redrawn.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._visit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#draw" class="summary-sig-name">draw</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span><br />
+      Subclass and do your drawing in here.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.draw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Scene management.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#onEnter" class="summary-sig-name">onEnter</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called when this node will first be displayed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.onEnter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#onEnterFromFinishedTransition" class="summary-sig-name">onEnterFromFinishedTransition</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called if there was a <a href="cocosCairo.Transition-module.html" 
+      class="link">Transition</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.onEnterFromFinishedTransition">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#onExit" class="summary-sig-name">onExit</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called when this node will no longer be displayed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.onExit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Timer methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="activateTimers"></a><span class="summary-sig-name">activateTimers</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Activates any <a href="cocosCairo.Timer.Timer-class.html" 
+      class="link">Timer</a>s that this Node has.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.activateTimers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="deactivateTimers"></a><span class="summary-sig-name">deactivateTimers</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Deactivates any <a href="cocosCairo.Timer.Timer-class.html" 
+      class="link">Timer</a>s that this Node has.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.deactivateTimers">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>float</code> (or <code>None</code>)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getIntervalForScheduledCallback" class="summary-sig-name">getIntervalForScheduledCallback</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">callback</span>)</span><br />
+      Returns how often (in seconds) the callback will be called (or 
+      <code>None</code> if the callback is not currently scheduled).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getIntervalForScheduledCallback">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#scheduleCallback" class="summary-sig-name">scheduleCallback</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">callback</span>,
+        <span class="summary-sig-arg">interval</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Registers a function to be called every <code>interval</code> 
+      seconds.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.scheduleCallback">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setIntervalForScheduledCallback" class="summary-sig-name">setIntervalForScheduledCallback</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">callback</span>,
+        <span class="summary-sig-arg">interval</span>)</span><br />
+      Sets how often (in seconds) the callback will be called.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setIntervalForScheduledCallback">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#unscheduleCallback" class="summary-sig-name">unscheduleCallback</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">callback</span>)</span><br />
+      Removes a <code>callback</code> that has been added via <a 
+      href="cocosCairo.Node.Node-class.html#scheduleCallback" 
+      class="link">scheduleCallback</a>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.unscheduleCallback">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Action methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getActionByTag" class="summary-sig-name">getActionByTag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span><br />
+      Gets a particular <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a> currently running on this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getActionByTag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>int</code>.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#numberOfRunningActions" class="summary-sig-name">numberOfRunningActions</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the number of <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a>s currently running on this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.numberOfRunningActions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="runAction"></a><span class="summary-sig-name">runAction</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">action</span>)</span><br />
+      Runs an <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a> on this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.runAction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="stopAction"></a><span class="summary-sig-name">stopAction</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">action</span>)</span><br />
+      Stops a particular <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a> currently running on this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.stopAction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#stopActionByTag" class="summary-sig-name">stopActionByTag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span><br />
+      Stops a particular <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a> currently running on this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.stopActionByTag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="stopAllActions"></a><span class="summary-sig-name">stopAllActions</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Stops all <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a>s currently running on this Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.stopAllActions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8"  class="private">
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Cleanup</th></tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#_cleanup" class="summary-sig-name" onclick="show_private();">_cleanup</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Private method used by Node.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._cleanup">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rect</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialization method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>rect</code></strong> (<a href="cocosCairo.Geometry.Rect-class.html" 
+          class="link">Rect</a> (or <code>None</code>)) - The bounding box for the Node. By default, the bounding box is <a
+          href="cocosCairo.Geometry-module.html#RectZero" 
+          class="link">RectZero</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_cleanup"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_cleanup</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._cleanup">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method used by Node. Stops all actions for the Node, clears 
+  out any scheduled timers, and tells its children to do the same.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_insertChild"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_insertChild</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">child</span>,
+        <span class="sig-arg">zOrder</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._insertChild">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Inserts a child into the Node's child list, which is 
+  sorted by the children's zOrders.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>child</code></strong> (<code>Node</code>.) - The Node to add.</li>
+        <li><strong class="pname"><code>zOrder</code></strong> (<code>int</code>.) - The zOrder at which the child will be added.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_transform"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_transform</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._transform">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method that is called by <code>_visit</code>. Performs 
+  transforms onto the current context (e.g. rotation, scaling).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>context</code></strong> - The Cairo context.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_visit"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_visit</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node._visit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method that is called by its parent whenever the node (and its
+  children) need to be redrawn. Do not call this method directly as the <a 
+  href="cocosCairo.Director-module.html" class="link">Director</a> and <a 
+  href="cocosCairo.GTKInterface-module.html" class="link">GTKInterface</a> 
+  handle the redrawing.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>context</code></strong> - The Cairo context.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addChild"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addChild</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">child</span>,
+        <span class="sig-arg">zOrder</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">tag</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.addChild">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Adds a child <code>Node</code> to this node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>child</code></strong> (<code>Node</code>.) - The child to add.</li>
+        <li><strong class="pname"><code>zOrder</code></strong> (<code>int</code>.) - The zOrder at which the child will be added. Default is the 
+          child's current zOrder.</li>
+        <li><strong class="pname"><code>tag</code></strong> (<code>str</code>.) - A tag ID by which to reference the child. Default is the child's 
+          current tag.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="draw"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">draw</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.draw">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Subclass and do your drawing in here. The context will already be 
+  translated to the node's current position, so drawing to 
+  <code>Point(0,0)</code> will actually render to <a 
+  href="cocosCairo.Node.Node-class.html#getPosition" 
+  class="link">getPosition</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>context</code></strong> - A Cairo context clipped to the dirtied rectangle.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getActionByTag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getActionByTag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getActionByTag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets a particular <a href="cocosCairo.Action-module.html" 
+  class="link">Action</a> currently running on this Node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tag</code></strong> (<code>string</code>.) - The tag of the Node.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAnchorPoint"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAnchorPoint</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getAnchorPoint">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>How the Node is displayed relative to its position. See <a 
+  href="cocosCairo.Node.Node-class.html#setAnchorPoint" 
+  class="link">setAnchorPoint</a> for a description.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a>.</dt>
+        <dd>Anchor point.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getBackgroundColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBackgroundColor</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getBackgroundColor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The background color of this Node. Default is <a 
+  href="cocosCairo.Color-module.html#ClearColor" 
+  class="link">ClearColor</a>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Color.Color-class.html" class="link">Color</a>.</dt>
+        <dd>The background color.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getChildByTag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getChildByTag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getChildByTag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a child <code>Node</code> whose tag matches the given 
+  <code>string</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tag</code></strong> (<code>string</code>.) - The child's tag.</li>
+    </ul></dd>
+    <dt>Returns: <code>Node</code> (or <code>None</code> if the child is not found).</dt>
+        <dd>A child <code>Node</code> if the child is found, 
+          <code>None</code> otherwise.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getChildren"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getChildren</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getChildren">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a list of children.</p>
+  <dl class="fields">
+    <dt>Returns: <code>List</code>.</dt>
+        <dd>List of children.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getColor</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getColor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the foreground color for Node subclasses that use it. Default 
+  is <a href="cocosCairo.Color-module.html#ClearColor" 
+  class="link">ClearColor</a>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Color.Color-class.html" class="link">Color</a>.</dt>
+        <dd>The foreground color.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getController"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getController</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getController">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the controller of this Node. Default is <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.AbstractController-module.html" 
+      class="link">AbstractController</a> (or <code>None</code> if not 
+      defined).</dt>
+        <dd>The controller of this Node.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getDirector"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getDirector</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getDirector">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A convenience method to get the <a 
+  href="cocosCairo.Director-module.html" class="link">Director</a> of the 
+  application. If this Node has not yet been parented to a running <a 
+  href="cocosCairo.Scene-module.html" class="link">Scene</a>, this will 
+  return <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Director-module.html" class="link">Director</a> 
+      (or <code>None</code> if not yet defined).</dt>
+        <dd>The Director of the application.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getIntervalForScheduledCallback"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntervalForScheduledCallback</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">callback</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getIntervalForScheduledCallback">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns how often (in seconds) the callback will be called (or 
+  <code>None</code> if the callback is not currently scheduled).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>callback</code></strong> (<code>function</code>) - The scheduled callback.</li>
+    </ul></dd>
+    <dt>Returns: <code>float</code> (or <code>None</code>)</dt>
+        <dd>The interval for the callback.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getOpacity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getOpacity</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getOpacity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the opacity for Node subclasses that use it. Default is 
+  <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code>.</dt>
+        <dd>The opacity.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getParent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getParent</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getParent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the parent of this node.</p>
+  <dl class="fields">
+    <dt>Returns: <code>Node</code> or <code>None</code>.</dt>
+        <dd>The parent of this node or None if there is no parent.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getPosition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPosition</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getPosition">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the current position of the Node. Note that the position is set 
+  relative to the <code>Node's</code> parent.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a>.</dt>
+        <dd>Current position.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRect</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getRect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the bounding box for the Node.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Rect-class.html" class="link">Rect</a>.</dt>
+        <dd>The bounding box.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRotation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRotation</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getRotation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The current angle at which this Node is rotated. Default is 
+  <code>0.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code>.</dt>
+        <dd>Angle.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getScale"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getScale</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScale">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the scale amount if both scaleX and scaleY are equal. If they 
+  are not equal, it will raise a warning and only return scaleX.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code>.</dt>
+        <dd>Scale amount.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getScaleX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getScaleX</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScaleX">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The scale factor for the X dimension. Default is <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code>.</dt>
+        <dd>Scale factor.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getScaleY"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getScaleY</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScaleY">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The scale factor for the Y dimension. Default is <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>float</code>.</dt>
+        <dd>Scale factor.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSize</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the size of this Node.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Size-class.html" class="link">Size</a>.</dt>
+        <dd>Size.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTag</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getTag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A convenience string with which to identify this Node. Default is 
+  <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>string</code> (or <code>None</code> if not defined).</dt>
+        <dd>Convenience string.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTransformAnchorPoint"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTransformAnchorPoint</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getTransformAnchorPoint">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns how the Node is transformed relative to its position.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.Geometry.Point-class.html" 
+      class="link">Point</a>.</dt>
+        <dd>Transform anchor.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getUserData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getUserData</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getUserData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Any peripheral data the user wishes to attach. Default is 
+  <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>User defined</code>.</dt>
+        <dd>User data.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getZOrder"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getZOrder</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getZOrder">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The Z-order of this current Node in relation to other Nodes.</p>
+  <dl class="fields">
+    <dt>Returns: <code>int</code> (or possibly <code>float</code>).</dt>
+        <dd>The Z-order.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isVisible"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isVisible</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.isVisible">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Whether or not this Node and its children are visible. Default is 
+  <code>True</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <code>bool</code>.</dt>
+        <dd>Whether or not this Node and its children are visible.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="numberOfRunningActions"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">numberOfRunningActions</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.numberOfRunningActions">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the number of <a href="cocosCairo.Action-module.html" 
+  class="link">Action</a>s currently running on this Node.</p>
+  <dl class="fields">
+    <dt>Returns: <code>int</code>.</dt>
+        <dd>Number of running actions.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onEnter"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onEnter</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.onEnter">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called when this node will first be displayed. Override to have custom
+  behaviors.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="onEnterFromFinishedTransition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onEnterFromFinishedTransition</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.onEnterFromFinishedTransition">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called if there was a <a href="cocosCairo.Transition-module.html" 
+  class="link">Transition</a>. Override to have custom behaviors.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="onExit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onExit</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.onExit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called when this node will no longer be displayed. Override to have 
+  custom behaviors.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="removeAllChildren"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">removeAllChildren</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">shouldCleanup</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeAllChildren">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Removes all children from this node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>shouldCleanup</code></strong> (<code>bool</code>.) - Whether or not the child and its children should be cleaned up, 
+          i.e. stopping actions and removing all Timer callbacks. Default 
+          is True.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="removeChild"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">removeChild</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">child</span>,
+        <span class="sig-arg">shouldCleanup</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeChild">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Removes a child <code>Node</code> from this node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>child</code></strong> (<code>Node</code>.) - The child to add.</li>
+        <li><strong class="pname"><code>shouldCleanup</code></strong> (<code>bool</code>.) - Whether or not the child and its children should be cleaned up, 
+          i.e. stopping actions and removing all Timer callbacks. Default 
+          is True.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="removeChildByTag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">removeChildByTag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>,
+        <span class="sig-arg">shouldCleanup</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeChildByTag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Removes a child <code>Node</code> from this node as identified by its 
+  tag.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tag</code></strong> (<code>str</code>.) - The child's unique identifier.</li>
+        <li><strong class="pname"><code>shouldCleanup</code></strong> (<code>bool</code>.) - Whether or not the child and its children should be cleaned up, 
+          i.e. stopping actions and removing all Timer callbacks. Default 
+          is True.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="reorderChild"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reorderChild</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">child</span>,
+        <span class="sig-arg">zOrder</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.reorderChild">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Changes the zOrder of a child of this node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>child</code></strong> (<code>Node</code>.) - The child to add.</li>
+        <li><strong class="pname"><code>zOrder</code></strong> (<code>int</code>.) - The zOrder at which the child will be added.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scheduleCallback"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">scheduleCallback</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">callback</span>,
+        <span class="sig-arg">interval</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.scheduleCallback">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Registers a function to be called every <code>interval</code> 
+  seconds.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>callback</code></strong> (Python <code>function</code>.) - The method to be called by the <a 
+          href="cocosCairo.Scheduler-module.html" 
+          class="link">Scheduler</a>.</li>
+        <li><strong class="pname"><code>interval</code></strong> (Non-negative <code>float</code>.) - How often (in seconds) the <code>callback</code> should be 
+          called.</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Requires:</strong>
+        This method should only be used by a subclass. If you wish to 
+        create a timer, see <a href="cocosCairo.Timer.Timer-class.html" 
+        class="link">Timer</a> and <a 
+        href="cocosCairo.Scheduler-module.html" class="link">Scheduler</a>.
+      </p>
+</div></td></tr></table>
+</div>
+<a name="setAnchorPoint"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAnchorPoint</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">anchorPoint</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setAnchorPoint">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets how the Node is displayed on the screen relative to its position.
+  E.g. <code>Point(0,0)</code> means that the Node will be drawn with its 
+  top left-most corner at the position, <code>Point(1,1)</code> means that 
+  the Node will be drawn with its bottom right-most corner at the position,
+  and <code>Point(0.5, 0.5)</code> means that the Node will be drawn with 
+  its center at the position.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>anchorPoint</code></strong> - <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>, with both <code>0 &lt;= x &lt;= 1</code> 
+          and <code>0 &lt;= y &lt;= 1</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setBackgroundColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setBackgroundColor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">backgroundColor</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setBackgroundColor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Background color for the node. Default is <code>Color(0,0,0,0)</code> 
+  (i.e. the background is fully transparent). Any child with a zOrder less 
+  than the node's zOrder will appear behind the background.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>backgroundColor</code></strong> - <a href="cocosCairo.Color.Color-class.html" 
+          class="link">Color</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setColor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">color</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setColor">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Method for children who have color foregrounds for, e.g. tinting (like
+  <a href="cocosCairo.Sprite-module.html" class="link">Sprite</a>s).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>color</code></strong> - <a href="cocosCairo.Color.Color-class.html" 
+          class="link">Color</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setColors"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setColors</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">r</span>,
+        <span class="sig-arg">g</span>,
+        <span class="sig-arg">b</span>,
+        <span class="sig-arg">a</span>=<span class="sig-default">1.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setColors">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Method for children who have color foregrounds for, e.g. tinting (like
+  <a href="cocosCairo.Sprite-module.html" class="link">Sprite</a>s).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> - <code>float</code>.</li>
+        <li><strong class="pname"><code>g</code></strong> - <code>float</code>.</li>
+        <li><strong class="pname"><code>b</code></strong> - <code>float</code>.</li>
+        <li><strong class="pname"><code>a</code></strong> - <code>float</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setController"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setController</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">controller</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setController">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the controller of this Node for the MVC design pattern.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>controller</code></strong> - A <a href="cocosCairo.AbstractController-module.html" 
+          class="link">AbstractController</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setDirector"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setDirector</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">director</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setDirector">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the <a href="cocosCairo.Director-module.html" 
+  class="link">Director</a> of the application. This method is used 
+  automatically and should not normally be called manually.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>director</code></strong> - the <a href="cocosCairo.Director-module.html" 
+          class="link">Director</a> of the application.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setIntervalForScheduledCallback"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setIntervalForScheduledCallback</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">callback</span>,
+        <span class="sig-arg">interval</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setIntervalForScheduledCallback">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets how often (in seconds) the callback will be called.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>callback</code></strong> (<code>function</code>) - The scheduled callback.</li>
+        <li><strong class="pname"><code>interval</code></strong> (Non-negative <code>float</code>.) - How often (in seconds) the <code>callback</code> should be 
+          called.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setOpacity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setOpacity</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">opacity</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setOpacity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the opacity for Node subclasses that use it. This should be set 
+  between <code>0.0</code> (fully transparent) and <code>1.0</code> (fully 
+  opaque).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>opacity</code></strong> (<code>float</code>.) - The opacity.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setPosition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setPosition</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">position</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setPosition">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the current position of the Node. Note that the position is set 
+  relative to the <code>Node's</code> parent.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>position</code></strong> - <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setRect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setRect</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rect</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setRect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the rectangle for the Node. Note that the node or its children 
+  may be drawn outside this rectangle (i.e. they will not be clipped).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>rect</code></strong> - <a href="cocosCairo.Geometry.Rect-class.html" 
+          class="link">Rect</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setRotation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setRotation</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rotation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setRotation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The rotation angle in radians. Default is <code>0.0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>rotation</code></strong> - <code>float</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setScale"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setScale</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">scale</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScale">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the scale amount for both the x-axis and y-axis.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>scale</code></strong> (<code>float</code>.) - How much to scale this node.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setScaleX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setScaleX</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">scaleX</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScaleX">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Scale factor for the X dimension. Default is <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>scaleX</code></strong> - <code>float</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setScaleY"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setScaleY</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">scaleY</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScaleY">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Scale factor for the Y dimension. Default is <code>1.0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>scaleY</code></strong> - <code>float</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setSize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">size</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the size of the Node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>size</code></strong> - <a href="cocosCairo.Geometry.Size-class.html" 
+          class="link">Size</a>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setTag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setTag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setTag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A convenience string with which to identify this Node. Default is 
+  <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tag</code></strong> - <code>string</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setTransformAnchorPoint"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setTransformAnchorPoint</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">anchorPoint</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setTransformAnchorPoint">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets how the Node is transformed relative to its position.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>anchorPoint</code></strong> - <a href="cocosCairo.Geometry.Point-class.html" 
+          class="link">Point</a>, with both <code>0 &lt;= x &lt;= 1</code> 
+          and <code>0 &lt;= y &lt;= 1</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setUserData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setUserData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">userData</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setUserData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Any peripheral data the user wishes to attach. Default is 
+  <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>userData</code></strong> - <code>User defined</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setVisible"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setVisible</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">isVisible</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setVisible">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Whether or not this node &amp; children are visible. Default is 
+  <code>True</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>isVisible</code></strong> - <code>bool</code>.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setZOrder"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setZOrder</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">zOrder</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setZOrder">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The Z-Order. Children are drawn in order relative to this. Default is 
+  <code>0</code>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>zOrder</code></strong> - <code>int</code> (though <code>float</code> is acceptable).</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="stopActionByTag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">stopActionByTag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.stopActionByTag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stops a particular <a href="cocosCairo.Action-module.html" 
+  class="link">Action</a> currently running on this Node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tag</code></strong> (<code>string</code>.) - The tag of the Node.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="unscheduleCallback"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">unscheduleCallback</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">callback</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.unscheduleCallback">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Removes a <code>callback</code> that has been added via <a 
+  href="cocosCairo.Node.Node-class.html#scheduleCallback" 
+  class="link">scheduleCallback</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>callback</code></strong> (<code>function</code>) - The scheduled callback to unschedule.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:33 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

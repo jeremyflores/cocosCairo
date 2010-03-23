@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cocosCairo.Label</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cocosCairo-module.html">Package&nbsp;cocosCairo</a> ::
+        Module&nbsp;Label
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cocosCairo.Label-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cocosCairo.Label-module.html">Module cocosCairo.Label</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module cocosCairo.Node=cocosCairo.Node-module.html,Class cocosCairo.Node.Node=cocosCairo.Node.Node-class.html"><a title="cocosCairo.Node
+cocosCairo.Node.Node" class="py-name" href="#" onclick="return doclink('link-0', 'Node', 'link-0');">Node</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cairo</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable cocosCairo.Label._SLANT_DICT=cocosCairo.Label-module.html#_SLANT_DICT"><a title="cocosCairo.Label._SLANT_DICT" class="py-name" href="#" onclick="return doclink('link-1', '_SLANT_DICT', 'link-1');">_SLANT_DICT</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> \ </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-string">"normal"</tt><tt class="py-op">:</tt> <tt class="py-name">cairo</tt><tt class="py-op">.</tt><tt class="py-name">FONT_SLANT_NORMAL</tt><tt class="py-op">,</tt> \ </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-string">"italic"</tt><tt class="py-op">:</tt> <tt class="py-name">cairo</tt><tt class="py-op">.</tt><tt class="py-name">FONT_SLANT_ITALIC</tt><tt class="py-op">,</tt> \ </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-string">"oblique"</tt><tt class="py-op">:</tt> <tt class="py-name">cairo</tt><tt class="py-op">.</tt><tt class="py-name">FONT_SLANT_OBLIQUE</tt> \ </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable cocosCairo.Label._WEIGHT_DICT=cocosCairo.Label-module.html#_WEIGHT_DICT"><a title="cocosCairo.Label._WEIGHT_DICT" class="py-name" href="#" onclick="return doclink('link-2', '_WEIGHT_DICT', 'link-2');">_WEIGHT_DICT</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> \ </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-string">"normal"</tt><tt class="py-op">:</tt> <tt class="py-name">cairo</tt><tt class="py-op">.</tt><tt class="py-name">FONT_WEIGHT_NORMAL</tt><tt class="py-op">,</tt> \ </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-string">"bold"</tt><tt class="py-op">:</tt> <tt class="py-name">cairo</tt><tt class="py-op">.</tt><tt class="py-name">FONT_WEIGHT_BOLD</tt> \ </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="Label"></a><div id="Label-def"><a name="L15"></a><tt class="py-lineno"> 15</tt> <a class="py-toggle" href="#" id="Label-toggle" onclick="return toggle('Label');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html">Label</a><tt class="py-op">(</tt><tt class="py-base-class">Node</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Label-expanded"><a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">        Renders text to the screen.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="Label.__init__"></a><div id="Label.__init__-def"><a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="Label.__init__-toggle" onclick="return toggle('Label.__init__');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">=</tt><tt class="py-string">""</tt><tt class="py-op">,</tt> <tt class="py-param">position</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.__init__-expanded"><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">                Initialization method.</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">                @param text: The text to be displayed.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">                @type text: C{string}</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">                @param position: The position of the Label on the screen.</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">                @type position: L{Point}</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">                @param color: The color of the text. Default is L{WhiteColor()}.</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">                @type color: L{Color} (or C{None})</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">position</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">                        <tt class="py-name">position</tt> <tt class="py-op">=</tt> <tt id="link-3" class="py-name" targets="Function cocosCairo.Geometry.PointZero()=cocosCairo.Geometry-module.html#PointZero"><a title="cocosCairo.Geometry.PointZero" class="py-name" href="#" onclick="return doclink('link-3', 'PointZero', 'link-3');">PointZero</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">color</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">                        <tt class="py-name">color</tt> <tt class="py-op">=</tt> <tt id="link-4" class="py-name" targets="Function cocosCairo.Color.WhiteColor()=cocosCairo.Color-module.html#WhiteColor"><a title="cocosCairo.Color.WhiteColor" class="py-name" href="#" onclick="return doclink('link-4', 'WhiteColor', 'link-4');">WhiteColor</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">                <tt id="link-5" class="py-name"><a title="cocosCairo.Node
+cocosCairo.Node.Node" class="py-name" href="#" onclick="return doclink('link-5', 'Node', 'link-0');">Node</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method cocosCairo.AbstractController.AbstractController.__init__()=cocosCairo.AbstractController.AbstractController-class.html#__init__,Method cocosCairo.AbstractWindow.AbstractWindow.__init__()=cocosCairo.AbstractWindow.AbstractWindow-class.html#__init__,Method cocosCairo.Action.AbstractAction.__init__()=cocosCairo.Action.AbstractAction-class.html#__init__,Method cocosCairo.Action.FiniteTimeAction.__init__()=cocosCairo.Action.FiniteTimeAction-class.html#__init__,Method cocosCairo.Action.RepeatForever.__init__()=cocosCairo.Action.RepeatForever-class.html#__init__,Method cocosCairo.Action.Speed.__init__()=cocosCairo.Action.Speed-class.html#__init__,Method cocosCairo.ActionManager.ActionManager.__init__()=cocosCairo.ActionManager.ActionManager-class.html#__init__,Method cocosCairo.Color.Color.__init__()=cocosCairo.Color.Color-class.html#__init__,Method cocosCairo.ColorNode.ColorNode.__init__()=cocosCairo.ColorNode.ColorNode-class.html#__init__,Method cocosCairo.Director.Director.__init__()=cocosCairo.Director.Director-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseAction.__init__()=cocosCairo.EaseAction.AbstractEaseAction-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseElastic.__init__()=cocosCairo.EaseAction.AbstractEaseElastic-class.html#__init__,Method cocosCairo.EaseAction.AbstractEaseRateAction.__init__()=cocosCairo.EaseAction.AbstractEaseRateAction-class.html#__init__,Method cocosCairo.GTKInterface.GTKInterface.__init__()=cocosCairo.GTKInterface.GTKInterface-class.html#__init__,Method cocosCairo.GTKInterface.GTKLayout.__init__()=cocosCairo.GTKInterface.GTKLayout-class.html#__init__,Method cocosCairo.Geometry.Point.__init__()=cocosCairo.Geometry.Point-class.html#__init__,Method cocosCairo.Geometry.Polygon.__init__()=cocosCairo.Geometry.Polygon-class.html#__init__,Method cocosCairo.Geometry.Rect.__init__()=cocosCairo.Geometry.Rect-class.html#__init__,Method cocosCairo.Geometry.Size.__init__()=cocosCairo.Geometry.Size-class.html#__init__,Method cocosCairo.GestureDispatch.GestureDispatch.__init__()=cocosCairo.GestureDispatch.GestureDispatch-class.html#__init__,Method cocosCairo.GestureEvent.KeyboardGestureEvent.__init__()=cocosCairo.GestureEvent.KeyboardGestureEvent-class.html#__init__,Method cocosCairo.GestureEvent.MouseGestureEvent.__init__()=cocosCairo.GestureEvent.MouseGestureEvent-class.html#__init__,Method cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__()=cocosCairo.GestureEvent.MouseScrollGestureEvent-class.html#__init__,Method cocosCairo.InstantAction.AbstractInstantAction.__init__()=cocosCairo.InstantAction.AbstractInstantAction-class.html#__init__,Method cocosCairo.InstantAction.CallbackInstantAction.__init__()=cocosCairo.InstantAction.CallbackInstantAction-class.html#__init__,Method cocosCairo.InstantAction.CallbackWithOwnerAndData.__init__()=cocosCairo.InstantAction.CallbackWithOwnerAndData-class.html#__init__,Method cocosCairo.InstantAction.Place.__init__()=cocosCairo.InstantAction.Place-class.html#__init__,Method cocosCairo.IntervalAction.AbstractIntervalAction.__init__()=cocosCairo.IntervalAction.AbstractIntervalAction-class.html#__init__,Method cocosCairo.IntervalAction.BezierBy.__init__()=cocosCairo.IntervalAction.BezierBy-class.html#__init__,Method cocosCairo.IntervalAction.BezierConfiguration.__init__()=cocosCairo.IntervalAction.BezierConfiguration-class.html#__init__,Method cocosCairo.IntervalAction.Blink.__init__()=cocosCairo.IntervalAction.Blink-class.html#__init__,Method cocosCairo.IntervalAction.FadeTo.__init__()=cocosCairo.IntervalAction.FadeTo-class.html#__init__,Method cocosCairo.IntervalAction.JumpBy.__init__()=cocosCairo.IntervalAction.JumpBy-class.html#__init__,Method cocosCairo.IntervalAction.MoveBy.__init__()=cocosCairo.IntervalAction.MoveBy-class.html#__init__,Method cocosCairo.IntervalAction.MoveTo.__init__()=cocosCairo.IntervalAction.MoveTo-class.html#__init__,Method cocosCairo.IntervalAction.Repeat.__init__()=cocosCairo.IntervalAction.Repeat-class.html#__init__,Method cocosCairo.IntervalAction.ReverseTime.__init__()=cocosCairo.IntervalAction.ReverseTime-class.html#__init__,Method cocosCairo.IntervalAction.RotateBy.__init__()=cocosCairo.IntervalAction.RotateBy-class.html#__init__,Method cocosCairo.IntervalAction.RotateTo.__init__()=cocosCairo.IntervalAction.RotateTo-class.html#__init__,Method cocosCairo.IntervalAction.ScaleTo.__init__()=cocosCairo.IntervalAction.ScaleTo-class.html#__init__,Method cocosCairo.IntervalAction.Sequence.__init__()=cocosCairo.IntervalAction.Sequence-class.html#__init__,Method cocosCairo.IntervalAction.Spawn.__init__()=cocosCairo.IntervalAction.Spawn-class.html#__init__,Method cocosCairo.IntervalAction.TintBy.__init__()=cocosCairo.IntervalAction.TintBy-class.html#__init__,Method cocosCairo.IntervalAction.TintTo.__init__()=cocosCairo.IntervalAction.TintTo-class.html#__init__,Method cocosCairo.Label.Label.__init__()=cocosCairo.Label.Label-class.html#__init__,Method cocosCairo.ListenedObject.ListenedObject.__init__()=cocosCairo.ListenedObject.ListenedObject-class.html#__init__,Method cocosCairo.Node.Node.__init__()=cocosCairo.Node.Node-class.html#__init__,Method cocosCairo.PangoLabel.PangoLabel.__init__()=cocosCairo.PangoLabel.PangoLabel-class.html#__init__,Method cocosCairo.Primitive.AbstractFillableNode.__init__()=cocosCairo.Primitive.AbstractFillableNode-class.html#__init__,Method cocosCairo.Primitive.EllipseNode.__init__()=cocosCairo.Primitive.EllipseNode-class.html#__init__,Method cocosCairo.Primitive.LineNode.__init__()=cocosCairo.Primitive.LineNode-class.html#__init__,Method cocosCairo.Primitive.PointNode.__init__()=cocosCairo.Primitive.PointNode-class.html#__init__,Method cocosCairo.Primitive.PolygonNode.__init__()=cocosCairo.Primitive.PolygonNode-class.html#__init__,Method cocosCairo.Primitive.RectangleNode.__init__()=cocosCairo.Primitive.RectangleNode-class.html#__init__,Method cocosCairo.SVGSprite.SVGSprite.__init__()=cocosCairo.SVGSprite.SVGSprite-class.html#__init__,Method cocosCairo.Scene.Scene.__init__()=cocosCairo.Scene.Scene-class.html#__init__,Method cocosCairo.Scheduler.Scheduler.__init__()=cocosCairo.Scheduler.Scheduler-class.html#__init__,Method cocosCairo.Sprite.Sprite.__init__()=cocosCairo.Sprite.Sprite-class.html#__init__,Method cocosCairo.Timer.Timer.__init__()=cocosCairo.Timer.Timer-class.html#__init__,Method cocosCairo.Transition.AbstractTransition.__init__()=cocosCairo.Transition.AbstractTransition-class.html#__init__,Method cocosCairo.Transition.FadeTransition.__init__()=cocosCairo.Transition.FadeTransition-class.html#__init__"><a title="cocosCairo.AbstractController.AbstractController.__init__
+cocosCairo.AbstractWindow.AbstractWindow.__init__
+cocosCairo.Action.AbstractAction.__init__
+cocosCairo.Action.FiniteTimeAction.__init__
+cocosCairo.Action.RepeatForever.__init__
+cocosCairo.Action.Speed.__init__
+cocosCairo.ActionManager.ActionManager.__init__
+cocosCairo.Color.Color.__init__
+cocosCairo.ColorNode.ColorNode.__init__
+cocosCairo.Director.Director.__init__
+cocosCairo.EaseAction.AbstractEaseAction.__init__
+cocosCairo.EaseAction.AbstractEaseElastic.__init__
+cocosCairo.EaseAction.AbstractEaseRateAction.__init__
+cocosCairo.GTKInterface.GTKInterface.__init__
+cocosCairo.GTKInterface.GTKLayout.__init__
+cocosCairo.Geometry.Point.__init__
+cocosCairo.Geometry.Polygon.__init__
+cocosCairo.Geometry.Rect.__init__
+cocosCairo.Geometry.Size.__init__
+cocosCairo.GestureDispatch.GestureDispatch.__init__
+cocosCairo.GestureEvent.KeyboardGestureEvent.__init__
+cocosCairo.GestureEvent.MouseGestureEvent.__init__
+cocosCairo.GestureEvent.MouseScrollGestureEvent.__init__
+cocosCairo.InstantAction.AbstractInstantAction.__init__
+cocosCairo.InstantAction.CallbackInstantAction.__init__
+cocosCairo.InstantAction.CallbackWithOwnerAndData.__init__
+cocosCairo.InstantAction.Place.__init__
+cocosCairo.IntervalAction.AbstractIntervalAction.__init__
+cocosCairo.IntervalAction.BezierBy.__init__
+cocosCairo.IntervalAction.BezierConfiguration.__init__
+cocosCairo.IntervalAction.Blink.__init__
+cocosCairo.IntervalAction.FadeTo.__init__
+cocosCairo.IntervalAction.JumpBy.__init__
+cocosCairo.IntervalAction.MoveBy.__init__
+cocosCairo.IntervalAction.MoveTo.__init__
+cocosCairo.IntervalAction.Repeat.__init__
+cocosCairo.IntervalAction.ReverseTime.__init__
+cocosCairo.IntervalAction.RotateBy.__init__
+cocosCairo.IntervalAction.RotateTo.__init__
+cocosCairo.IntervalAction.ScaleTo.__init__
+cocosCairo.IntervalAction.Sequence.__init__
+cocosCairo.IntervalAction.Spawn.__init__
+cocosCairo.IntervalAction.TintBy.__init__
+cocosCairo.IntervalAction.TintTo.__init__
+cocosCairo.Label.Label.__init__
+cocosCairo.ListenedObject.ListenedObject.__init__
+cocosCairo.Node.Node.__init__
+cocosCairo.PangoLabel.PangoLabel.__init__
+cocosCairo.Primitive.AbstractFillableNode.__init__
+cocosCairo.Primitive.EllipseNode.__init__
+cocosCairo.Primitive.LineNode.__init__
+cocosCairo.Primitive.PointNode.__init__
+cocosCairo.Primitive.PolygonNode.__init__
+cocosCairo.Primitive.RectangleNode.__init__
+cocosCairo.SVGSprite.SVGSprite.__init__
+cocosCairo.Scene.Scene.__init__
+cocosCairo.Scheduler.Scheduler.__init__
+cocosCairo.Sprite.Sprite.__init__
+cocosCairo.Timer.Timer.__init__
+cocosCairo.Transition.AbstractTransition.__init__
+cocosCairo.Transition.FadeTransition.__init__" class="py-name" href="#" onclick="return doclink('link-6', '__init__', 'link-6');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name" targets="Function cocosCairo.Geometry.MakeRect()=cocosCairo.Geometry-module.html#MakeRect"><a title="cocosCairo.Geometry.MakeRect" class="py-name" href="#" onclick="return doclink('link-7', 'MakeRect', 'link-7');">MakeRect</a></tt><tt class="py-op">(</tt><tt class="py-name">position</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">position</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method cocosCairo.ColorNode.ColorNode.setColor()=cocosCairo.ColorNode.ColorNode-class.html#setColor,Method cocosCairo.Node.Node.setColor()=cocosCairo.Node.Node-class.html#setColor,Method cocosCairo.Primitive.AbstractFillableNode.setColor()=cocosCairo.Primitive.AbstractFillableNode-class.html#setColor,Method cocosCairo.Primitive.EllipseNode.setColor()=cocosCairo.Primitive.EllipseNode-class.html#setColor"><a title="cocosCairo.ColorNode.ColorNode.setColor
+cocosCairo.Node.Node.setColor
+cocosCairo.Primitive.AbstractFillableNode.setColor
+cocosCairo.Primitive.EllipseNode.setColor" class="py-name" href="#" onclick="return doclink('link-8', 'setColor', 'link-8');">setColor</a></tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_text</tt> <tt class="py-op">=</tt> <tt class="py-name">text</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontSize</tt> <tt class="py-op">=</tt> <tt class="py-number">12.0</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontFamily</tt> <tt class="py-op">=</tt> <tt class="py-string">"serif"</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isItalic</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isBold</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="Label.getOpacity"></a><div id="Label.getOpacity-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="Label.getOpacity-toggle" onclick="return toggle('Label.getOpacity');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#getOpacity">getOpacity</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.getOpacity-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.getOpacity-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">a</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="Label.setOpacity"></a><div id="Label.setOpacity-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="Label.setOpacity-toggle" onclick="return toggle('Label.setOpacity');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#setOpacity">setOpacity</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">opacity</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.setOpacity-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.setOpacity-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_color</tt><tt class="py-op">.</tt><tt class="py-name">a</tt> <tt class="py-op">=</tt> <tt class="py-name">opacity</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-comment">#{ Accessor methods.</tt> </tt>
+<a name="Label.getText"></a><div id="Label.getText-def"><a name="L49"></a><tt class="py-lineno"> 49</tt> <a class="py-toggle" href="#" id="Label.getText-toggle" onclick="return toggle('Label.getText');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#getText">getText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.getText-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.getText-expanded"><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the text to be rendered.</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The text to be rendered.</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: C{string}</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_text</tt> </tt>
+</div><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
+<a name="Label.setText"></a><div id="Label.setText-def"><a name="L58"></a><tt class="py-lineno"> 58</tt> <a class="py-toggle" href="#" id="Label.setText-toggle" onclick="return toggle('Label.setText');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#setText">setText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.setText-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.setText-expanded"><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">                Sets the text to be rendered.</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">                @param text: The text to be rendered.</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">                @type text: C{string}</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_text</tt> <tt class="py-op">=</tt> <tt class="py-name">text</tt> </tt>
+</div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="Label.getFontSize"></a><div id="Label.getFontSize-def"><a name="L67"></a><tt class="py-lineno"> 67</tt> <a class="py-toggle" href="#" id="Label.getFontSize-toggle" onclick="return toggle('Label.getFontSize');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#getFontSize">getFontSize</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.getFontSize-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.getFontSize-expanded"><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the text's current font size.</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The font size.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: C{float}</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontSize</tt> </tt>
+</div><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="Label.setFontSize"></a><div id="Label.setFontSize-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="Label.setFontSize-toggle" onclick="return toggle('Label.setFontSize');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#setFontSize">setFontSize</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fontSize</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.setFontSize-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.setFontSize-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">                Sets the font size for the Label.</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">                @param fontSize: The font size.</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">                @type fontSize: Non-negative C{float}</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontSize</tt> <tt class="py-op">=</tt> <tt class="py-name">fontSize</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="Label.getFontFamily"></a><div id="Label.getFontFamily-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="Label.getFontFamily-toggle" onclick="return toggle('Label.getFontFamily');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#getFontFamily">getFontFamily</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.getFontFamily-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.getFontFamily-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">                Returns the font family for the Label. Default is "serif".</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">                @return: The font family.</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: C{string}</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontFamily</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="Label.setFontFamily"></a><div id="Label.setFontFamily-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="Label.setFontFamily-toggle" onclick="return toggle('Label.setFontFamily');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#setFontFamily">setFontFamily</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fontFamily</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.setFontFamily-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.setFontFamily-expanded"><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">                Sets the font family for the Label.</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">                @param fontFamily: The font family used in rendering.</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">                @type fontFamily: C{string}</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontFamily</tt> <tt class="py-op">=</tt> <tt class="py-name">fontFamily</tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="Label.isItalic"></a><div id="Label.isItalic-def"><a name="L103"></a><tt class="py-lineno">103</tt> <a class="py-toggle" href="#" id="Label.isItalic-toggle" onclick="return toggle('Label.isItalic');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#isItalic">isItalic</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.isItalic-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.isItalic-expanded"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">                Returns whether or not the text will be italicized. Default is C{False}.</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-docstring">                @return: Whether or not the text will be italicized.</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: C{bool}</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isItalic</tt> </tt>
+</div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="Label.setItalic"></a><div id="Label.setItalic-def"><a name="L112"></a><tt class="py-lineno">112</tt> <a class="py-toggle" href="#" id="Label.setItalic-toggle" onclick="return toggle('Label.setItalic');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#setItalic">setItalic</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">isItalic</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.setItalic-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.setItalic-expanded"><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">                Sets whether or not the text will be italicized. Note that rendering the text as italic may not currently work.</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">                @param isItalic: Whether or not the text will be italicized.</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">                @type isItalic: C{bool}</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isItalic</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name" targets="Method cocosCairo.Label.Label.isItalic()=cocosCairo.Label.Label-class.html#isItalic,Method cocosCairo.PangoLabel.PangoLabel.isItalic()=cocosCairo.PangoLabel.PangoLabel-class.html#isItalic"><a title="cocosCairo.Label.Label.isItalic
+cocosCairo.PangoLabel.PangoLabel.isItalic" class="py-name" href="#" onclick="return doclink('link-9', 'isItalic', 'link-9');">isItalic</a></tt> </tt>
+</div><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="Label.isBold"></a><div id="Label.isBold-def"><a name="L121"></a><tt class="py-lineno">121</tt> <a class="py-toggle" href="#" id="Label.isBold-toggle" onclick="return toggle('Label.isBold');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#isBold">isBold</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.isBold-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.isBold-expanded"><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">                Returns whether or not the text will be bolded. Default is C{False}.</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">                @return: Whether or not the text will be bolded.</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">                @rtype: C{bool}</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isBold</tt> </tt>
+</div><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="Label.setBold"></a><div id="Label.setBold-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="Label.setBold-toggle" onclick="return toggle('Label.setBold');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#setBold">setBold</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">isBold</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.setBold-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.setBold-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">                Sets whether or not the text will be bolded.</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-docstring">                @param isBold: Whether or not the text will be bolded.</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-docstring">                @type isBold: C{bool}</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isBold</tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name" targets="Method cocosCairo.Label.Label.isBold()=cocosCairo.Label.Label-class.html#isBold"><a title="cocosCairo.Label.Label.isBold" class="py-name" href="#" onclick="return doclink('link-10', 'isBold', 'link-10');">isBold</a></tt> </tt>
+</div><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-comment">#}</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt>
+<a name="Label.draw"></a><div id="Label.draw-def"><a name="L140"></a><tt class="py-lineno">140</tt> <a class="py-toggle" href="#" id="Label.draw-toggle" onclick="return toggle('Label.draw');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Label.Label-class.html#draw">draw</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">context</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Label.draw-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="Label.draw-expanded"><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                <tt class="py-name">color</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method cocosCairo.ColorNode.ColorNode.getColor()=cocosCairo.ColorNode.ColorNode-class.html#getColor,Method cocosCairo.Node.Node.getColor()=cocosCairo.Node.Node-class.html#getColor,Method cocosCairo.Primitive.AbstractFillableNode.getColor()=cocosCairo.Primitive.AbstractFillableNode-class.html#getColor,Method cocosCairo.Primitive.EllipseNode.getColor()=cocosCairo.Primitive.EllipseNode-class.html#getColor"><a title="cocosCairo.ColorNode.ColorNode.getColor
+cocosCairo.Node.Node.getColor
+cocosCairo.Primitive.AbstractFillableNode.getColor
+cocosCairo.Primitive.EllipseNode.getColor" class="py-name" href="#" onclick="return doclink('link-11', 'getColor', 'link-11');">getColor</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">set_source_rgba</tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">.</tt><tt class="py-name">r</tt><tt class="py-op">,</tt> <tt class="py-name">color</tt><tt class="py-op">.</tt><tt class="py-name">g</tt><tt class="py-op">,</tt> <tt class="py-name">color</tt><tt class="py-op">.</tt><tt class="py-name">b</tt><tt class="py-op">,</tt> <tt class="py-name">color</tt><tt class="py-op">.</tt><tt class="py-name">a</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isItalic</tt><tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                        <tt class="py-name">slantFlag</tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="cocosCairo.Label._SLANT_DICT" class="py-name" href="#" onclick="return doclink('link-12', '_SLANT_DICT', 'link-1');">_SLANT_DICT</a></tt><tt class="py-op">[</tt><tt class="py-string">"italic"</tt><tt class="py-op">]</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                        <tt class="py-name">slantFlag</tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="cocosCairo.Label._SLANT_DICT" class="py-name" href="#" onclick="return doclink('link-13', '_SLANT_DICT', 'link-1');">_SLANT_DICT</a></tt><tt class="py-op">[</tt><tt class="py-string">"normal"</tt><tt class="py-op">]</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_isBold</tt><tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">                        <tt class="py-name">boldFlag</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="cocosCairo.Label._WEIGHT_DICT" class="py-name" href="#" onclick="return doclink('link-14', '_WEIGHT_DICT', 'link-2');">_WEIGHT_DICT</a></tt><tt class="py-op">[</tt><tt class="py-string">"bold"</tt><tt class="py-op">]</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                        <tt class="py-name">boldFlag</tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="cocosCairo.Label._WEIGHT_DICT" class="py-name" href="#" onclick="return doclink('link-15', '_WEIGHT_DICT', 'link-2');">_WEIGHT_DICT</a></tt><tt class="py-op">[</tt><tt class="py-string">"normal"</tt><tt class="py-op">]</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">select_font_face</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontFamily</tt><tt class="py-op">,</tt> <tt class="py-name">slantFlag</tt><tt class="py-op">,</tt> <tt class="py-name">boldFlag</tt><tt class="py-op">)</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">set_font_size</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_fontSize</tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                <tt class="py-name">context</tt><tt class="py-op">.</tt><tt class="py-name">show_text</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_text</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="cocosCairo-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:35 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
