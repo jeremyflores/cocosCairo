@@ -224,46 +224,7 @@ class Polygon:
 			j = i
 		return oddNodes
 		
-
-def addPolygons(*polygons):
-	"""
-	Returns the smallest possible convex polygon which encompasses all points generated from pointwise addition of the polygons. (That is, it returns the convex hull of the Minkowski summation of the polygons.)
-
-	@param polygons: The L{Polygon}C{s} to add up.
-	@type polygons: C{comma-separated Polygons}
-	@return: The smallest possible convex polygon which encompasses all the points.
-	@rtype: L{Polygon}
-	"""
-	points = []
-	for polygon1 in polygons:
-		for polygon2 in polygons:
-			if polygon1 == polygon2:
-				continue
-			for point1 in polygon1.getPoints():
-				for point2 in polygon2.getPoints():
-					points.append(pointAdd(point1,point2))
-	return MakePolygon(*points)
-
-def multiplyPolygons(*polygons):
-	"""
-	Returns the smallest possible convex polygon which encompasses all points generated from pointwise multiplication of the polygons. (That is, it returns the convex hull of the multiplication of the polygons.)
-
-	@param polygons: The L{Polygon}C{s} to multiply.
-	@type polygons: C{comma-separated Polygons}
-	@return: The smallest possible convex polygon which encompasses all the points.
-	@rtype: L{Polygon}
-	"""
-	points = []
-	for polygon1 in polygons:
-		for polygon2 in polygons:
-			if polygon1 == polygon2:
-				continue
-			for point1 in polygon1.getPoints():
-				for point2 in polygon2.getPoints():
-					points.append(pointMult(point1,point2))
-	return MakePolygon(*points)
-
-
+#{ Constructor functions.
 def MakePolygon(*points):
 	"""
 	Creates the smallest possible convex polygon which encompasses the given points. (That is, it returns the convex hull of the points.)
@@ -355,8 +316,51 @@ def RectZero():
 	@rtype: L{Rect}
 	"""
 	return Rect(PointZero(), SizeZero())
+#}
 
 
+#{ Polygon functions.
+def addPolygons(*polygons):
+	"""
+	Returns the smallest possible convex polygon which encompasses all points generated from pointwise addition of the polygons. (That is, it returns the convex hull of the Minkowski summation of the polygons.)
+
+	@param polygons: The L{Polygon}C{s} to add up.
+	@type polygons: C{comma-separated Polygons}
+	@return: The smallest possible convex polygon which encompasses all the points.
+	@rtype: L{Polygon}
+	"""
+	points = []
+	for polygon1 in polygons:
+		for polygon2 in polygons:
+			if polygon1 == polygon2:
+				continue
+			for point1 in polygon1.getPoints():
+				for point2 in polygon2.getPoints():
+					points.append(pointAdd(point1,point2))
+	return MakePolygon(*points)
+
+def multiplyPolygons(*polygons):
+	"""
+	Returns the smallest possible convex polygon which encompasses all points generated from pointwise multiplication of the polygons. (That is, it returns the convex hull of the multiplication of the polygons.)
+
+	@param polygons: The L{Polygon}C{s} to multiply.
+	@type polygons: C{comma-separated Polygons}
+	@return: The smallest possible convex polygon which encompasses all the points.
+	@rtype: L{Polygon}
+	"""
+	points = []
+	for polygon1 in polygons:
+		for polygon2 in polygons:
+			if polygon1 == polygon2:
+				continue
+			for point1 in polygon1.getPoints():
+				for point2 in polygon2.getPoints():
+					points.append(pointMult(point1,point2))
+	return MakePolygon(*points)
+#}
+
+
+#{ Point arithmetic functions.
 def pointAdd(*points):
 	"""
 	Adds up a series of L{Point}C{s} and returns a new Point that is the result.
@@ -444,67 +448,33 @@ def pointMid(p1, p2):
 	"""
 	return pointConstMult(pointAdd(p1,p2), 0.5)
 
-def pointDot(p1, p2):
+def pointLength(point):
 	"""
-	Returns the dot product of the given Points.
+	Returns the distance of the given L{Point} from the origin (L{PointZero}).
 
-	@param p1: A Point.
-	@type p1: L{Point}
-	@param p2: Another Point.
-	@type p2: L{Point}
-	@return: The dot product.
+	@param point: A point.
+	@type point: L{Point}
+	@return: The distance.
 	@rtype: C{float}
 	"""
-	return p1.x*p2.x + p1.y*p2.y
+	return math.sqrt(pointDot(point, point))
 
-def pointCross(p1, p2):
+def pointDistance(p1, p2):
 	"""
-	Returns the cross product of the given Points.
-
-	@param p1: A Point.
-	@type p1: L{Point}
-	@param p2: Another Point.
-	@type p2: L{Point}
-	@return: The cross product.
-	@rtype: C{float}
-	"""
-	return p1.x*p2.y - p1.y*p2.x
-
-def pointPerp(point):
-	"""
-	Returns a new L{Point} which is perpendicular to the given point, rotated pi/2 radians counter-clockwise (that is, the new Point has the value C{(-y, x)}.
-
-	@param point: A Point.
-	@type point: L{Point}
-	@return: A Point with the result.
-	@rtype: L{Point}
-	"""
-	return Point(-point.y, point.x)
-
-def pointRPerp(point):
-	"""
-	Returns a new L{Point} which is perpendicular to the given point, rotated pi/2 radians clockwise (that is, the new Point has the value C{(y, -x)}.
-
-	@param point: A Point.
-	@type point: L{Point}
-	@return: A Point with the result.
-	@rtype: L{Point}
-	"""
-	return Point(point.y, -point.x)
-
-def pointProject(p1, p2):
-	"""
-	Returns the projection of p1 over p2.
+	Returns the distance between two Points.
 
 	@param p1: A Point.
 	@type p1: L{Point}
 	@param p2: A Point.
 	@type p2: L{Point}
-	@return: A Point with the result.
-	@rtype: L{Point}
+	return: The distance between the two Points.
+	@rtype: C{float}
 	"""
-	return pointConstMult(p2, pointDot(p1,p2) / pointDot(p2,p2))
+	return pointLength(pointSub(p1, p2))
+#}
 
+
+#{ Point line functions.
 def pointProjectToLine(p1, m, b):
 	"""
 	Projects a point onto a line (that is, it constructs a line perpendicular to the given line that intersects the given point, then returns where the given line and perpendicular line intersect).
@@ -613,6 +583,70 @@ def getSlopeAndIntercept(p1, p2):
 	m = (p2.y-p1.y)/(p2.x-p1.x)
 	b = p2.y - m*p2.x
 	return [m, b]
+#}
+
+
+#{ Point geometry functions.
+def pointDot(p1, p2):
+	"""
+	Returns the dot product of the given Points.
+
+	@param p1: A Point.
+	@type p1: L{Point}
+	@param p2: Another Point.
+	@type p2: L{Point}
+	@return: The dot product.
+	@rtype: C{float}
+	"""
+	return p1.x*p2.x + p1.y*p2.y
+
+def pointCross(p1, p2):
+	"""
+	Returns the cross product of the given Points.
+
+	@param p1: A Point.
+	@type p1: L{Point}
+	@param p2: Another Point.
+	@type p2: L{Point}
+	@return: The cross product.
+	@rtype: C{float}
+	"""
+	return p1.x*p2.y - p1.y*p2.x
+
+def pointPerp(point):
+	"""
+	Returns a new L{Point} which is perpendicular to the given point, rotated pi/2 radians counter-clockwise (that is, the new Point has the value C{(-y, x)}.
+
+	@param point: A Point.
+	@type point: L{Point}
+	@return: A Point with the result.
+	@rtype: L{Point}
+	"""
+	return Point(-point.y, point.x)
+
+def pointRPerp(point):
+	"""
+	Returns a new L{Point} which is perpendicular to the given point, rotated pi/2 radians clockwise (that is, the new Point has the value C{(y, -x)}.
+
+	@param point: A Point.
+	@type point: L{Point}
+	@return: A Point with the result.
+	@rtype: L{Point}
+	"""
+	return Point(point.y, -point.x)
+
+def pointProject(p1, p2):
+	"""
+	Returns the projection of p1 over p2.
+
+	@param p1: A Point.
+	@type p1: L{Point}
+	@param p2: A Point.
+	@type p2: L{Point}
+	@return: A Point with the result.
+	@rtype: L{Point}
+	"""
+	return pointConstMult(p2, pointDot(p1,p2) / pointDot(p2,p2))
 
 def pointRotate(p1, p2):
 	"""
@@ -639,30 +673,6 @@ def pointUnrotate(p1, p2):
 	@rtype: L{Point}
 	"""
 	return Point(p1.x*p2.x + p1.y*p2.y, p1.y*p2.x - p1.x*p2.y)
-
-def pointLength(point):
-	"""
-	Returns the distance of the given L{Point} from the origin (L{PointZero}).
-
-	@param point: A point.
-	@type point: L{Point}
-	@return: The distance.
-	@rtype: C{float}
-	"""
-	return math.sqrt(pointDot(point, point))
-
-def pointDistance(p1, p2):
-	"""
-	Returns the distance between two Points.
-
-	@param p1: A Point.
-	@type p1: L{Point}
-	@param p2: A Point.
-	@type p2: L{Point}
-	return: The distance between the two Points.
-	@rtype: C{float}
-	"""
-	return pointLength(pointSub(p1, p2))
 
 def pointNormalize(point):
 	"""
@@ -696,3 +706,4 @@ def pointToAngle(point):
 	@rtype: C{float}
 	"""
 	return math.atan2(point.y, point.x)
+#}

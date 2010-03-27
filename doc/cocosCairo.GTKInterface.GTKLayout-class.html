@@ -88,10 +88,10 @@ gobject.GInterface --+   |
 <hr />
 <p>A GTK widget to which any <a href="cocosCairo.Scene-module.html" 
   class="link">Scene</a> is &quot;attached&quot; for rendering. Any <a 
-  href="cocosCairo.Node-module.html" class="link">Node</a>, therefore, is 
-  drawn onto this (which writes to the video hardware). Most applications 
-  should never have to directly talk to the GTKLayout as the <a 
-  href="cocosCairo.Director-module.html" class="link">Director</a> will 
+  href="cocosCairo.Node.Node-class.html" class="link">Node</a>, therefore, 
+  is drawn onto this (which writes to the video hardware). Most 
+  applications should never have to directly talk to the GTKLayout as the 
+  <a href="cocosCairo.Director-module.html" class="link">Director</a> will 
   handle this by childing / de-childing Scenes automatically.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
@@ -131,14 +131,50 @@ gobject.GInterface --+   |
       
     </td>
   </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GTKInterface.GTKLayout-class.html#_makeFFMpegCommand" class="summary-sig-name" onclick="show_private();">_makeFFMpegCommand</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout._makeFFMpegCommand">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GTKInterface.GTKLayout-class.html#_deleteFolderPngs" class="summary-sig-name" onclick="show_private();">_deleteFolderPngs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">folderPath</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout._deleteFolderPngs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="startRecording"></a><span class="summary-sig-name">startRecording</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">directoryPath</span>)</span></td>
+          <td><span class="summary-sig"><a href="cocosCairo.GTKInterface.GTKLayout-class.html#startRecording" class="summary-sig-name">startRecording</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">videoPath</span>)</span><br />
+      Private method.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout.startRecording">source&nbsp;code</a></span>
             
@@ -154,9 +190,28 @@ gobject.GInterface --+   |
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="stopRecording"></a><span class="summary-sig-name">stopRecording</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="cocosCairo.GTKInterface.GTKLayout-class.html#stopRecording" class="summary-sig-name">stopRecording</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Private method.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout.stopRecording">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="cocosCairo.GTKInterface.GTKLayout-class.html#_renderVideo" class="summary-sig-name" onclick="show_private();">_renderVideo</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>)</span><br />
+      Private method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout._renderVideo">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -172,8 +227,7 @@ gobject.GInterface --+   |
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.GTKInterface.GTKLayout-class.html#takeScreenshot" class="summary-sig-name">takeScreenshot</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">screenshotPath</span>)</span><br />
-      Takes a screenshot of the next expose event and saves it to the 
-      specified file.</td>
+      Private method.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout.takeScreenshot">source&nbsp;code</a></span>
             
@@ -686,6 +740,126 @@ gobject.GInterface --+   |
   </dl>
 </td></tr></table>
 </div>
+<a name="_makeFFMpegCommand"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_makeFFMpegCommand</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout._makeFFMpegCommand">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Returns a formatted string through which FFmpeg is 
+  run.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_deleteFolderPngs"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_deleteFolderPngs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">folderPath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout._deleteFolderPngs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Deletes all PNG files which were generated by <a 
+  href="cocosCairo.GTKInterface.GTKLayout-class.html#startRecording" 
+  class="link">startRecording</a>.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="startRecording"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">startRecording</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">videoPath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout.startRecording">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Begins saving a sequence of image stills to be 
+  rendered to video. This method is called automatically by the <a 
+  href="cocosCairo.Director-module.html" class="link">Director</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>videoPath</code></strong> (<code>string</code>) - The location where the video (and temporary image files) will be 
+          saved.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="stopRecording"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">stopRecording</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout.stopRecording">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Stops recording and, if FFmpeg is available, will call
+  <a href="cocosCairo.GTKInterface.GTKLayout-class.html#_renderVideo" 
+  class="link" onclick="show_private();">_renderVideo</a>. If there is 
+  already a movie file with the same name as the one given in <a 
+  href="cocosCairo.GTKInterface.GTKLayout-class.html#startRecording" 
+  class="link">startRecording</a>, that movie file will be deleted. This 
+  method is called automatically by the <a 
+  href="cocosCairo.Director-module.html" class="link">Director</a>.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_renderVideo"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_renderVideo</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.GTKInterface-pysrc.html#GTKLayout._renderVideo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Private method. Renders the sequence of PNG images to a video file 
+  using FFmpeg. It will also delete the temporary PNG files and resume the 
+  <a href="cocosCairo.Director-module.html" class="link">Director</a>.</p>
+  <p>This will be called automatically by <a 
+  href="cocosCairo.GTKInterface.GTKLayout-class.html#stopRecording" 
+  class="link">stopRecording</a>.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="takeScreenshot"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -701,9 +875,11 @@ gobject.GInterface --+   |
     </td>
   </tr></table>
   
-  <p>Takes a screenshot of the next expose event and saves it to the 
-  specified file. Note that PyGTK widgets will not appear in the screenshot
-  as it will only render the gtk.Layout.</p>
+  <p>Private method. Takes a screenshot of the next expose event and saves 
+  it to the specified file. This method will be called automatically by the
+  <a href="cocosCairo.Director-module.html" class="link">Director</a>. Note
+  that PyGTK widgets will not appear in the screenshot as it will only 
+  render the gtk.Layout.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -739,7 +915,7 @@ gobject.GInterface --+   |
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:31 2010
+    Generated by Epydoc 3.0.1 on Fri Mar 26 19:56:34 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -26,7 +26,7 @@ class AbstractTransition(Scene):
 		Scene.__init__(self)
 		self._duration = duration
 		self._dstScene = destinationScene
-		self._srcScene = None	# defined in setDirector
+		self._srcScene = None	# defined in _setDirector
 		self._isDstSceneOnTop = True
 		self._sceneOrder()
 
@@ -75,9 +75,9 @@ class AbstractTransition(Scene):
 #}
 
 
-	def setDirector(self, director):
-		Scene.setDirector(self, director)
-		self._dstScene.setDirector(director)
+	def _setDirector(self, director):
+		Scene._setDirector(self, director)
+		self._dstScene._setDirector(director)
 		gestureDispatch = self.getDirector().getGestureDispatch()
 		gestureDispatch.setDispatching(False)	# disable events while transitioning
 		self._srcScene = director.getRunningScene()

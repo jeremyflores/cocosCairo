@@ -58,9 +58,9 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class Director</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director">source&nbsp;code</a></span></p>
 <p>The central point of the application. It handles the main run loop, <a
-  href="cocosCairo.Scene-module.html" class="link">Scene</a> transitions, 
-  and propagating redraw events to the Scene's children. It is also the 
-  owner of the <a 
+  href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> 
+  transitions, and propagating redraw events to the Scene's children. It is
+  also the owner of the <a 
   href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
   class="link">GestureDispatch</a>, <a 
   href="cocosCairo.ActionManager.ActionManager-class.html" 
@@ -282,13 +282,13 @@
     >&nbsp;&nbsp;&nbsp;&nbsp;Scene methods.</th></tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type"><a href="cocosCairo.Scene-module.html" class="link">Scene</a> (or 
-      <code>None</code>)</span>
+      <span class="summary-type"><a href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> 
+      (or <code>None</code>)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#getRunningScene" class="summary-sig-name">getRunningScene</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the <a href="cocosCairo.Scene-module.html" 
+      Returns the <a href="cocosCairo.Scene.Scene-class.html" 
       class="link">Scene</a> which is currently running or 
       <code>None</code> if there is not a scene currently running.</td>
           <td align="right" valign="top">
@@ -308,8 +308,8 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#runWithScene" class="summary-sig-name">runWithScene</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">scene</span>)</span><br />
-      Starts the application with a <a href="cocosCairo.Scene-module.html" 
-      class="link">Scene</a>.</td>
+      Starts the application with a <a 
+      href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a>.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.runWithScene">source&nbsp;code</a></span>
             
@@ -327,8 +327,9 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#replaceScene" class="summary-sig-name">replaceScene</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">scene</span>)</span><br />
-      Replaces the currently running <a href="cocosCairo.Scene-module.html"
-      class="link">Scene</a> with a new Scene.</td>
+      Replaces the currently running <a 
+      href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> with 
+      a new Scene.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.replaceScene">source&nbsp;code</a></span>
             
@@ -346,7 +347,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#pushScene" class="summary-sig-name">pushScene</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">scene</span>)</span><br />
-      Pushes a new <a href="cocosCairo.Scene-module.html" 
+      Pushes a new <a href="cocosCairo.Scene.Scene-class.html" 
       class="link">Scene</a> onto the stack of Scenes.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.pushScene">source&nbsp;code</a></span>
@@ -364,8 +365,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="popScene"></a><span class="summary-sig-name">popScene</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Pops the most recently-pushed <a href="cocosCairo.Scene-module.html" 
-      class="link">Scene</a> off the stack of Scenes.</td>
+      Pops the most recently-pushed <a 
+      href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> off 
+      the stack of Scenes.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.popScene">source&nbsp;code</a></span>
             
@@ -388,7 +390,8 @@
       Ends all animations, unregisters all <a 
       href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
       class="link">GestureDispatch</a> listeners, and clears out the stack 
-      of <a href="cocosCairo.Scene-module.html" class="link">Scene</a>s.</td>
+      of <a href="cocosCairo.Scene.Scene-class.html" 
+      class="link">Scene</a>s.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.end">source&nbsp;code</a></span>
             
@@ -406,7 +409,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#_setNextScene" class="summary-sig-name" onclick="show_private();">_setNextScene</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Private method which handles setting the next <a 
-      href="cocosCairo.Scene-module.html" class="link">Scene</a>.</td>
+      href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a>.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director._setNextScene">source&nbsp;code</a></span>
             
@@ -537,7 +540,7 @@
         <tr>
           <td><span class="summary-sig"><a name="_mainLoop"></a><span class="summary-sig-name">_mainLoop</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Private method which is called repeatedly to redraw the <a 
-      href="cocosCairo.Node-module.html" class="link">Node</a>s and to 
+      href="cocosCairo.Node.Node-class.html" class="link">Node</a>s and to 
       update the <a href="cocosCairo.Scheduler.Scheduler-class.html" 
       class="link">Scheduler</a> with the time that has passed since the 
       last loop.</td>
@@ -869,12 +872,12 @@
     </td>
   </tr></table>
   
-  <p>Returns the <a href="cocosCairo.Scene-module.html" 
+  <p>Returns the <a href="cocosCairo.Scene.Scene-class.html" 
   class="link">Scene</a> which is currently running or <code>None</code> if
   there is not a scene currently running.</p>
   <dl class="fields">
-    <dt>Returns: <a href="cocosCairo.Scene-module.html" class="link">Scene</a> (or 
-      <code>None</code>)</dt>
+    <dt>Returns: <a href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> 
+      (or <code>None</code>)</dt>
         <dd>The running Scene.</dd>
   </dl>
 </td></tr></table>
@@ -894,12 +897,14 @@
     </td>
   </tr></table>
   
-  <p>Starts the application with a <a href="cocosCairo.Scene-module.html" 
-  class="link">Scene</a>. This starts the main run loop.</p>
+  <p>Starts the application with a <a 
+  href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a>. This 
+  starts the main run loop.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>scene</code></strong> (<a href="cocosCairo.Scene-module.html" class="link">Scene</a>) - The opening scene.</li>
+        <li><strong class="pname"><code>scene</code></strong> (<a href="cocosCairo.Scene.Scene-class.html" 
+          class="link">Scene</a>) - The opening scene.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -919,12 +924,14 @@
     </td>
   </tr></table>
   
-  <p>Replaces the currently running <a href="cocosCairo.Scene-module.html" 
-  class="link">Scene</a> with a new Scene.</p>
+  <p>Replaces the currently running <a 
+  href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a> with a 
+  new Scene.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>scene</code></strong> (<a href="cocosCairo.Scene-module.html" class="link">Scene</a>) - The new Scene.</li>
+        <li><strong class="pname"><code>scene</code></strong> (<a href="cocosCairo.Scene.Scene-class.html" 
+          class="link">Scene</a>) - The new Scene.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -944,12 +951,13 @@
     </td>
   </tr></table>
   
-  <p>Pushes a new <a href="cocosCairo.Scene-module.html" 
+  <p>Pushes a new <a href="cocosCairo.Scene.Scene-class.html" 
   class="link">Scene</a> onto the stack of Scenes.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>scene</code></strong> (<a href="cocosCairo.Scene-module.html" class="link">Scene</a>) - The new Scene.</li>
+        <li><strong class="pname"><code>scene</code></strong> (<a href="cocosCairo.Scene.Scene-class.html" 
+          class="link">Scene</a>) - The new Scene.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -971,8 +979,8 @@
   <p>Ends all animations, unregisters all <a 
   href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
   class="link">GestureDispatch</a> listeners, and clears out the stack of 
-  <a href="cocosCairo.Scene-module.html" class="link">Scene</a>s. This does
-  not end the program by itself, however.</p>
+  <a href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a>s. This
+  does not end the program by itself, however.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -992,8 +1000,8 @@
   </tr></table>
   
   <p>Private method which handles setting the next <a 
-  href="cocosCairo.Scene-module.html" class="link">Scene</a>. This should 
-  not normally be called manually.</p>
+  href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a>. This 
+  should not normally be called manually.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1120,7 +1128,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Mar 23 11:12:30 2010
+    Generated by Epydoc 3.0.1 on Fri Mar 26 19:56:33 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

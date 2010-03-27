@@ -16,7 +16,7 @@ class Label(Node):
 	"""
 	Renders text to the screen.
 	"""
-	def __init__(self, text="", position=None, color=None):
+	def __init__(self, text="", position=None, color=None, isAnimated=False):
 		"""
 		Initialization method.
 
@@ -26,6 +26,8 @@ class Label(Node):
 		@type position: L{Point}
 		@param color: The color of the text. Default is L{WhiteColor()}.
 		@type color: L{Color} (or C{None})
+		@param isAnimated: Whether or not the text will be animated. See L{Label.start}.
+		@type isAnimated: C{bool}
 		"""
 		if position is None:
 			position = PointZero()
@@ -38,6 +40,42 @@ class Label(Node):
 		self._fontFamily = "serif"
 		self._isItalic = False
 		self._isBold = False
+		self._isAnimated = isAnimated
+		if self._isAnimated:
+			self._displayText = ""
+		else:
+			self._displayText = self._text
+
+#{ Animation methods.
+	def start(self, duration=0.05):
+		"""
+		Starts the text animation in which the characters are added one at a time to the screen.
+
+		@param duration: How long until a new character is added.
+		@type duration: Non-negative C{float}
+		"""
+		if self._isAnimated is True:
+			self.scheduleCallback(self._updateDisplayText, duration)
+
+	def stop(self):
+		"""
+		Stops the text animation which was begun by L{Label.start}.
+		"""
+		self.unscheduleCallback(self._updateDisplayText)
+#}
+
+	def _updateDisplayText(self, dt):
+		newString = ""
+		index = len(self._displayText)
+		for char in self._text[index:]:
+			newString += char
+			if len(newString.strip()) < 1:
+				continue
+			else:
+				break
+		self._displayText += newString
+		if self._displayText == self._text:
+			self.stop()
 
 	def getOpacity(self):
 		return self._color.a
@@ -63,6 +101,8 @@ class Label(Node):
 		@type text: C{string}
 		"""
 		self._text = text
+		if self._isAnimated is not True:
+			self._displayText = self._text
 
 	def getFontSize(self):
 		"""
@@ -150,4 +190,4 @@ class Label(Node):
 			boldFlag = _WEIGHT_DICT["normal"]
 		context.select_font_face(self._fontFamily, slantFlag, boldFlag)
 		context.set_font_size(self._fontSize)
-		context.show_text(self._text)
+		context.show_text(self._displayText)

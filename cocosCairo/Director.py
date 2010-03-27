@@ -172,7 +172,7 @@ class Director:
 		@type scene: L{Scene}
 		"""
 		scene.setRect(Rect(Point(0,0), self._gtkInterface.getSize()))
-		scene.setDirector(self)
+		scene._setDirector(self)
 		index = len(self._scenesStack)-1
 		self._scenesStack[index] = scene
 		self._nextScene = scene
@@ -185,7 +185,7 @@ class Director:
 		@type scene: L{Scene}
 		"""
 		scene.setRect(Rect(Point(0,0), self._gtkInterface.getSize()))
-		scene.setDirector(self)
+		scene._setDirector(self)
 		self._scenesStack.append(scene)
 		self._nextScene = scene
 

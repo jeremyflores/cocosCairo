@@ -1,0 +1,30 @@
+cocosCairo is a 2D application development framework written in Python. You can use it to rapidly construct games or feature-rich user interfaces.
+
+cocosCairo is also an educational tool. Learn more about object-oriented programming in a fun environment!
+
+All of cocosCairo is written in Python, so you can learn advanced systems and user interface designs from perusing the code base. The documentation also links you to the code.
+
+The framework includes a built-in (and optional!) model-view-controller design pattern for creating decoupled code.
+
+Also, since cocosCairo is built on PyGTK and PyCairo, it is also compatible with traditional PyGTK widgets.
+
+
+
+
+
+ffmpeg -r 30 -i temp/%d_record.png -r 30 -s 800x600 -b 700000 ../movie.avi
+
+
+Set up SVGSprite to be dirtied?
+
+Make parallax node
+
+Make Particle system
+
+Make Animation action
+
+Make path class
+
+Make relative path class
+
+Make path node which takes path class / relative path class, can optionally rotate

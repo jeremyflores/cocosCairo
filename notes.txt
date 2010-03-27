@@ -12,7 +12,21 @@ Also, since cocosCairo is built on PyGTK and PyCairo, it is also compatible with
 
 
 
+ffmpeg -r 30 -i temp/%d_record.png -r 30 -s 800x600 -b 700000 ../movie.avi
 
-Set up SVGSprite to be dirtied
 
-MAKE PARALLAX NODE
+Set up SVGSprite to be dirtied?
+
+Make parallax node
+
+Make Particle system
+
+Make Animation action
+
+Make path class
+
+Make relative path class
+
+Make path node which takes path class / relative path class, can optionally rotate
+
+Possibly make _onEnter / _onEnterFromFinishedTransition / _onExit so users don't have to call super.

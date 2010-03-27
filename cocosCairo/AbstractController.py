@@ -17,7 +17,8 @@ class AbstractController(GestureListener):
 		"""
 		self._node = None
 		self._model = None
-		self._parent = None
+		self._parent = None	# the parent Node
+		self._controllers = []
 		if node is not None:
 			self.setNode(node)
 		if model is not None:
@@ -49,7 +50,12 @@ class AbstractController(GestureListener):
 				self._model.removeListener(self._node)
 			if parent is not None:
 				parent.removeChild(self._node, True)
+			for controller in self._controllers:
+				self._node.removeController(controller)
 		self._node = node
+		self._node._controller = self
+		for controller in self._controllers:
+			self._node.addController(controller)
 		if self._model is not None:
 			self._model.addListener(self._node)
 			self._model.notifyListener(self._node)	# update the node with the model info
@@ -91,6 +97,21 @@ class AbstractController(GestureListener):
 			return self._node.getDirector()
 		else:
 			return None
+#}
+
+
+#{ Controller methods.
+	def addController(self, controller):
+		if controller not in self._controllers:
+			if self.getNode() is not None:
+				self.getNode().addController(controller)
+			self._controllers.append(controller)
+
+	def removeController(self, controller):
+		if controller in self._controllers:
+			if self.getNode() is not None:
+				self.getNode().removeController(controller)
+			self._controllers.remove(controller)
 #}
 
 
