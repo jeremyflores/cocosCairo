@@ -6,6 +6,103 @@ import math
 
 # TODO: make more primitive nodes.
 
+class PathNode(Node):
+	"""
+	Displays interconnected lines as defined by a L{Path}.
+	"""
+	def __init__(self, path=None, color=None, thickness=2.0):
+		"""
+		Initialization method.
+
+		@param path: The path to be displayed.
+		@type path: L{Path}
+		@param color: The color of the line. Default is L{WhiteColor}.
+		@type color: L{Color}
+		@param thickness: The thickness of the line.
+		@type thickness: Non-negative C{float}
+		"""
+		if path is None:
+			path = Path()
+		if color is None:
+			color = WhiteColor()
+		Node.__init__(self)
+		self._path = None
+		self._isRelative = False
+		self._thickness = thickness
+		self.setPath(path)
+		self.setColor(color)
+
+	def getPath(self):
+		"""
+		Returns the Path to be displayed.
+
+		@return: The Path to be displayed.
+		@rtype: L{Path}
+		"""
+		return self._path
+
+	def setPath(self, path):
+		"""
+		Sets the Path to be displayed.
+
+		@param path: The Path to be displayed.
+		@type path: L{Path}
+		"""
+		self._isRelative = isinstance(path, RelativePath)
+		self._path = path
+
+	def getThickness(self):
+		"""
+		Returns the thickness of the line. Default is 2.0.
+
+		@return: The thickness.
+		@rtype: C{float}
+		"""
+		return self._thickness
+
+	def setThickness(self, thickness):
+		"""
+		Sets the thickness of the line.
+
+		@param thickness: The thickness.
+		@type thickness: C{float}
+		"""
+		self._thickness = thickness
+
+	def getOpacity(self):
+		"""
+		Returns the opacity of the line.
+
+		@return: The opacity.
+		@rtype: C{float}
+		"""
+		return self._color.a
+
+	def setOpacity(self, opacity):
+		"""
+		Sets the opacity for the line.
+
+		@param opacity: The opacity from C{0.0} to C{1.0}.
+		@type opacity: C{float}
+		"""
+		self._color.a = opacity
+
+	def draw(self, context):
+		points = self._path.getPoints()
+		if len(points) < 2:
+			return
+		context.set_line_width(self._thickness)
+		context.set_source_rgba(self._color.r, self._color.g, self._color.b, self._color.a)
+		point = points[0]
+		context.move_to(point.x, point.y)
+		if self._isRelative:
+			for point in points[1:]:
+				context.rel_line_to(point.x, point.y)
+		else:
+			for point in points[1:]:
+				context.line_to(point.x, point.y)
+		context.stroke()
+
 class LineNode(Node):
 	"""
 	Displays a line.
@@ -18,7 +115,7 @@ class LineNode(Node):
 		@type startPoint: L{Point}
 		@param endPoint: The ending point of the line. Default is L{PointZero}.
 		@type endPoint: L{Point}
-		@param color: The color of the line. Default is L{ClearColor}.
+		@param color: The color of the line. Default is L{WhiteColor}.
 		@type color: L{Color}
 		@param thickness: The thickness of the line.
 		@type thickness: Non-negative C{float}
@@ -28,7 +125,7 @@ class LineNode(Node):
 		if endPoint is None:
 			endPoint = Point(0,0)
 		if color is None:
-			color = ClearColor()
+			color = WhiteColor()
 		Node.__init__(self)
 		self._startPoint = startPoint
 		self._endPoint = endPoint
@@ -141,7 +238,7 @@ class AbstractFillableNode(Node):
 		"""
 		Initialization method.
 		
-		@param fillColor: The color which will fill the polygon. Default is L{ClearColor}.
+		@param fillColor: The color which will fill the polygon. Default is L{WhiteColor}.
 		@type fillColor: L{Color}
 		@param strokeColor: The color which will outline the polygon. Default is L{ClearColor}.
 		@type strokeColor: L{Color}
@@ -150,7 +247,7 @@ class AbstractFillableNode(Node):
 		"""
 		Node.__init__(self)
 		if fillColor is None:
-			fillColor = ClearColor()
+			fillColor = WhiteColor()
 		if strokeColor is None:
 			strokeColor = ClearColor()
 		self._fillColor = fillColor
@@ -184,7 +281,7 @@ class AbstractFillableNode(Node):
 #{ Accessor methods.
 	def getFillColor(self):
 		"""
-		Returns the color which will fill the rectangle. Default is L{ClearColor()}.
+		Returns the color which will fill the rectangle. Default is L{WhiteColor()}.
 
 		@return: Fill color.
 		@rtype: L{Color}
@@ -245,7 +342,7 @@ class PolygonNode(AbstractFillableNode):
 
 		@param polygon: The Polygon to display.
 		@type polygon: L{Polygon}
-		@param fillColor: The color which will fill the polygon. Default is L{ClearColor}.
+		@param fillColor: The color which will fill the polygon. Default is L{WhiteColor}.
 		@type fillColor: L{Color}
 		@param strokeColor: The color which will outline the polygon. Default is L{ClearColor}.
 		@type strokeColor: L{Color}
@@ -317,7 +414,7 @@ class RectangleNode(PolygonNode):
 
 		@param rect: The bounding box of the Node. Default is L{RectZero}.
 		@type rect: L{Rect}
-		@param fillColor: The color which will fill the rectangle. Default is L{ClearColor}.
+		@param fillColor: The color which will fill the rectangle. Default is L{WhiteColor}.
 		@type fillColor: L{Color}
 		@param strokeColor: The color which will outline the rectangle. Default is L{ClearColor}.
 		@type strokeColor: L{Color}
@@ -371,7 +468,7 @@ class PointNode(EllipseNode):
 		@type point: L{Point}
 		@param radius: The radius of the circle to be drawn. Default is 2.0.
 		@type radius: Non-negative C{float}
-		@param fillColor: The color of the circle to be drawn. Default is L{ClearColor()}.
+		@param fillColor: The color of the circle to be drawn. Default is L{WhiteColor()}.
 		@type fillColor: L{Color}
 		"""
 		EllipseNode.__init__(self, MakeRect(point.x, point.y, radius*2, radius*2), fillColor)

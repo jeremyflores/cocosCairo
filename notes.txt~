@@ -28,3 +28,9 @@ Make path class
 Make relative path class
 
 Make path node which takes path class / relative path class, can optionally rotate
+
+Make MoveAlongPath(duration, path, autorotates=True) action
+
+Possibly make _onEnter / _onEnterFromFinishedTransition / _onExit so users don't have to call super.
+
+Add comments to the very top of the modules to give an overall description of what they are.

@@ -414,6 +414,61 @@ class MoveBy(MoveTo):
 		"""
 		return MoveBy(self._duration, Point(-self._delta.x, -self._delta.y))
 
+
+class MoveAlongPath(Sequence):
+	"""
+	Moves a L{Node} along a given L{Path}.
+	"""
+	def __init__(self, duration, path, maxRotationDuration=0.5, isAutorotating=True):
+		"""
+		Initialization method.
+
+		@param duration: How long the action will take.
+		@type duration: Non-negative C{float}
+		@param path: The Path which the Node will traverse.
+		@type path: L{Path}
+		@param maxRotationDuration: The maximum time in seconds an automatic rotation should take.
+		@type maxRotationDuration: Non-negative C{float}
+		@param isAutorotating: Whether or not the Node will rotate automatically at turns.
+		@type isAutorotating: C{bool}
+		"""
+		self._path = path
+		self._isAutorotating = isAutorotating
+		points = self._path.getPoints()
+		totalDistance = 0.0
+		for i in range(0, len(points)-1):
+			totalDistance += pointDistance(points[i], points[i+1])
+		actions = []
+		self._startingAngle = getAngleBetweenLines(points[0], Point(points[0].x+1, points[0].y), points[0], points[1])
+		if isinstance(self._path, RelativePath):
+			MoveClass = MoveBy
+		else:
+			MoveClass = MoveTo
+		rotateAction = None
+		for i in range(1, len(points)):
+			moveDuration = pointDistance(points[i-1], points[i]) / totalDistance * duration
+			action = MoveClass(moveDuration, points[i])
+			if self._isAutorotating:
+				if rotateAction is not None:
+					action = Spawn(action, rotateAction)
+				if i+1 < len(points):
+					p1 = points[i-1]
+					p2 = points[i]
+					p3 = points[i+1]
+					angle = getAngleBetweenLines(p1, p2, p2, p3)
+					rotateDuration = abs(angle)/(2*math.pi)*maxRotationDuration
+					if angle != 0.0:
+						rotateAction = RotateBy(rotateDuration, angle)
+			actions.append(action)
+		Sequence.__init__(self, *actions)
+
+	def start(self, owner):
+		Sequence.start(self, owner)
+		owner.setPosition(self._path.getPoints()[0])
+		if self._isAutorotating:
+			owner.setRotation(self._startingAngle)
+
+
 class JumpBy(AbstractIntervalAction):
 	"""
 	Moves a L{Node} by a certain distance by having it "jump" to its final destination.

@@ -223,7 +223,45 @@ class Polygon:
 					oddNodes = not oddNodes
 			j = i
 		return oddNodes
+
+
+class Path:
+	"""
+	A sequence of L{Point}C{s} which defines a path.
+	"""
+	def __init__(self, *points):
+		"""
+		Initialization method.
+
+		@param points: The points which define the path.
+		@type points: C{Comma-separated Points}
+		"""
+		self._points = points
+
+	def getPoints(self):
+		"""
+		Returns the list of Points for the path.
+
+		@return: The Points for the path.
+		@rtype: C{list}
+		"""
+		return self._points
+
+	def addPoint(self, point):
+		"""
+		Adds a Point to the path.
+
+		@param point: A Point.
+		@type point: L{Point}
+		"""
+		self._points.append(point)
 		
+class RelativePath(Path):
+	"""
+	A sequence of L{Point}C{s} which defines a path. The first Point is used as the absolute starting point, and all subsequent Points are relative to the first Point.
+	"""
+	pass
+
 #{ Constructor functions.
 def MakePolygon(*points):
 	"""
@@ -583,6 +621,24 @@ def getSlopeAndIntercept(p1, p2):
 	m = (p2.y-p1.y)/(p2.x-p1.x)
 	b = p2.y - m*p2.x
 	return [m, b]
+
+def getAngleBetweenLines(p1, p2, q1, q2):
+	"""
+	Returns the angle between two lines.
+
+	@param p1: A Point on the line C{p}.
+	@type p1: L{Point}
+	@param p2: Another Point on the line C{p}.
+	@type p2: L{Point}
+	@param q1: A Point on the line C{q}.
+	@type q1: L{Point}
+	@param q2: A Point on the line C{q}.
+	@type q2: L{Point}
+	"""
+	pVector = Point(p2.x-p1.x, p2.y-p1.y)
+	qVector = Point(q2.x-q1.x, q2.y-q1.y)
+	angle = math.atan2(pVector.y, pVector.x) - math.atan2(qVector.y, qVector.x)
+	return -angle
 #}
 
 
