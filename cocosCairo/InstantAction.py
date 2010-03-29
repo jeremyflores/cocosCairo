@@ -1,3 +1,7 @@
+"""
+Actions that execute once instantaneously.
+"""
+
 from Action import *
 from copy import copy
 

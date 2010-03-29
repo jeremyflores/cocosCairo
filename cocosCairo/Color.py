@@ -1,3 +1,7 @@
+"""
+Defines an RGBA color.
+"""
+
 class Color:
 	"""
 	Defines an C{RGBA} (Red, Green, Blue, Alpha) color. A Color is considered a primitive, so its values may be accessed directly.

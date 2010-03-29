@@ -1,3 +1,7 @@
+"""
+Provides an interface between cocosCairo and PyGTK.
+"""
+
 import pygtk
 pygtk.require('2.0')
 import gtk
@@ -23,7 +27,7 @@ GTK_EVENT_MASKS = gtk.gdk.BUTTON_RELEASE_MASK | gtk.gdk.BUTTON_PRESS_MASK | gtk.
 
 class GTKLayout(gtk.Layout):
 	"""
-	A GTK widget to which any L{Scene} is "attached" for rendering. Any L{Node}, therefore, is drawn onto this (which writes to the video hardware). Most applications should never have to directly talk to the GTKLayout as the L{Director} will handle this by childing / de-childing Scenes automatically.
+	A GTK widget to which any L{Scene} is "attached" for rendering. Any L{Node}, therefore, is drawn onto this (which writes to the video hardware). Most applications should never have to directly talk to the GTKLayout as the L{Director} will handle this automatically.
 	"""
 	def __init__(self, director, size, color):
 		gtk.Layout.__init__(self)
@@ -205,6 +209,7 @@ class GTKLayout(gtk.Layout):
 # TODO: this class will likely have to change to appropriately accommodate both Sugar activities and normal windowed applications.
 class GTKInterface:
 	"""
+	Provides an interface between cocosCairo and PyGTK.
 	"""
 	def _destroy(self, widget):
 		self._director._stopAnimation()

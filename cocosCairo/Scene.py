@@ -1,3 +1,7 @@
+"""
+The main type of Node to which other Nodes are added.
+"""
+
 from Geometry import *
 from Node import *
 

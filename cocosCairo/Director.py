@@ -1,3 +1,7 @@
+"""
+The central part of the application.
+"""
+
 from Geometry import *
 
 from GTKInterface import *

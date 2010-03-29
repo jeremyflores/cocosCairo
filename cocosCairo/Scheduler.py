@@ -1,3 +1,7 @@
+"""
+Manages all Timers for the application.
+"""
+
 class Scheduler:
 	"""
 	Manages all L{Timer}C{s} for the application. It is responsible for updating all Timers whenever it ticks.

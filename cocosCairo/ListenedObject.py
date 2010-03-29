@@ -1,3 +1,7 @@
+"""
+A mixin which provides listenable methods to an object.
+"""
+
 class ListenedObject:
 	"""
 	A mixin which provides convenience methods for storing, adding, and removing L{AbstractListener}C{s} to an object.

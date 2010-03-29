@@ -1,3 +1,7 @@
+"""
+The controller in the model-view-controller design pattern.
+"""
+
 from Node import *
 from GestureListener import *
 from AbstractModel import *

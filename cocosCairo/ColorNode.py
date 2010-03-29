@@ -1,3 +1,7 @@
+"""
+A Node which fills its bounding box with a given Color.
+"""
+
 from Node import *
 from Color import *
 

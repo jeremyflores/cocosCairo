@@ -1,3 +1,7 @@
+"""
+A ListenedObject that is responsible for sending user gestures to handlers.
+"""
+
 import pygtk
 import gtk
 

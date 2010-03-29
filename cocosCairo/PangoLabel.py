@@ -1,3 +1,7 @@
+"""
+A Node which renders text to the screen using the Pango library.
+"""
+
 import pango
 import pangocairo
 

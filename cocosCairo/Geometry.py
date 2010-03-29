@@ -1,3 +1,7 @@
+"""
+Defines basic Geometry classes like Point, Rect, or Polygon as well as helper geometric functions.
+"""
+
 import math
 import random
 
@@ -19,6 +23,9 @@ class Size:
 
 	def __str__(self):
 		return "width: " + str(self.width) + "\t\theight: " + str(self.height)
+
+	def __eq__(self, otherSize):
+		return self.width==otherSize.width and self.height==otherSize.height
 
 	def copy(self):
 		"""
@@ -50,6 +57,9 @@ class Point:
 	def __str__(self):
 		return "x: " + str(self.x) + "\t\ty: " + str(self.y)
 
+	def __eq__(self, otherPoint):
+		return self.x==otherPoint.x and self.y==otherPoint.y
+
 	def copy(self):
 		"""
 		Returns a new Point with the same L{x} and L{y} coordinates.
@@ -80,6 +90,9 @@ class Rect:
 
 	def __str__(self):
 		return str(self.point) + " " + str(self.size)
+
+	def __eq__(self, otherRect):
+		return self.point==otherRect.point and self.size==otherRect.size
 
 	# TODO: might have to optimize this method more as it may be called multiple times per redraw
 	def intersectsRect(self, rect):

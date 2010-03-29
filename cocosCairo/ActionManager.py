@@ -1,3 +1,7 @@
+"""
+Manages all Actions for the application.
+"""
+
 from Scheduler import *
 from Timer import *
 from Action import *

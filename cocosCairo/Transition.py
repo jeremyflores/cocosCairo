@@ -1,3 +1,7 @@
+"""
+A type of Scene that provides a transition from the currently-running Scene to a new Scene.
+"""
+
 from Director import *
 from GestureDispatch import *
 from Scene import *

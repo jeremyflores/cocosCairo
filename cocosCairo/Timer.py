@@ -1,6 +1,10 @@
+"""
+Calls a given callback every given seconds.
+"""
+
 class Timer:
 	"""
-	An object calls a callback every given milliseconds.
+	Calls a callback every given seconds.
 	"""
 	def __init__(self, callback, interval=0.0):
 		"""

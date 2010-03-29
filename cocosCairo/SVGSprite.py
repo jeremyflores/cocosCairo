@@ -1,3 +1,7 @@
+"""
+Renders SVG files to the screen.
+"""
+
 from Node import *
 from Geometry import *
 

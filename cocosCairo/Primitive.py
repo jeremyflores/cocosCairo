@@ -1,3 +1,7 @@
+"""
+Defines Nodes which display primitive geometric items, such as Polygons or Points, to the screen.
+"""
+
 from Geometry import *
 from Node import *
 from Color import *

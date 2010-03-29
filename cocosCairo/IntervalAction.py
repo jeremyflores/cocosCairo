@@ -1,3 +1,7 @@
+"""
+Defines actions such as MoveTo or FadeOut which incrementally perform small changes in intervals over a period of time.
+"""
+
 from Action import *
 from InstantAction import *
 from Geometry import *

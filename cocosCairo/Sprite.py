@@ -1,10 +1,14 @@
+"""
+A Node that renders an image such as a JPEG to the screen.
+"""
+
 from Node import *
 from Geometry import *
 import gtk
 
 class Sprite(Node):
 	"""
-	A L{Node} that renders an image (such as a JPEG or PNG) to the screen.
+	A L{Node} that renders an image (such as a JPEG, PNG, or SVG) to the screen.
 	"""
 	def __init__(self, imageName=None, position=None):
 		"""

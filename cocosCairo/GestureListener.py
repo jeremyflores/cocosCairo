@@ -1,4 +1,11 @@
+"""
+A mixin that equips an object with handling Gesture events.
+"""
+
 class GestureListener:
+	"""
+	A mixin that equips an object with handling Gesture events.
+	"""
 	def onMousePress(self, event):
 		"""
 		Override this method to handle a button press event.

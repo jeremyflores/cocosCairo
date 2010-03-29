@@ -1,3 +1,6 @@
+"""
+The model in the model-view-controller design pattern.
+"""
 from ListenedObject import *
 from AbstractListener import *
 

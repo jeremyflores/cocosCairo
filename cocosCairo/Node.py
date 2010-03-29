@@ -1,6 +1,9 @@
+"""
+The base class for rendering items to the screen.
+"""
+
 from Geometry import *
 from Color import *
-#from Scene import *
 
 from Timer import *
 from AbstractModel import *
@@ -12,7 +15,7 @@ import warnings
 
 class Node(ModelListener):
 	"""
-	The base class for rendering objects to the screen.
+	The base class for rendering items to the screen.
 
 	Note that the position is set relative to the Node's parent. If the Node's parent is the L{Director}, the position is relative to the top-left corner of the screen (in general, this should only apply to L{Scene}C{s}).
 	"""

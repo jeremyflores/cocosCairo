@@ -1,3 +1,7 @@
+"""
+A Node which renders text to the screen.
+"""
+
 from Node import *
 import cairo
 

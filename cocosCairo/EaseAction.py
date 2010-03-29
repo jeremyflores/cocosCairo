@@ -1,3 +1,7 @@
+"""
+Actions which modifies the rate at which other Actions execute, usually by some geometric curve.
+"""
+
 from IntervalAction import *
 from Geometry import *
 from Color import *

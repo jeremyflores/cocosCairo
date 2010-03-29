@@ -15,6 +15,7 @@ from Label import *
 from PangoLabel import *
 from Primitive import *
 from ColorNode import *
+from ParallaxNode import *
 
 from GestureDispatch import *
 from GestureEvent import *

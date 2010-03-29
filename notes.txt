@@ -26,3 +26,11 @@ Make Animation action
 Possibly make _onEnter / _onEnterFromFinishedTransition / _onExit so users don't have to call super.
 
 Add comments to the very top of the modules to give an overall description of what they are.
+
+Implement double buffering
+
+Maybe have key press/release events have a list of pressed keys
+
+Finish implementing the frame rate stuff in the Director
+
+
