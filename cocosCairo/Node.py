@@ -195,7 +195,7 @@ class Node(ModelListener):
 
 	def setColor(self, color):
 		"""
-		Method for children who have color foregrounds for, e.g. tinting (like L{Sprite}C{s}).
+		Method for children who have special color values like, for example, tinting (see L{Sprite} and L{TintTo}).
 
 		@param color: L{Color}.
 		"""
@@ -203,7 +203,7 @@ class Node(ModelListener):
 
 	def setColors(self, r, g, b, a=1.0):
 		"""
-		Method for children who have color foregrounds for, e.g. tinting (like L{Sprite}C{s}).
+		Method for children who have special color values like, for example, tinting (see L{Sprite} and L{TintTo}).
 
 		@param r: C{float}.
 		@param g: C{float}.

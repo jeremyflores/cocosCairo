@@ -303,6 +303,7 @@ cocosCairo.Director.Director	cocosCairo.Director.Director-class.html
 cocosCairo.Director.Director.setBackgroundColor	cocosCairo.Director.Director-class.html#setBackgroundColor
 cocosCairo.Director.Director.stopRecording	cocosCairo.Director.Director-class.html#stopRecording
 cocosCairo.Director.Director.getSize	cocosCairo.Director.Director-class.html#getSize
+cocosCairo.Director.Director._showFPS	cocosCairo.Director.Director-class.html#_showFPS
 cocosCairo.Director.Director._stopAnimation	cocosCairo.Director.Director-class.html#_stopAnimation
 cocosCairo.Director.Director.setWindow	cocosCairo.Director.Director-class.html#setWindow
 cocosCairo.Director.Director.isShowingFPS	cocosCairo.Director.Director-class.html#isShowingFPS
@@ -688,6 +689,7 @@ cocosCairo.GTKInterface.GTKInterface._destroy	cocosCairo.GTKInterface.GTKInterfa
 cocosCairo.GTKInterface.GTKInterface.redraw	cocosCairo.GTKInterface.GTKInterface-class.html#redraw
 cocosCairo.GTKInterface.GTKInterface.__init__	cocosCairo.GTKInterface.GTKInterface-class.html#__init__
 cocosCairo.GTKInterface.GTKLayout	cocosCairo.GTKInterface.GTKLayout-class.html
+cocosCairo.GTKInterface.GTKLayout.setFrameRate	cocosCairo.GTKInterface.GTKLayout-class.html#setFrameRate
 cocosCairo.GTKInterface.GTKLayout._renderVideo	cocosCairo.GTKInterface.GTKLayout-class.html#_renderVideo
 cocosCairo.GTKInterface.GTKLayout._onExpose	cocosCairo.GTKInterface.GTKLayout-class.html#_onExpose
 cocosCairo.GTKInterface.GTKLayout._deleteFolderPngs	cocosCairo.GTKInterface.GTKLayout-class.html#_deleteFolderPngs

@@ -11,6 +11,8 @@ from GestureDispatch import *
 from ActionManager import *
 from Scheduler import *
 
+from Label import *
+
 from Transition import *
 
 from Color import *
@@ -51,8 +53,9 @@ class Director:
 		self._dt = 0
 		self._isNextDeltaTimeZero = False
 		self._lastTimeStamp = 0
-		#self._accumDt = 0		# TODO: finish implementing these
-		#self._frameRate = 0
+		self._accumDt = 0
+		self._frames = 0
+		self._frameRate = 0
 		self._isRecording = False
 		self._backgroundColor = BlackColor()
 
@@ -86,7 +89,7 @@ class Director:
 
 	def getGestureDispatch(self):
 		"""
-		Returns the L{GestureDispatch} for the application, which sends out notifications of L{GestureEvent}s to L{GestureListener}s.
+		Returns the L{GestureDispatch} for the application, which sends out notifications of L{GestureEvent}C{s} to L{GestureListener}C{s}.
 
 		@return: The dispatch.
 		@rtype: L{GestureDispatch}
@@ -95,7 +98,7 @@ class Director:
 
 	def getActionManager(self):
 		"""
-		Reutrns the L{ActionManager} for the application, which manages the L{Action}s.
+		Reutrns the L{ActionManager} for the application, which manages the L{Action}C{s}.
 
 		@return: The manager.
 		@rtype: L{ActionManager}
@@ -104,7 +107,7 @@ class Director:
 
 	def getScheduler(self):
 		"""
-		Returns the L{Scheduler} for the application, which manages the L{Timer}s.
+		Returns the L{Scheduler} for the application, which manages the L{Timer}C{s}.
 
 		@return: The scheduler.
 		@rtype: L{Scheduler}
@@ -136,6 +139,12 @@ class Director:
 			warnings.warn("Window is already set.")
 
 	def getGTKLayout(self):
+		"""
+		Returns the main gtk.Layout to which cocosCairo draws. Use this method to perform PyGTK actions such as attaching C{gtk.Widgets} to the application. If the GTKInterface has not yet been initialized, then it will return C{None}.
+
+		@return: The main gtk.Layout.
+		@rtype: L{GTKLayout} (or C{None})
+		"""
 		if self._gtkInterface is not None:
 			return self._gtkInterface.getGTKLayout()
 		else:
@@ -209,7 +218,7 @@ class Director:
 #{ Run methods.
 	def end(self):
 		"""
-		Ends all animations, unregisters all L{GestureDispatch} listeners, and clears out the stack of L{Scene}s. This does not end the program by itself, however.
+		Ends all animations, unregisters all L{GestureDispatch} listeners, and clears out the stack of L{Scene}C{s}. This does not end the program by itself, however.
 		"""
 		self._runningScene.onExit()
 		self._runningScene.cleanup()
@@ -291,7 +300,7 @@ class Director:
 
 	def _mainLoop(self):
 		"""
-		Private method which is called repeatedly to redraw the L{Node}s and to update the L{Scheduler} with the time that has passed since the last loop.
+		Private method which is called repeatedly to redraw the L{Node}C{s} and to update the L{Scheduler} with the time that has passed since the last loop.
 		"""
 		self._calculateDeltaTime()
 		if not self._isPaused:
@@ -301,8 +310,9 @@ class Director:
 				self._scheduler.tick(self._animationInterval)
 		if self._nextScene is not None:
 			self._setNextScene()
-		self._gtkInterface.redraw()
-
+		self._gtkInterface.redraw()	# This is not guaranteed to redraw within the same loop iteration as PyGTK accumulates redraw events before dispatching.
+		if self._isShowingFPS is True:
+			self._showFPS()
 		if self._isRunning:
 			return True
 		else:
@@ -322,6 +332,17 @@ class Director:
 			self._dt = timestamp - self._lastTimeStamp
 		self._lastTimeStamp = timestamp
 
+	def _showFPS(self):
+		self._frames += 1
+		self._accumDt += self._dt
+		if (self._accumDt > 0.1):
+			self._frameRate = self._frames/self._accumDt
+			self._frames = 0
+			self._accumDt = 0
+		string = "%.1f" % self._frameRate
+		self._gtkInterface._layout.setFrameRate(string)
+		#self._fpsLabel.setText(string)
+
 	def _stopAnimation(self):
 		"""
 		Private method which stops the main loop.
@@ -340,11 +361,20 @@ class Director:
 		"""
 		self._gtkInterface._layout.takeScreenshot(imagePath)
 
-	def startRecording(self, directoryPath):
+	def startRecording(self, videoPath):
+		"""
+		Begins saving a sequence of image stills to be rendered to video.
+
+		@param videoPath: The location where the video (and temporary image files) will be saved.
+		@type videoPath: C{string}
+		"""
 		self._isRecording = True
-		self._gtkInterface._layout.startRecording(directoryPath)
+		self._gtkInterface._layout.startRecording(videoPath)
 
 	def stopRecording(self):
+		"""
+		Stops recording and, if FFmpeg is available, will automatically render the video. If there is already a movie file with the same name as the one given in L{startRecording}, that movie file will be deleted.
+		"""
 		self._isRecording = False
 		self._gtkInterface._layout.stopRecording()
 #}

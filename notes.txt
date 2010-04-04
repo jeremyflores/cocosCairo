@@ -10,14 +10,7 @@ Also, since cocosCairo is built on PyGTK and PyCairo, it is also compatible with
 
 
 
-
-
-ffmpeg -r 30 -i temp/%d_record.png -r 30 -s 800x600 -b 700000 ../movie.avi
-
-
 Set up SVGSprite to be dirtied?
-
-Make parallax node
 
 Make Particle system
 
@@ -25,12 +18,6 @@ Make Animation action
 
 Possibly make _onEnter / _onEnterFromFinishedTransition / _onExit so users don't have to call super.
 
-Add comments to the very top of the modules to give an overall description of what they are.
-
-Implement double buffering
+Implement double buffering?
 
 Maybe have key press/release events have a list of pressed keys
-
-Finish implementing the frame rate stuff in the Director
-
-

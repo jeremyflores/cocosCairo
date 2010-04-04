@@ -13,11 +13,11 @@ class ParallaxScene(Scene):
 		self.addChild(self._parallax)
 		sprite2 = Sprite("images/pulse.png")
 		sprite2.setPosition(Point(800,300))
-		self._parallax.addChild(sprite2, 2, ratio=Point(0.5, 0.3), offset=Point(400,300))
+		self._parallax.addChild(sprite2, 2, ratio=Point(0.5, 0.2), offset=Point(400,300))
 
 	def onEnter(self):
 		Scene.onEnter(self)
-		action = MoveBy(5.0, Point(200, -700))
+		action = MoveBy(5.0, Point(200, -900))
 		self._parallax.runAction(action)
 
 
@@ -26,4 +26,5 @@ class ParallaxScene(Scene):
 if __name__ == "__main__":
 	director = Director()
 	director.setWindow()
+	director.setShowingFPS(True)
 	director.runWithScene(ParallaxScene())

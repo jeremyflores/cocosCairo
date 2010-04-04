@@ -172,9 +172,9 @@
       href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
       class="link">GestureDispatch</a> for the application, which sends out
       notifications of <a href="cocosCairo.GestureEvent-module.html" 
-      class="link">GestureEvent</a>s to <a 
+      class="link">GestureEvent</a><code>s</code> to <a 
       href="cocosCairo.GestureListener-module.html" 
-      class="link">GestureListener</a>s.</td>
+      class="link">GestureListener</a><code>s</code>.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.getGestureDispatch">source&nbsp;code</a></span>
             
@@ -195,7 +195,8 @@
       Reutrns the <a 
       href="cocosCairo.ActionManager.ActionManager-class.html" 
       class="link">ActionManager</a> for the application, which manages the
-      <a href="cocosCairo.Action-module.html" class="link">Action</a>s.</td>
+      <a href="cocosCairo.Action-module.html" 
+      class="link">Action</a><code>s</code>.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.getActionManager">source&nbsp;code</a></span>
             
@@ -215,7 +216,8 @@
           <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#getScheduler" class="summary-sig-name">getScheduler</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the <a href="cocosCairo.Scheduler.Scheduler-class.html" 
       class="link">Scheduler</a> for the application, which manages the <a 
-      href="cocosCairo.Timer.Timer-class.html" class="link">Timer</a>s.</td>
+      href="cocosCairo.Timer.Timer-class.html" 
+      class="link">Timer</a><code>s</code>.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.getScheduler">source&nbsp;code</a></span>
             
@@ -263,11 +265,13 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type"><a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+      class="link">GTKLayout</a> (or <code>None</code>)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="getGTKLayout"></a><span class="summary-sig-name">getGTKLayout</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#getGTKLayout" class="summary-sig-name">getGTKLayout</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the main gtk.Layout to which cocosCairo draws.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.getGTKLayout">source&nbsp;code</a></span>
             
@@ -391,7 +395,7 @@
       href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
       class="link">GestureDispatch</a> listeners, and clears out the stack 
       of <a href="cocosCairo.Scene.Scene-class.html" 
-      class="link">Scene</a>s.</td>
+      class="link">Scene</a><code>s</code>.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.end">source&nbsp;code</a></span>
             
@@ -540,8 +544,9 @@
         <tr>
           <td><span class="summary-sig"><a name="_mainLoop"></a><span class="summary-sig-name">_mainLoop</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Private method which is called repeatedly to redraw the <a 
-      href="cocosCairo.Node.Node-class.html" class="link">Node</a>s and to 
-      update the <a href="cocosCairo.Scheduler.Scheduler-class.html" 
+      href="cocosCairo.Node.Node-class.html" 
+      class="link">Node</a><code>s</code> and to update the <a 
+      href="cocosCairo.Scheduler.Scheduler-class.html" 
       class="link">Scheduler</a> with the time that has passed since the 
       last loop.</td>
           <td align="right" valign="top">
@@ -564,6 +569,22 @@
       last loop iteration.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director._calculateDeltaTime">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_showFPS"></a><span class="summary-sig-name">_showFPS</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director._showFPS">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -615,8 +636,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="startRecording"></a><span class="summary-sig-name">startRecording</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">directoryPath</span>)</span></td>
+          <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#startRecording" class="summary-sig-name">startRecording</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">videoPath</span>)</span><br />
+      Begins saving a sequence of image stills to be rendered to video.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.startRecording">source&nbsp;code</a></span>
             
@@ -632,7 +654,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="stopRecording"></a><span class="summary-sig-name">stopRecording</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="cocosCairo.Director.Director-class.html#stopRecording" class="summary-sig-name">stopRecording</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Stops recording and, if FFmpeg is available, will automatically 
+      render the video.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.stopRecording">source&nbsp;code</a></span>
             
@@ -747,9 +771,9 @@
   href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
   class="link">GestureDispatch</a> for the application, which sends out 
   notifications of <a href="cocosCairo.GestureEvent-module.html" 
-  class="link">GestureEvent</a>s to <a 
+  class="link">GestureEvent</a><code>s</code> to <a 
   href="cocosCairo.GestureListener-module.html" 
-  class="link">GestureListener</a>s.</p>
+  class="link">GestureListener</a><code>s</code>.</p>
   <dl class="fields">
     <dt>Returns: <a href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
       class="link">GestureDispatch</a></dt>
@@ -774,7 +798,8 @@
   <p>Reutrns the <a 
   href="cocosCairo.ActionManager.ActionManager-class.html" 
   class="link">ActionManager</a> for the application, which manages the <a 
-  href="cocosCairo.Action-module.html" class="link">Action</a>s.</p>
+  href="cocosCairo.Action-module.html" 
+  class="link">Action</a><code>s</code>.</p>
   <dl class="fields">
     <dt>Returns: <a href="cocosCairo.ActionManager.ActionManager-class.html" 
       class="link">ActionManager</a></dt>
@@ -798,7 +823,8 @@
   
   <p>Returns the <a href="cocosCairo.Scheduler.Scheduler-class.html" 
   class="link">Scheduler</a> for the application, which manages the <a 
-  href="cocosCairo.Timer.Timer-class.html" class="link">Timer</a>s.</p>
+  href="cocosCairo.Timer.Timer-class.html" 
+  class="link">Timer</a><code>s</code>.</p>
   <dl class="fields">
     <dt>Returns: <a href="cocosCairo.Scheduler.Scheduler-class.html" 
       class="link">Scheduler</a></dt>
@@ -855,6 +881,31 @@
         <li><strong class="pname"><code>window</code></strong> (<a href="cocosCairo.AbstractWindow.AbstractWindow-class.html" 
           class="link">AbstractWindow</a> (or <code>None</code>)) - The main application window.</li>
     </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getGTKLayout"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getGTKLayout</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.getGTKLayout">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the main gtk.Layout to which cocosCairo draws. Use this method
+  to perform PyGTK actions such as attaching <code>gtk.Widgets</code> to 
+  the application. If the GTKInterface has not yet been initialized, then 
+  it will return <code>None</code>.</p>
+  <dl class="fields">
+    <dt>Returns: <a href="cocosCairo.GTKInterface.GTKLayout-class.html" 
+      class="link">GTKLayout</a> (or <code>None</code>)</dt>
+        <dd>The main gtk.Layout.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -979,8 +1030,9 @@
   <p>Ends all animations, unregisters all <a 
   href="cocosCairo.GestureDispatch.GestureDispatch-class.html" 
   class="link">GestureDispatch</a> listeners, and clears out the stack of 
-  <a href="cocosCairo.Scene.Scene-class.html" class="link">Scene</a>s. This
-  does not end the program by itself, however.</p>
+  <a href="cocosCairo.Scene.Scene-class.html" 
+  class="link">Scene</a><code>s</code>. This does not end the program by 
+  itself, however.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1101,6 +1153,53 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="startRecording"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">startRecording</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">videoPath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.startRecording">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Begins saving a sequence of image stills to be rendered to video.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>videoPath</code></strong> (<code>string</code>) - The location where the video (and temporary image files) will be 
+          saved.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="stopRecording"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">stopRecording</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="cocosCairo.Director-pysrc.html#Director.stopRecording">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stops recording and, if FFmpeg is available, will automatically render
+  the video. If there is already a movie file with the same name as the one
+  given in <a href="cocosCairo.Director.Director-class.html#startRecording"
+  class="link">startRecording</a>, that movie file will be deleted.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -1128,7 +1227,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Mar 28 20:56:10 2010
+    Generated by Epydoc 3.0.1 on Sat Apr  3 20:02:04 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
