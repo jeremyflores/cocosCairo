@@ -109,7 +109,10 @@ class GTKLayout(gtk.Layout):
 			videoPath += ".avi"
 		videoPath += ".png"	# for generating the PNG still images
 		separator = os.sep
-		self._screenshotPath = os.path.split(videoPath)[0] + separator
+		self._screenshotPath = os.path.split(videoPath)[0]
+		if self._screenshotPath is "":
+			self._screenshotPath = "."
+		self._screenshotPath = self._screenshotPath + separator
 		self._screenshotName = os.path.split(videoPath)[1]
 		if not os.path.exists(self._screenshotPath):
 			os.makedirs(self._screenshotPath)
@@ -166,7 +169,10 @@ class GTKLayout(gtk.Layout):
 		if screenshotPath.endswith(".png") is not True:
 			screenshotPath += ".png"
 		separator = os.sep
-		self._screenshotPath = os.path.split(screenshotPath)[0] + separator
+		self._screenshotPath = os.path.split(screenshotPath)[0]
+		if self._screenshotPath is "":
+			self._screenshotPath = "."
+		self._screenshotPath = self._screenshotPath + separator
 		self._screenshotName = os.path.split(screenshotPath)[1]
 		if not os.path.exists(self._screenshotPath):
 			os.makedirs(self._screenshotPath)
@@ -209,6 +215,7 @@ class GTKLayout(gtk.Layout):
 				path = self._screenshotPath + str(self._exposeCounter) + "_" + self._screenshotName
 			else:
 				path = self._screenshotPath + self._screenshotName
+			path = os.path.normpath(path)
 			surface = context.get_group_target()
 			surface.write_to_png(path)
 			if self._isRecording is not True:
