@@ -240,23 +240,21 @@ class WinScene(Scene, GestureListener):
 
 	def setup(self):
 		self.setBackgroundColor(WhiteColor())
-		self._label = PangoLabel()
+		size = self.getSize()
+		winLabel = Label("You win!", Point(size.width/2, 50), BlackColor())
+		winLabel.setFontSize(72)
+		winLabel.setAnchorPoint(Point(0.5, 0.5))
+#		movesLabel = Label("moves", 
+		self.addChild(winLabel)
 		self.setMarkupText(0)
-		self._label.setAnchorPoint(Point(0.5, 0.5))
-		self._label.setAlignment("center")
-		self._label.setFontSize(48)
-		self.addChild(self._label)
 
 	def onEnter(self):
 		Scene.onEnter(self)
 		self.getDirector().getGestureDispatch().addListener(self)
-		x = self.getSize().width/2
-		y = self.getSize().height/2
-		self._label.setPosition(Point(x,y))
 
 	def onEnterFromFinishedTransition(self):
 		Scene.onEnterFromFinishedTransition(self)
-		self.scheduleCallback(self._updateCount, 0.005)
+		self.scheduleCallback(self._updateCount, 0.001/self._moveCount)
 
 	def onExit(self):
 		Scene.onExit(self)
@@ -278,7 +276,7 @@ class WinScene(Scene, GestureListener):
 						'<span foreground="#003399">You took\n' + \
 						'<span size="xx-large">' + countString + \
 						' moves\n</span>to complete the maze!</span>'
-		self._label.setMarkupText(markupText)
+		#self._label.setMarkupText(markupText)
 
 	def onKeyPress(self, event):
 		self._onEvent()
@@ -303,9 +301,9 @@ class WinScene(Scene, GestureListener):
 
 if __name__ == "__main__":
 	director = Director()
-	director.setWindow()
+	director.setShowingFPS(True)
 	path = MAZE_PATHS[PATH_INDEX]
 	PATH_INDEX += 1
-	transition = MoveInTopTransition(1.0, MazeScene(path))
+	transition = RotoZoomTransition(1.5, MazeScene(path))
 	director.runWithScene(SplashScene(transition))
-	#director.runWithScene(MazeScene("maze02.txt"))
+	#director.runWithScene(MazeScene(path))

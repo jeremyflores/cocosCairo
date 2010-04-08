@@ -18,7 +18,7 @@ _WEIGHT_DICT = { \
 
 class Label(Node):
 	"""
-	Renders text to the screen.
+	Renders text to the screen. Note that the Label's rect is only an approximation of the text's area.
 	"""
 	def __init__(self, text="", position=None, color=None, isAnimated=False):
 		"""
@@ -45,10 +45,11 @@ class Label(Node):
 		self._isItalic = False
 		self._isBold = False
 		self._isAnimated = isAnimated
+		self._displayText = ""
 		if self._isAnimated:
-			self._displayText = ""
+			self._setDisplayText("")
 		else:
-			self._displayText = self._text
+			self._setDisplayText(self._text)
 
 #{ Animation methods.
 	def start(self, duration=0.05):
@@ -77,9 +78,17 @@ class Label(Node):
 				continue
 			else:
 				break
-		self._displayText += newString
+		self._setDisplayText(self._displayText + newString)
 		if self._displayText == self._text:
 			self.stop()
+
+	def _setDisplayText(self, text):
+		self._displayText = text
+		self._updateSize()
+
+	def _updateSize(self):
+		size = Size(self._fontSize*len(self._displayText)*.5, self._fontSize*1.33)
+		self.setSize(size)
 
 	def getOpacity(self):
 		return self._color.a
@@ -106,7 +115,7 @@ class Label(Node):
 		"""
 		self._text = text
 		if self._isAnimated is not True:
-			self._displayText = self._text
+			self._setDisplayText(self._text)
 
 	def getFontSize(self):
 		"""
@@ -125,6 +134,7 @@ class Label(Node):
 		@type fontSize: Non-negative C{float}
 		"""
 		self._fontSize = fontSize
+		self._updateSize()
 
 	def getFontFamily(self):
 		"""
@@ -194,4 +204,5 @@ class Label(Node):
 			boldFlag = _WEIGHT_DICT["normal"]
 		context.select_font_face(self._fontFamily, slantFlag, boldFlag)
 		context.set_font_size(self._fontSize)
+		context.move_to(0, self._fontSize*1.33)
 		context.show_text(self._displayText)

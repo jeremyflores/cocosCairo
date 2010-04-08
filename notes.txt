@@ -8,7 +8,7 @@ The framework includes a built-in (and optional!) model-view-controller design p
 
 Also, since cocosCairo is built on PyGTK and PyCairo, it is also compatible with traditional PyGTK widgets.
 
-
+epydoc -v -o doc cocosCairo/
 
 Set up SVGSprite to be dirtied?
 

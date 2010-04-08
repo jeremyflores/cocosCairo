@@ -31,10 +31,17 @@ class Director:
 
 	Normally only one Director should exist per application.
 	"""
-	def __init__(self):
+	def __init__(self, windowSize=None):
 		"""
-		Initialization method.
+		Initialization method. If windowSize is not defined, the default is C{Size(800,600)}.
+
+		@param windowSize: The size of the window.
+		@type windowSize: L{Size}
 		"""
+		if windowSize is None:
+			self._windowSize = Size(800, 600)
+		else:
+			self._windowSize = windowSize
 		self._gtkInterface = None	# set this up in setWindow()
 		self._gestureDispatch = GestureDispatch()
 		self._scheduler = Scheduler()
@@ -46,8 +53,8 @@ class Director:
 		self._nextScene = None
 		self._scenesStack = []
 
-		self._oldAnimationInterval = 1.0/30.0
-		self._animationInterval = 1.0/30.0
+		self._oldFramerate = 1.0/60.0
+		self._framerate = 1.0/60.0
 		self._frames = 0
 		self._isPaused = False
 		self._dt = 0
@@ -55,7 +62,7 @@ class Director:
 		self._lastTimeStamp = 0
 		self._accumDt = 0
 		self._frames = 0
-		self._frameRate = 0
+		self._displayedFramerate = 0
 		self._isRecording = False
 		self._backgroundColor = BlackColor()
 
@@ -78,6 +85,8 @@ class Director:
 		"""
 		self._isShowingFPS = isShowingFPS
 
+	showingFPS = property(isShowingFPS, setShowingFPS, doc="Whether or not to display the framerate.")
+
 	def getSize(self):
 		"""
 		Returns the size of the main application window.
@@ -86,6 +95,8 @@ class Director:
 		@rtype: L{Size}
 		"""
 		return self._gtkInterface.getSize()
+
+	size = property(getSize, doc="The size of the main application window.")
 
 	def getGestureDispatch(self):
 		"""
@@ -96,6 +107,8 @@ class Director:
 		"""
 		return self._gestureDispatch
 
+	gestureDispatch = property(getGestureDispatch, doc="The application's GestureDispatch.")
+
 	def getActionManager(self):
 		"""
 		Reutrns the L{ActionManager} for the application, which manages the L{Action}C{s}.
@@ -105,6 +118,8 @@ class Director:
 		"""
 		return self._actionManager
 
+	actionManager = property(getActionManager, doc="The application's ActionManager.")
+
 	def getScheduler(self):
 		"""
 		Returns the L{Scheduler} for the application, which manages the L{Timer}C{s}.
@@ -113,6 +128,11 @@ class Director:
 		@rtype: L{Scheduler}
 		"""
 		return self._scheduler
+
+	scheduler = property(getScheduler, doc="The application's Scheduler.")
+
+	def getBackgroundColor(self):
+		return self._backgroundColor
 
 	def setBackgroundColor(self, color):
 		"""
@@ -125,6 +145,8 @@ class Director:
 			self._gtkInterface.setBackgroundColor(color)
 		self._backgroundColor = color
 
+	backgroundColor = property(getBackgroundColor, setBackgroundColor, doc="The application's background color.")
+
 	def setWindow(self, window=None):
 		"""
 		Sets the main window for the application. If window is C{None}, a L{GTKWindow} is generated automatically.
@@ -133,7 +155,7 @@ class Director:
 		@type window: L{AbstractWindow} (or C{None})
 		"""
 		if self._gtkInterface == None:
-			self._gtkInterface = GTKInterface(self, window) # if window is None, defaults to GTKWindow()
+			self._gtkInterface = GTKInterface(self, window, self._windowSize) # if window is None, defaults to GTKWindow()
 			self._gtkInterface.setBackgroundColor(self._backgroundColor)
 		else:
 			warnings.warn("Window is already set.")
@@ -149,6 +171,8 @@ class Director:
 			return self._gtkInterface.getGTKLayout()
 		else:
 			return None
+
+	gtkLayout = property(getGTKLayout, doc="The application's main gtk.Layout.")
 #}
 
 
@@ -162,6 +186,8 @@ class Director:
 		"""
 		return self._runningScene
 
+	runningScene = property(getRunningScene, doc="The currently-running scene.")
+
 	def runWithScene(self, scene):
 		"""
 		Starts the application with a L{Scene}. This starts the main run loop.
@@ -173,6 +199,9 @@ class Director:
 		if self._runningScene:
 			warnings.warn("Scene is already running. Use replaceScene or pushScene instead.")
 			return
+
+		if self._gtkInterface is None:
+			self.setWindow()
 
 		self.pushScene(scene)
 		self._startAnimation()
@@ -240,23 +269,25 @@ class Director:
 			self._runningScene.onEnter()
 			self._runningScene.onEnterFromFinishedTransition()
 
-	def getAnimationInterval(self):
+	def getFramerate(self):
 		"""
 		Returns the animation interval. Default is C{30.0} FPS.
 
 		@return: Animation interval.
 		@rtype: C{float}
 		"""
-		return self._animationInterval
+		return self._framerate
 
-	def setAnimationInterval(self, animationInterval):
+	def setFramerate(self, framerate):
 		"""
 		Sets the animation interval, that is, the frames per second for the application. Note that this must be set before L{runWithScene} is called, otherwise this method will have no effect.
 
-		@param animationInterval: The animation interval (FPS).
-		@type animationInterval: C{float}
+		@param framerate: The animation interval (FPS).
+		@type framerate: C{float}
 		"""
-		self._animationInterval = animationInterval
+		self._framerate = framerate
+
+	framerate = property(getFramerate, setFramerate, doc="The application's framerate.")
 
 	def pause(self):
 		"""
@@ -264,8 +295,8 @@ class Director:
 		"""
 		if self._isPaused:
 			return
-		self._oldAnimationInterval = self._animationInterval
-		self.setAnimationInterval(1.0/4.0)
+		self._oldFramerate = self._framerate
+		self.setFramerate(1.0/4.0)
 		self._isPaused = True
 
 	def resume(self):
@@ -274,7 +305,7 @@ class Director:
 		"""
 		if not self._isPaused:
 			return
-		self.setAnimationInterval(self._oldAnimationInterval)
+		self.setFramerate(self._oldFramerate)
 		self._isPaused = False
 		self._dt = 0
 #}
@@ -294,7 +325,7 @@ class Director:
 		"""
 		Private method that sets up the L{_mainLoop} method to be called repeatedly.
 		"""
-		interval = self._animationInterval*1000
+		interval = self._framerate*1000
 		interval = int(interval)
 		gobject.timeout_add(interval, self._mainLoop)
 
@@ -307,7 +338,7 @@ class Director:
 			if not self._isRecording:
 				self._scheduler.tick(self._dt)
 			else:
-				self._scheduler.tick(self._animationInterval)
+				self._scheduler.tick(self._framerate)
 		if self._nextScene is not None:
 			self._setNextScene()
 		self._gtkInterface.redraw()	# This is not guaranteed to redraw within the same loop iteration as PyGTK accumulates redraw events before dispatching.
@@ -336,11 +367,11 @@ class Director:
 		self._frames += 1
 		self._accumDt += self._dt
 		if (self._accumDt > 0.1):
-			self._frameRate = self._frames/self._accumDt
+			self._displayedFramerate = self._frames/self._accumDt
 			self._frames = 0
 			self._accumDt = 0
-		string = "%.1f" % self._frameRate
-		self._gtkInterface._layout.setFrameRate(string)
+		string = "%.1f" % self._displayedFramerate
+		self._gtkInterface._layout.setFramerate(string)
 		#self._fpsLabel.setText(string)
 
 	def _stopAnimation(self):

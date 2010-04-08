@@ -14,7 +14,8 @@ class PathScene(Scene):
 
 	def onEnter(self):
 		Scene.onEnter(self)
-		action = EaseSineInOut(MoveAlongPath(5.0, self._path))
+		#action = EaseSineInOut(MoveAlongPath(5.0, self._path))
+		action = MoveAlongPath(5.0, self._path, isAutorotating=False)
 		self._sprite.runAction(action)
 
 if __name__ == "__main__":

@@ -58,8 +58,10 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class SlideInBottomTransition</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.Transition-pysrc.html#SlideInBottomTransition">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+                    
-                                    |                    
+                               object --+                
+                                        |                
+<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+   |                
+                                    |   |                
           <a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a> --+                
                                         |                
                                 <a href="cocosCairo.Node.Node-class.html">Node.Node</a> --+            
@@ -138,6 +140,20 @@
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Scene.Scene-class.html">Scene.Scene</a></code></b>:
       <code><a href="cocosCairo.Scene.Scene-class.html#setup">setup</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a></code></b>:
       <code><a href="cocosCairo.AbstractModel.ModelListener-class.html#onModelChange">onModelChange</a></code>
@@ -363,6 +379,107 @@
     </td>
   </tr>
 </table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Appearance methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#backgroundColor">backgroundColor</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#color">color</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#colors">colors</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#opacity">opacity</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#rotation">rotation</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#scale">scale</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#scaleX">scaleX</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#scaleY">scaleY</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#visible">visible</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#zOrder">zOrder</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Information methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#tag">tag</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#userData">userData</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Director methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#director">director</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Geometry methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#absolutePosition">absolutePosition</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#anchorPoint">anchorPoint</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#position">position</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#rect">rect</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#size">size</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#transformAnchorPoint">transformAnchorPoint</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Parenting methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#children">children</a></code>,
+      <code><a href="cocosCairo.Node.Node-class.html#parent">parent</a></code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Controller methods.</th></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.Node.Node-class.html">Node.Node</a></code></b>:
+      <code><a href="cocosCairo.Node.Node-class.html#controller">controller</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
 <table class="details" border="1" cellpadding="3"
@@ -478,7 +595,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Apr  3 20:02:06 2010
+    Generated by Epydoc 3.0.1 on Wed Apr  7 19:00:14 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

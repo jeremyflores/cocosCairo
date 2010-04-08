@@ -36,6 +36,8 @@ class Color:
 		"""
 		return [self.r, self.g, self.b, self.a]
 
+	values = property(getValues, doc="The list of colors.")
+
 	def getIntValues(self):
 		"""
 		Returns a list of the colors of the form C{[r, g, b, a]}, where r, g, b, and a are integers between C{0} and C{255}.
@@ -62,6 +64,8 @@ class Color:
 		self.g = g/255.
 		self.b = b/255.
 		self.a = a/255.
+
+	intValues = property(getIntValues, setIntValues, doc="The list of integer values.")
 
 	def getHexString(self):
 		"""
@@ -92,6 +96,8 @@ class Color:
 		else:
 			a = 255
 		self.setIntValues(r, g, b, a)
+
+	hexString = property(getHexString, setHexString, doc="A hexadecimal version of the color.")
 
 	def copy(self):
 		"""

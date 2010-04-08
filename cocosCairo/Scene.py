@@ -15,8 +15,6 @@ class Scene(Node):
 		"""
 		Node.__init__(self)
 		self._isAnchorPointRelative = False
-		#self._gestureListeners = []
-		#self._controllers = []	# there may be GestureListeners that are not Controllers
 		self._isSetupComplete = False
 
 	def _setDirector(self, director):

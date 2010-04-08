@@ -175,6 +175,8 @@ class Polygon:
 		"""
 		return [point.copy() for point in self._points]
 
+	points = property(getPoints, doc="An ordered list of the Polygon's Points.")
+
 	def getPointAtIndex(self, index):
 		"""
 		Returns a copy of the Point at the given index, if it exists. If not, it will return C{None}.
@@ -259,6 +261,8 @@ class Path:
 		@rtype: C{list}
 		"""
 		return self._points
+
+	points = property(getPoints, doc="A list of Points for the Path.")
 
 	def addPoint(self, point):
 		"""

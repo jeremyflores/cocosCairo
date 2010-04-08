@@ -36,7 +36,7 @@ _ALIGN_DICT = { \
 
 class PangoLabel(Node):
 	"""
-	A L{Node} used to render text to the screen.
+	A L{Node} used to render text to the screen. It is recommended that you do NOT use PangoLabel at this point due to rendering issues.
 
 	PangoLabel uses the Pango text-rendering library and provides an HTML-like markup language for in-line decoration (such as italics and underlining). See http://pygtk.org/docs/pygtk/pango-markup-language.html for the markup specification.
 	"""

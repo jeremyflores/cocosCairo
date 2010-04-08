@@ -80,12 +80,12 @@ class AbstractTransition(Scene):
 
 
 	def _setDirector(self, director):
+		self._srcScene = director.getRunningScene()
+		self._dstScene.setRect(self._srcScene.getRect())
 		Scene._setDirector(self, director)
 		self._dstScene._setDirector(director)
 		gestureDispatch = self.getDirector().getGestureDispatch()
 		gestureDispatch.setDispatching(False)	# disable events while transitioning
-		self._srcScene = director.getRunningScene()
-		self._dstScene.setRect(self._srcScene.getRect())
 		if self._srcScene == self._dstScene:
 			warnings.warn("TransitionScene's source and destination Scenes are the same.")
 
@@ -121,14 +121,14 @@ class RotoZoomTransition(AbstractTransition):
 		self._srcScene.setScale(1.0)
 		self._dstScene.setAnchorPoint(Point(0.5, 0.5))
 		self._srcScene.setAnchorPoint(Point(0.5, 0.5))
-		scaleAction1 = ScaleTo(self._duration/2, 0.001)
-		rotateAction1 = RotateBy(self._duration/2, math.pi*2)
+		scaleAction1 = ScaleTo(self._duration/2., 0.001)
+		rotateAction1 = RotateBy(self._duration/2., math.pi*2)
 		spawnAction1 = Spawn(scaleAction1, rotateAction1)
 		self._srcScene.runAction(spawnAction1)
-		scaleAction2 = ScaleTo(self._duration/2, 1.0)
-		rotateAction2 = RotateBy(self._duration/2, math.pi*2)
+		scaleAction2 = ScaleTo(self._duration/2., 1.0)
+		rotateAction2 = RotateBy(self._duration/2., math.pi*2)
 		spawnAction2 = Spawn(scaleAction2, rotateAction2)
-		delayAction2 = DelayTime(self._duration/2)
+		delayAction2 = DelayTime(self._duration/2.)
 		sequence2 = Sequence(delayAction2, spawnAction2, CallbackInstantAction(self.finish))
 		self._dstScene.runAction(sequence2)
 

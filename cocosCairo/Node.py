@@ -13,7 +13,7 @@ import warnings
 # TODO: add a convenience method to get and set the absolute position (that is, relative to the top-left of the screen).
 # TODO: possibly add some translation stuff so that the origin is at the bottom-left (and NOT top-left) of the screen.
 
-class Node(ModelListener):
+class Node(object, ModelListener):
 	"""
 	The base class for rendering items to the screen.
 
@@ -76,6 +76,8 @@ class Node(ModelListener):
 		"""
 		self._opacity = opacity
 
+	opacity = property(getOpacity, setOpacity, doc="The opacity for Node subclasses that use it.")
+
 	def getZOrder(self):
 		"""
 		The z-order of this current Node in relation to other Nodes.
@@ -93,6 +95,8 @@ class Node(ModelListener):
 		@type zOrder: C{int} (or C{float})
 		"""
 		self._zOrder = zOrder
+
+	zOrder = property(getZOrder, setZOrder, doc="The z-order of this current Node in relation to other Nodes.")
 
 	def isVisible(self):
 		"""
@@ -112,6 +116,8 @@ class Node(ModelListener):
 		"""
 		self._isVisible = isVisible
 
+	visible = property(isVisible, setVisible, doc="Whether or not this node and its children are visible.")
+
 	def getBackgroundColor(self):
 		"""
 		The background color of this Node. Default is L{ClearColor}.
@@ -123,12 +129,14 @@ class Node(ModelListener):
 
 	def setBackgroundColor(self, backgroundColor):
 		"""
-		Background color for the node. Default is C{Color(0,0,0,0)} (i.e. the background is fully transparent). Any child with a zOrder less than the node's zOrder will appear behind the background.
+		Background color for the Node. Default is C{Color(0,0,0,0)} (i.e. the background is fully transparent). Any child with a zOrder less than the node's zOrder will appear behind the background.
 
 		@param backgroundColor: The background color.
 		@type backgroundColor: L{Color}
 		"""
 		self._backgroundColor = backgroundColor.copy()
+
+	backgroundColor = property(getBackgroundColor, setBackgroundColor, doc="Background color for the Node.")
 
 	def getRotation(self):
 		"""
@@ -148,9 +156,11 @@ class Node(ModelListener):
 		"""
 		self._rotation = rotation
 
+	rotation = property(getRotation, setRotation, doc="The rotation angle of the Node in radians.")
+
 	def getScaleX(self):
 		"""
-		The scale factor for the X dimension. Default is C{1.0}.
+		The scale factor for the x-axis. Default is C{1.0}.
 
 		@return: Scale factor.
 		@rtype: C{float}
@@ -159,16 +169,18 @@ class Node(ModelListener):
 
 	def setScaleX(self, scaleX):
 		"""
-		Scale factor for the X dimension. Default is C{1.0}.
+		Scale factor for the x-axis. Default is C{1.0}.
 
-		@param scaleX: Scale factor for the X dimension.
+		@param scaleX: Scale factor for the x-axis.
 		@type scaleX: C{float}
 		"""
 		self._scaleX = scaleX
 
+	scaleX = property(getScaleX, setScaleX, doc="Scale factor for the y-axis.")
+
 	def getScaleY(self):
 		"""
-		The scale factor for the Y dimension. Default is C{1.0}.
+		The scale factor for the y-axis. Default is C{1.0}.
 
 		@return: Scale factor.
 		@rtype: C{float}
@@ -177,12 +189,14 @@ class Node(ModelListener):
 
 	def setScaleY(self, scaleY):
 		"""
-		Scale factor for the Y dimension. Default is C{1.0}.
+		Scale factor for the y-axis. Default is C{1.0}.
 
-		@param scaleY: Scale factor for the Y dimension.
+		@param scaleY: Scale factor for the y-axis.
 		@type scaleY: C{float}
 		"""
 		self._scaleY = scaleY
+
+	scaleY = property(getScaleY, setScaleY, doc="Scale factor for the y-axis.")
 
 	def getColor(self):
 		"""
@@ -201,6 +215,8 @@ class Node(ModelListener):
 		"""
 		self._color = color.copy()
 
+	color = property(getColor, setColor, doc="Foreground color for Node subclasses that use it.")
+
 	def setColors(self, r, g, b, a=1.0):
 		"""
 		Method for children who have special color values like, for example, tinting (see L{Sprite} and L{TintTo}).
@@ -211,6 +227,8 @@ class Node(ModelListener):
 		@param a: C{float}.
 		"""
 		self._color = Color(r, g, b, a)
+
+	colors = property(fset=setColors, doc="Foreground color for Node subclasses that use it.")
 
 	def getScale(self):
 		"""
@@ -232,6 +250,8 @@ class Node(ModelListener):
 		"""
 		self._scaleX = scale
 		self._scaleY = scale
+
+	scale = property(getScale, setScale, doc="The scale amount for both the x-axis and y-axis.")
 #}
 
 
@@ -254,6 +274,8 @@ class Node(ModelListener):
 		"""
 		self._userData = userData
 
+	userData = property(getUserData, setUserData, doc="Peripheral data which the developer wishes to attach.")
+
 	def getTag(self):
 		"""
 		A convenience string with which to identify this Node. Default is the empty string.
@@ -271,6 +293,8 @@ class Node(ModelListener):
 		@type tag: C{string}.
 		"""
 		self._tag = tag
+
+	tag = property(getTag, setTag, doc="A convenience string with which to identify this Node.")
 #}
 
 
@@ -283,6 +307,8 @@ class Node(ModelListener):
 		@rtype: L{Director} (or C{None})
 		"""
 		return self._director
+
+	director = property(getDirector, doc="Read-only access to the Director.")
 
 	def _setDirector(self, director):
 		"""
@@ -315,6 +341,8 @@ class Node(ModelListener):
 		'''
 		self._position = position.copy()
 
+	position = property(getPosition, setPosition, doc="The current position of the Node relative to its parent.")
+
 	def getAbsolutePosition(self):
 		"""
 		Returns the absolute position of this Node.
@@ -328,6 +356,8 @@ class Node(ModelListener):
 			node = node.getParent()
 			position = pointAdd(position, node.getPosition())
 		return position
+
+	absolutePosition = property(getAbsolutePosition, doc="Read-only access to the Node's absolute position.")
 
 	def getSize(self):
 		'''
@@ -349,6 +379,8 @@ class Node(ModelListener):
 		transformAnchor = Point(self._size.width*anchorPoint.x, self._size.height*anchorPoint.y)
 		self.setTransformAnchorPoint(transformAnchor)
 
+	size = property(getSize, setSize, doc="The size of the Node.")
+
 	def getRect(self):
 		"""
 		Returns the bounding box for the Node.
@@ -369,6 +401,8 @@ class Node(ModelListener):
 		self.setPosition(rect.point)
 		self.setSize(rect.size)
 
+	rect = property(getRect, setRect, doc="The bounding box of the Node.")
+
 	def getAnchorPoint(self):
 		"""
 		How the Node is displayed relative to its position. See L{setAnchorPoint} for a description.
@@ -388,6 +422,8 @@ class Node(ModelListener):
 		transformAnchor = Point(self._size.width*self._anchorPoint.x, self._size.height*self._anchorPoint.y)
 		self.setTransformAnchorPoint(transformAnchor)
 
+	anchorPoint = property(getAnchorPoint, setAnchorPoint, doc="How the Node is displayed relative to its children.")
+
 	def getTransformAnchorPoint(self):
 		"""
 		Returns how the Node is transformed relative to its position.
@@ -404,6 +440,8 @@ class Node(ModelListener):
 		@param anchorPoint: L{Point}, with both C{0 <= x <= 1} and C{0 <= y <= 1}.
 		"""
 		self._transformAnchor = anchorPoint.copy()
+
+	transformAnchorPoint = property(getTransformAnchorPoint, setTransformAnchorPoint, doc="How the Node is transformed relative to its position.")
 #}
 
 
@@ -417,6 +455,8 @@ class Node(ModelListener):
 		"""
 		return self._parent
 
+	parent = property(getParent, doc="Read-only access to the parent Node.")
+
 	def getChildren(self):
 		"""
 		Returns a list of children.
@@ -425,6 +465,8 @@ class Node(ModelListener):
 		@rtype: C{List}
 		"""
 		return self._children
+
+	children = property(getChildren, doc="Read-only access to the list of all children.")
 
 	def getChildByTag(self, tag):
 		"""
@@ -555,9 +597,11 @@ class Node(ModelListener):
 		"""
 		return self._controller
 
+	controller = property(getController, doc="Read-only access to the Node's current controller.")
+
 	def addController(self, controller):
 		"""
-		Adds an L{AbstractController} to the Scene. This method will parent the controller's Node to the Scene as well as automatically register it as a listener.
+		Adds an L{AbstractController} to the Node. This method will parent the controller's Node to this Node as well as automatically register it as a listener.
 
 		@param controller: The controller to add.
 		@type controller: L{AbstractController}
@@ -572,7 +616,7 @@ class Node(ModelListener):
 
 	def removeController(self, controller):
 		"""
-		Removes a Controller from the Scene. This method will deparent the controller's Node from the Scene as well as automatically unregister it as a listener.
+		Removes a Controller from the Node. This method will deparent the controller's Node from this Node as well as automatically unregister it as a listener.
 
 		@param controller: The controller to remove.
 		@type controller: L{AbstractController}

@@ -52,7 +52,7 @@ class GTKLayout(gtk.Layout):
 		label.setPosition(Point(0, self._size.height/2))
 		self._renderNode.addChild(label)
 
-		self._frameRate = None
+		self._framerate = None
 		self._exposeCounter = 0
 		self.set_flags(gtk.CAN_FOCUS)
 		self.grab_focus()
@@ -177,8 +177,8 @@ class GTKLayout(gtk.Layout):
 		if not os.path.exists(self._screenshotPath):
 			os.makedirs(self._screenshotPath)
 
-	def setFrameRate(self, frameRate):
-		self._frameRate = frameRate
+	def setFramerate(self, framerate):
+		self._framerate = framerate
 
 	def _onExpose(self, widget, event):
 		context = widget.bin_window.cairo_create()
@@ -200,12 +200,12 @@ class GTKLayout(gtk.Layout):
 		if scene is not None:
 			scene._visit(context)
 
-		if self._frameRate is not None:
+		if self._framerate is not None:
 			context.move_to(0, self._size.height-10)
 			context.set_font_size(14)
 			context.set_source_rgb(1,1,1)
-			context.show_text(self._frameRate)
-			self._frameRate = None
+			context.show_text(self._framerate)
+			self._framerate = None
 
 		# Done with the new context state, so pop it.
 		context.restore()

@@ -543,6 +543,6 @@ class cocosCairoScene(Scene,GestureListener):
 if __name__ == "__main__":
 	director = Director()
 	director.setWindow()
-	#director.runWithScene(ActionScene())
+	director.runWithScene(ActionScene())
 	#director.runWithScene(RedrawScene())
-	director.runWithScene(cocosCairoScene())
+	#director.runWithScene(cocosCairoScene())

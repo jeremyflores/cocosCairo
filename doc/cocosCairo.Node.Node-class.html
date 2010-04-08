@@ -58,8 +58,10 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class Node</h1><p class="nomargin-top"><span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node">source&nbsp;code</a></span></p>
 <pre class="base-tree">
-<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+    
-                                    |    
+                               object --+
+                                        |
+<a href="cocosCairo.AbstractListener.AbstractListener-class.html">AbstractListener.AbstractListener</a> --+   |
+                                    |   |
           <a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a> --+
                                         |
                                        <strong class="uidshort">Node</strong>
@@ -117,6 +119,20 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code><a href="cocosCairo.AbstractModel.ModelListener-class.html">AbstractModel.ModelListener</a></code></b>:
       <code><a href="cocosCairo.AbstractModel.ModelListener-class.html#onModelChange">onModelChange</a></code>
       </p>
@@ -255,7 +271,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setBackgroundColor" class="summary-sig-name">setBackgroundColor</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">backgroundColor</span>)</span><br />
-      Background color for the node.</td>
+      Background color for the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setBackgroundColor">source&nbsp;code</a></span>
             
@@ -307,7 +323,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScaleX" class="summary-sig-name">getScaleX</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      The scale factor for the X dimension.</td>
+      The scale factor for the x-axis.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScaleX">source&nbsp;code</a></span>
             
@@ -325,7 +341,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScaleX" class="summary-sig-name">setScaleX</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">scaleX</span>)</span><br />
-      Scale factor for the X dimension.</td>
+      Scale factor for the x-axis.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScaleX">source&nbsp;code</a></span>
             
@@ -342,7 +358,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScaleY" class="summary-sig-name">getScaleY</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      The scale factor for the Y dimension.</td>
+      The scale factor for the y-axis.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.getScaleY">source&nbsp;code</a></span>
             
@@ -360,7 +376,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScaleY" class="summary-sig-name">setScaleY</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">scaleY</span>)</span><br />
-      Scale factor for the Y dimension.</td>
+      Scale factor for the y-axis.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.setScaleY">source&nbsp;code</a></span>
             
@@ -999,7 +1015,7 @@
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#addController" class="summary-sig-name">addController</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">controller</span>)</span><br />
       Adds an <a href="cocosCairo.AbstractController-module.html" 
-      class="link">AbstractController</a> to the Scene.</td>
+      class="link">AbstractController</a> to the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.addController">source&nbsp;code</a></span>
             
@@ -1017,7 +1033,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#removeController" class="summary-sig-name">removeController</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">controller</span>)</span><br />
-      Removes a Controller from the Scene.</td>
+      Removes a Controller from the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Node-pysrc.html#Node.removeController">source&nbsp;code</a></span>
             
@@ -1454,6 +1470,225 @@
     </td>
   </tr>
 </table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Appearance methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#opacity" class="summary-name">opacity</a><br />
+      The opacity for Node subclasses that use it.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#zOrder" class="summary-name">zOrder</a><br />
+      The z-order of this current Node in relation to other Nodes.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#visible" class="summary-name">visible</a><br />
+      Whether or not this node and its children are visible.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#backgroundColor" class="summary-name">backgroundColor</a><br />
+      Background color for the Node.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#rotation" class="summary-name">rotation</a><br />
+      The rotation angle of the Node in radians.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#scaleX" class="summary-name">scaleX</a><br />
+      Scale factor for the y-axis.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#scaleY" class="summary-name">scaleY</a><br />
+      Scale factor for the y-axis.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#color" class="summary-name">color</a><br />
+      Foreground color for Node subclasses that use it.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#colors" class="summary-name">colors</a><br />
+      Foreground color for Node subclasses that use it.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#scale" class="summary-name">scale</a><br />
+      The scale amount for both the x-axis and y-axis.
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Information methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#userData" class="summary-name">userData</a><br />
+      Peripheral data which the developer wishes to attach.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#tag" class="summary-name">tag</a><br />
+      A convenience string with which to identify this Node.
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Director methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#director" class="summary-name">director</a><br />
+      Read-only access to the Director.
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Geometry methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#position" class="summary-name">position</a><br />
+      The current position of the Node relative to its parent.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#absolutePosition" class="summary-name">absolutePosition</a><br />
+      Read-only access to the Node's absolute position.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#size" class="summary-name">size</a><br />
+      The size of the Node.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#rect" class="summary-name">rect</a><br />
+      The bounding box of the Node.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#anchorPoint" class="summary-name">anchorPoint</a><br />
+      How the Node is displayed relative to its children.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#transformAnchorPoint" class="summary-name">transformAnchorPoint</a><br />
+      How the Node is transformed relative to its position.
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Parenting methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#parent" class="summary-name">parent</a><br />
+      Read-only access to the parent Node.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#children" class="summary-name">children</a><br />
+      Read-only access to the list of all children.
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Controller methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Node.Node-class.html#controller" class="summary-name">controller</a><br />
+      Read-only access to the Node's current controller.
+    </td>
+  </tr>
+</table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
 <table class="details" border="1" cellpadding="3"
@@ -1497,6 +1732,9 @@
           href="cocosCairo.Geometry-module.html#RectZero" 
           class="link">RectZero</a>.</li>
     </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
   </dl>
 </td></tr></table>
 </div>
@@ -1680,7 +1918,7 @@
     </td>
   </tr></table>
   
-  <p>Background color for the node. Default is <code>Color(0,0,0,0)</code> 
+  <p>Background color for the Node. Default is <code>Color(0,0,0,0)</code> 
   (i.e. the background is fully transparent). Any child with a zOrder less 
   than the node's zOrder will appear behind the background.</p>
   <dl class="fields">
@@ -1752,7 +1990,7 @@
     </td>
   </tr></table>
   
-  <p>The scale factor for the X dimension. Default is <code>1.0</code>.</p>
+  <p>The scale factor for the x-axis. Default is <code>1.0</code>.</p>
   <dl class="fields">
     <dt>Returns: <code>float</code></dt>
         <dd>Scale factor.</dd>
@@ -1774,11 +2012,11 @@
     </td>
   </tr></table>
   
-  <p>Scale factor for the X dimension. Default is <code>1.0</code>.</p>
+  <p>Scale factor for the x-axis. Default is <code>1.0</code>.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>scaleX</code></strong> (<code>float</code>) - Scale factor for the X dimension.</li>
+        <li><strong class="pname"><code>scaleX</code></strong> (<code>float</code>) - Scale factor for the x-axis.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1797,7 +2035,7 @@
     </td>
   </tr></table>
   
-  <p>The scale factor for the Y dimension. Default is <code>1.0</code>.</p>
+  <p>The scale factor for the y-axis. Default is <code>1.0</code>.</p>
   <dl class="fields">
     <dt>Returns: <code>float</code></dt>
         <dd>Scale factor.</dd>
@@ -1819,11 +2057,11 @@
     </td>
   </tr></table>
   
-  <p>Scale factor for the Y dimension. Default is <code>1.0</code>.</p>
+  <p>Scale factor for the y-axis. Default is <code>1.0</code>.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>scaleY</code></strong> (<code>float</code>) - Scale factor for the Y dimension.</li>
+        <li><strong class="pname"><code>scaleY</code></strong> (<code>float</code>) - Scale factor for the y-axis.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -2643,8 +2881,8 @@
   </tr></table>
   
   <p>Adds an <a href="cocosCairo.AbstractController-module.html" 
-  class="link">AbstractController</a> to the Scene. This method will parent
-  the controller's Node to the Scene as well as automatically register it 
+  class="link">AbstractController</a> to the Node. This method will parent 
+  the controller's Node to this Node as well as automatically register it 
   as a listener.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
@@ -2670,8 +2908,8 @@
     </td>
   </tr></table>
   
-  <p>Removes a Controller from the Scene. This method will deparent the 
-  controller's Node from the Scene as well as automatically unregister it 
+  <p>Removes a Controller from the Node. This method will deparent the 
+  controller's Node from this Node as well as automatically unregister it 
   as a listener.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
@@ -3092,6 +3330,450 @@
 </td></tr></table>
 </div>
 <br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="opacity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">opacity</h3>
+  <p>The opacity for Node subclasses that use it.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getOpacity" class="summary-sig-name">getOpacity</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the opacity for Node subclasses that use it.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setOpacity" class="summary-sig-name">setOpacity</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">opacity</span>)</span>
+        - Sets the opacity for Node subclasses that use it.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="zOrder"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">zOrder</h3>
+  <p>The z-order of this current Node in relation to other Nodes.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getZOrder" class="summary-sig-name">getZOrder</a>(<span class="summary-sig-arg">self</span>)</span>
+        - The z-order of this current Node in relation to other Nodes.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setZOrder" class="summary-sig-name">setZOrder</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">zOrder</span>)</span>
+        - Sets the z-order of this current Node in relation to other Nodes.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="visible"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">visible</h3>
+  <p>Whether or not this node and its children are visible.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#isVisible" class="summary-sig-name">isVisible</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Whether or not this Node and its children are visible.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setVisible" class="summary-sig-name">setVisible</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">isVisible</span>)</span>
+        - Whether or not this node and its children are visible.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="backgroundColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">backgroundColor</h3>
+  <p>Background color for the Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getBackgroundColor" class="summary-sig-name">getBackgroundColor</a>(<span class="summary-sig-arg">self</span>)</span>
+        - The background color of this Node.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setBackgroundColor" class="summary-sig-name">setBackgroundColor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">backgroundColor</span>)</span>
+        - Background color for the Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rotation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rotation</h3>
+  <p>The rotation angle of the Node in radians.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getRotation" class="summary-sig-name">getRotation</a>(<span class="summary-sig-arg">self</span>)</span>
+        - The current angle at which this Node is rotated.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setRotation" class="summary-sig-name">setRotation</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rotation</span>)</span>
+        - The rotation angle in radians.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scaleX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">scaleX</h3>
+  <p>Scale factor for the y-axis.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScaleX" class="summary-sig-name">getScaleX</a>(<span class="summary-sig-arg">self</span>)</span>
+        - The scale factor for the x-axis.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScaleX" class="summary-sig-name">setScaleX</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scaleX</span>)</span>
+        - Scale factor for the x-axis.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scaleY"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">scaleY</h3>
+  <p>Scale factor for the y-axis.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScaleY" class="summary-sig-name">getScaleY</a>(<span class="summary-sig-arg">self</span>)</span>
+        - The scale factor for the y-axis.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScaleY" class="summary-sig-name">setScaleY</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scaleY</span>)</span>
+        - Scale factor for the y-axis.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="color"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">color</h3>
+  <p>Foreground color for Node subclasses that use it.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getColor" class="summary-sig-name">getColor</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the foreground color for Node subclasses that use it.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setColor" class="summary-sig-name">setColor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">color</span>)</span>
+        - Method for children who have special color values like, for example, 
+      tinting (see <a href="cocosCairo.Sprite-module.html" 
+      class="link">Sprite</a> and <a 
+      href="cocosCairo.IntervalAction.TintTo-class.html" 
+      class="link">TintTo</a>).
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="colors"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">colors</h3>
+  <p>Foreground color for Node subclasses that use it.</p>
+  <dl class="fields">
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setColors" class="summary-sig-name">setColors</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">g</span>,
+        <span class="summary-sig-arg">b</span>,
+        <span class="summary-sig-arg">a</span>=<span class="summary-sig-default">1.0</span>)</span>
+        - Method for children who have special color values like, for example, 
+      tinting (see <a href="cocosCairo.Sprite-module.html" 
+      class="link">Sprite</a> and <a 
+      href="cocosCairo.IntervalAction.TintTo-class.html" 
+      class="link">TintTo</a>).
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scale"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">scale</h3>
+  <p>The scale amount for both the x-axis and y-axis.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getScale" class="summary-sig-name">getScale</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the scale amount if both scaleX and scaleY are equal.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setScale" class="summary-sig-name">setScale</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scale</span>)</span>
+        - Set the scale amount for both the x-axis and y-axis.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="userData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">userData</h3>
+  <p>Peripheral data which the developer wishes to attach.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getUserData" class="summary-sig-name">getUserData</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Any peripheral data the user wishes to attach.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setUserData" class="summary-sig-name">setUserData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">userData</span>)</span>
+        - Any peripheral data the user wishes to attach.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="tag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">tag</h3>
+  <p>A convenience string with which to identify this Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getTag" class="summary-sig-name">getTag</a>(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience string with which to identify this Node.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setTag" class="summary-sig-name">setTag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span>
+        - A convenience string with which to identify this Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="director"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">director</h3>
+  <p>Read-only access to the Director.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getDirector" class="summary-sig-name">getDirector</a>(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience method to get the <a 
+      href="cocosCairo.Director-module.html" class="link">Director</a> of 
+      the application.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="position"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">position</h3>
+  <p>The current position of the Node relative to its parent.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getPosition" class="summary-sig-name">getPosition</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Get the current position of the Node relative to its parent.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setPosition" class="summary-sig-name">setPosition</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">position</span>)</span>
+        - Sets the current position of the Node relative to its parent.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="absolutePosition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">absolutePosition</h3>
+  <p>Read-only access to the Node's absolute position.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getAbsolutePosition" class="summary-sig-name">getAbsolutePosition</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the absolute position of this Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="size"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">size</h3>
+  <p>The size of the Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getSize" class="summary-sig-name">getSize</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the size of this Node.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setSize" class="summary-sig-name">setSize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>)</span>
+        - Sets the size of the Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rect</h3>
+  <p>The bounding box of the Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getRect" class="summary-sig-name">getRect</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the bounding box for the Node.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setRect" class="summary-sig-name">setRect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rect</span>)</span>
+        - Sets the rectangle for the Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="anchorPoint"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">anchorPoint</h3>
+  <p>How the Node is displayed relative to its children.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getAnchorPoint" class="summary-sig-name">getAnchorPoint</a>(<span class="summary-sig-arg">self</span>)</span>
+        - How the Node is displayed relative to its position.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setAnchorPoint" class="summary-sig-name">setAnchorPoint</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">anchorPoint</span>)</span>
+        - Sets how the Node is displayed on the screen relative to its 
+      position.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="transformAnchorPoint"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">transformAnchorPoint</h3>
+  <p>How the Node is transformed relative to its position.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getTransformAnchorPoint" class="summary-sig-name">getTransformAnchorPoint</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns how the Node is transformed relative to its position.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#setTransformAnchorPoint" class="summary-sig-name">setTransformAnchorPoint</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">anchorPoint</span>)</span>
+        - Sets how the Node is transformed relative to its position.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="parent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">parent</h3>
+  <p>Read-only access to the parent Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getParent" class="summary-sig-name">getParent</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the parent Node of this Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="children"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">children</h3>
+  <p>Read-only access to the list of all children.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getChildren" class="summary-sig-name">getChildren</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns a list of children.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="controller"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">controller</h3>
+  <p>Read-only access to the Node's current controller.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Node.Node-class.html#getController" class="summary-sig-name">getController</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the controller of this Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -3118,7 +3800,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sat Apr  3 20:02:05 2010
+    Generated by Epydoc 3.0.1 on Wed Apr  7 19:00:13 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

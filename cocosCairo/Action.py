@@ -30,6 +30,8 @@ class AbstractAction:
 		"""
 		self._tag = tag
 
+	tag = property(getTag, setTag, doc="The tag of this Action.")
+
 	def getOriginalOwner(self):
 		"""
 		Returns the owner of the Action when the Action is started via L{start}. (When the Action is stopped via L{stop}, it will no longer have an owner.) If the owner has not yet been defined, it will return C{None}.
@@ -38,6 +40,8 @@ class AbstractAction:
 		@rtype: C{defined by subclasses} (or C{None} if not yet defined)
 		"""
 		return self._originalOwner
+
+	originalOwner = property(getOriginalOwner, doc="Read-only access to the owner of the Action when the Action is started.")
 
 	def getOwner(self):
 		"""
@@ -56,6 +60,8 @@ class AbstractAction:
 		@type owner: C{defined by subclasses}
 		"""
 		self._owner = owner
+
+	owner = property(getOwner, setOwner, doc="The current owner of the Action.")
 #}
 
 
@@ -141,6 +147,8 @@ class FiniteTimeAction(AbstractAction):
 		@type duration: C{float} (non-negative)
 		"""
 		self._duration = duration
+
+	duration = property(getDuration, setDuration, doc="The duration of the Action.")
 #}
 
 	def reverse(self):
@@ -228,6 +236,8 @@ class Speed(AbstractAction):
 		@type speed: C{float} (non-negative)
 		"""
 		self._speed = speed
+
+	speed = property(getSpeed, setSpeed, doc="The scale at which the Action's speed will be modified.")
 #}
 
 	def start(self, owner):

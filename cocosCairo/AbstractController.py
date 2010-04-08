@@ -66,6 +66,8 @@ class AbstractController(GestureListener):
 		if parent is not None:
 			parent.addChild(self._node, zOrder)
 
+	node = property(getNode, setNode, doc="The controller's Node.")
+
 	def getModel(self):
 		"""
 		Returns the model for this Node. If a Model has not yet been assigned, it will return C{None}.
@@ -90,6 +92,8 @@ class AbstractController(GestureListener):
 			self._model.addListener(self._node)
 			self._model.notifyListener(self._node)	# update the node with the model info
 
+	model = property(getModel, setModel, doc="The controller's model.")
+
 	def getDirector(self):
 		"""
 		Returns the L{Director} of the controller's L{Node}. This will return C{None} if there is currently no Node or if the Node has not yet been attached to the Director.
@@ -101,6 +105,8 @@ class AbstractController(GestureListener):
 			return self._node.getDirector()
 		else:
 			return None
+
+	director = property(getDirector, doc="Read-only access to the Director.")
 #}
 
 

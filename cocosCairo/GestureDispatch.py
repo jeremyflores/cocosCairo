@@ -42,6 +42,8 @@ class GestureDispatch(ListenedObject):
 		@type isDispatching: C{bool}
 		"""
 		self._isDispatching = isDispatching
+
+	dispatching = property(isDispatching, setDispatching, doc="Whether or not the GestureDispatch will send out events.")
 #}
 
 

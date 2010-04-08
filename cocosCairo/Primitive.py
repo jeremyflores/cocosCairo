@@ -355,6 +355,8 @@ class PolygonNode(AbstractFillableNode):
 		"""
 		AbstractFillableNode.__init__(self, fillColor, strokeColor, strokeThickness)
 		self._polygon = None
+		self._minX = 0
+		self._minY = 0
 		if polygon is not None:
 			self.setPolygon(polygon)
 
@@ -382,6 +384,8 @@ class PolygonNode(AbstractFillableNode):
 		minY = min(allY)
 		maxY = max(allY)
 		rect = MakeRect(minX, minY, maxX-minX, maxY-minY)
+		self._minX = minX
+		self._minY = minY
 		self.setRect(rect)
 		self._polygon = polygon
 #}
@@ -392,8 +396,8 @@ class PolygonNode(AbstractFillableNode):
 			return
 		color = self._fillColor
 		context.set_source_rgba(color.r, color.g, color.b, color.a)
-		x = self.getRect().point.x
-		y = self.getRect().point.y
+		x = self._minX
+		y = self._minY
 		context.move_to(points[0].x-x, points[0].y-y)
 		for point in points[1:]:
 			context.line_to(point.x-x, point.y-y)

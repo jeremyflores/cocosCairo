@@ -79,6 +79,8 @@ class AbstractEaseRateAction(AbstractEaseAction):
 		"""
 		self._rate = rate
 
+	rate = property(getRate, setRate, doc="The rate at which the curve will change.")
+
 	def reverse(self):
 		"""
 		Returns a new copy of the L{AbstractEaseRateAction} whose wrapped Action is reversed and whose rate is inverted.
@@ -238,6 +240,8 @@ class AbstractEaseElastic(AbstractEaseAction):
 
 	def setPeriod(self, period):
 		self._period = period
+
+	period = property(getPeriod, setPeriod)
 
 	def reverse(self):
 		"""
