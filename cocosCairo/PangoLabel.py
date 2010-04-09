@@ -87,6 +87,8 @@ class PangoLabel(Node):
 		"""
 		self._isAlwaysRedrawing = isAlwaysRedrawing
 
+	alwaysRendering = property(isAlwaysRedrawing, setAlwaysRedrawing, doc="Whether or not this Node should be redrawn every loop.")
+
 	def setWidth(self, width):
 		"""
 		This value is ignored if C{wrappingType} is set to "none".
@@ -115,6 +117,8 @@ class PangoLabel(Node):
 			self._markupText = markupText
 			self.dirty()
 
+	markupText = property(getMarkupText, setMarkupText, doc="The marked-up text to be rendered.")
+
 	def getAccelMarker(self):
 		"""
 		Returns the accel marker.
@@ -126,7 +130,7 @@ class PangoLabel(Node):
 
 	def setAccelMarker(self, accelMarker):
 		"""
-		Sets the accel marker for the marked=up text. Set it to C{None} if an accelMarker should not be used. Default is C{None}.
+		Sets the accel marker for the marked-up text. Set it to C{None} if an accelMarker should not be used. Default is C{None}.
 
 		@param accelMarker: The accel marker.
 		@type accelMarker: C{string}
@@ -134,6 +138,8 @@ class PangoLabel(Node):
 		if self._accelMarker != accelMarker:
 			self._accelMarker = accelMarker
 			self.dirty()
+
+	accelMarker = property(getAccelMarker, setAccelMarker, doc="The accel marker for the marked-up text.")
 
 	def getFontFamily(self):
 		"""
@@ -157,6 +163,8 @@ class PangoLabel(Node):
 			self._fontFamily = fontFamily
 			self.dirty()
 
+	fontFamily = property(getFontFamily, setFontFamily, doc="The font family of the text.")
+
 	def getFontSize(self):
 		"""
 		Returns the font size for the text. Default is C{12}.
@@ -176,6 +184,8 @@ class PangoLabel(Node):
 		if self._fontSize != fontSize:
 			self._fontSize = fontSize
 			self.dirty()
+
+	fontSize = property(getFontSize, setFontSize, doc="The font size of the text.")
 
 	def isItalic(self):
 		"""
@@ -197,11 +207,13 @@ class PangoLabel(Node):
 			self._isItalic = isItalic
 			self.dirty()
 
+	italic = property(isItalic, setItalic, doc="Whether or not the rendered text will be italicized.")
+
 	def isSmallCaps(self):
 		"""
 		Returns whether or not the text is rendered in small caps. Default is C{False}.
 
-		@return: Whether or not hte text is rendered in small caps.
+		@return: Whether or not the text is rendered in small caps.
 		@rtype: C{bool}
 		"""
 		return self._isSmallCaps
@@ -216,6 +228,8 @@ class PangoLabel(Node):
 		if self._isSmallCaps != isSmallCaps:
 			self._isSmallCaps = isSmallCaps
 			self.dirty()
+
+	smallCaps = property(isSmallCaps, setSmallCaps, doc="Whether or not the text will be rendered in small caps.")
 
 	def getFontWeight(self):
 		"""
@@ -237,6 +251,8 @@ class PangoLabel(Node):
 			self._fontWeight = fontWeight
 			self.dirty()
 
+	fontWeight = property(getFontWeight, setFontWeight, doc="The font weight of the text.")
+
 	def getFontStretch(self):
 		"""
 		Gets the amount by which the text will be stretched.
@@ -256,6 +272,8 @@ class PangoLabel(Node):
 		if self._fontStretch != fontStretch:
 			self._fontStretch = fontStretch
 			self.dirty()
+
+	fontStretch = property(getFontStretch, setFontStretch, doc="The amount by which the text will be stretched.")
 
 	def getWrappingType(self):
 		"""
@@ -283,6 +301,8 @@ class PangoLabel(Node):
 			self._wrappingType = wrappingType
 			self.dirty()
 
+	wrappingType = property(getWrappingType, setWrappingType, doc="How the text is wrapped across multiple lines.")
+
 	def getIndentation(self):
 		"""
 		Returns the amount by which the text is indented. Default is C{0.0}.
@@ -303,6 +323,8 @@ class PangoLabel(Node):
 			self._indentation = indentation
 			self.dirty()
 
+	indentation = property(getIndentation, setIndentation, doc="The amount by which the text is indented.")
+
 	def getSpacing(self):
 		"""
 		Returns the spacing between lines of text. Default is C{0.0}.
@@ -322,6 +344,8 @@ class PangoLabel(Node):
 		if self._spacing != spacing:
 			self._spacing = spacing
 			self.dirty()
+
+	spacing = property(getSpacing, setSpacing, doc="The spacing amount between lines of text.")
 
 	def isJustified(self):
 		"""
@@ -345,6 +369,8 @@ class PangoLabel(Node):
 			self._isJustified = isJustified
 			self.dirty()
 
+	justified = property(isJustified, setJustified, doc="Whether or not the text is justified.")
+
 	def getAlignment(self):
 		"""
 		Returns the alignment for the text. Default is C{"left"}. See L{setAlignment} for more details.
@@ -367,6 +393,8 @@ class PangoLabel(Node):
 			self._alignment = alignment
 			self.dirty()
 
+	alignment = property(getAlignment, setAlignment, doc="The alignment for the text.")
+
 	def isSingleParagraph(self):
 		"""
 		Returns whether or not the text is rendered as a single paragraph. Default is C{False}.
@@ -386,6 +414,8 @@ class PangoLabel(Node):
 		if self._isSingleParagraph != isSingleParagraph:
 			self._isSingleParagraph = isSingleParagraph
 			self.dirty()
+
+	singleParagraph = property(isSingleParagraph, setSingleParagraph, doc="Whether or not the text should be treated as a single paragraph.")
 
 	def draw(self, context):
 		# TODO: making the layout in the drawing method might slow down rendering / cause flickering. Maybe

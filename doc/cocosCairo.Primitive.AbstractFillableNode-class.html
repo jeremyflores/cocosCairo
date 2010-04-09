@@ -147,7 +147,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#getFillColor" class="summary-sig-name">getFillColor</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the color which will fill the rectangle.</td>
+      Returns the color which will fill the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Primitive-pysrc.html#AbstractFillableNode.getFillColor">source&nbsp;code</a></span>
             
@@ -165,7 +165,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#setFillColor" class="summary-sig-name">setFillColor</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fillColor</span>)</span><br />
-      Sets the color which will fill the rectangle.</td>
+      Sets the color which will fill the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Primitive-pysrc.html#AbstractFillableNode.setFillColor">source&nbsp;code</a></span>
             
@@ -182,7 +182,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#getStrokeColor" class="summary-sig-name">getStrokeColor</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the color which will outline the rectangle.</td>
+      Returns the Color which will outline the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Primitive-pysrc.html#AbstractFillableNode.getStrokeColor">source&nbsp;code</a></span>
             
@@ -200,7 +200,7 @@
         <tr>
           <td><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#setStrokeColor" class="summary-sig-name">setStrokeColor</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">strokeColor</span>)</span><br />
-      Sets the color which will outline the rectangle.</td>
+      Sets the Color which will outline the Node.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="cocosCairo.Primitive-pysrc.html#AbstractFillableNode.setStrokeColor">source&nbsp;code</a></span>
             
@@ -518,6 +518,33 @@
   </tr>
 <tr bgcolor="#e8f0f8" >
   <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Accessor methods.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Primitive.AbstractFillableNode-class.html#fillColor" class="summary-name">fillColor</a><br />
+      The color which will fill the Node.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Primitive.AbstractFillableNode-class.html#strokeColor" class="summary-name">strokeColor</a><br />
+      The Color which will outline the Node.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="cocosCairo.Primitive.AbstractFillableNode-class.html#strokeThickness" class="summary-name">strokeThickness</a><br />
+      The thickness of the outline.
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
     >&nbsp;&nbsp;&nbsp;&nbsp;Appearance methods.</th></tr>
   <tr>
     <td colspan="2" class="summary">
@@ -774,7 +801,7 @@
     </td>
   </tr></table>
   
-  <p>Returns the color which will fill the rectangle. Default is <a 
+  <p>Returns the color which will fill the Node. Default is <a 
   href="cocosCairo.Color-module.html#WhiteColor" 
   class="link">WhiteColor()</a>.</p>
   <dl class="fields">
@@ -798,7 +825,7 @@
     </td>
   </tr></table>
   
-  <p>Sets the color which will fill the rectangle.</p>
+  <p>Sets the color which will fill the Node.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -822,7 +849,7 @@
     </td>
   </tr></table>
   
-  <p>Returns the color which will outline the rectangle. Default is <a 
+  <p>Returns the Color which will outline the Node. Default is <a 
   href="cocosCairo.Color-module.html#ClearColor" 
   class="link">ClearColor()</a>.</p>
   <dl class="fields">
@@ -846,7 +873,7 @@
     </td>
   </tr></table>
   
-  <p>Sets the color which will outline the rectangle.</p>
+  <p>Sets the Color which will outline the Node.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -902,6 +929,85 @@
 </td></tr></table>
 </div>
 <br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="fillColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">fillColor</h3>
+  <p>The color which will fill the Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#getFillColor" class="summary-sig-name">getFillColor</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the color which will fill the Node.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#setFillColor" class="summary-sig-name">setFillColor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fillColor</span>)</span>
+        - Sets the color which will fill the Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="strokeColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">strokeColor</h3>
+  <p>The Color which will outline the Node.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#getStrokeColor" class="summary-sig-name">getStrokeColor</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the Color which will outline the Node.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#setStrokeColor" class="summary-sig-name">setStrokeColor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">strokeColor</span>)</span>
+        - Sets the Color which will outline the Node.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="strokeThickness"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">strokeThickness</h3>
+  <p>The thickness of the outline.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#getStrokeThickness" class="summary-sig-name">getStrokeThickness</a>(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the thickness of the outline.
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="cocosCairo.Primitive.AbstractFillableNode-class.html#setStrokeThickness" class="summary-sig-name">setStrokeThickness</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">strokeThickness</span>)</span>
+        - Sets the thickness of the outline.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -928,7 +1034,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Apr  7 19:00:13 2010
+    Generated by Epydoc 3.0.1 on Fri Apr  9 14:54:59 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

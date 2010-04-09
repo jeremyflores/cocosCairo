@@ -117,6 +117,8 @@ class Label(Node):
 		if self._isAnimated is not True:
 			self._setDisplayText(self._text)
 
+	text = property(getText, setText, doc="The text to be rendered to the screen.")
+
 	def getFontSize(self):
 		"""
 		Returns the text's current font size.
@@ -136,6 +138,8 @@ class Label(Node):
 		self._fontSize = fontSize
 		self._updateSize()
 
+	fontSize = property(getFontSize, setFontSize, doc="The font size for the Label.")
+
 	def getFontFamily(self):
 		"""
 		Returns the font family for the Label. Default is "serif".
@@ -153,6 +157,8 @@ class Label(Node):
 		@type fontFamily: C{string}
 		"""
 		self._fontFamily = fontFamily
+
+	fontFamily = property(getFontFamily, setFontFamily, doc="The font family for the Label.")
 
 	def isItalic(self):
 		"""
@@ -172,6 +178,8 @@ class Label(Node):
 		"""
 		self._isItalic = isItalic
 
+	italic = property(isItalic, setItalic, doc="Whether or not the text will be italicized.")
+
 	def isBold(self):
 		"""
 		Returns whether or not the text will be bolded. Default is C{False}.
@@ -189,6 +197,8 @@ class Label(Node):
 		@type isBold: C{bool}
 		"""
 		self._isBold = isBold
+
+	bold = property(isBold, setBold, doc="Whether or not the text will be bolded.")
 #}
 
 	def draw(self, context):

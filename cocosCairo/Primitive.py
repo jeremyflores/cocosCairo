@@ -36,6 +36,7 @@ class PathNode(Node):
 		self.setPath(path)
 		self.setColor(color)
 
+#{ Accessor methods.
 	def getPath(self):
 		"""
 		Returns the Path to be displayed.
@@ -55,6 +56,8 @@ class PathNode(Node):
 		self._isRelative = isinstance(path, RelativePath)
 		self._path = path
 
+	path = property(getPath, setPath, doc="The Path to be displayed.")
+
 	def getThickness(self):
 		"""
 		Returns the thickness of the line. Default is 2.0.
@@ -72,6 +75,9 @@ class PathNode(Node):
 		@type thickness: C{float}
 		"""
 		self._thickness = thickness
+
+	thickness = property(getThickness, setThickness, doc="The thickness of the line.")
+#}
 
 	def getOpacity(self):
 		"""
@@ -156,6 +162,8 @@ class LineNode(Node):
 		self._startPoint = startPoint.copy()
 		self._updateRect()
 
+	startPoint = property(getStartPoint, setStartPoint, doc="The starting point of the LineNode.")
+
 	def getEndPoint(self):
 		"""
 		Returns the end point of the LineNode.
@@ -175,6 +183,8 @@ class LineNode(Node):
 		self._endPoint = endPoint.copy()
 		self._updateRect()
 
+	endPoint = property(getEndPoint, setEndPoint, doc="The ending point of the LineNode.")
+
 	def getThickness(self):
 		"""
 		Returns the thickness of the line. Default is 2.0.
@@ -192,6 +202,8 @@ class LineNode(Node):
 		@type thickness: C{float}
 		"""
 		self._thickness = thickness
+
+	thickness = property(getThickness, setThickness, doc="The thickness of the line.")
 #}
 
 
@@ -285,7 +297,7 @@ class AbstractFillableNode(Node):
 #{ Accessor methods.
 	def getFillColor(self):
 		"""
-		Returns the color which will fill the rectangle. Default is L{WhiteColor()}.
+		Returns the color which will fill the Node. Default is L{WhiteColor()}.
 
 		@return: Fill color.
 		@rtype: L{Color}
@@ -294,16 +306,18 @@ class AbstractFillableNode(Node):
 
 	def setFillColor(self, fillColor):
 		"""
-		Sets the color which will fill the rectangle.
+		Sets the color which will fill the Node.
 
 		@param fillColor: Fill color.
 		@rtype: L{Color}
 		"""
 		self._fillColor = fillColor.copy()
 
+	fillColor = property(getFillColor, setFillColor, doc="The color which will fill the Node.")
+
 	def getStrokeColor(self):
 		"""
-		Returns the color which will outline the rectangle. Default is L{ClearColor()}.
+		Returns the Color which will outline the Node. Default is L{ClearColor()}.
 
 		@return: Stroke color.
 		@rtype: L{Color}
@@ -312,12 +326,14 @@ class AbstractFillableNode(Node):
 
 	def setStrokeColor(self, strokeColor):
 		"""
-		Sets the color which will outline the rectangle.
+		Sets the Color which will outline the Node.
 
 		@param strokeColor: Stroke color.
 		@type strokeColor: L{Color}
 		"""
 		self._strokeColor = strokeColor.copy()
+
+	strokeColor = property(getStrokeColor, setStrokeColor, doc="The Color which will outline the Node.")
 
 	def getStrokeThickness(self):
 		"""
@@ -336,6 +352,8 @@ class AbstractFillableNode(Node):
 		@type strokeThickness: C{float}
 		"""
 		self._strokeThickness = strokeThickness
+
+	strokeThickness = property(getStrokeThickness, setStrokeThickness, doc="The thickness of the outline.")
 #}
 
 
@@ -388,6 +406,8 @@ class PolygonNode(AbstractFillableNode):
 		self._minY = minY
 		self.setRect(rect)
 		self._polygon = polygon
+
+	polygon = property(getPolygon, setPolygon, doc="The Polygon to be rendered.")
 #}
 
 	def draw(self, context):

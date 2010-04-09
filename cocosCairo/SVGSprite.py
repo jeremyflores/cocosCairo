@@ -156,6 +156,8 @@ class SVGSprite(Node):
 		tree.parse(self._svgName)
 		self._setupSVGParsingWithTree(tree)
 
+	svgName = property(getSVGName, setSVGName, doc="The file path of the SVG file to be rendered.")
+
 	'''
 	def setSVGString(self, string):
 		"""

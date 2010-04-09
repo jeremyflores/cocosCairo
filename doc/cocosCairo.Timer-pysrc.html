@@ -74,7 +74,7 @@
 <a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">                @type interval: Non-negative C{float}</tt> </tt>
 <a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
 <a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt> <tt class="py-op">=</tt> <tt class="py-name">callback</tt> </tt>
-<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_interval</tt> <tt class="py-op">=</tt> <tt class="py-name">interval</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_interval</tt> <tt class="py-op">=</tt> <tt id="link-0" class="py-name" targets="Variable cocosCairo.Timer.Timer.interval=cocosCairo.Timer.Timer-class.html#interval"><a title="cocosCairo.Timer.Timer.interval" class="py-name" href="#" onclick="return doclink('link-0', 'interval', 'link-0');">interval</a></tt> </tt>
 <a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">=</tt> <tt class="py-op">-</tt><tt class="py-number">1.0</tt> </tt>
 </div><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
 <a name="Timer.getInterval"></a><div id="Timer.getInterval-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="Timer.getInterval-toggle" onclick="return toggle('Timer.getInterval');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Timer.Timer-class.html#getInterval">getInterval</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
@@ -93,23 +93,25 @@
 <a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">                @param interval: How often the callback will be called.</tt> </tt>
 <a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-docstring">                @type interval: C{float}</tt> </tt>
 <a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
-<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_interval</tt> <tt class="py-op">=</tt> <tt class="py-name">interval</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_interval</tt> <tt class="py-op">=</tt> <tt id="link-1" class="py-name"><a title="cocosCairo.Timer.Timer.interval" class="py-name" href="#" onclick="return doclink('link-1', 'interval', 'link-0');">interval</a></tt> </tt>
 </div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
-<a name="Timer.fire"></a><div id="Timer.fire-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="Timer.fire-toggle" onclick="return toggle('Timer.fire');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Timer.Timer-class.html#fire">fire</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">dt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="Timer.fire-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Timer.fire-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
-<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"><tt class="py-docstring">                Causes the timer to call the callback.</tt> </tt>
-<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
-<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-docstring">                @param dt: The amount of time that has elapsed since the last time it was fired.</tt> </tt>
-<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring">                @type dt: Non-negative C{float}</tt> </tt>
-<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
-<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">==</tt> <tt class="py-op">-</tt><tt class="py-number">1.0</tt><tt class="py-op">:</tt> </tt>
-<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">=</tt> <tt class="py-number">0.0</tt> </tt>
-<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
-<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">+=</tt> <tt class="py-name">dt</tt> </tt>
-<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_interval</tt><tt class="py-op">:</tt> </tt>
-<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt><tt class="py-op">)</tt> </tt>
-<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">=</tt> <tt class="py-number">0.0</tt> </tt>
-</div></div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt id="link-2" class="py-name"><a title="cocosCairo.Timer.Timer.interval" class="py-name" href="#" onclick="return doclink('link-2', 'interval', 'link-0');">interval</a></tt> <tt class="py-op">=</tt> <tt class="py-name">property</tt><tt class="py-op">(</tt><tt id="link-3" class="py-name" targets="Method cocosCairo.Timer.Timer.getInterval()=cocosCairo.Timer.Timer-class.html#getInterval"><a title="cocosCairo.Timer.Timer.getInterval" class="py-name" href="#" onclick="return doclink('link-3', 'getInterval', 'link-3');">getInterval</a></tt><tt class="py-op">,</tt> <tt id="link-4" class="py-name" targets="Method cocosCairo.Timer.Timer.setInterval()=cocosCairo.Timer.Timer-class.html#setInterval"><a title="cocosCairo.Timer.Timer.setInterval" class="py-name" href="#" onclick="return doclink('link-4', 'setInterval', 'link-4');">setInterval</a></tt><tt class="py-op">,</tt> <tt class="py-name">doc</tt><tt class="py-op">=</tt><tt class="py-string">"How often the callback will be called."</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"> </tt>
+<a name="Timer.fire"></a><div id="Timer.fire-def"><a name="L42"></a><tt class="py-lineno">42</tt> <a class="py-toggle" href="#" id="Timer.fire-toggle" onclick="return toggle('Timer.fire');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="cocosCairo.Timer.Timer-class.html#fire">fire</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">dt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Timer.fire-collapsed" style="display:none;" pad="++" indent="++++++++++++"></div><div id="Timer.fire-expanded"><a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                <tt class="py-docstring">"""</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-docstring">                Causes the timer to call the callback.</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">                @param dt: The amount of time that has elapsed since the last time it was fired.</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-docstring">                @type dt: Non-negative C{float}</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"><tt class="py-docstring">                """</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">==</tt> <tt class="py-op">-</tt><tt class="py-number">1.0</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">=</tt> <tt class="py-number">0.0</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">+=</tt> <tt class="py-name">dt</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_interval</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_callback</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_elapsed</tt> <tt class="py-op">=</tt> <tt class="py-number">0.0</tt> </tt>
+</div></div><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--
 expandto(location.href);
 // -->
@@ -142,7 +144,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Apr  7 19:00:15 2010
+    Generated by Epydoc 3.0.1 on Fri Apr  9 14:55:01 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

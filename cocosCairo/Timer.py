@@ -37,6 +37,8 @@ class Timer:
 		"""
 		self._interval = interval
 
+	interval = property(getInterval, setInterval, doc="How often the callback will be called.")
+
 	def fire(self, dt):
 		"""
 		Causes the timer to call the callback.
