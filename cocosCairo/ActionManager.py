@@ -6,7 +6,7 @@ from Scheduler import *
 from Timer import *
 from Action import *
 
-class ActionManager:
+class ActionManager(object):
 	"""
 	Manages all L{AbstractAction}C{s} for the application. It is responsible for updating Actions whenever the L{Scheduler} ticks.
 

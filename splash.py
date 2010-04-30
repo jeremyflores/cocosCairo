@@ -8,10 +8,10 @@ class SplashScene(Scene):
 	def setup(self):
 		self.setBackgroundColor(WhiteColor())
 		self.label = Label("cocosCairo", Point(530,-130), color=BlackColor())
-		self.label.setAnchorPoint(Point(0.5, 0.5))
-		self.label.setFontSize(72)
-		self.label.setRotation(0.3)
-		self.label.setBold(True)
+		self.label.anchorPoint = Point(0.5, 0.5)
+		self.label.fontSize = 72
+		self.label.rotation = 0.3
+		self.label.bold = True
 		self.addChild(self.label)
 
 	def onEnterFromFinishedTransition(self):

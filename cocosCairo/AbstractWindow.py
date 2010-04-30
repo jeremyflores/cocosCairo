@@ -1,4 +1,4 @@
-class AbstractWindow:
+class AbstractWindow(object):
 	"""
 	"""
 	def __init__(self):

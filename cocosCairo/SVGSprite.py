@@ -109,6 +109,8 @@ class SVGSprite(Node):
 			self.setSVGAttribute("height", size.height)
 			Node.setSize(self, size)
 
+	size = property(getSize, setSize)
+
 	def getOpacity(self):
 		"""
 		Returns the opacity of the SVG. If the SVG tag does not have an opacity attribute (or if the SVG file has not yet been set), then it will return C{1.0}.
@@ -133,6 +135,8 @@ class SVGSprite(Node):
 		@type opacity: C{float}
 		"""
 		self.setSVGAttribute("opacity", opacity)
+
+	opacity = property(getOpacity, setOpacity)
 
 #{ SVG methods.
 	def getSVGName(self):

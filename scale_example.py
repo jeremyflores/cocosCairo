@@ -10,7 +10,7 @@ class MainScene(Scene):
 
 		rect2 = MakeRect(0, self.size.height/2, 50, 50)
 		self.rectNode2 = RectangleNode(rect2, WhiteColor())
-		self.rectNode2.setScale(2.0)
+		self.rectNode2.scale = 2.0
 		self.rectNode2.anchorPoint = Point(0.5, 0.5)
 		self.addChild(self.rectNode2)
 
@@ -33,5 +33,6 @@ class MainScene(Scene):
 
 if __name__ == "__main__":
 	director = Director()
+	director.showingFPS = True
 	scene = MainScene()
 	director.runWithScene(scene)

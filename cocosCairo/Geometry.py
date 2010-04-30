@@ -5,7 +5,9 @@ Defines basic Geometry classes like Point, Rect, or Polygon as well as helper ge
 import math
 import random
 
-class Size:
+PI = math.pi
+
+class Size(object):
 	"""
 	The size of some object (usually a L{Node}), given as its width and height (usually in pixels). A Size is considered a primitive, so its values may be accessed directly. If you wish to render geometric shapes to the screen, see the C{Primitive} module.
 	"""
@@ -38,7 +40,7 @@ class Size:
 
 
 
-class Point:
+class Point(object):
 	"""
 	A two-dimensional coordinate (usually for a L{Node}), given as its x-coordinate and its y-coordinate (usually in pixels). Note that, due to the rendering aspects of Cairo, an increase in the y-coordinate usually means that the point has moved downwards (and not, as might be intuitive, upwards). A Point is considered a primitive, so its values may be accessed directly.
 	"""
@@ -70,7 +72,7 @@ class Point:
 		return Point(self.x, self.y)
 
 
-class Rect:
+class Rect(object):
 	"""
 	A L{Point} and a L{Size} which are used to define a rectangle. A Rect is considered a primitive, so its values may be accessed directly.
 
@@ -151,7 +153,7 @@ class Rect:
 		return Rect(self.point.copy(), self.size.copy())
 
 
-class Polygon:
+class Polygon(object):
 	"""
 	A sequence of L{Point}C{s} which defines a polygon. Note that the polygon is assumed to be closed by having the last given Point connect to the first given Point.
 	"""
@@ -240,7 +242,7 @@ class Polygon:
 		return oddNodes
 
 
-class Path:
+class Path(object):
 	"""
 	A sequence of L{Point}C{s} which defines a path.
 	"""
@@ -530,6 +532,21 @@ def pointDistance(p1, p2):
 
 
 #{ Point line functions.
+def pointForVector(point, length, angle):
+	"""
+	Returns the point whose distance from the given point is the given length and whose angle from the x-axis is the given angle.
+
+	@param point: The point of reference.
+	@type point: L{Point}
+	@param length: The distance from the point of reference.
+	@type length: C{float}
+	@param angle: The angle (in radians) from the x-axis.
+	@type angle: C{float}
+	"""
+	x = point.x + length*math.cos(angle)
+	y = point.y + length*math.sin(angle)
+	return Point(x,y)
+
 def pointProjectToLine(p1, m, b):
 	"""
 	Projects a point onto a line (that is, it constructs a line perpendicular to the given line that intersects the given point, then returns where the given line and perpendicular line intersect).

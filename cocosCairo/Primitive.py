@@ -97,6 +97,8 @@ class PathNode(Node):
 		"""
 		self._color.a = opacity
 
+	opacity = property(getOpacity, setOpacity)
+
 	def draw(self, context):
 		points = self._path.getPoints()
 		if len(points) < 2:
@@ -239,6 +241,8 @@ class LineNode(Node):
 		"""
 		self._color.a = opacity
 
+	opacity = property(getOpacity, setOpacity)
+
 	def draw(self, context):
 		context.set_line_width(self._thickness)
 		context.set_source_rgba(self._color.r, self._color.g, self._color.b, self._color.a)
@@ -288,11 +292,15 @@ class AbstractFillableNode(Node):
 		"""
 		self._fillColor.a = opacity
 
+	opacity = property(getOpacity, setOpacity)
+
 	def getColor(self):
 		return self.getFillColor()
 
 	def setColor(self, color):
 		self.setFillColor(color)
+
+	color = property(getColor, setColor)
 
 #{ Accessor methods.
 	def getFillColor(self):
@@ -471,6 +479,8 @@ class EllipseNode(AbstractFillableNode):
 
 	def setColor(self, color):
 		self._fillColor = color
+
+	color = property(getColor, setColor, doc="The fill color of the ellipse.")
 
 	def draw(self, context):
 		context.save()

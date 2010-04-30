@@ -225,7 +225,7 @@ class GTKLayout(gtk.Layout):
 
 
 # TODO: this class will likely have to change to appropriately accommodate both Sugar activities and normal windowed applications.
-class GTKInterface:
+class GTKInterface(object):
 	"""
 	Provides an interface between cocosCairo and PyGTK.
 	"""

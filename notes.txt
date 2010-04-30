@@ -8,7 +8,11 @@ The framework includes a built-in (and optional!) model-view-controller design p
 
 Also, since cocosCairo is built on PyGTK and PyCairo, it is also compatible with traditional PyGTK widgets.
 
+
 epydoc -v -o doc cocosCairo/
+
+
+TODO:
 
 Set up SVGSprite to be dirtied?
 
@@ -16,8 +20,14 @@ Make Particle system
 
 Make Animation action
 
-Possibly make _onEnter / _onEnterFromFinishedTransition / _onExit so users don't have to call super.
+Possibly make willEnter, didEnter, willEnterFromFinishedTransition, didEnterFromFinishedTransition, willExit, didExit so users don't have to call super.
 
 Implement double buffering?
 
 Maybe have key press/release events have a list of pressed keys
+
+Look into more intelligent drawing such that only dirtied Nodes are redrawn. Currently all Nodes are redrawn every iteration (except the PangoLabel).
+
+Clean up SystemBlock to use PathNodes.
+
+Clean up SystemDiagram in general to be more legible (no need for list comprehensions or lambda functions).

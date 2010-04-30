@@ -96,6 +96,8 @@ class Label(Node):
 	def setOpacity(self, opacity):
 		self._color.a = opacity
 
+	opacity = property(getOpacity, setOpacity)
+
 #{ Accessor methods.
 	def getText(self):
 		"""
@@ -202,7 +204,7 @@ class Label(Node):
 #}
 
 	def draw(self, context):
-		color = self.getColor()
+		color = self.color
 		context.set_source_rgba(color.r, color.g, color.b, color.a)
 		if self._isItalic:
 			slantFlag = _SLANT_DICT["italic"]

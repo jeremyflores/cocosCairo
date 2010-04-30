@@ -7,18 +7,18 @@ class PathScene(Scene):
 		pathNode = PathNode(self._path)
 		self.addChild(pathNode)
 		self._sprite = Sprite("images/pulse.png")
-		self._sprite.setAnchorPoint(Point(0.5,0.5))
-		self._sprite.setScale(0.25)
-		self._sprite.setPosition(Point(100,100))
+		self._sprite.anchorPoint = Point(0.5,0.5)
+		self._sprite.scale = 0.25
+		self._sprite.position = Point(100,100)
 		self.addChild(self._sprite)
 
 	def onEnter(self):
 		Scene.onEnter(self)
-		#action = EaseSineInOut(MoveAlongPath(5.0, self._path))
-		action = MoveAlongPath(5.0, self._path, isAutorotating=False)
+		action = MoveAlongPath(5.0, self._path, isAutorotating=True)
+		#action = EaseSineInOut(action)
 		self._sprite.runAction(action)
 
 if __name__ == "__main__":
 	director = Director()
-	director.setWindow()
+	director.showingFPS = True
 	director.runWithScene(PathScene())

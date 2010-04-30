@@ -20,18 +20,18 @@ class MazeScene(Scene):
 		self._mazePathController = MazePathController(self._modelPath)
 		self.addController(self._mazePathController)
 
-		x = self.getSize().width/2
-		y = self.getSize().height/2
-		self._mazePathController.getNode().setPosition(Point(x,y))
+		x = self.size.width/2
+		y = self.size.height/2
+		self._mazePathController.node.position = Point(x,y)
 
-		self._mazePathController.getNode().setOpacity(0.0)
+		self._mazePathController.node.opacity = 0.0
 		action = EaseSineInOut(FadeIn(1.0))
 		cbAction = CallbackInstantAction(self._onFadeInCompletion)
 		sequence = Sequence(action, cbAction)
-		self._mazePathController.getNode().runAction(sequence)
+		self._mazePathController.node.runAction(sequence)
 
 	def _onFadeInCompletion(self):
-		self._mazePathController.getNode().showPieces()
+		self._mazePathController.node.showPieces()
 
 class MazePathModel(AbstractModel):
 	def __init__(self, filepath):
@@ -64,14 +64,22 @@ class MazePathModel(AbstractModel):
 	def getModelArray(self):
 		return self._modelArray
 
+	modelArray = property(getModelArray)
+
 	def getPlayerLocation(self):
 		return self._playerLocation
+
+	playerLocation = property(getPlayerLocation)
 
 	def getGoalLocation(self):
 		return self._goalLocation
 
+	goalLocation = property(getGoalLocation)
+
 	def getMoveCount(self):
 		return self._moveCount
+
+	moveCount = property(getMoveCount)
 
 	def movePlayerLocation(self, direction):
 		self._moveCount += 1
@@ -111,12 +119,12 @@ class MazePathNode(Node):
 		self._player = None
 		self._goal = None
 		self._tileSize = 50
-		self.setAnchorPoint(Point(0.5, 0.5))
+		self.anchorPoint = Point(0.5, 0.5)
 
 	def setOpacity(self, opacity):
 		Node.setOpacity(self, opacity)
-		for child in self.getChildren():
-			child.setOpacity(opacity)
+		for child in self.children:
+			child.opacity = opacity
 
 	def onModelChange(self, model):
 		if not model:
@@ -124,10 +132,10 @@ class MazePathNode(Node):
 		# render the tiles
 		if not self._hasRenderedTiles:
 			self._hasRenderedTiles = True
-			modelArray = model.getModelArray()
+			modelArray = model.modelArray
 			width = self._tileSize * len(modelArray[0])
 			height = self._tileSize * len(modelArray)
-			self.setSize(Size(width, height))
+			self.size = Size(width, height)
 			for i in range(0, len(modelArray[0])):
 				for j in range(0, len(modelArray)):
 					x = i*self._tileSize
@@ -143,15 +151,15 @@ class MazePathNode(Node):
 					self.addChild(rectangle, 1)
 
 		# set up the player's sprite
-		x = model.getPlayerLocation()[0] * self._tileSize
-		y = model.getPlayerLocation()[1] * self._tileSize
+		x = model.playerLocation[0] * self._tileSize
+		y = model.playerLocation[1] * self._tileSize
 		if not self._player:
 			self._player = Sprite("images/character.png", Point(x,y))
 			self.addChild(self._player,3)
-			self._player.setScale(0.01)
-			self._player.setAnchorPoint(Point(0.5,0.5))
-			size = self._player.getSize().width
-			self._player.setPosition(pointAdd(self._player.getPosition(), Point(size/2, size/2)))
+			self._player.scale = 0.01
+			self._player.anchorPoint = Point(0.5,0.5)
+			size = self._player.size.width
+			self._player.position = pointAdd(self._player.position, Point(size/2, size/2))
 		else:
 			self._hasFinishedActions = False
 			action = EaseSineInOut(MoveTo(0.05, Point(x,y)))
@@ -160,17 +168,17 @@ class MazePathNode(Node):
 			self._player.runAction(sequence)
 
 		# set up the goal sprite
-		x = model.getGoalLocation()[0] * self._tileSize
-		y = model.getGoalLocation()[1] * self._tileSize
+		x = model.goalLocation[0] * self._tileSize
+		y = model.goalLocation[1] * self._tileSize
 		if not self._goal:
 			self._goal = Sprite("images/goal.png", Point(x,y))
 			self.addChild(self._goal,2)
-			self._goal.setScale(0.01)
-			self._goal.setAnchorPoint(Point(0.5,0.5))
-			size = self._goal.getSize().width
-			self._goal.setPosition(pointAdd(self._goal.getPosition(), Point(size/2, size/2)))
+			self._goal.scale = 0.01
+			self._goal.anchorPoint = Point(0.5,0.5)
+			size = self._goal.size.width
+			self._goal.position = pointAdd(self._goal.getPosition(), Point(size/2, size/2))
 		else:
-			self._goal.setPosition(Point(x,y))
+			self._goal.position = Point(x,y)
 
 	def showPieces(self):
 		if self._goal:
@@ -179,18 +187,18 @@ class MazePathNode(Node):
 			self._goal.runAction(sequence)
 
 	def onGoalScaleCompletion(self):
-		self._goal.setAnchorPoint(PointZero())
-		size = self._goal.getSize().width
-		self._goal.setPosition(pointSub(self._goal.getPosition(), Point(size/2, size/2)))
+		self._goal.anchorPoint = PointZero()
+		size = self._goal.size.width
+		self._goal.position = pointSub(self._goal.position, Point(size/2, size/2))
 		if self._player:
 			action = EaseBounceOut(ScaleTo(0.75, 1.0))
 			sequence = Sequence(action, CallbackInstantAction(self.onPlayerScaleCompletion))
 			self._player.runAction(sequence)
 
 	def onPlayerScaleCompletion(self):
-		self._player.setAnchorPoint(PointZero())
-		size = self._player.getSize().width
-		self._player.setPosition(pointSub(self._player.getPosition(), Point(size/2, size/2)))
+		self._player.anchorPoint = PointZero()
+		size = self._player.size.width
+		self._player.position = pointSub(self._player.getPosition(), Point(size/2, size/2))
 		self._hasFinishedActions = True
 
 	def onPlayerMotionCompletion(self):
@@ -217,18 +225,18 @@ class MazePathController(AbstractController):
 
 		key = event.key
 		if key == "Left":
-			self.getModel().movePlayerLocation("left")
+			self.model.movePlayerLocation("left")
 		elif key == "Right":
-			self.getModel().movePlayerLocation("right")
+			self.model.movePlayerLocation("right")
 		elif key == "Up":
-			self.getModel().movePlayerLocation("up")
+			self.model.movePlayerLocation("up")
 		elif key == "Down":
-			self.getModel().movePlayerLocation("down")
+			self.model.movePlayerLocation("down")
 
-		if self.getModel().getPlayerLocation() == self.getModel().getGoalLocation():
-			winScene = WinScene(self.getModel().getMoveCount())
+		if self.model.playerLocation == self.model.goalLocation:
+			winScene = WinScene(self.model.moveCount)
 			transition = MoveInTopTransition(.5, winScene)
-			self.getDirector().replaceScene(transition)
+			self.director.replaceScene(transition)
 		return True
 
 
@@ -239,18 +247,24 @@ class WinScene(Scene, GestureListener):
 		self._moveCount = moveCount
 
 	def setup(self):
-		self.setBackgroundColor(WhiteColor())
-		size = self.getSize()
+		self.backgroundColor = WhiteColor()
+		size = self.size
 		winLabel = Label("You win!", Point(size.width/2, 50), BlackColor())
-		winLabel.setFontSize(72)
-		winLabel.setAnchorPoint(Point(0.5, 0.5))
-#		movesLabel = Label("moves", 
+		winLabel.fontSize = 72
+		winLabel.anchorPoint = Point(0.5, 0.5)
 		self.addChild(winLabel)
-		self.setMarkupText(0)
+		self._moveCountLabel = Label("00", Point(size.width/2, 300), BlackColor())
+		self._moveCountLabel.anchorPoint = Point(0.5, 0.5)
+		self._moveCountLabel.fontSize = 72
+		self.addChild(self._moveCountLabel)
+		movesLabel = Label("moves", Point(size.width/2, 400), BlackColor())
+		movesLabel.anchorPoint = Point(0.5, 0.5)
+		movesLabel.fontSize = 72
+		self.addChild(movesLabel)
 
 	def onEnter(self):
 		Scene.onEnter(self)
-		self.getDirector().getGestureDispatch().addListener(self)
+		self.director.gestureDispatch.addListener(self)
 
 	def onEnterFromFinishedTransition(self):
 		Scene.onEnterFromFinishedTransition(self)
@@ -258,25 +272,17 @@ class WinScene(Scene, GestureListener):
 
 	def onExit(self):
 		Scene.onExit(self)
-		self.getDirector().getGestureDispatch().removeListener(self)
+		self.director.gestureDispatch.removeListener(self)
 
 	def _updateCount(self, dt):
 		self._currentCount += 1
-		self.setMarkupText(self._currentCount)
+		if self._currentCount < 10:
+			countString = "0"+str(self._currentCount)
+		else:
+			countString = str(self._currentCount)
+		self._moveCountLabel.text = countString
 		if self._currentCount >= self._moveCount:
 			self.unscheduleCallback(self._updateCount)
-
-	def setMarkupText(self, count):
-		if count < 10:
-			countString = "0"+str(count)
-		else:
-			countString = str(count)
-		markupText =	'<span foreground="#000000" size="xx-large">You win!</span>' + \
-						'<span size="xx-small">\n\n</span>' + \
-						'<span foreground="#003399">You took\n' + \
-						'<span size="xx-large">' + countString + \
-						' moves\n</span>to complete the maze!</span>'
-		#self._label.setMarkupText(markupText)
 
 	def onKeyPress(self, event):
 		self._onEvent()
@@ -293,7 +299,7 @@ class WinScene(Scene, GestureListener):
 			path = MAZE_PATHS[PATH_INDEX]
 			PATH_INDEX += 1
 			transition = RotoZoomTransition(1.0, MazeScene(path))
-			self.getDirector().replaceScene(transition)
+			self.director.replaceScene(transition)
 		else:
 			PATH_INDEX = 0 # for right now, just loop through the mazes
 			self._onEvent()
@@ -306,4 +312,4 @@ if __name__ == "__main__":
 	PATH_INDEX += 1
 	transition = RotoZoomTransition(1.5, MazeScene(path))
 	director.runWithScene(SplashScene(transition))
-	#director.runWithScene(MazeScene(path))
+	#director.runWithScene(MazeScene(path))	# Use this to skip the splash scene.

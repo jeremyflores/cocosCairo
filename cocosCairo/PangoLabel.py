@@ -89,6 +89,9 @@ class PangoLabel(Node):
 
 	alwaysRendering = property(isAlwaysRedrawing, setAlwaysRedrawing, doc="Whether or not this Node should be redrawn every loop.")
 
+	def getWidth(self):
+		return self._width
+
 	def setWidth(self, width):
 		"""
 		This value is ignored if C{wrappingType} is set to "none".
@@ -96,6 +99,8 @@ class PangoLabel(Node):
 		if self._width != width:
 			self._width = width
 			self.dirty()	# self._size will be set when redrawn.
+
+	width = property(getWidth, setWidth)
 
 	def getMarkupText(self):
 		"""

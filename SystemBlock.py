@@ -5,8 +5,8 @@ import math
 class PulseNode(Sprite):
 	def __init__(self, position=None):
 		Sprite.__init__(self, "images/pulse.png", position)
-		self.setAnchorPoint(Point(0.5, 0.5))
-		self.setScale(0.25)
+		self.anchorPoint = Point(0.5, 0.5)
+		self.scale = 0.25
 
 	def onEnter(self):
 		Sprite.onEnter(self)
@@ -25,21 +25,28 @@ class ConnectionNode(Node):
 		self._startPoint = startPoint
 		self._endPoint = endPoint
 		angle = math.atan2((endPoint.y-startPoint.y),(endPoint.x-startPoint.x))
-		self.setSize(Size(length,1))
-		self.setPosition(startPoint)
-		self.setRotation(angle)
+		self.size = Size(length,1)
+		self.position = startPoint
+		self.rotation = angle
 		self._length = length
 		self._lineNode = LineNode(PointZero(), Point(length, 0.0), color)
 		self.addChild(self._lineNode, 1)
 
 	def getLineThickness(self):
-		return self._lineNode.getThickness()
+		return self._lineNode.thickness
 
 	def setLineThickness(self, thickness):
-		self._lineNode.setThickness(thickness)
+		self._lineNode.thickness = thickness
+
+	lineThickness = property(getLineThickness, setLineThickness)
+
+	def getColor(self):
+		return self._lineNode.color
 
 	def setColor(self, color):
-		self._lineNode.setColor(color)
+		self._lineNode.color = color
+
+	color = property(getColor, setColor)
 
 	def setColors(self, r, g, b, a=1.0):
 		self._lineNode.setColors(r, g, b, a)
@@ -57,10 +64,8 @@ class ConnectionNode(Node):
 		self.getParent().addChild(pulseNode, 2)	# parent the pulse node to the parent in case there are nearby ConnectionNodes: otherwise, the z-ordering will cause one of the pulse nodes to render beneath the other ConnectionNode's line node
 		fadeInAction = FadeIn(duration/3)
 		moveAction = MoveTo(duration/3, movePoint)
-		#moveAction = EaseExponentialInOut(moveAction)
 		moveAction = EaseSineInOut(moveAction)
-		cbAction = CallbackInstantAction(lambda:self.getParent().removeChild(pulseNode))
-		#cbAction = CallbackWithOwner(self._removePulseNode)
+		cbAction = CallbackInstantAction(lambda:self.parent.removeChild(pulseNode))
 		if callback is not None:
 			cbAction2 = CallbackWithOwnerAndData(callback, data)
 			sequence = Sequence(fadeInAction, moveAction, fadeInAction.reverse(), cbAction, cbAction2)
@@ -75,17 +80,17 @@ class SystemBlockNode(Node):
 	def __init__(self, rect=None):
 		self._background = SVGSprite("images/system_block.svg")
 		self._titleLabel = PangoLabel()
-		self._titleLabel.setWrappingType("word-char")
-		self._titleLabel.setFontWeight(1.0)
-		self._titleLabel.setAnchorPoint(Point(0.5, 0.0))
+		self._titleLabel.wrappingType = "word-char"
+		self._titleLabel.fontWeight = 1.0
+		self._titleLabel.anchorPoint = Point(0.5, 0.0)
 		self._titleMargin = 10
 		self._bodyLabel = PangoLabel()
-		self._bodyLabel.setWrappingType("word-char")
-		self._bodyLabel.setAnchorPoint(Point(0.5, 0.0))
+		self._bodyLabel.wrappingType = "word-char"
+		self._bodyLabel.anchorPoint = Point(0.5, 0.0)
 		self._bodyMargin = 50
 		if rect is None:
 			point = PointZero()
-			size = self._background.getSize()
+			size = self._background.size
 			rect = Rect(point, size)
 		Node.__init__(self, rect)
 		self.addChild(self._background, 1)
@@ -99,6 +104,8 @@ class SystemBlockNode(Node):
 		self._titleMargin = margin
 		self.dirty()
 
+	titleMargin = property(getTitleMargin, setTitleMargin)
+
 	def getBodyMargin(self):
 		return self._bodyMargin
 
@@ -106,30 +113,38 @@ class SystemBlockNode(Node):
 		self._bodyMargin = margin
 		self.dirty()
 
+	bodyMargin = property(getBodyMargin, setBodyMargin)
+
 	def dirty(self):
-		width = self.getSize().width
+		width = self.size.width
 		x = width/2
 		y = self._titleMargin
-		self._titleLabel.setPosition(Point(x,y))
-		self._titleLabel.setWidth(width)
+		self._titleLabel.position = Point(x,y)
+		self._titleLabel.width = width
 		y += self._bodyMargin
-		self._bodyLabel.setPosition(Point(x,y))
-		self._bodyLabel.setWidth(width)
+		self._bodyLabel.position = Point(x,y)
+		self._bodyLabel.width = width
 
 	def getTitleLabel(self):
 		return self._titleLabel
 
+	titleLabel = property(getTitleLabel)
+
 	def getBodyLabel(self):
 		return self._bodyLabel
 
+	bodyLabel = property(getBodyLabel)
+
 	def setSize(self, size):
 		Node.setSize(self, size)
-		self._background.setSize(size)
+		self._background.size = size
 		self.dirty()
 
+	size = property(Node.getSize, setSize)
+
 	def onModelChange(self, model):
-		self._titleLabel.setMarkupText(model.getTitleText())
-		self._bodyLabel.setMarkupText(model.getBodyText())
+		self._titleLabel.markupText = model.titleText
+		self._bodyLabel.markupText = model.bodyText
 
 class SystemBlockController(AbstractController):
 	def __init__(self, node=None, model=None):
@@ -152,8 +167,12 @@ class SystemBlockModel(AbstractModel):
 		self._titleText = titleText
 		self.didChange()
 
+	titleText = property(getTitleText, setTitleText)
+
 	def getBodyText(self):
 		return self._bodyText
 
 	def setBodyText(self, bodyText):
 		self._bodyText = bodyText
+
+	bodyText = property(getBodyText, setBodyText)

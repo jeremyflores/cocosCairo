@@ -25,7 +25,7 @@ import warnings
 gobject.threads_init()
 
 
-class Director:
+class Director(object):
 	"""
 	The central point of the application. It handles the main run loop, L{Scene} transitions, and propagating redraw events to the Scene's children. It is also the owner of the L{GestureDispatch}, L{ActionManager}, L{Scheduler}, and the L{GTKInterface}.
 

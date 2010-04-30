@@ -2,7 +2,7 @@
 Defines an RGBA color.
 """
 
-class Color:
+class Color(object):
 	"""
 	Defines an C{RGBA} (Red, Green, Blue, Alpha) color. A Color is considered a primitive, so its values may be accessed directly.
 	"""

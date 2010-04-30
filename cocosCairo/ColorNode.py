@@ -5,7 +5,7 @@ A Node which fills its bounding box with a given Color.
 from Node import *
 from Color import *
 
-class ColorNode(Node):
+class ColorNode(Node, object):
 	"""
 	A Node which fills its bounding box with a certain L{Color}. (Note that the ColorNode merely uses the backgroundColor to render the color, so setting the backgroundColor will actually be setting the ColorNode's color and vice versa).
 	"""
@@ -41,6 +41,8 @@ class ColorNode(Node):
 		"""
 		self.setBackgroundColor(color)
 
+	color = property(getColor, setColor)
+
 	def getOpacity(self):
 		"""
 		Returns the opacity of this Node (that is, the L{Color}'s alpha value).
@@ -60,3 +62,5 @@ class ColorNode(Node):
 		color = self.getColor()
 		color.a = opacity
 		self.setColor(color)
+
+	opacity = property(getOpacity, setOpacity)

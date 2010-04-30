@@ -6,7 +6,7 @@ from Node import *
 from GestureListener import *
 from AbstractModel import *
 
-class AbstractController(GestureListener):
+class AbstractController(GestureListener, object):
 	"""
 	The controller in the model-view-controller design pattern. Subclass this and override methods as needed to handle L{GestureEvent}s and to facilitate model-view communications.
 	"""

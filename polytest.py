@@ -5,7 +5,7 @@ import random
 class MyScene(Scene, GestureListener):
 	def setup(self):
 		points = []
-		for i in range(0,50):
+		for i in range(0,20):
 			point = Point(random.randint(0,800), random.randint(0,600))
 			points.append(point)
 		for point in points:
@@ -24,24 +24,24 @@ class MyScene(Scene, GestureListener):
 
 	def onEnter(self):
 		Scene.onEnter(self)
-		self.getDirector().getGestureDispatch().addListener(self)
+		self.director.gestureDispatch.addListener(self)
 
 	def onExit(self):
 		Scene.onExit(self)
-		self.getDirector().getGestureDispatch().removeListener(self)
+		self.director.gestureDispatch.removeListener(self)
 
 	def onMouseMotion(self, event):
 		point = event.point
 		if self._polygon.containsPoint(point):
 			if not self._isEntered:
 				self._isEntered = True
-				self._polygonNode.setFillColor(WhiteColor())
+				self._polygonNode.fillColor = WhiteColor()
 		else:
 			if self._isEntered:
 				self._isEntered = False
-				self._polygonNode.setFillColor(GreenColor())
+				self._polygonNode.fillColor = GreenColor()
 
 if __name__ == "__main__":
 	director = Director()
-	director.setWindow()
+	director.showingFPS = True
 	director.runWithScene(MyScene())

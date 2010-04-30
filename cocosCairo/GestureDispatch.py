@@ -14,7 +14,7 @@ _DOUBLE_PRESS_ENUM = 5
 # TODO: add drag and drop
 # TODO: possibly add onMouseEnter, onMouseLeave?
 
-class GestureDispatch(ListenedObject):
+class GestureDispatch(object, ListenedObject):
 	"""
 	A L{ListenedObject} that is responsible for sending user gestures to handlers (which could, but not necessarily, be an L{AbstractController}).
 	"""

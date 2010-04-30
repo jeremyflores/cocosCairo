@@ -30,7 +30,7 @@ class GraphNode(Node):
 			color = WhiteColor()
 		if axisColor is None:
 			axisColor = Color(0.5, 0.5, 0.5)
-		self.setColor(color)
+		self.color = color
 		self._axisColor = axisColor
 		self._table = []
 		self._pointNodes = []
@@ -42,9 +42,9 @@ class GraphNode(Node):
 		self._label.setOpacity(0.0)
 		self.addChild(self._label)
 		self._startingLabelPosition = Point(0,0)
-		self._label.setPosition(self._startingLabelPosition)
-		width = self.getSize().width
-		height = self.getSize().height
+		self._label.position = self._startingLabelPosition
+		width = self.size.width
+		height = self.size.height
 		for i in range(0, int(width/self._radius/2)):
 			x = i*4
 			y = height
@@ -54,14 +54,21 @@ class GraphNode(Node):
 			self.addChild(node, 3)
 		self._lineThickness = lineThickness
 
+	def getGraphName(self):
+		return self._graphName
+
 	def setGraphName(self, name):
 		self._graphName = name
+
+	graphName = property(getGraphName, setGraphName)
 
 	def clearTable(self):
 		self._table = []
 
 	def getTable(self):
 		return self._table
+
+	table = property(getTable)
 
 	def onEnterFromFinishedTransition(self):
 		Node.onEnterFromFinishedTransition(self)
@@ -72,14 +79,14 @@ class GraphNode(Node):
 			for node in self._pointNodes:
 				node.stopActionByTag("move")
 			self.startFloatUpExitSequence()
-			width = self.getSize().width
-			height = self.getSize().height
+			width = self.size.width
+			height = self.size.height
 			for i in range(0, int(width/self._radius/2)):
 				x = i*4
 				y = -self._table[i*len(self._table)/width*self._radius*2]*height
 				y += height
 				action = EaseExponentialInOut(MoveTo(self._pointChangeDuration, Point(x,y)))
-				action.setTag("move")
+				action.tag = "move"
 				node = self._pointNodes[i]
 				node.runAction(action)
 
@@ -89,11 +96,11 @@ class GraphNode(Node):
 	def startFloatUpEnterSequence(self):
 		# for the label / graph's title
 		self._label.stopAllActions()
-		self._label.setOpacity(0.0)
-		self._label.setText(self._graphName)
-		self._label.setPosition(self._startingLabelPosition)
-		x = self._label.getPosition().x
-		y = self._label.getPosition().y
+		self._label.opacity = 0.0
+		self._label.text = self._graphName
+		self._label.position = self._startingLabelPosition
+		x = self._label.position.x
+		y = self._label.position.y
 		duration = self._pointChangeDuration
 		action1 = FadeIn(duration*3/4)
 		action2 = EaseSineOut(MoveBy(duration*3/4, Point(0, -25)))
@@ -113,8 +120,8 @@ class GraphNode(Node):
 
 	def draw(self, context):
 		# draws the axes and the grid
-		width = self.getSize().width
-		height = self.getSize().height
+		width = self.size.width
+		height = self.size.height
 		color = self._axisColor
 		context.set_line_width(self._lineThickness)
 		context.set_source_rgba(color.r, color.g, color.b, color.a)
@@ -140,14 +147,14 @@ class TableAction(AbstractIntervalAction):
 		AbstractIntervalAction.__init__(self, duration)
 
 	def start(self, owner):
-		self.setOwner(owner)
-		self.getOwner().clearTable()
+		self.owner = owner
+		self.owner.clearTable()
 
 	def update(self, dt):
-		self.getOwner().getTable().append(dt)
+		self.owner.table.append(dt)
 
 	def stop(self):
-		self.getOwner().didFinishPopulatingTable()
+		self.owner.didFinishPopulatingTable()
 		AbstractIntervalAction.stop(self)
 
 
@@ -162,34 +169,34 @@ class TrackedAction(AbstractIntervalAction):
 class GraphScene(Scene,GestureListener):
 	def setup(self):
 		self._graphNode = GraphNode(MakeRect(self.getSize().width/2,self.getSize().height/2, 400, 200), axisColor=Color(0.3, 0.3, 0.7))
-		self._graphNode.setAnchorPoint(Point(0.5,0.5))
+		self._graphNode.anchorPoint = Point(0.5,0.5)
 		self.addChild(self._graphNode)
 		self._currentIndex = 0
 		self._leftArrow = SVGSprite("images/left_button.svg")
-		self._leftArrow.setRotation(math.pi)
-		self._leftArrow.setAnchorPoint(Point(0.5,0.5))
-		self._leftArrow.setPosition(Point(self.getSize().width/2+125, self.getSize().height/2+160))
+		self._leftArrow.rotation = math.pi
+		self._leftArrow.anchorPoint = Point(0.5,0.5)
+		self._leftArrow.position = Point(self.size.width/2+125, self.size.height/2+160)
 		self.addChild(self._leftArrow)
 		self._rightArrow = SVGSprite("images/right_button.svg")
-		self._rightArrow.setAnchorPoint(Point(0.5,0.5))
-		self._rightArrow.setPosition(Point(self.getSize().width/2+175, self.getSize().height/2+160))
+		self._rightArrow.anchorPoint = Point(0.5,0.5)
+		self._rightArrow.position = Point(self.size.width/2+175, self.size.height/2+160)
 		self.addChild(self._rightArrow)
 		self._ball = Sprite("images/goal.png")
-		self._ball.setAnchorPoint(Point(0.5,1.0))
+		self._ball.anchorPoint = Point(0.5,1.0)
 		self._ballStartingPosition = Point(100, 575)
-		self._ball.setPosition(self._ballStartingPosition)
+		self._ball.position = self._ballStartingPosition
 		self.addChild(self._ball)
 
 	def setCurrentIndex(self, index):
 		self._currentIndex = (index % len(easeClasses))
 		for pointNode in self._graphNode._pointNodes:
-			pointNode.setColor(WhiteColor())
+			pointNode.color = WhiteColor()
 		self._ball.stopAllActions()
-		self._ball.setPosition(self._ballStartingPosition)
+		self._ball.position = self._ballStartingPosition
 		easeList = easeClasses[self._currentIndex]
 		easeName = easeList[0]
 		EaseClass = easeList[1]
-		self._graphNode.setGraphName(easeName)
+		self._graphNode.graphName = easeName
 		action = EaseClass(TableAction(1.0))
 		action.start(self._graphNode)
 		for i in range(0,1000):
@@ -206,17 +213,17 @@ class GraphScene(Scene,GestureListener):
 	def _onUpdate(self, percentComplete):
 		pointNodes = self._graphNode._pointNodes
 		for pointNode in pointNodes:
-			pointNode.setColor(WhiteColor())
-			pointNode.setScale(1.0)
+			pointNode.color = WhiteColor()
+			pointNode.scale = 1.0
 		index = int(len(pointNodes)*percentComplete)-1
 		pointNode = pointNodes[index]
-		pointNode.setColor(YellowColor())
-		pointNode.setScale(2.0)
+		pointNode.color = YellowColor()
+		pointNode.scale = 2.0
 
 	def onMousePress(self, event):
-		if self._leftArrow.getRect().containsPoint(event.point):
+		if self._leftArrow.rect.containsPoint(event.point):
 			self.setCurrentIndex(self._currentIndex-1)
-		elif self._rightArrow.getRect().containsPoint(event.point):
+		elif self._rightArrow.rect.containsPoint(event.point):
 			self.setCurrentIndex(self._currentIndex+1)
 
 	def onKeyPress(self, event):
@@ -227,14 +234,14 @@ class GraphScene(Scene,GestureListener):
 
 	def onEnter(self):
 		Scene.onEnter(self)
-		self.getDirector().getGestureDispatch().addListener(self)
+		self.director.gestureDispatch.addListener(self)
 		self.setCurrentIndex(0)
 
 	def onExit(self):
-		self.getDirector().getGestureDispatch().removeListener(self)
+		self.director.gestureDispatch.removeListener(self)
 
 
 if __name__ == "__main__":
 	director = Director()
-	director.setWindow()
+	director.showingFPS = True
 	director.runWithScene(GraphScene())

@@ -2,7 +2,7 @@
 A mixin that equips an object with handling Gesture events.
 """
 
-class GestureListener:
+class GestureListener(object):
 	"""
 	A mixin that equips an object with handling Gesture events.
 	"""

@@ -7,7 +7,7 @@ from Geometry import *
 # TODO: add state stuff so GestureListeners know if, e.g., Ctrl or Alt keys are pressed when gesture is
 # TODO: dispatched.
 
-class AbstractGestureEvent:
+class AbstractGestureEvent(object):
 	"""
 	An object that contains information about a detected gesture (e.g. a mouse press or a key release). AbstractGestureEvents are considered primitives, so values may be accessed directly (e.g. C{event.point} if event is a L{MouseGestureEvent}).
 	"""

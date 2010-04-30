@@ -2,7 +2,7 @@
 Basic Actions which can be performed on Nodes.
 """
 
-class AbstractAction:
+class AbstractAction(object):
 	"""
 	The base class for all Actions. An Action is a convenience class used to perform some task over a period of time (or instantaneously). Actions usually perform some task on an object, which is referred to as the Action's "owner". The owner should typically be a L{Node}.
 	"""

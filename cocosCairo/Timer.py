@@ -2,7 +2,7 @@
 Calls a given callback every given seconds.
 """
 
-class Timer:
+class Timer(object):
 	"""
 	Calls a callback every given seconds.
 	"""

@@ -27,11 +27,11 @@ class ActionScene(Scene):
 
 	def setup(self):
 		actionManagerNode = SystemBlockNode()
-		actionManagerNode.setAnchorPoint(Point(0.5,0.5))
-		x = self.getSize().width/2
-		y = self.getSize().height/2
-		actionManagerNode.setPosition(Point(x,y))
-		actionManagerNode.setSize(Size(200,150))
+		actionManagerNode.anchorPoint = Point(0.5,0.5)
+		x = self.size.width/2
+		y = self.size.height/2
+		actionManagerNode.position = Point(x,y)
+		actionManagerNode.size = Size(200,150)
 		title = '<span foreground="#FFFFFF">ActionManager</span>'
 		bullet = '<span foreground="#FFFFFF" size="xx-large">&#183; </span>'
 		body = 	bullet + \
@@ -41,8 +41,8 @@ class ActionScene(Scene):
 		actionManagerModel = SystemBlockModel(title, body)
 		actionManagerController = SystemBlockController(actionManagerNode, actionManagerModel)
 		self.addController(actionManagerController)
-		width = actionManagerNode.getRect().size.width
-		height = actionManagerNode.getRect().size.height
+		width = actionManagerNode.rect.size.width
+		height = actionManagerNode.rect.size.height
 		oldX = x
 		oldY = y
 
@@ -52,12 +52,12 @@ class ActionScene(Scene):
 		x = oldX+width/2+100
 		y = oldY
 		actionOwner = Sprite("images/goal.png", Point(50,50))
-		actionOwner.setAnchorPoint(Point(0.5,1.0))
-		actionOwner.setScale(0.75)
+		actionOwner.anchorPoint = Point(0.5,1.0)
+		actionOwner.scale = 0.75
 		action = MoveBy(1.0, Point(0,54))
 		action = RepeatForever(Sequence(EaseBounceOut(action), action.reverse()))
 		node = IntervalActionNode(actionOwner, action, Point(x,y))
-		node.setAnchorPoint(Point(0.0, 0.5))
+		node.anchorPoint = Point(0.0, 0.5)
 		self.addChild(node, 0)
 		connectionNode = ConnectionNode(Point(x-100,y), Point(x,y), Color(0.1, 0.1, 0.5))
 		self.addConnectionNode(connectionNode, data=node.update)
@@ -65,11 +65,11 @@ class ActionScene(Scene):
 		# set up the middle-left node
 		x = oldX-width-100
 		actionOwner = Sprite("images/goal.png", Point(50,50))
-		actionOwner.setAnchorPoint(Point(0.5,0.5))
+		actionOwner.anchorPoint = Point(0.5,0.5)
 		action = EaseSineInOut(ScaleBy(1.0, 0.5))
 		action = RepeatForever(Sequence(action, action.reverse()))
 		node = IntervalActionNode(actionOwner, action, Point(x,y))
-		node.setAnchorPoint(Point(0.0, 0.5))
+		node.anchorPoint = Point(0.0, 0.5)
 		self.addChild(node, 0)
 		connectionNode = ConnectionNode(Point(x+200,y), Point(x+100,y), Color(0.1, 0.1, 0.5))
 		self.addConnectionNode(connectionNode, data=node.update)
@@ -78,11 +78,11 @@ class ActionScene(Scene):
 		x = oldX
 		y = oldY-height/2-50
 		actionOwner = Sprite("images/goal.png", Point(50,50))
-		actionOwner.setAnchorPoint(Point(0.5,0.5))
+		actionOwner.anchorPoint = Point(0.5,0.5)
 		action = EaseSineInOut(TintBy(1.0, 1.0, 1.0, 1.0, 1.0))
 		action = RepeatForever(Sequence(action, action.reverse()))
 		node = IntervalActionNode(actionOwner, action, Point(x,y))
-		node.setAnchorPoint(Point(0.5, 1.0))
+		node.anchorPoint = Point(0.5, 1.0)
 		self.addChild(node, 0)
 		connectionNode = ConnectionNode(Point(x, y+50), Point(x,y), Color(0.1, 0.1, 0.5))
 		self.addConnectionNode(connectionNode, data=node.update)
@@ -90,11 +90,11 @@ class ActionScene(Scene):
 		# set up the middle-bottom node
 		y = oldY+height/2+50
 		actionOwner = Sprite("images/goal.png", Point(50,50))
-		actionOwner.setAnchorPoint(Point(0.5,0.5))
+		actionOwner.anchorPoint = Point(0.5,0.5)
 		action = FadeOut(1.0)
 		action = RepeatForever(Sequence(action, action.reverse()))
 		node = IntervalActionNode(actionOwner, action, Point(x, y))
-		node.setAnchorPoint(Point(0.5, 0.0))
+		node.anchorPoint = Point(0.5, 0.0)
 		self.addChild(node, 0)
 		connectionNode = ConnectionNode(Point(x, y-50), Point(x,y), Color(0.1, 0.1, 0.5))
 		self.addConnectionNode(connectionNode, data=node.update)
@@ -109,8 +109,8 @@ class IntervalActionNode(Node):
 		Node.__init__(self)
 		if position is None:
 			position = PointZero()
-		self.setPosition(position)
-		self.setSize(Size(100,100))
+		self.position = position
+		self.size = Size(100,100)
 		backgroundNode = SVGSprite("images/system_block.svg")
 		self.addChild(backgroundNode, -1)
 		self._actionOwner = actionOwner
@@ -132,17 +132,17 @@ class RedrawScene(Scene):
 		self._cbRate = 1.0
 		self._counter = 0
 		self._connectionNodes = {}
-		self._displayNode = Node(MakeRect(self.getSize().width/2, self.getSize().height-10, 200, 200))
-		rectangleNode = RectangleNode(Rect(PointZero(), self._displayNode.getSize()), strokeColor=WhiteColor(), strokeThickness=2.0)
+		self._displayNode = Node(MakeRect(self.size.width/2, self.size.height-10, 200, 200))
+		rectangleNode = RectangleNode(Rect(PointZero(), self._displayNode.size), strokeColor=WhiteColor(), strokeThickness=2.0)
 		self._displayNode.addChild(rectangleNode, -1)
-		self._displayNode.setAnchorPoint(Point(0.5, 1.0))
+		self._displayNode.anchorPoint = Point(0.5, 1.0)
 		self.addChild(self._displayNode)
 		length = 50
 
 		self.scheduleCallback(self._callback, self._cbRate)
 
-		playButton = PlayButton(Point(self.getSize().width*1/6, self.getSize().height*5/6))
-		playButton.setAnchorPoint(Point(0.5,0.5))
+		playButton = PlayButton(Point(self.size.width*1/6, self.size.height*5/6))
+		playButton.anchorPoint = Point(0.5,0.5)
 		self.addChild(playButton)
 
 		bullet = '<span foreground="#FFFFFF" size="xx-large">&#183; </span>'
@@ -150,8 +150,8 @@ class RedrawScene(Scene):
 		makeBody = lambda string: bullet + '<span foreground="#FFFFFF" size="small">' + string + '</span>'
 
 		sceneNode = SystemBlockNode()
-		sceneNode.setAnchorPoint(Point(0.5,0.0))
-		x = self.getSize().width/2
+		sceneNode.anchorPoint = Point(0.5,0.0)
+		x = self.size.width/2
 		y = 10
 		title = makeTitle('Scene')
 		body = 	makeBody('Has <span face="monospace">Node</span> children redrawn according to their z-orders.')
@@ -159,10 +159,10 @@ class RedrawScene(Scene):
 		self.addController(controller)
 
 		oldX = x
-		oldY = y + sceneNode.getSize().height
-		y += controller.getNode().getSize().height + length
+		oldY = y + sceneNode.size.height
+		y += controller.node.size.height + length
 
-		x = self.getSize().width*1/4
+		x = self.size.width*1/4
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=1</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -172,7 +172,7 @@ class RedrawScene(Scene):
 		self.addConnectionNode(connectionNode, 0, node, 1)
 		node1 = node
 
-		x = self.getSize().width*2/4
+		x = self.size.width*2/4
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=2</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -182,7 +182,7 @@ class RedrawScene(Scene):
 		self.addConnectionNode(connectionNode, 3, node, 2)
 		node2 = node
 
-		x = self.getSize().width*3/4
+		x = self.size.width*3/4
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=-1</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -192,11 +192,11 @@ class RedrawScene(Scene):
 		self.addConnectionNode(connectionNode, 6, node, -1)
 		node3 = node
 
-		oldX = self.getSize().width*1/4
-		oldY = y + controller.getNode().getSize().height
-		y += controller.getNode().getSize().height + length
+		oldX = self.size.width*1/4
+		oldY = y + controller.node.size.height
+		y += controller.node.size.height + length
 
-		x = self.getSize().width*1/7
+		x = self.size.width*1/7
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=3</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -205,7 +205,7 @@ class RedrawScene(Scene):
 		connectionNode = ConnectionNode(Point(oldX,oldY), Point(x,y), Color(0.1,0.1,0.5))
 		self.addConnectionNode(connectionNode, 1, node, 3, node1)
 
-		x = self.getSize().width*2/7
+		x = self.size.width*2/7
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=2</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -214,9 +214,9 @@ class RedrawScene(Scene):
 		connectionNode = ConnectionNode(Point(oldX,oldY), Point(x,y), Color(0.1,0.1,0.5))
 		self.addConnectionNode(connectionNode, 2, node, 2, node1)
 
-		oldX = self.getSize().width*2/4
+		oldX = self.size.width*2/4
 
-		x = self.getSize().width*3/7
+		x = self.size.width*3/7
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=4</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -225,7 +225,7 @@ class RedrawScene(Scene):
 		connectionNode = ConnectionNode(Point(oldX,oldY), Point(x,y), Color(0.1,0.1,0.5))
 		self.addConnectionNode(connectionNode, 4, node, 4, node2)
 
-		x = self.getSize().width*4/7
+		x = self.size.width*4/7
 		title = makeTitle('Node')
 		body = 	makeBody('<span face="monospace">z-order=1</span>')
 		controller = self.makeController(Point(x,y), title, body, Size(100, 75))
@@ -247,10 +247,10 @@ class RedrawScene(Scene):
 		if size is None:
 			size = Size(100,100)
 		node = SystemBlockNode()
-		node.setAnchorPoint(Point(0.5,0.0))
-		node.setPosition(position)
-		node.setSize(size)
-		node.setBodyMargin(bodyMargin)
+		node.anchorPoint = Point(0.5,0.0)
+		node.position = position
+		node.size = size
+		node.bodyMargin = bodyMargin
 		model = SystemBlockModel(title, body)
 		controller = SystemBlockController(node, model)
 		return controller
@@ -269,7 +269,7 @@ class RedrawScene(Scene):
 			self._counter = -1
 
 	def _onSentPacket(self, owner, node):
-		node.setVisible(True)
+		node.visible = True
 
 
 class PlayButton(Node, GestureListener):
@@ -277,9 +277,9 @@ class PlayButton(Node, GestureListener):
 		scale = 1.5
 		Node.__init__(self, MakeRect(position.x, position.y, scale*100, scale*100))
 		self._playSprite = SVGSprite("images/play_button.svg")
-		self._playSprite.setScale(scale)
+		self._playSprite.scale = scale
 		self._pauseSprite = SVGSprite("images/pause_button.svg")
-		self._pauseSprite.setScale(scale)
+		self._pauseSprite.scale = scale
 		self._isPlaying = True
 		self._isLoaded = False
 		self._isEntered = False
@@ -287,14 +287,14 @@ class PlayButton(Node, GestureListener):
 
 	def onEnter(self):
 		Node.onEnter(self)
-		self.getDirector().getGestureDispatch().addListener(self)
+		self.director.gestureDispatch.addListener(self)
 
 	def onExit(self):
 		Node.onExit(self)
-		self.getDirector().getGestureDispatch().removeListener(self)
+		self.director.gestureDispatch.removeListener(self)
 
 	def onMousePress(self, event):
-		if self.getRect().containsPoint(event.point):
+		if self.rect.containsPoint(event.point):
 			self._isLoaded = True
 			if self._isPlaying:
 				sprite = self._pauseSprite
@@ -318,9 +318,9 @@ class PlayButton(Node, GestureListener):
 					self.addChild(self._playSprite)
 					self._isPlaying = not self._isPlaying
 					if self._isPlaying:
-						self.getDirector().resume()
+						self.director.resume()
 					else:
-						self.getDirector().pause()
+						self.director.pause()
 				else:
 					self._pauseSprite.setStylePropertyValueById("top_stop", "stop-color", color)
 			else:
@@ -331,9 +331,9 @@ class PlayButton(Node, GestureListener):
 					self.addChild(self._pauseSprite)
 					self._isPlaying = not self._isPlaying
 					if self._isPlaying:
-						self.getDirector().resume()
+						self.director.resume()
 					else:
-						self.getDirector().pause()
+						self.director.pause()
 				else:
 					self._playSprite.setStylePropertyValueById("top_stop", "stop-color", color)
 		self._isLoaded = False
@@ -366,7 +366,7 @@ class cocosCairoScene(Scene,GestureListener):
 
 		makeTitle = lambda string: '<span foreground="#FFFFFF">' + string + '</span>'
 
-		x = self.getSize().width/2
+		x = self.size.width/2
 		y = 10
 		title = makeTitle('PyGTK')
 		controller = self.makeController(Point(x,y), title, "", Size(100, 50))
@@ -374,7 +374,7 @@ class cocosCairoScene(Scene,GestureListener):
 		oldX = x
 		oldY = y + 50
 
-		x = self.getSize().width/2
+		x = self.size.width/2
 		y = 160
 		title = makeTitle('Director')
 		controller = self.makeController(Point(x,y), title, "", Size(100, 50))
@@ -385,7 +385,7 @@ class cocosCairoScene(Scene,GestureListener):
 		oldX = x+50
 		oldY = 160+25
 
-		x = self.getSize().width*5/6
+		x = self.size.width*5/6
 		title = makeTitle('Scheduler')
 		controller = self.makeController(Point(x,y), title, "", Size(100, 50))
 		self.addController(controller)
@@ -395,7 +395,7 @@ class cocosCairoScene(Scene,GestureListener):
 		oldX = x
 		oldY = oldY+25
 
-		x = self.getSize().width*5/6
+		x = self.size.width*5/6
 		y = 310+25
 		title = makeTitle('ActionManager')
 		controller = self.makeController(Point(x,y), title, "", Size(150, 50))
@@ -406,7 +406,7 @@ class cocosCairoScene(Scene,GestureListener):
 		oldX = x
 		oldY = y+50
 
-		x = self.getSize().width*5/6
+		x = self.size.width*5/6
 		y = 460+25
 		title = makeTitle('Action')
 		controller = self.makeController(Point(x,y), title, "", Size(100, 50))
@@ -416,7 +416,7 @@ class cocosCairoScene(Scene,GestureListener):
 
 		oldX = x-50
 		oldY = y+25
-		x = self.getSize().width/2
+		x = self.size.width/2
 		y = 460+25
 		title = makeTitle('Node')
 		controller = self.makeController(Point(x,y), title, "", Size(100, 50))
@@ -424,9 +424,9 @@ class cocosCairoScene(Scene,GestureListener):
 		connectionNode = ConnectionNode(Point(oldX,oldY), Point(x+50,y+25), Color(0.1,0.1,0.5))
 		self._connectionNodes.append(connectionNode)
 
-		oldX = self.getSize().width/2
+		oldX = self.size.width/2
 		oldY = 160+50
-		x = self.getSize().width/2
+		x = self.size.width/2
 		y = 310+25
 		title = makeTitle('Scene')
 		controller = self.makeController(Point(x,y), title, "", Size(100, 50))
@@ -439,9 +439,9 @@ class cocosCairoScene(Scene,GestureListener):
 
 		[self.addChild(connectionNode) for connectionNode in self._connectionNodes]
 
-		oldX = self.getSize().width/2-50
+		oldX = self.size.width/2-50
 		oldY = 10+25
-		x = self.getSize().width*1/6
+		x = self.size.width*1/6
 		y = 10
 		title = makeTitle('GestureDispatch')
 		controller = self.makeController(Point(x,y), title, "", Size(160, 50))
@@ -464,10 +464,10 @@ class cocosCairoScene(Scene,GestureListener):
 		if size is None:
 			size = Size(100,100)
 		node = SystemBlockNode()
-		node.setAnchorPoint(Point(0.5,0.0))
-		node.setPosition(position)
-		node.setSize(size)
-		node.setBodyMargin(bodyMargin)
+		node.anchorPoint = Point(0.5,0.0)
+		node.position = position
+		node.size = size
+		node.bodyMargin = bodyMargin
 		model = SystemBlockModel(title, body)
 		controller = SystemBlockController(node, model)
 		return controller
@@ -475,25 +475,25 @@ class cocosCairoScene(Scene,GestureListener):
 	def callback(self, owner, data):
 		if self._counter == 0:
 			path = "images/new_frame.svg"
-			point = Point(self.getSize().width/2-50, 100)
+			point = Point(self.size.width/2-50, 100)
 		elif self._counter == 1:
 			path = "images/tick.svg"
-			point = Point(self.getSize().width/2, 150)
+			point = Point(self.size.width/2, 150)
 		elif self._counter == 2:
 			path = "images/tick.svg"
-			point = Point(self.getSize().width*3/4, 250)
+			point = Point(self.size.width*3/4, 250)
 		elif self._counter == 3:
 			path = "images/tick.svg"
-			point = Point(self.getSize().width*3/4, 420)
+			point = Point(self.size.width*3/4, 420)
 		elif self._counter == 4:
 			path = "images/update.svg"
-			point = Point(self.getSize().width/2, 450)
+			point = Point(self.size.width/2, 450)
 		elif self._counter == 5:
 			path = "images/redraw.svg"
-			point = Point(self.getSize().width/2-50, 250)
+			point = Point(self.size.width/2-50, 250)
 		elif self._counter == 6:
 			path = "images/redraw.svg"
-			point = Point(self.getSize().width/2-50, 420)
+			point = Point(self.size.width/2-50, 420)
 		self.startFloatUpSequence(SVGSprite(path, point))
 		self._connectionNodes[self._counter].sendPulse(duration=1.0, callback=self.callback)
 		self._counter += 1
@@ -502,7 +502,7 @@ class cocosCairoScene(Scene,GestureListener):
 
 	def startFloatUpSequence(self, node):
 		self.addChild(node)
-		node.setOpacity(0.0)
+		node.opacity = 0.0
 		duration = 1.0
 		action1 = FadeIn(duration*3/4)
 		action1a = EaseSineOut(MoveBy(duration*3/4, Point(0, -25)))
@@ -515,34 +515,34 @@ class cocosCairoScene(Scene,GestureListener):
 	def onEnter(self):
 		Scene.onEnter(self)
 		self.callback(None,None)
-		self.getDirector().getGestureDispatch().addListener(self)
+		self.director.gestureDispatch.addListener(self)
 
 	def onExit(self):
 		Scene.onExit(self)
-		self.getDirector().getGestureDispatch().removeListener(self)
+		self.director.gestureDispatch.removeListener(self)
 
 	def _mousePressCallback(self, owner, data):
 		self._conn2.sendPulse(duration=1.0)
-		self.startFloatUpSequence(SVGSprite("images/mouse_press.svg", Point(self.getSize().width/4-100, 100)))
+		self.startFloatUpSequence(SVGSprite("images/mouse_press.svg", Point(self.size.width/4-100, 100)))
 
 	def onMousePress(self, event):
 		self._conn1.sendPulse(duration=1.0, callback=self._mousePressCallback)
-		self.startFloatUpSequence(SVGSprite("images/mouse_press.svg", Point(self.getSize().width/4-25, 50)))
+		self.startFloatUpSequence(SVGSprite("images/mouse_press.svg", Point(self.size.width/4-25, 50)))
 		return True
 
 	def _keyPressCallback(self, owner, data):
 		self._conn2.sendPulse(duration=1.0)
-		self.startFloatUpSequence(SVGSprite("images/key_press.svg", Point(self.getSize().width/4-100, 100)))
+		self.startFloatUpSequence(SVGSprite("images/key_press.svg", Point(self.size.width/4-100, 100)))
 
 	def onKeyPress(self, event):
 		self._conn1.sendPulse(duration=1.0, callback=self._keyPressCallback)
-		self.startFloatUpSequence(SVGSprite("images/key_press.svg", Point(self.getSize().width/4-25, 50)))
+		self.startFloatUpSequence(SVGSprite("images/key_press.svg", Point(self.size.width/4-25, 50)))
 		return True
 
 
 if __name__ == "__main__":
 	director = Director()
-	director.setWindow()
-	director.runWithScene(ActionScene())
+	director.showingFPS = True
+	#director.runWithScene(ActionScene())
 	#director.runWithScene(RedrawScene())
-	#director.runWithScene(cocosCairoScene())
+	director.runWithScene(cocosCairoScene())
